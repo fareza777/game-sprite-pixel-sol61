@@ -1,0 +1,20 @@
+{
+  "sprite": "enemy-frost-1.aseprite",
+  "findings": [
+    {
+      "count": 122,
+      "check": "palette",
+      "message": "122 palette entries. Most sprites read better under 32 — a large palette usually means ramps that were never merged.",
+      "severity": "note"
+    },
+    {
+      "layer": "effects",
+      "check": "layers",
+      "message": "Layer 'effects' has no cels on any frame.",
+      "severity": "note"
+    }
+  ],
+  "passed": true,
+  "score": 100,
+  "summary": "Clean."
+}

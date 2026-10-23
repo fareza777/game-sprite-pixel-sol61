@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="theme-color" content="#0c111c"><meta name="description" content="Vespergrave: The Bell Below. An offline, hand-drawn dark fantasy roguelike. Descend one hundred floors through ten forgotten realms."><title>Vespergrave · The Bell Below</title><link rel="icon" href="__APP_ICON__"><style>__CAMPAIGN_CSS__</style></head>
+<body><main class="app" id="app" data-screen="loading">
+<canvas id="game" width="360" height="720" aria-label="Vespergrave dungeon arena. Use WASD to move, J to attack, K to guard, Space to dodge, Q and E for skills, R to heal, F to interact, and I for equipment."></canvas>
+<div class="hud" id="hud" hidden><div class="vitals"><div class="hero-name" id="hud-name">ALDRIC <span>LV 1</span></div><div class="meter health"><i id="hp-meter"></i><small id="hp-value"></small></div><div class="meter stamina"><i id="stamina-meter"></i></div><div class="meter focus"><i id="focus-meter"></i></div></div><div class="floor-label"><span id="floor-number">FLOOR 01</span><small id="biome-name">MOURNING ABBEY</small><canvas id="minimap" width="66" height="44" aria-label="Current floor room map"></canvas></div></div>
+<div class="top-actions" id="top-actions" hidden><button class="icon-button" id="open-bag" aria-label="Open equipment and journal" title="Equipment / I"><img data-icon="star" alt=""><span>SATCHEL</span></button><button class="icon-button" id="touch-pause" aria-label="Pause game" title="Pause / Escape"><img data-icon="pause" alt=""></button></div>
+<div class="boss-hud" id="boss-hud" hidden><span id="boss-name"></span><div><i id="boss-meter"></i></div></div>
+<div class="event-hud" id="event-hud" role="status" hidden><span id="event-name"></span><small id="event-progress"></small></div>
+<div class="context" id="context" hidden></div><div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<aside class="tutorial" id="tutorial" hidden><span id="tutorial-count"></span><h2 id="tutorial-title"></h2><p id="tutorial-text"></p><button data-command="skip-tutorial" class="text-button">Skip practice</button></aside>
+<div class="touch-controls" id="touch-controls" hidden>
+ <div id="dpad" class="dpad" aria-label="Floating directional pad" aria-hidden="true" hidden><i class="pad-ring"></i><span data-direction="up">▲</span><span data-direction="down">▼</span><span data-direction="left">◀</span><span data-direction="right">▶</span><b class="thumb"></b></div>
+ <div class="action-cluster"><button class="touch-action skill skill-one" data-action="skill1" aria-label="Use first skill"><img id="skill-icon-1" alt=""><b id="skill-cd-1"></b><small>Q</small></button><button class="touch-action skill skill-two" data-action="skill2" aria-label="Use second skill"><img id="skill-icon-2" alt=""><b id="skill-cd-2"></b><small>E</small></button><button class="touch-action guard" data-action="block" aria-label="Hold to guard"><img data-icon="block" alt=""><small>GUARD</small></button><button class="touch-action attack" data-action="attack" aria-label="Hold to attack"><img data-icon="attack" alt=""><small>ATTACK</small></button><button class="touch-action roll" data-action="roll" aria-label="Dodge roll"><img data-icon="roll" alt=""><small>ROLL</small></button><button class="touch-action use" data-action="interact" aria-label="Interact with door, chest or hearth"><img data-icon="interact" alt=""><small>USE</small></button></div>
+ <button class="touch-action flask" data-action="heal" aria-label="Drink healing flask"><img data-icon="flask" alt=""><b id="flask-count">3</b><small>HEAL / R</small></button><p class="move-hint" id="move-hint">Touch the floor and drag to move</p>
+</div>
+<div class="overlay" id="overlay"></div><div class="splash" id="loading"><img src="__APP_ICON__" alt="Vespergrave hand-drawn knight emblem"><h1>VESPERGRAVE</h1><p>THE BELL BELOW</p><div class="load-track"><i id="load-meter"></i></div><small id="load-message">Lighting the last ember…</small></div>
+</main><script>
+const ASSETS=__ASSETS__;
+const VO_ASSETS=__VO__;
+const UI_ICONS=__ICONS__;
+const FONT=__FONT__;
+__CORE__
+__CONTENT__
+__CAMPAIGN__
+__TOUCH__
+__PRESENTATION__
+</script></body></html>

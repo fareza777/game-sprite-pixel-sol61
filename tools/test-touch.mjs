@@ -3,7 +3,7 @@ import {TouchInput} from '../game/touch.mjs';
 import {Game} from '../game/core.mjs';
 const touch=new TouchInput();
 touch.setPad(1,1,-1);touch.press(2,'attack');
-assert.deepEqual(touch.snapshot(),{up:true,down:false,left:false,right:true,attack:true,block:false,roll:false,interact:false});
+assert.deepEqual(touch.snapshot(),{up:true,down:false,left:false,right:true,attack:true,block:false,roll:false,interact:false,skill1:false,skill2:false,heal:false});
 touch.release(2);assert.equal(touch.snapshot().right,true);assert.equal(touch.snapshot().attack,false);
 touch.press(3,'roll');assert.equal(touch.consume().roll,true);assert.equal(touch.consume().roll,false);assert.equal(touch.snapshot().right,true);
 touch.press(4,'block');touch.press(5,'block');touch.release(4);assert.equal(touch.snapshot().block,true);
@@ -21,3 +21,5 @@ touch.dragPad(20,100,370);assert.equal(touch.snapshot().down,true,'Thumb can rev
 assert.equal(touch.beginPad(21,200,400),false,'Second finger cannot steal the movement origin');
 touch.press(21,'attack');touch.release(20);assert.equal(touch.origin,null);assert.equal(touch.snapshot().attack,true);touch.clear();
 console.log('PASS hidden-until-touch origin, flexible base following, immediate reversal and independent action pointer');
+for(const action of ['skill1','skill2','heal']){touch.press(31,action);assert(touch.consume()[action]);assert(!touch.consume()[action]);touch.release(31);}
+console.log('PASS both skill slots and healing are independent one-shot actions');

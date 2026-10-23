@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "english": true,
+  "offlineNarrationPlayed": true,
+  "fullPortraitViewport": true,
+  "floatingPad": true,
+  "independentPointers": true,
+  "mageSkill": true,
+  "equipment": true,
+  "bestiaryAnimation": true,
+  "persistentContinue": true,
+  "responsiveResize": true,
+  "snapshot": {
+    "state": "playing",
+    "hero": "seer",
+    "floor": 1,
+    "biome": "abbey",
+    "room": 0,
+    "roomLayout": "cloister",
+    "mapForm": 1,
+    "event": null,
+    "eventsResolved": 0,
+    "rooms": 6,
+    "enemies": 0,
+    "player": {
+      "x": 180,
+      "y": 546,
+      "hp": 92,
+      "maxHp": 92,
+      "action": "idle",
+      "focus": 135.92676000000054,
+      "stamina": 100
+    },
+    "layout": {
+      "width": 360,
+      "height": 688,
+      "bounds": {
+        "left": 41,
+        "right": 319,
+        "top": 116,
+        "bottom": 616
+      }
+    },
+    "tutorial": null,
+    "inventory": 3,
+    "level": 1,
+    "kills": 0,
+    "controls": {
+      "up": false,
+      "down": false,
+      "left": false,
+      "right": false,
+      "attack": false,
+      "block": false,
+      "roll": false,
+      "interact": false,
+      "skill1": false,
+      "skill2": false,
+      "heal": false
+    },
+    "pad": null,
+    "panel": null,
+    "narration": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "roomLayouts": 12,
+  "interactiveEventChoices": true,
+  "boonSaved": true,
+  "threeWaveEncounter": true,
+  "timedTrialWarnings": true,
+  "pauseFreezesTrial": true,
+  "resumeKeepsTrial": true
+}

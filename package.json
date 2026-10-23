@@ -1,13 +1,13 @@
 {
-  "name": "cinder-vow",
-  "version": "2.2.0",
+  "name": "vespergrave",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node tools/serve.mjs",
-    "art": "node tools/build-art.mjs",
+    "art": "node tools/draw-campaign-actors.mjs && node tools/draw-campaign-world.mjs && node tools/draw-layout-kit.mjs && node tools/review-campaign-art.mjs",
     "build": "node tools/build.mjs",
-    "test": "node tools/check-anchors.mjs && node tools/test-game.mjs && node tools/test-touch.mjs && node tools/test-client.mjs",
+    "test": "node tools/test-campaign.mjs && node tools/test-touch.mjs && node tools/check-campaign-assets.mjs && node tools/test-campaign-client.mjs",
     "android:sync": "node tools/sync-android.mjs",
     "android:debug": "npm run build && npm run android:sync && cd android && .\\gradlew.bat assembleDebug",
     "android:release": "npm run build && npm run android:sync && cd android && .\\gradlew.bat assembleRelease"

@@ -1,0 +1,529 @@
+{
+  "passed": true,
+  "poses": 8400,
+  "enemies": 60,
+  "items": 100,
+  "skills": 9,
+  "biomes": 10,
+  "cinematicPanels": 6,
+  "offlineVoiceClips": 30,
+  "connectedKeyPoses": 540,
+  "roomLayouts": 12,
+  "mapPlans": 8,
+  "interactiveEvents": 10,
+  "environmentKitFrames": 160,
+  "architecturalHeaders": 40,
+  "checks": [
+    {
+      "name": "hero-knight",
+      "frames": 240,
+      "width": 1440,
+      "height": 1344
+    },
+    {
+      "name": "hero-rogue",
+      "frames": 240,
+      "width": 1344,
+      "height": 1248
+    },
+    {
+      "name": "hero-seer",
+      "frames": 240,
+      "width": 1056,
+      "height": 1056
+    },
+    {
+      "name": "enemy-abbey-0",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-abbey-1",
+      "frames": 128,
+      "width": 1056,
+      "height": 960
+    },
+    {
+      "name": "enemy-abbey-2",
+      "frames": 128,
+      "width": 576,
+      "height": 480
+    },
+    {
+      "name": "enemy-abbey-3",
+      "frames": 128,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "name": "enemy-abbey-4",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-abbey-boss",
+      "frames": 128,
+      "width": 1296,
+      "height": 1008
+    },
+    {
+      "name": "enemy-tides-0",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-tides-1",
+      "frames": 128,
+      "width": 576,
+      "height": 480
+    },
+    {
+      "name": "enemy-tides-2",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-tides-3",
+      "frames": 128,
+      "width": 288,
+      "height": 288
+    },
+    {
+      "name": "enemy-tides-4",
+      "frames": 128,
+      "width": 384,
+      "height": 288
+    },
+    {
+      "name": "enemy-tides-boss",
+      "frames": 128,
+      "width": 1008,
+      "height": 784
+    },
+    {
+      "name": "enemy-thorns-0",
+      "frames": 128,
+      "width": 1056,
+      "height": 960
+    },
+    {
+      "name": "enemy-thorns-1",
+      "frames": 128,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "name": "enemy-thorns-2",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-thorns-3",
+      "frames": 128,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "name": "enemy-thorns-4",
+      "frames": 128,
+      "width": 288,
+      "height": 288
+    },
+    {
+      "name": "enemy-thorns-boss",
+      "frames": 128,
+      "width": 1296,
+      "height": 1008
+    },
+    {
+      "name": "enemy-forge-0",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-forge-1",
+      "frames": 128,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "name": "enemy-forge-2",
+      "frames": 128,
+      "width": 576,
+      "height": 448
+    },
+    {
+      "name": "enemy-forge-3",
+      "frames": 128,
+      "width": 480,
+      "height": 384
+    },
+    {
+      "name": "enemy-forge-4",
+      "frames": 128,
+      "width": 1056,
+      "height": 960
+    },
+    {
+      "name": "enemy-forge-boss",
+      "frames": 128,
+      "width": 1008,
+      "height": 672
+    },
+    {
+      "name": "enemy-bones-0",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-bones-1",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-bones-2",
+      "frames": 128,
+      "width": 1056,
+      "height": 960
+    },
+    {
+      "name": "enemy-bones-3",
+      "frames": 128,
+      "width": 384,
+      "height": 288
+    },
+    {
+      "name": "enemy-bones-4",
+      "frames": 128,
+      "width": 576,
+      "height": 448
+    },
+    {
+      "name": "enemy-bones-boss",
+      "frames": 128,
+      "width": 1296,
+      "height": 896
+    },
+    {
+      "name": "enemy-frost-0",
+      "frames": 128,
+      "width": 1056,
+      "height": 960
+    },
+    {
+      "name": "enemy-frost-1",
+      "frames": 128,
+      "width": 288,
+      "height": 288
+    },
+    {
+      "name": "enemy-frost-2",
+      "frames": 128,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "name": "enemy-frost-3",
+      "frames": 128,
+      "width": 576,
+      "height": 480
+    },
+    {
+      "name": "enemy-frost-4",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-frost-boss",
+      "frames": 128,
+      "width": 720,
+      "height": 560
+    },
+    {
+      "name": "enemy-blood-0",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-blood-1",
+      "frames": 128,
+      "width": 1056,
+      "height": 960
+    },
+    {
+      "name": "enemy-blood-2",
+      "frames": 128,
+      "width": 384,
+      "height": 384
+    },
+    {
+      "name": "enemy-blood-3",
+      "frames": 128,
+      "width": 288,
+      "height": 288
+    },
+    {
+      "name": "enemy-blood-4",
+      "frames": 128,
+      "width": 384,
+      "height": 384
+    },
+    {
+      "name": "enemy-blood-boss",
+      "frames": 128,
+      "width": 576,
+      "height": 336
+    },
+    {
+      "name": "enemy-astral-0",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-astral-1",
+      "frames": 128,
+      "width": 576,
+      "height": 480
+    },
+    {
+      "name": "enemy-astral-2",
+      "frames": 128,
+      "width": 576,
+      "height": 448
+    },
+    {
+      "name": "enemy-astral-3",
+      "frames": 128,
+      "width": 384,
+      "height": 288
+    },
+    {
+      "name": "enemy-astral-4",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-astral-boss",
+      "frames": 128,
+      "width": 1008,
+      "height": 784
+    },
+    {
+      "name": "enemy-gilded-0",
+      "frames": 128,
+      "width": 1056,
+      "height": 960
+    },
+    {
+      "name": "enemy-gilded-1",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-gilded-2",
+      "frames": 128,
+      "width": 288,
+      "height": 288
+    },
+    {
+      "name": "enemy-gilded-3",
+      "frames": 128,
+      "width": 576,
+      "height": 480
+    },
+    {
+      "name": "enemy-gilded-4",
+      "frames": 128,
+      "width": 384,
+      "height": 288
+    },
+    {
+      "name": "enemy-gilded-boss",
+      "frames": 128,
+      "width": 1440,
+      "height": 1120
+    },
+    {
+      "name": "enemy-abyss-0",
+      "frames": 128,
+      "width": 960,
+      "height": 960
+    },
+    {
+      "name": "enemy-abyss-1",
+      "frames": 128,
+      "width": 576,
+      "height": 480
+    },
+    {
+      "name": "enemy-abyss-2",
+      "frames": 128,
+      "width": 768,
+      "height": 768
+    },
+    {
+      "name": "enemy-abyss-3",
+      "frames": 128,
+      "width": 576,
+      "height": 448
+    },
+    {
+      "name": "enemy-abyss-4",
+      "frames": 128,
+      "width": 384,
+      "height": 288
+    },
+    {
+      "name": "enemy-abyss-boss",
+      "frames": 128,
+      "width": 1296,
+      "height": 896
+    },
+    {
+      "name": "room-abbey",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "room-tides",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "room-thorns",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "room-forge",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "room-bones",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "room-frost",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "room-blood",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "room-astral",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "room-gilded",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "room-abyss",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "campaign-props",
+      "frames": 80,
+      "width": 576,
+      "height": 640
+    },
+    {
+      "name": "campaign-items",
+      "frames": 100,
+      "width": 400,
+      "height": 400
+    },
+    {
+      "name": "campaign-skills",
+      "frames": 9,
+      "width": 120,
+      "height": 120
+    },
+    {
+      "name": "cinematic-0",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "cinematic-1",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "cinematic-2",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "cinematic-3",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "cinematic-4",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "cinematic-5",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "vespergrave-icon",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "name": "arena-seals",
+      "frames": 10,
+      "width": 640,
+      "height": 336
+    },
+    {
+      "name": "layout-kit",
+      "frames": 160,
+      "width": 1040,
+      "height": 960
+    },
+    {
+      "name": "room-headers",
+      "frames": 40,
+      "width": 2520,
+      "height": 720
+    },
+    {
+      "name": "event-props",
+      "frames": 10,
+      "width": 320,
+      "height": 240
+    },
+    {
+      "name": "event-art",
+      "frames": 10,
+      "width": 640,
+      "height": 336
+    }
+  ]
+}

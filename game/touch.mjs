@@ -11,8 +11,8 @@ export class TouchInput {
  }
  setPad(id,x,y){if(this.padId!==null&&this.padId!==id)return false;this.padId=id;const length=Math.hypot(x,y);if(length<.22){this.x=0;this.y=0;}else{this.x=x/Math.max(1,length);this.y=y/Math.max(1,length);}return true;}
  release(id){if(id===this.padId){this.padId=null;this.x=0;this.y=0;this.origin=null;}this.held.delete(id);}
- press(id,action){this.held.set(id,action);if(action==='roll'||action==='interact')this.queued.add(action);}
- snapshot(){const held=new Set(this.held.values());return {up:this.y<-.35,down:this.y>.35,left:this.x<-.35,right:this.x>.35,attack:held.has('attack'),block:held.has('block'),roll:this.queued.has('roll'),interact:this.queued.has('interact')};}
+ press(id,action){this.held.set(id,action);if(['roll','interact','skill1','skill2','heal'].includes(action))this.queued.add(action);}
+ snapshot(){const held=new Set(this.held.values());return {up:this.y<-.35,down:this.y>.35,left:this.x<-.35,right:this.x>.35,attack:held.has('attack'),block:held.has('block'),roll:this.queued.has('roll'),interact:this.queued.has('interact'),skill1:this.queued.has('skill1'),skill2:this.queued.has('skill2'),heal:this.queued.has('heal')};}
  consume(){const input=this.snapshot();this.queued.clear();return input;}
  clear(){this.padId=null;this.x=0;this.y=0;this.origin=null;this.held.clear();this.queued.clear();}
 }

@@ -1,80 +1,77 @@
-# Cinder Vow — The Sunken Chapterhouse
+# Vespergrave: The Bell Below
 
-A hand-authored pixel action roguelike, with a desktop browser version and an offline **portrait Android APK**. English is the default throughout the game, animation viewer and Android application.
+An original, offline portrait action roguelike. Carry the last ember through **100 procedural floors**, ten ruined realms and ten named bosses. All game text defaults to English.
 
-[Download the Android APK](releases/CinderVow-2.2.0.apk?raw=true) · [Android build instructions](android/README.md) · [Editable Aseprite sources](art)
+[Download the signed Android APK](releases/Vespergrave-3.0.0.apk?raw=true) · [Android build instructions](android/README.md) · [Editable Aseprite sources](art)
 
-![Full-screen portrait dungeon](previews/android-portrait.png)
+![Vespergrave on Android](previews/android-vespergrave/vespergrave-portrait.png)
+
+## The descent
+
+- **Three heroes:** Aldric, a plate-armoured knight with a pointed longsword and shield; Sera, a hooded dual-dagger hunter; and Elian, a weathered sorcerer with layered robes, a grimoire and carved staff.
+- **Ten biomes:** Mourning Abbey, Drowned Reliquary, Thornwake Grove, Cinderforge, Ivory Necropolis, Frostveil Bastion, Scarlet Catacombs, Astral Archive, Gilded Ruin and The Bell Below.
+- **Sixty enemy designs**, including a boss on every tenth floor. Enemy behaviours include committed charges, thrusts, melee sweeps, arrows, spell volleys, slams, roots, summons and meteor attacks. Bosses accelerate their patterns below half health.
+- Eight seeded floor plans with branching routes and loops. Six or seven rooms use different architecture on each floor: processional halls, cloisters, shattered bridges, crypts, cisterns, galleries, arenas, crossings, archives, root sanctuaries, foundries and ritual courts. Each chamber fits the portrait screen; a small map shows its connections.
+- **Ten interactive events:** a blood altar, cursed coffer, wounded pilgrim, oath shrine, sealed manuscript, falling-star vault, wandering smith, mirror champion, three-wave bell and a memory bargain. Choices consume actual resources, grant run-long boons, or begin encounters with earned rewards. Trials and choices persist through Continue.
+- Stamina, directional guard, dodge invulnerability, three-strike primary attacks, sorcery projectiles, focus, healing flasks, nine class skills, two equipped skill slots and skill strengthening.
+- **One hundred named base item designs**, with seeded level, rarity, affixes and numerical rolls. Six equipment slots, inventory, consumables, purchase and salvage.
+- Original splash and app icon, three onboarding pages, an interactive six-step practice chamber, five illustrated opening scenes, a choice of two endings, English narration, captions, an original ambient score and sound effects.
+- New Game, Continue, settings, equipment, skills, bestiary, journal, About, Share and a private in-app rating. Autosaved active runs and permanent ember bonds persist on the device.
+
+The Rate page records a local rating and links to project feedback. A public store listing has not been published. Share opens Android's share chooser, the browser share sheet, or a copy-link fallback after the player's action.
 
 ## Play
 
-Open `index.html` directly, or run `npm start` and visit `http://127.0.0.1:4173/`. The HTML bundles the art, animation metadata, bitmap font and game logic. No runtime internet connection is needed.
+Open `index.html` directly, or run `npm start` and visit `http://127.0.0.1:4173/`. All art, animation metadata, narration and logic are embedded in the HTML. No account or runtime network connection is required.
 
-For the portrait browser layout, use `http://127.0.0.1:4173/?mobile=1`. Portrait touch devices select this layout automatically. The Android app always opens it in portrait. Version 2.2 fills the phone screen with a complete, compact chamber: no horizontal following crop or separate control panel. The room adapts to viewport height while characters retain their pixel proportions. Desktop play also fits the available screen height.
+Touch and drag any open floor to reveal the floating eight-way D-pad. Its base follows a long drag. Release hides it; the next touch chooses a new origin. Movement, held attacks, guard and one-shot actions accept independent fingers. The game fills the phone viewport, including when its height changes.
 
-Open `atelier.html` to inspect all characters, facings and animations. The viewer offers pause, slow playback and individual frame stepping.
-
-| Desktop | Action |
+| Keyboard | Action |
 |---|---|
 | WASD / arrows | Move and face |
-| J / Space / left click | Hold for crosscut → backhand → heavy combo |
-| Shift / K | Dodge roll |
-| L / right click | Hold to block |
-| Mouse | Aim; movement determines facing without the mouse |
-| E | Use the chest, shrine or north exit |
-| P / Esc | Pause |
-| 1 / 2 / 3 | Choose a relic |
-| Enter | Start or restart |
+| J | Hold primary attack / cast |
+| K | Hold guard |
+| Space | Dodge roll |
+| Q / E | First / second equipped skill |
+| R | Drink healing flask |
+| F | Use a nearby door, event, chest, hearth, keeper or stair |
+| I | Equipment, skills and journal |
+| Escape | Pause or close a page |
 
-On Android, touch and drag anywhere on the arena to reveal the floating eight-direction D-pad. Its base follows a long drag, so direction can be reversed near the current thumb position. Releasing or cancelling hides it; the next touch chooses a fresh origin. Sword, shield, roll and hand buttons overlay the lower right corner. Movement and actions accept separate simultaneous fingers. Pause and backgrounding release held inputs. The pause menu includes sound control.
+`atelier.html` is a standalone gallery of all 63 characters. Choose a character, facing and animation, or pause the preview. The in-game bestiary also previews every enemy's idle, walk and attack.
 
-## Artwork
+## Pixel artwork
 
-Every game sprite, architectural prop, flame, control icon and launcher icon is authored as pixel grids and drawing primitives through **Aseprite AI Artist MCP 0.8.2**, using Aseprite **1.3.18.6-dev**. Editable layered sources are included. Art generation deliberately uses a headless Aseprite session for batch assets.
+Graphics are drawn as native pixel clusters, keyed poses and drawing primitives through **MCP Aseprite**. The layered `.aseprite` documents are editable. Character frames are redrawn from authored keys; they are not generated by rotating or stretching a portrait. Large enemies use their own native resolution.
 
-The knight has a ventilated great helm, red plume, gorget, layered plate armour, gold tabard, articulated knees and greaves, leather boots and a bevelled heater shield. The longsword uses two steel planes, a brass crossguard and a triangular point that tapers to one pixel. The same construction follows its keyed attack poses.
+| Character set | Native cell | Frames |
+|---|---|---:|
+| Each of three heroes | 96 × 96 | 240 |
+| Ordinary enemies | 96 × 96 | 128 each |
+| Bosses and brutes | 144 × 112 | 128 each |
+| Total character frames | Four facings | 8,400 |
 
-The enemies contrast in silhouette and movement: a rust-helmeted skeleton with exposed ribs and a spiked wooden club, a hooded spectral caster, and a broad olive ogre with tusks, scars, leather wraps and heavy fists. Walks use contact, down, passing and lift poses. Attacks have anticipation, impact and recovery. Feet, hands and held equipment remain connected.
+Elian has independently designed hood, face, mantle, sleeves, split robe, belt, boots, grimoire, staff, casting, dodge and fallen poses. Enemy heads replace the original head rather than being layered above it. Native-size neck, shoulder and pelvis masses connect the body parts. The cast includes quadrupeds, spiders, a leech, moths, living books, stone and bone constructs, a mounted marshal and other distinct boss silhouettes. Wraiths and winged creatures deliberately hover; other actors retain a common foot plane and contact shadow.
 
-| Character | Cell | Frames | Clips |
-|---|---|---:|---|
-| Knight | 96×96 | 240 | Four facings × idle 4, walk 8, crosscut 9, backhand 9, heavy 9, roll 6, block 4, hurt 4, death 7 |
-| Skeleton / hollow | 96×96 | 128 | Four facings × idle 4, walk 8, attack 9, hurt 4, death 7 |
-| Ogre / warden | 144×112 | 128 | Four facings × idle 4, walk 8, attack 9, hurt 4, death 7 |
-| Wraith / wisp | 64×64 | 32 | Idle 4, walk 8, cast 9, hurt 4, death 7 |
+The individual review covers **60 enemies in 540 key poses**, with Aseprite-exported opaque-pixel paths from head to torso. It found and corrected disconnected anatomy, then passed with zero remaining connectivity failures. Filmstrips and onion-skin views supplement the numerical checks. These checks do not substitute for artistic judgement.
 
-There are **528 character frames**, 14 control/relic icons and 11 editable Aseprite sources. The wraith deliberately floats. Grounded actors share a floor contact; the ogre is drawn at its own native resolution.
+![Revised heroes](previews/vespergrave-heroes.png)
 
-![Character lineup](previews/cast-design.png)
+Other assets include ten 360 × 640 room illustrations, 40 architectural headers, 160 biome-specific floor and furnishing tiles, ten large arena seals, 80 original furnishing variants, ten event objects and ten event illustrations, 100 item icons, nine skill icons, six cinematic panels, animated flames, touch icons and the launcher artwork. Atlas packing keeps every texture below 4096 pixels on either edge. Enemy atlases from earlier biomes are released from the image cache as the descent advances.
 
-## The slice
+![Architectural variants and event objects](previews/level-art-review.png)
 
-One detailed stone hall, with a 640×360 desktop layout and a newly authored 360-pixel-wide portrait layout. Portrait architecture uses height-adaptive floor bands, a complete north gate, jade lancets, crimson banners, oath mosaic, ivy, tomb, books, shrine, chest and animated braziers. Furniture, collisions, formations and interactions use the compact layout's own coordinates. Three encounters lead to the ogre and the north exit. Six relics modify a run, with stamina, combo attacks, blocking, rolling, hitstop, knockback, coins, healing, death and restart. Sound is synthesized locally.
+[Compare the twelve rooms on Android](previews/level-gallery.html). Bridge and cistern banks grow to fit the viewport while retaining the original pixel size.
 
-This is one arena with three encounters. Run variation comes from enemy formations and relic choices. It does not yet generate multiple dungeon rooms or save progression between runs.
+## Narration
 
-## Files
+Thirty English clips are bundled offline. Deepgram Aura 2 voices Draco, Pandora and Orpheus read the original script in `game/content.mjs`. Voice volume and captions are available in settings. `assets/vo/manifest.json` records text, voice, length and SHA-256 for each clip.
 
-- `index.html`: standalone game with desktop and portrait layouts.
-- `atelier.html`: standalone animation viewer.
-- `releases/CinderVow-2.2.0.apk`: signed universal Android release, Android 8.0+.
-- `android/`: Gradle wrapper, native offline WebView host and instrumentation test.
-- `art/*.aseprite`: eleven editable layered sources, including the compact portrait chamber.
-- `assets/`: PNG atlases, timing, animation tags, pivots and individual UI icons.
-- `previews/cast-design.png`: MCP character lineup.
-- `previews/knight-sword-detail.png`: pointed sword close-up.
-- `previews/*-detail.png`, `*.gif`, `*-attack-film.png`: character and animation reviews.
-- `previews/anchor-report.json`: actual exported-pixel contact and connection checks.
-- `previews/verification.json`: gameplay checks and three complete seeded runs.
-- `art/provenance.json`: MCP operation counts and asset checksums.
-- `references/`: local reference images and the design features adapted from them.
-- `game/`, `tools/`: authored pixel drawings, game source, build and verification tools.
+To regenerate narration, set `DEEPGRAM_API_KEY` only in the build environment and run `node tools/generate-vo.mjs`. The key is not included in the game, APK, source files or manifest. Existing matching clips are reused.
 
-Untrimmed pivots: knight/skeleton `(48,76)`, ogre `(64,96)`, wraith `(32,58)`, props `(32,70)`. JSON atlas indices begin at zero; MCP frame numbers begin at one.
+## Build and verify
 
-## Build and test
-
-Requires Node.js 20.11 or newer for source builds; no npm dependencies are needed for the web game.
+Node.js 20.11+ is required; the web game has no npm dependencies.
 
 ```sh
 npm run build
@@ -82,12 +79,29 @@ npm test
 npm start
 ```
 
-Android requires JDK 17+, SDK platform 35 and Android build tools. See [android/README.md](android/README.md). The release signing key is kept outside this repository. The GitHub Actions workflow verifies the web game and builds a debug APK; the committed release APK is signed separately.
+The checks cover all 100 floors under four seeds, room graph reachability and reciprocal doors, eight route plans and twelve distinct room layouts, furnishing routes at four viewport heights, event costs and one-time rewards, multi-wave encounters, timed trial warnings and persistence, progression to the ending, actual primary combat, guard, dodge, every boss pattern, all nine skills, equipment, item rolls, revisiting rooms, saves, tutorial controls and death. The shipping renderer is exercised with every one of the 8,400 source frames. Touch tests cover independent pointers and one-shot skill/heal input.
 
-`npm test` checks 496 authored ground contacts, all 412 live grounded body/gear connections, pointed idle swords in four facings, animation tags, combo timing, 14 gameplay cases, floating multi-pointer touch behaviour and every one of the 528 poses through the shipping renderer. Three desktop and twelve portrait seeded playthroughs exercise ordinary game rules; at least one run at each tested portrait height completes all encounters and the exit. Android instrumentation verifies real WebView initialization, English UI, full viewport coverage, the complete compact room, responsive resizing, button bounds, floating origin, flexible dragging, two-pointer movement/attack, cancellation and pause.
+Android instrumentation verifies the actual offline WebView, English UI, full portrait viewport, opening audio playback, floating movement, simultaneous attack, cancellation, mage skill, equipment, animated bestiary, settings persistence, Continue after activity recreation and responsive resizing. A second test previews all twelve room layouts, chooses an event boon, starts the bell waves and verifies a timed trial through pause and Continue. Reports and screenshots are in `previews/android-vespergrave/`. Room/event preview fixtures place the player directly at the feature being reviewed.
 
-MCP review checks palette, layers, animation, export readiness, stray pixels and effect placement. There are no errors. Style notes about outlines on individual material layers are accepted: metal, cloth, bone and glow use selective edges, while the composite structure is checked separately. Attack filmstrips and onion skins are reviewed visually; automatic scores are not treated as a measure of artistic taste.
+```sh
+node tools/mcp-service.mjs
+npm run art
+node tools/package.mjs
+```
 
-To regenerate art on the original machine, run `node tools/mcp-service.mjs`, then `npm run art` and `node tools/export-previews.mjs`. The MCP checkout is at `C:/Isprite Asset/aseprite-ai-artist`, and Aseprite is at `C:/Isprite Asset/tools/aseprite-build/bin/aseprite.exe`. Adapt those paths for another machine. The complete session audit stays local at `art/mcp-audit.jsonl` and is excluded from Git and delivery archives.
+Art regeneration needs the local MCP bridge and Aseprite. The original installation is `C:/Isprite Asset/aseprite-ai-artist` with `C:/Isprite Asset/tools/aseprite-build/bin/aseprite.exe`. Adapt the local paths on another machine. A headless session was intentionally chosen for batch drawing. `art/provenance.json` contains operation counts and output hashes; the full local audit log is excluded from delivery.
 
-The `pixel5x7` bitmap font comes from Aseprite AI Artist's font knowledge, CC0-1.0. Reference images were found in the user's local asset folder; game sprites are newly authored at game resolution, rather than resized reference portraits.
+## Project files
+
+- `game/content.mjs`: the complete English catalogue, lore and narration script.
+- `game/campaign.mjs`: generation, combat, progression, equipment and validated saves.
+- `game/presentation.mjs`, `game/campaign.css`: portrait renderer, input, menus, cinematic and audio.
+- `tools/draw-campaign-*.mjs`, `tools/mage-design.mjs`: reproducible MCP drawings and animation keys.
+- `art/`, `assets/`: editable documents, final atlases, frame tags, native foot anchors and offline audio.
+- `previews/cast-anatomy-report.json`, `campaign-asset-report.json`, `campaign-test-report.json`: verification evidence.
+- `android/`: offline Android host, Gradle project and instrumentation test.
+- `releases/Vespergrave-3.0.0.apk`: signed universal release for Android 8.0+.
+
+The Android package and signing certificate are retained from Cinder Vow so this release can update version 2.2.0. Earlier slice sources and releases remain as project history. Vespergrave's shipped game uses the campaign engine.
+
+The pixel5x7 bitmap font supplied by Aseprite AI Artist's font knowledge is CC0-1.0. Vespergrave's lore, characters, illustration and score are original; third-party game artwork and music are not included.

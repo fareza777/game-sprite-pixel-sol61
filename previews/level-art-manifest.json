@@ -1,0 +1,43 @@
+{
+  "kit": [
+    "pit",
+    "water",
+    "lava",
+    "dais",
+    "rune",
+    "pressure",
+    "sarcophagus",
+    "bookcase",
+    "roots",
+    "machine",
+    "broken-column",
+    "debris",
+    "well",
+    "obelisk",
+    "carpet",
+    "grate"
+  ],
+  "headers": [
+    "cloister",
+    "crypt",
+    "broken",
+    "throne"
+  ],
+  "events": [
+    "blood-altar",
+    "cursed-cache",
+    "lost-pilgrim",
+    "oath-shrine",
+    "sealed-library",
+    "trap-vault",
+    "wandering-smith",
+    "shadow-duel",
+    "restless-bell",
+    "memory-vow"
+  ],
+  "kitFrames": 160,
+  "headerFrames": 40,
+  "eventProps": 10,
+  "eventIllustrations": 10,
+  "source": "MCP Aseprite, authored pixel primitives"
+}

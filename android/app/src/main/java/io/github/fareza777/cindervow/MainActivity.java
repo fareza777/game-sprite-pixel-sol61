@@ -1,9 +1,12 @@
 package io.github.fareza777.cindervow;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.View;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
@@ -13,6 +16,7 @@ import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.webkit.JavascriptInterface;
 import androidx.webkit.WebViewAssetLoader;
 import java.io.ByteArrayInputStream;
 
@@ -28,13 +32,14 @@ public final class MainActivity extends Activity {
         webView.setBackgroundColor(Color.rgb(11,16,27));
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
-        settings.setDomStorageEnabled(false);
+        settings.setDomStorageEnabled(true);
         settings.setAllowFileAccess(false);
         settings.setAllowContentAccess(false);
         settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
-        settings.setMediaPlaybackRequiresUserGesture(true);
+        settings.setMediaPlaybackRequiresUserGesture(false);
         settings.setSupportZoom(false);
         WebView.setWebContentsDebuggingEnabled(BuildConfig.DEBUG);
+        webView.addJavascriptInterface(new NativeActions(), "VespergraveNative");
         WebViewAssetLoader loader = new WebViewAssetLoader.Builder()
             .addPathHandler("/assets/", new WebViewAssetLoader.AssetsPathHandler(this)).build();
         webView.setWebViewClient(new WebViewClient() {
@@ -49,6 +54,37 @@ public final class MainActivity extends Activity {
         hideSystemBars();
         webView.loadUrl("https://appassets.androidplatform.net/assets/index.html?mobile=1");
     }
+    private boolean trustedPage() {
+        return webView != null && webView.getUrl() != null
+            && webView.getUrl().startsWith("https://appassets.androidplatform.net/assets/index.html");
+    }
+    private final class NativeActions {
+        @JavascriptInterface public void share(String text) {
+            runOnUiThread(() -> {
+                if (!trustedPage() || text == null || text.length() > 2000) return;
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Vespergrave: The Bell Below");
+                intent.putExtra(Intent.EXTRA_TEXT, text);
+                startActivity(Intent.createChooser(intent, "Share Vespergrave"));
+            });
+        }
+        @JavascriptInterface public void openProject(boolean feedback) {
+            runOnUiThread(() -> {
+                if (!trustedPage()) return;
+                String url = "https://github.com/fareza777/game-sprite-pixel-sol61" + (feedback ? "/issues" : "");
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+            });
+        }
+        @JavascriptInterface public void haptic(int milliseconds) {
+            runOnUiThread(() -> {
+                if (!trustedPage()) return;
+                Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                if (vibrator != null && vibrator.hasVibrator())
+                    vibrator.vibrate(VibrationEffect.createOneShot(Math.max(5, Math.min(30, milliseconds)), VibrationEffect.DEFAULT_AMPLITUDE));
+            });
+        }
+    }
     private void hideSystemBars() {
         if (android.os.Build.VERSION.SDK_INT >= 30) {
             getWindow().setDecorFitsSystemWindows(false);
@@ -62,6 +98,6 @@ public final class MainActivity extends Activity {
     @Override protected void onPause() { if (webView != null) { webView.evaluateJavascript("window.CinderVow && window.CinderVow.pauseForBackground()", null); webView.onPause(); webView.pauseTimers(); } super.onPause(); }
     @Override protected void onResume() { super.onResume(); if (webView != null) { webView.onResume(); webView.resumeTimers(); } }
     @Override public void onBackPressed() { webView.evaluateJavascript("window.CinderVow ? window.CinderVow.back() : 'exit'", result -> { if ("\"exit\"".equals(result)) finish(); }); }
-    @Override protected void onDestroy() { if (webView != null) { webView.stopLoading(); webView.destroy(); webView = null; } super.onDestroy(); }
+    @Override protected void onDestroy() { if (webView != null) { webView.removeJavascriptInterface("VespergraveNative"); webView.stopLoading(); webView.destroy(); webView = null; } super.onDestroy(); }
     public WebView gameView() { return webView; }
 }

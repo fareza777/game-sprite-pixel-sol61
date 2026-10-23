@@ -18,19 +18,20 @@ export const P={
   x:'#353741', X:'#555862', M:'#7e838b', N:'#b1b5b7', C:'#e7e6d8',
   '0':'#171923','1':'#242d1b','2':'#3c4726','3':'#596735','4':'#798742','5':'#9eac53','6':'#c3cb72','7':'#eee29d','8':'#70654f','9':'#a29476',P:'#d0c4a2',i:'#eee4cd'
 };
-export function rect(x,y,width,height,c,fill=c){return {kind:'rect',rect:{x,y,width,height},color:P[c]??c,...(fill?{fill:P[fill]??fill}:{})};}
-export function line(x,y,x2,y2,c,thickness=1){return {kind:'line',from:{x,y},to:{x:x2,y:y2},color:P[c]??c,thickness};}
-export function ellipse(x,y,width,height,c,fill){return {kind:'ellipse',rect:{x,y,width,height},color:P[c]??c,...(fill?{fill:P[fill]??fill}:{})};}
-export function poly(points,c,fill){return {kind:'polyline',points:points.map(([x,y])=>({x,y})),closed:!!fill,color:P[c]??c,...(fill?{fill:P[fill]??fill}:{})};}
+export function rect(x,y,width,height,c,fill=c){return {kind:'rect',rect:{x:Math.round(x),y:Math.round(y),width:Math.round(width),height:Math.round(height)},color:P[c]??c,...(fill?{fill:P[fill]??fill}:{})};}
+export function line(x,y,x2,y2,c,thickness=1){return {kind:'line',from:{x:Math.round(x),y:Math.round(y)},to:{x:Math.round(x2),y:Math.round(y2)},color:P[c]??c,thickness};}
+export function ellipse(x,y,width,height,c,fill){return {kind:'ellipse',rect:{x:Math.round(x),y:Math.round(y),width:Math.round(width),height:Math.round(height)},color:P[c]??c,...(fill?{fill:P[fill]??fill}:{})};}
+export function poly(points,c,fill){return {kind:'polyline',points:points.map(([x,y])=>({x:Math.round(x),y:Math.round(y)})),closed:!!fill,color:P[c]??c,...(fill?{fill:P[fill]??fill}:{})};}
 export function grid(x,y,rows,legend=P){
   const rr=typeof rows==='string'?rows.split('\n'):rows;
   const width=Math.max(...rr.map(r=>r.length));
-  return {kind:'grid',x,y,rows:rr.map(r=>r.padEnd(width,'.')),legend,transparent:'skip'};
+  const used=new Set(rr.join(''));const colors=Object.fromEntries(Object.entries(legend).filter(([key])=>used.has(key)));
+  return {kind:'grid',x,y,rows:rr.map(r=>r.padEnd(width,'.')),legend:colors,transparent:'skip'};
 }
 export async function sprite(name,w,h,layers){
   const made=data(await call('sprite_manage',{op:'new',width:w,height:h,colorMode:'rgb'}));
   // Read the actual generated layer name before renaming it.
-  const current=data(await call('sprite_info'));
+  const current=data(await call('sprite_info',made.id!==undefined?{sprite:'#'+made.id}:{}));
   const id='#'+current.id;
   await call('palette',{sprite:id,op:'set',colors:['#00000000',...Object.values(P).filter(Boolean)],replace:true});
   await call('layer',{sprite:id,op:'rename',name:current.layers[0].name,newName:layers[0]});
@@ -44,7 +45,7 @@ export async function finish(id,name,tags,durations,{sheet=true}={}){
   if(durations?.length) await call('frame',{sprite:id,op:'set_duration',durations});
   for(const [name,from,to] of tags) await call('tag',{sprite:id,op:'create',name,from,to,direction:'forward'});
   await call('sprite_manage',{sprite:id,op:'save_as',path:path.join(ROOT,'art',name+'.aseprite')});
-  if(sheet) await call('export',{sprite:id,op:'spritesheet',path:path.join(ROOT,'assets',name+'.png'),sheetType:'rows',padding:0,trim:false});
+  if(sheet) await call('export',{sprite:id,op:'spritesheet',path:path.join(ROOT,'assets',name+'.png'),sheetType:'packed',padding:0,trim:false});
   else await call('export',{sprite:id,op:'png',path:path.join(ROOT,'assets',name+'.png'),frame:1});
   const check=await call('validate',{sprite:id,checks:['palette','layers','animation','export_readiness']});
   fs.writeFileSync(path.join(ROOT,'previews',name+'-validation.json'),JSON.stringify(check.structuredContent??check,null,2));

@@ -1,0 +1,90 @@
+{
+  "passed": 21,
+  "total": 21,
+  "results": [
+    {
+      "name": "The catalogue contains 60 species, 10 unique bosses, 100 items and 3 complete classes",
+      "passed": true
+    },
+    {
+      "name": "Every generated room is reachable, reciprocal and contains only its biome encounters",
+      "passed": true
+    },
+    {
+      "name": "Floor routes, loops, room architecture and all ten events vary reproducibly",
+      "passed": true
+    },
+    {
+      "name": "Instant event choices enforce their costs and apply permanent run boons only once",
+      "passed": true
+    },
+    {
+      "name": "Ambushes, the empowered duel and the three-wave bell award their offerings after victory",
+      "passed": true
+    },
+    {
+      "name": "The timed vault has real warnings, sealed exits and a continuing timer after save and resize",
+      "passed": true
+    },
+    {
+      "name": "An interrupted bell wave restores its living enemies and never duplicates its reward",
+      "passed": true
+    },
+    {
+      "name": "Room furnishing preserves a clear route to each available door at four portrait heights",
+      "passed": true
+    },
+    {
+      "name": "One hundred floors descend in order and enter an ending after the tenth boss",
+      "passed": true
+    },
+    {
+      "name": "Melee strikes respect facing, consume stamina and do not hit the same target twice",
+      "passed": true
+    },
+    {
+      "name": "The seer fires a real damaging projectile after anticipation",
+      "passed": true
+    },
+    {
+      "name": "Guard direction and dodge invulnerability reject damage only while valid",
+      "passed": true
+    },
+    {
+      "name": "All ordinary species and all boss patterns produce finite, telegraphed attacks",
+      "passed": true
+    },
+    {
+      "name": "Each skill spends focus, respects cooldowns and acts on the encounter",
+      "passed": true
+    },
+    {
+      "name": "Equipment changes statistics and cannot be salvaged while worn or used by another class",
+      "passed": true
+    },
+    {
+      "name": "Seeded item quality and affixes reproduce and all 100 items have usable data",
+      "passed": true
+    },
+    {
+      "name": "Leaving and revisiting a room preserves enemy health and chest flags",
+      "passed": true
+    },
+    {
+      "name": "Saving restores progress, gear, skill ranks and resized positions without spawning foes again",
+      "passed": true
+    },
+    {
+      "name": "Corrupt, dead and foreign save data is rejected",
+      "passed": true
+    },
+    {
+      "name": "The six tutorial steps require their corresponding real controls",
+      "passed": true
+    },
+    {
+      "name": "Death finishes once and a completed run never serializes as resumable",
+      "passed": true
+    }
+  ]
+}

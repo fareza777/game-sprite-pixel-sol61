@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+const file='game/presentation.mjs';let source=fs.readFileSync(file,'utf8');
+const edits=[
+ ['const anchor=ASSETS[name].meta.anchor??{x:f.w/2,y:f.h};x.drawImage(img,f.x,f.y,f.w,f.h,Math.round(size/2-anchor.x),Math.round(size*.84-anchor.y),f.w,f.h);','const anchor=ASSETS[name].meta.anchor??{x:f.w/2,y:f.h},scale=name.startsWith("hero-")?size/88:1;x.drawImage(img,f.x,f.y,f.w,f.h,Math.round(size/2-anchor.x*scale),Math.round(size*.92-anchor.y*scale),Math.round(f.w*scale),Math.round(f.h*scale));'],
+ ['speak(id,onEnd=null){this.stopVoice();','speak(id,onEnd=null){this.stopVoice();app.dataset.narration=id;app.dataset.narrationState="loading";'],
+ ['this.voice=voice;voice.volume=settings.voice;voice.onended=()=>{this.voice=null;onEnd?.();};','this.voice=voice;voice.volume=settings.voice;voice.onplaying=()=>{app.dataset.narrationState="playing";};voice.onended=()=>{app.dataset.narrationState="ended";this.voice=null;onEnd?.();};'],
+ ["const reach=e.move==='charge'?155:def.boss?70:def.behavior==='lancer'?64:43,a=e.aim,wide=e.move==='charge'?11:24;c.beginPath();c.moveTo(x-Math.sin(a)*wide,y+Math.cos(a)*wide);c.lineTo(x+Math.cos(a)*reach-Math.sin(a)*wide,y+Math.sin(a)*reach+Math.cos(a)*wide);c.lineTo(x+Math.cos(a)*reach+Math.sin(a)*wide,y+Math.sin(a)*reach-Math.cos(a)*wide);c.lineTo(x+Math.sin(a)*wide,y-Math.cos(a)*wide);c.closePath();c.fill();c.stroke();", "const reach=e.move==='charge'?94:def.boss?70:def.behavior==='lancer'?64:43,a=e.aim,wide=e.radius+15;c.beginPath();if(e.move==='charge'){c.moveTo(x-Math.sin(a)*wide,y+Math.cos(a)*wide);c.lineTo(x+Math.cos(a)*reach-Math.sin(a)*wide,y+Math.sin(a)*reach+Math.cos(a)*wide);c.lineTo(x+Math.cos(a)*reach+Math.sin(a)*wide,y+Math.sin(a)*reach-Math.cos(a)*wide);c.lineTo(x+Math.sin(a)*wide,y-Math.cos(a)*wide);}else{c.moveTo(x,y);c.arc(x,y,reach,a-Math.acos(-.1),a+Math.acos(-.1));}c.closePath();c.fill();c.stroke();"],
+ ['ctx.ellipse(180,b.top+115+32,16,6,0,0,TAU)','ctx.ellipse(180,b.top+190+32,16,6,0,0,TAU)'],
+ ['const x=180,y=b.top+150+32','const x=180,y=b.top+155+32'],
+ ["if(t.step===1){const x=180", "if(t.step===2){ctx.fillStyle='#ae594330';ctx.strokeStyle='#ca7a61';ctx.beginPath();ctx.arc(game.player.x,game.player.y+32,36+Math.sin(game.time*3)*4,0,TAU);ctx.fill();ctx.stroke();}if(t.step===1){const x=180"]
+];
+for(const [before,after]of edits){if(!source.includes(before))throw Error('Expected presentation passage is absent: '+before.slice(0,80));source=source.replace(before,after);}fs.writeFileSync(file,source);

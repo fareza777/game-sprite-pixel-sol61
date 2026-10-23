@@ -25,5 +25,5 @@ jobs:
         run: chmod +x gradlew && ./gradlew assembleDebug --console=plain
       - uses: actions/upload-artifact@v7.0.2
         with:
-          name: CinderVow-debug
+          name: Vespergrave-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk

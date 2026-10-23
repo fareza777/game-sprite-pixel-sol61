@@ -1,15 +1,16 @@
-# Cinder Vow 2.2.0
+# Vespergrave 3.0.0
 
-[Download the signed release APK](CinderVow-2.2.0.apk?raw=true)
+[Download the signed Android APK](Vespergrave-3.0.0.apk?raw=true)
 
-- Android 8.0 and newer; universal APK, portrait orientation.
-- Full-screen arena with a complete compact portrait chamber and height-adaptive layout.
-- Floating eight-direction D-pad appears at the touch point, follows a long drag, and hides on release.
-- English UI, offline dungeon and independent action buttons overlaid in the corner.
-- Pixel launcher and controls drawn through MCP Aseprite.
-- Release signature verified with Android's `apksigner`.
-- SHA-256 checksum in `SHA256SUMS`.
+- Android 8.0+, universal APK, full portrait viewport and floating touch D-pad.
+- Offline campaign: 100 procedural floors, ten biomes, three heroes, sixty enemies and ten bosses.
+- Eight floor route plans, twelve room layouts and ten interactive events with persistent choices and trials.
+- All pixel artwork authored through MCP Aseprite. Thirty English narration clips are bundled offline.
+- Signed with the existing Cinder Vow certificate; an update from 2.2.0 was installed successfully on the Android 15 test emulator.
+- Release startup, embedded game hash and APK signature verified. Two native tests cover gameplay, audio, controls, equipment, persistence, all room layouts and event UI.
 
-The Android 15 emulator instrumentation test checks offline startup, English UI, full viewport coverage, complete room, responsive resizing, floating D-pad origin/following/hiding, control bounds, simultaneous movement and attack, cancellation and pause. See `previews/android-verification.json`, `previews/android-portrait.png` and `previews/android-floating.png` in the repository.
+Size: 4.95 MiB. SHA-256: `497ba91f3bd2a2ad74dee8ee82a8b0d3011c7dc4051ff4e45a73e5de60a0d92c`.
 
-Signed with the same certificate as [2.1.0](CinderVow-2.1.0.apk?raw=true); the new APK can update the previous installation.
+[Verification report](Vespergrave-3.0.0-verification.json) · [Checksums](SHA256SUMS) · [Build instructions](../android/README.md) · [Room review gallery](../previews/level-gallery.html)
+
+Earlier releases remain available: [Cinder Vow 2.2.0](CinderVow-2.2.0.apk?raw=true) and [2.1.0](CinderVow-2.1.0.apk?raw=true).
