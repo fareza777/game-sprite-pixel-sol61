@@ -1,0 +1,38 @@
+{
+  "op": "ascii",
+  "sprite": "wisp.aseprite",
+  "width": 18,
+  "height": 17,
+  "text": "........xx........\n.......xyyx.......\n......xyzzyx......\n.....xyzyyyyx.....\n....xyzyxxyyyx....\n...xyzyxLLxyyyx...\n..xyzyxLLLLxyyyx..\n.xyzyxLLLLLLxyyyx.\nxyzyxLLLLLLLLxyyyx\nxyyxLLz0LL0zLLxyyx\nxyyxLLLxLLxLLLxyyx\nxyyyxLLLxxLLLxyyyx\n.xyyyxLLLLLLxyyyx.\n..xyyyxLLxxxyyyx..\nxyyyxyyyxxyyyyxyyy\nyyyyxxyyyyyyxxxyyy\nyyyyxzxxyyxxzyxyyy",
+  "legend": {
+    "0": "#d2e9c0",
+    "x": "#2e6566",
+    "y": "#58a79b",
+    "z": "#9bd5b0",
+    "L": "#0b101b"
+  },
+  "offPalette": [],
+  "gridRows": [
+    "........xx........",
+    ".......xyyx.......",
+    "......xyzzyx......",
+    ".....xyzyyyyx.....",
+    "....xyzyxxyyyx....",
+    "...xyzyxLLxyyyx...",
+    "..xyzyxLLLLxyyyx..",
+    ".xyzyxLLLLLLxyyyx.",
+    "xyzyxLLLLLLLLxyyyx",
+    "xyyxLLz0LL0zLLxyyx",
+    "xyyxLLLxLLxLLLxyyx",
+    "xyyyxLLLxxLLLxyyyx",
+    ".xyyyxLLLLLLxyyyx.",
+    "..xyyyxLLxxxyyyx..",
+    "xyyyxyyyxxyyyyxyyy",
+    "yyyyxxyyyyyyxxxyyy",
+    "yyyyxzxxyyxxzyxyyy"
+  ],
+  "origin": {
+    "x": 23,
+    "y": 13
+  }
+}

@@ -1,0 +1,11050 @@
+{
+  "knight": {
+    "width": 96,
+    "height": 96,
+    "pivot": {
+      "x": 48,
+      "y": 76
+    },
+    "frames": [
+      {
+        "frame": 1,
+        "tag": "s-idle",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 2,
+        "tag": "s-idle",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 3,
+        "tag": "s-idle",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 4,
+        "tag": "s-idle",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 5,
+        "tag": "s-walk",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 71
+          }
+        ],
+        "hand": [
+          32,
+          51
+        ],
+        "tip": [
+          32,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 6,
+        "tag": "s-walk",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 41,
+            "y": 75
+          },
+          {
+            "x": 54,
+            "y": 70
+          }
+        ],
+        "hand": [
+          33,
+          52
+        ],
+        "tip": [
+          33,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 7,
+        "tag": "s-walk",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 72
+          }
+        ],
+        "hand": [
+          34,
+          51
+        ],
+        "tip": [
+          34,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 8,
+        "tag": "s-walk",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 44,
+            "y": 73
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          34,
+          50
+        ],
+        "tip": [
+          34,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 9,
+        "tag": "s-walk",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 41,
+            "y": 71
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          34,
+          51
+        ],
+        "tip": [
+          34,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 10,
+        "tag": "s-walk",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 43,
+            "y": 70
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          52
+        ],
+        "tip": [
+          33,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 11,
+        "tag": "s-walk",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 44,
+            "y": 72
+          },
+          {
+            "x": 54,
+            "y": 75
+          }
+        ],
+        "hand": [
+          32,
+          51
+        ],
+        "tip": [
+          32,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 12,
+        "tag": "s-walk",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 41,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 73
+          }
+        ],
+        "hand": [
+          32,
+          50
+        ],
+        "tip": [
+          32,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 13,
+        "tag": "s-attack",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          32,
+          47
+        ],
+        "tip": [
+          31,
+          24
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 14,
+        "tag": "s-attack",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          31,
+          31
+        ],
+        "tip": [
+          27,
+          10
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 15,
+        "tag": "s-attack",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          39,
+          29
+        ],
+        "tip": [
+          49,
+          11
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 16,
+        "tag": "s-attack",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 38,
+            "y": 72
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          53,
+          55
+        ],
+        "tip": [
+          77,
+          71
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 17,
+        "tag": "s-attack",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 38,
+            "y": 72
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          64,
+          54
+        ],
+        "tip": [
+          80,
+          74
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 18,
+        "tag": "s-attack",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 72
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          59
+        ],
+        "tip": [
+          62,
+          87
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 19,
+        "tag": "s-attack",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          50,
+          57
+        ],
+        "tip": [
+          42,
+          80
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 20,
+        "tag": "s-attack",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          36,
+          53
+        ],
+        "tip": [
+          32,
+          31
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 21,
+        "tag": "s-attack",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 22,
+        "tag": "s-attack-backhand",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 23,
+        "tag": "s-attack-backhand",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          54,
+          34
+        ],
+        "tip": [
+          69,
+          15
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 24,
+        "tag": "s-attack-backhand",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          59,
+          36
+        ],
+        "tip": [
+          81,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 25,
+        "tag": "s-attack-backhand",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 38,
+            "y": 72
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          46,
+          56
+        ],
+        "tip": [
+          26,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 26,
+        "tag": "s-attack-backhand",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 38,
+            "y": 72
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          32,
+          58
+        ],
+        "tip": [
+          12,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 27,
+        "tag": "s-attack-backhand",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 72
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          31,
+          60
+        ],
+        "tip": [
+          30,
+          87
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 28,
+        "tag": "s-attack-backhand",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          35,
+          55
+        ],
+        "tip": [
+          25,
+          74
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 29,
+        "tag": "s-attack-backhand",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          34,
+          52
+        ],
+        "tip": [
+          31,
+          30
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 30,
+        "tag": "s-attack-backhand",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 31,
+        "tag": "s-attack-heavy",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 32,
+        "tag": "s-attack-heavy",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          35,
+          29
+        ],
+        "tip": [
+          31,
+          9
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 33,
+        "tag": "s-attack-heavy",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          44,
+          27
+        ],
+        "tip": [
+          46,
+          5
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 34,
+        "tag": "s-attack-heavy",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 38,
+            "y": 72
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          47,
+          43
+        ],
+        "tip": [
+          51,
+          70
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 35,
+        "tag": "s-attack-heavy",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 38,
+            "y": 72
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          49,
+          55
+        ],
+        "tip": [
+          51,
+          91
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 36,
+        "tag": "s-attack-heavy",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 72
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          49,
+          59
+        ],
+        "tip": [
+          50,
+          92
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 37,
+        "tag": "s-attack-heavy",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          42,
+          56
+        ],
+        "tip": [
+          40,
+          80
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 38,
+        "tag": "s-attack-heavy",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          35,
+          53
+        ],
+        "tip": [
+          32,
+          32
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 39,
+        "tag": "s-attack-heavy",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 40,
+        "tag": "s-roll",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 61,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 41,
+        "tag": "s-roll",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 42,
+        "tag": "s-roll",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 43,
+        "tag": "s-roll",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 44,
+        "tag": "s-roll",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 45,
+        "tag": "s-roll",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 61,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 46,
+        "tag": "s-block",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          52
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 47,
+        "tag": "s-block",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          52
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 48,
+        "tag": "s-block",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          52
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 49,
+        "tag": "s-block",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          52
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 50,
+        "tag": "s-hurt",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 51,
+        "tag": "s-hurt",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 52,
+        "tag": "s-hurt",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 53,
+        "tag": "s-hurt",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 54,
+        "tag": "s-death",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 55,
+        "tag": "s-death",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 56,
+        "tag": "s-death",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 57,
+        "tag": "s-death",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 58,
+        "tag": "s-death",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 59,
+        "tag": "s-death",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 60,
+        "tag": "s-death",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 61,
+        "tag": "n-idle",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 62,
+        "tag": "n-idle",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 63,
+        "tag": "n-idle",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 64,
+        "tag": "n-idle",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 65,
+        "tag": "n-walk",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 71
+          }
+        ],
+        "hand": [
+          61,
+          50
+        ],
+        "tip": [
+          64,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 66,
+        "tag": "n-walk",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 41,
+            "y": 75
+          },
+          {
+            "x": 54,
+            "y": 70
+          }
+        ],
+        "hand": [
+          62,
+          51
+        ],
+        "tip": [
+          65,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 67,
+        "tag": "n-walk",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          63,
+          50
+        ],
+        "tip": [
+          66,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 68,
+        "tag": "n-walk",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 44,
+            "y": 73
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          63,
+          49
+        ],
+        "tip": [
+          66,
+          25
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 69,
+        "tag": "n-walk",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 41,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          63,
+          50
+        ],
+        "tip": [
+          66,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 70,
+        "tag": "n-walk",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          51
+        ],
+        "tip": [
+          65,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 71,
+        "tag": "n-walk",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 44,
+            "y": 72
+          },
+          {
+            "x": 54,
+            "y": 75
+          }
+        ],
+        "hand": [
+          61,
+          50
+        ],
+        "tip": [
+          64,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 72,
+        "tag": "n-walk",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 41,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          61,
+          49
+        ],
+        "tip": [
+          64,
+          25
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 73,
+        "tag": "n-attack",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          48
+        ],
+        "tip": [
+          66,
+          25
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 74,
+        "tag": "n-attack",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          64,
+          31
+        ],
+        "tip": [
+          70,
+          9
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 75,
+        "tag": "n-attack",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          57,
+          29
+        ],
+        "tip": [
+          45,
+          10
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 76,
+        "tag": "n-attack",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 59,
+            "y": 72
+          }
+        ],
+        "hand": [
+          42,
+          34
+        ],
+        "tip": [
+          23,
+          13
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 77,
+        "tag": "n-attack",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 59,
+            "y": 72
+          }
+        ],
+        "hand": [
+          35,
+          36
+        ],
+        "tip": [
+          14,
+          24
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 78,
+        "tag": "n-attack",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 59,
+            "y": 72
+          }
+        ],
+        "hand": [
+          36,
+          44
+        ],
+        "tip": [
+          17,
+          49
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 79,
+        "tag": "n-attack",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          48,
+          46
+        ],
+        "tip": [
+          35,
+          58
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 80,
+        "tag": "n-attack",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          61,
+          49
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 81,
+        "tag": "n-attack",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 82,
+        "tag": "n-attack-backhand",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 83,
+        "tag": "n-attack-backhand",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          43,
+          42
+        ],
+        "tip": [
+          24,
+          53
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 84,
+        "tag": "n-attack-backhand",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          37,
+          37
+        ],
+        "tip": [
+          16,
+          36
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 85,
+        "tag": "n-attack-backhand",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 59,
+            "y": 72
+          }
+        ],
+        "hand": [
+          53,
+          30
+        ],
+        "tip": [
+          72,
+          12
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 86,
+        "tag": "n-attack-backhand",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 59,
+            "y": 72
+          }
+        ],
+        "hand": [
+          64,
+          32
+        ],
+        "tip": [
+          86,
+          20
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 87,
+        "tag": "n-attack-backhand",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 59,
+            "y": 72
+          }
+        ],
+        "hand": [
+          66,
+          42
+        ],
+        "tip": [
+          89,
+          47
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 88,
+        "tag": "n-attack-backhand",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          63,
+          48
+        ],
+        "tip": [
+          77,
+          60
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 89,
+        "tag": "n-attack-backhand",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 90,
+        "tag": "n-attack-backhand",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 91,
+        "tag": "n-attack-heavy",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 92,
+        "tag": "n-attack-heavy",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          63,
+          28
+        ],
+        "tip": [
+          70,
+          8
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 93,
+        "tag": "n-attack-heavy",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          55,
+          26
+        ],
+        "tip": [
+          51,
+          4
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 94,
+        "tag": "n-attack-heavy",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 59,
+            "y": 72
+          }
+        ],
+        "hand": [
+          48,
+          30
+        ],
+        "tip": [
+          44,
+          7
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 95,
+        "tag": "n-attack-heavy",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 59,
+            "y": 72
+          }
+        ],
+        "hand": [
+          42,
+          35
+        ],
+        "tip": [
+          27,
+          15
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 96,
+        "tag": "n-attack-heavy",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 59,
+            "y": 72
+          }
+        ],
+        "hand": [
+          38,
+          43
+        ],
+        "tip": [
+          18,
+          30
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 97,
+        "tag": "n-attack-heavy",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          48,
+          47
+        ],
+        "tip": [
+          35,
+          61
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 98,
+        "tag": "n-attack-heavy",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          61,
+          50
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 99,
+        "tag": "n-attack-heavy",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 100,
+        "tag": "n-roll",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 61,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 101,
+        "tag": "n-roll",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 102,
+        "tag": "n-roll",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 103,
+        "tag": "n-roll",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 104,
+        "tag": "n-roll",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 105,
+        "tag": "n-roll",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 61,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 106,
+        "tag": "n-block",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          51
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 107,
+        "tag": "n-block",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          51
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 108,
+        "tag": "n-block",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          51
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 109,
+        "tag": "n-block",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          51
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 110,
+        "tag": "n-hurt",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 111,
+        "tag": "n-hurt",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 112,
+        "tag": "n-hurt",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 113,
+        "tag": "n-hurt",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 114,
+        "tag": "n-death",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 115,
+        "tag": "n-death",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 116,
+        "tag": "n-death",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 117,
+        "tag": "n-death",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 118,
+        "tag": "n-death",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 119,
+        "tag": "n-death",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 120,
+        "tag": "n-death",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 121,
+        "tag": "e-idle",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 122,
+        "tag": "e-idle",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 123,
+        "tag": "e-idle",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 124,
+        "tag": "e-idle",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 125,
+        "tag": "e-walk",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 60,
+            "y": 75
+          },
+          {
+            "x": 36,
+            "y": 72
+          }
+        ],
+        "hand": [
+          59,
+          51
+        ],
+        "tip": [
+          64,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 126,
+        "tag": "e-walk",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 55,
+            "y": 75
+          },
+          {
+            "x": 39,
+            "y": 70
+          }
+        ],
+        "hand": [
+          60,
+          52
+        ],
+        "tip": [
+          65,
+          29
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 127,
+        "tag": "e-walk",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 75
+          },
+          {
+            "x": 49,
+            "y": 69
+          }
+        ],
+        "hand": [
+          61,
+          51
+        ],
+        "tip": [
+          66,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 128,
+        "tag": "e-walk",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 72
+          }
+        ],
+        "hand": [
+          61,
+          50
+        ],
+        "tip": [
+          66,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 129,
+        "tag": "e-walk",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 36,
+            "y": 72
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "hand": [
+          61,
+          51
+        ],
+        "tip": [
+          66,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 130,
+        "tag": "e-walk",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 40,
+            "y": 70
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          52
+        ],
+        "tip": [
+          65,
+          29
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 131,
+        "tag": "e-walk",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 48,
+            "y": 69
+          },
+          {
+            "x": 50,
+            "y": 75
+          }
+        ],
+        "hand": [
+          59,
+          51
+        ],
+        "tip": [
+          64,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 132,
+        "tag": "e-walk",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 55,
+            "y": 72
+          },
+          {
+            "x": 43,
+            "y": 75
+          }
+        ],
+        "hand": [
+          59,
+          50
+        ],
+        "tip": [
+          64,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 133,
+        "tag": "e-attack",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          50
+        ],
+        "tip": [
+          65,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 134,
+        "tag": "e-attack",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          51,
+          33
+        ],
+        "tip": [
+          32,
+          15
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 135,
+        "tag": "e-attack",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          56,
+          30
+        ],
+        "tip": [
+          64,
+          9
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 136,
+        "tag": "e-attack",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 66,
+            "y": 75
+          }
+        ],
+        "hand": [
+          68,
+          45
+        ],
+        "tip": [
+          92,
+          41
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 137,
+        "tag": "e-attack",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 66,
+            "y": 75
+          }
+        ],
+        "hand": [
+          71,
+          51
+        ],
+        "tip": [
+          94,
+          55
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 138,
+        "tag": "e-attack",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 66,
+            "y": 75
+          }
+        ],
+        "hand": [
+          67,
+          58
+        ],
+        "tip": [
+          83,
+          78
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 139,
+        "tag": "e-attack",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          58
+        ],
+        "tip": [
+          60,
+          81
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 140,
+        "tag": "e-attack",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          59,
+          53
+        ],
+        "tip": [
+          64,
+          30
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 141,
+        "tag": "e-attack",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 142,
+        "tag": "e-attack-backhand",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 143,
+        "tag": "e-attack-backhand",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          64,
+          57
+        ],
+        "tip": [
+          49,
+          78
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 144,
+        "tag": "e-attack-backhand",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          69,
+          54
+        ],
+        "tip": [
+          77,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 145,
+        "tag": "e-attack-backhand",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 66,
+            "y": 75
+          }
+        ],
+        "hand": [
+          70,
+          40
+        ],
+        "tip": [
+          94,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 146,
+        "tag": "e-attack-backhand",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 66,
+            "y": 75
+          }
+        ],
+        "hand": [
+          68,
+          35
+        ],
+        "tip": [
+          90,
+          16
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 147,
+        "tag": "e-attack-backhand",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 66,
+            "y": 75
+          }
+        ],
+        "hand": [
+          59,
+          32
+        ],
+        "tip": [
+          57,
+          9
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 148,
+        "tag": "e-attack-backhand",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          56,
+          43
+        ],
+        "tip": [
+          45,
+          24
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 149,
+        "tag": "e-attack-backhand",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          50
+        ],
+        "tip": [
+          63,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 150,
+        "tag": "e-attack-backhand",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 151,
+        "tag": "e-attack-heavy",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 152,
+        "tag": "e-attack-heavy",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          51,
+          28
+        ],
+        "tip": [
+          43,
+          7
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 153,
+        "tag": "e-attack-heavy",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          58,
+          26
+        ],
+        "tip": [
+          63,
+          4
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 154,
+        "tag": "e-attack-heavy",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 66,
+            "y": 75
+          }
+        ],
+        "hand": [
+          68,
+          42
+        ],
+        "tip": [
+          90,
+          50
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 155,
+        "tag": "e-attack-heavy",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 66,
+            "y": 75
+          }
+        ],
+        "hand": [
+          70,
+          54
+        ],
+        "tip": [
+          91,
+          73
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 156,
+        "tag": "e-attack-heavy",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 66,
+            "y": 75
+          }
+        ],
+        "hand": [
+          68,
+          59
+        ],
+        "tip": [
+          81,
+          88
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 157,
+        "tag": "e-attack-heavy",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          58
+        ],
+        "tip": [
+          62,
+          82
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 158,
+        "tag": "e-attack-heavy",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          53
+        ],
+        "tip": [
+          65,
+          31
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 159,
+        "tag": "e-attack-heavy",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 160,
+        "tag": "e-roll",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 61,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 161,
+        "tag": "e-roll",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 162,
+        "tag": "e-roll",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 163,
+        "tag": "e-roll",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 164,
+        "tag": "e-roll",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 165,
+        "tag": "e-roll",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 61,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 166,
+        "tag": "e-block",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          52
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 167,
+        "tag": "e-block",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          52
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 168,
+        "tag": "e-block",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          52
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 169,
+        "tag": "e-block",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          52
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 170,
+        "tag": "e-hurt",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 171,
+        "tag": "e-hurt",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 172,
+        "tag": "e-hurt",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 173,
+        "tag": "e-hurt",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 174,
+        "tag": "e-death",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 175,
+        "tag": "e-death",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 176,
+        "tag": "e-death",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 177,
+        "tag": "e-death",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 178,
+        "tag": "e-death",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 179,
+        "tag": "e-death",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 180,
+        "tag": "e-death",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 181,
+        "tag": "w-idle",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 182,
+        "tag": "w-idle",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 183,
+        "tag": "w-idle",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 184,
+        "tag": "w-idle",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 185,
+        "tag": "w-walk",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 36,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 72
+          }
+        ],
+        "hand": [
+          35,
+          51
+        ],
+        "tip": [
+          30,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 186,
+        "tag": "w-walk",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 41,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 70
+          }
+        ],
+        "hand": [
+          36,
+          52
+        ],
+        "tip": [
+          31,
+          29
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 187,
+        "tag": "w-walk",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 75
+          },
+          {
+            "x": 47,
+            "y": 69
+          }
+        ],
+        "hand": [
+          37,
+          51
+        ],
+        "tip": [
+          32,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 188,
+        "tag": "w-walk",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 56,
+            "y": 75
+          },
+          {
+            "x": 38,
+            "y": 72
+          }
+        ],
+        "hand": [
+          37,
+          50
+        ],
+        "tip": [
+          32,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 189,
+        "tag": "w-walk",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 60,
+            "y": 72
+          },
+          {
+            "x": 34,
+            "y": 75
+          }
+        ],
+        "hand": [
+          37,
+          51
+        ],
+        "tip": [
+          32,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 190,
+        "tag": "w-walk",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 56,
+            "y": 70
+          },
+          {
+            "x": 39,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          52
+        ],
+        "tip": [
+          31,
+          29
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 191,
+        "tag": "w-walk",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 48,
+            "y": 69
+          },
+          {
+            "x": 46,
+            "y": 75
+          }
+        ],
+        "hand": [
+          35,
+          51
+        ],
+        "tip": [
+          30,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 192,
+        "tag": "w-walk",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 41,
+            "y": 72
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          35,
+          50
+        ],
+        "tip": [
+          30,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 193,
+        "tag": "w-attack",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          50
+        ],
+        "tip": [
+          31,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 194,
+        "tag": "w-attack",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          45,
+          33
+        ],
+        "tip": [
+          64,
+          15
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 195,
+        "tag": "w-attack",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          40,
+          30
+        ],
+        "tip": [
+          32,
+          9
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 196,
+        "tag": "w-attack",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 30,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 75
+          }
+        ],
+        "hand": [
+          28,
+          45
+        ],
+        "tip": [
+          4,
+          41
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 197,
+        "tag": "w-attack",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 30,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 75
+          }
+        ],
+        "hand": [
+          25,
+          51
+        ],
+        "tip": [
+          2,
+          55
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 198,
+        "tag": "w-attack",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 30,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 75
+          }
+        ],
+        "hand": [
+          29,
+          58
+        ],
+        "tip": [
+          13,
+          78
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 199,
+        "tag": "w-attack",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          58
+        ],
+        "tip": [
+          36,
+          81
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 200,
+        "tag": "w-attack",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          37,
+          53
+        ],
+        "tip": [
+          32,
+          30
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 201,
+        "tag": "w-attack",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 202,
+        "tag": "w-attack-backhand",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 203,
+        "tag": "w-attack-backhand",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          32,
+          57
+        ],
+        "tip": [
+          47,
+          78
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 204,
+        "tag": "w-attack-backhand",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          27,
+          54
+        ],
+        "tip": [
+          19,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 205,
+        "tag": "w-attack-backhand",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 30,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 75
+          }
+        ],
+        "hand": [
+          26,
+          40
+        ],
+        "tip": [
+          2,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 206,
+        "tag": "w-attack-backhand",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 30,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 75
+          }
+        ],
+        "hand": [
+          28,
+          35
+        ],
+        "tip": [
+          6,
+          16
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 207,
+        "tag": "w-attack-backhand",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 30,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 75
+          }
+        ],
+        "hand": [
+          37,
+          32
+        ],
+        "tip": [
+          39,
+          9
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 208,
+        "tag": "w-attack-backhand",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          40,
+          43
+        ],
+        "tip": [
+          51,
+          24
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 209,
+        "tag": "w-attack-backhand",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          50
+        ],
+        "tip": [
+          33,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 210,
+        "tag": "w-attack-backhand",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 211,
+        "tag": "w-attack-heavy",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 212,
+        "tag": "w-attack-heavy",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          45,
+          28
+        ],
+        "tip": [
+          53,
+          7
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 213,
+        "tag": "w-attack-heavy",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          38,
+          26
+        ],
+        "tip": [
+          33,
+          4
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 214,
+        "tag": "w-attack-heavy",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 30,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 75
+          }
+        ],
+        "hand": [
+          28,
+          42
+        ],
+        "tip": [
+          6,
+          50
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 215,
+        "tag": "w-attack-heavy",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 30,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 75
+          }
+        ],
+        "hand": [
+          26,
+          54
+        ],
+        "tip": [
+          5,
+          73
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 216,
+        "tag": "w-attack-heavy",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 30,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 75
+          }
+        ],
+        "hand": [
+          28,
+          59
+        ],
+        "tip": [
+          15,
+          88
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 217,
+        "tag": "w-attack-heavy",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          58
+        ],
+        "tip": [
+          34,
+          82
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 218,
+        "tag": "w-attack-heavy",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          53
+        ],
+        "tip": [
+          31,
+          31
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 219,
+        "tag": "w-attack-heavy",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 220,
+        "tag": "w-roll",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 61,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 221,
+        "tag": "w-roll",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 222,
+        "tag": "w-roll",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 223,
+        "tag": "w-roll",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 224,
+        "tag": "w-roll",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 49,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 225,
+        "tag": "w-roll",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 61,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 226,
+        "tag": "w-block",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          52
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 227,
+        "tag": "w-block",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          52
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 228,
+        "tag": "w-block",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          52
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 229,
+        "tag": "w-block",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          52
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 230,
+        "tag": "w-hurt",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 231,
+        "tag": "w-hurt",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 232,
+        "tag": "w-hurt",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 233,
+        "tag": "w-hurt",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 234,
+        "tag": "w-death",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 235,
+        "tag": "w-death",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 236,
+        "tag": "w-death",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 37,
+            "y": 75
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 237,
+        "tag": "w-death",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 238,
+        "tag": "w-death",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 239,
+        "tag": "w-death",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 240,
+        "tag": "w-death",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 65,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      }
+    ]
+  },
+  "hollow": {
+    "width": 96,
+    "height": 96,
+    "pivot": {
+      "x": 48,
+      "y": 76
+    },
+    "frames": [
+      {
+        "frame": 1,
+        "tag": "s-idle",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 2,
+        "tag": "s-idle",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 3,
+        "tag": "s-idle",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 4,
+        "tag": "s-idle",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 5,
+        "tag": "s-walk",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 71
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 6,
+        "tag": "s-walk",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 41,
+            "y": 75
+          },
+          {
+            "x": 54,
+            "y": 70
+          }
+        ],
+        "hand": [
+          33,
+          52
+        ],
+        "tip": [
+          33,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 7,
+        "tag": "s-walk",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 72
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 8,
+        "tag": "s-walk",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 44,
+            "y": 73
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          50
+        ],
+        "tip": [
+          33,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 9,
+        "tag": "s-walk",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 41,
+            "y": 71
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 10,
+        "tag": "s-walk",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 43,
+            "y": 70
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          52
+        ],
+        "tip": [
+          33,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 11,
+        "tag": "s-walk",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 44,
+            "y": 72
+          },
+          {
+            "x": 54,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 12,
+        "tag": "s-walk",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 41,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 73
+          }
+        ],
+        "hand": [
+          33,
+          50
+        ],
+        "tip": [
+          33,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 13,
+        "tag": "s-attack",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          32,
+          47
+        ],
+        "tip": [
+          31,
+          24
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 14,
+        "tag": "s-attack",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          31,
+          31
+        ],
+        "tip": [
+          27,
+          10
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 15,
+        "tag": "s-attack",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          39,
+          29
+        ],
+        "tip": [
+          49,
+          11
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 16,
+        "tag": "s-attack",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 38,
+            "y": 72
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          53,
+          55
+        ],
+        "tip": [
+          77,
+          71
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 17,
+        "tag": "s-attack",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 38,
+            "y": 72
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          64,
+          54
+        ],
+        "tip": [
+          80,
+          74
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 18,
+        "tag": "s-attack",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 72
+          },
+          {
+            "x": 60,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          59
+        ],
+        "tip": [
+          62,
+          87
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 19,
+        "tag": "s-attack",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          50,
+          57
+        ],
+        "tip": [
+          42,
+          80
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 20,
+        "tag": "s-attack",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          36,
+          53
+        ],
+        "tip": [
+          32,
+          31
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 21,
+        "tag": "s-attack",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 74
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 22,
+        "tag": "s-hurt",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 23,
+        "tag": "s-hurt",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 24,
+        "tag": "s-hurt",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 25,
+        "tag": "s-hurt",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          33,
+          51
+        ],
+        "tip": [
+          33,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 26,
+        "tag": "s-death",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 37,
+            "y": 74
+          },
+          {
+            "x": 60,
+            "y": 74
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 27,
+        "tag": "s-death",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 37,
+            "y": 74
+          },
+          {
+            "x": 60,
+            "y": 74
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 28,
+        "tag": "s-death",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 37,
+            "y": 74
+          },
+          {
+            "x": 60,
+            "y": 74
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 29,
+        "tag": "s-death",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 30,
+        "tag": "s-death",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 31,
+        "tag": "s-death",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 32,
+        "tag": "s-death",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 33,
+        "tag": "n-idle",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 34,
+        "tag": "n-idle",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 35,
+        "tag": "n-idle",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 36,
+        "tag": "n-idle",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 37,
+        "tag": "n-walk",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 71
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 38,
+        "tag": "n-walk",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 41,
+            "y": 75
+          },
+          {
+            "x": 54,
+            "y": 70
+          }
+        ],
+        "hand": [
+          62,
+          51
+        ],
+        "tip": [
+          65,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 39,
+        "tag": "n-walk",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 40,
+        "tag": "n-walk",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 44,
+            "y": 73
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          49
+        ],
+        "tip": [
+          65,
+          25
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 41,
+        "tag": "n-walk",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 41,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 42,
+        "tag": "n-walk",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          51
+        ],
+        "tip": [
+          65,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 43,
+        "tag": "n-walk",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 44,
+            "y": 72
+          },
+          {
+            "x": 54,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 44,
+        "tag": "n-walk",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 41,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          49
+        ],
+        "tip": [
+          65,
+          25
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 45,
+        "tag": "n-attack",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          48
+        ],
+        "tip": [
+          66,
+          25
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 46,
+        "tag": "n-attack",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          64,
+          31
+        ],
+        "tip": [
+          70,
+          9
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 47,
+        "tag": "n-attack",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          57,
+          29
+        ],
+        "tip": [
+          45,
+          10
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 48,
+        "tag": "n-attack",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 59,
+            "y": 72
+          }
+        ],
+        "hand": [
+          42,
+          34
+        ],
+        "tip": [
+          23,
+          13
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 49,
+        "tag": "n-attack",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 59,
+            "y": 72
+          }
+        ],
+        "hand": [
+          35,
+          36
+        ],
+        "tip": [
+          14,
+          24
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 50,
+        "tag": "n-attack",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 59,
+            "y": 72
+          }
+        ],
+        "hand": [
+          36,
+          44
+        ],
+        "tip": [
+          17,
+          49
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 51,
+        "tag": "n-attack",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          48,
+          46
+        ],
+        "tip": [
+          35,
+          58
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 52,
+        "tag": "n-attack",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          61,
+          49
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 53,
+        "tag": "n-attack",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 74
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 54,
+        "tag": "n-hurt",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 55,
+        "tag": "n-hurt",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 56,
+        "tag": "n-hurt",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 57,
+        "tag": "n-hurt",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 42,
+            "y": 75
+          },
+          {
+            "x": 55,
+            "y": 75
+          }
+        ],
+        "hand": [
+          62,
+          50
+        ],
+        "tip": [
+          65,
+          26
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 58,
+        "tag": "n-death",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 37,
+            "y": 74
+          },
+          {
+            "x": 60,
+            "y": 74
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 59,
+        "tag": "n-death",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 37,
+            "y": 74
+          },
+          {
+            "x": 60,
+            "y": 74
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 60,
+        "tag": "n-death",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 37,
+            "y": 74
+          },
+          {
+            "x": 60,
+            "y": 74
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 61,
+        "tag": "n-death",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 62,
+        "tag": "n-death",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 63,
+        "tag": "n-death",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 64,
+        "tag": "n-death",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 65,
+        "tag": "e-idle",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 66,
+        "tag": "e-idle",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 67,
+        "tag": "e-idle",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 68,
+        "tag": "e-idle",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 69,
+        "tag": "e-walk",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 60,
+            "y": 75
+          },
+          {
+            "x": 36,
+            "y": 72
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 70,
+        "tag": "e-walk",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 55,
+            "y": 75
+          },
+          {
+            "x": 39,
+            "y": 70
+          }
+        ],
+        "hand": [
+          60,
+          52
+        ],
+        "tip": [
+          65,
+          29
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 71,
+        "tag": "e-walk",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 75
+          },
+          {
+            "x": 49,
+            "y": 69
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 72,
+        "tag": "e-walk",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 72
+          }
+        ],
+        "hand": [
+          60,
+          50
+        ],
+        "tip": [
+          65,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 73,
+        "tag": "e-walk",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 36,
+            "y": 72
+          },
+          {
+            "x": 62,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 74,
+        "tag": "e-walk",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 40,
+            "y": 70
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          52
+        ],
+        "tip": [
+          65,
+          29
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 75,
+        "tag": "e-walk",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 48,
+            "y": 69
+          },
+          {
+            "x": 50,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 76,
+        "tag": "e-walk",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 55,
+            "y": 72
+          },
+          {
+            "x": 43,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          50
+        ],
+        "tip": [
+          65,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 77,
+        "tag": "e-attack",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          50
+        ],
+        "tip": [
+          65,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 78,
+        "tag": "e-attack",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          51,
+          33
+        ],
+        "tip": [
+          32,
+          15
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 79,
+        "tag": "e-attack",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          56,
+          30
+        ],
+        "tip": [
+          64,
+          9
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 80,
+        "tag": "e-attack",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 66,
+            "y": 75
+          }
+        ],
+        "hand": [
+          68,
+          45
+        ],
+        "tip": [
+          92,
+          41
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 81,
+        "tag": "e-attack",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 66,
+            "y": 75
+          }
+        ],
+        "hand": [
+          71,
+          51
+        ],
+        "tip": [
+          94,
+          55
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 82,
+        "tag": "e-attack",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 38,
+            "y": 75
+          },
+          {
+            "x": 66,
+            "y": 75
+          }
+        ],
+        "hand": [
+          67,
+          58
+        ],
+        "tip": [
+          83,
+          78
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 83,
+        "tag": "e-attack",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          58
+        ],
+        "tip": [
+          60,
+          81
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 84,
+        "tag": "e-attack",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          59,
+          53
+        ],
+        "tip": [
+          64,
+          30
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 85,
+        "tag": "e-attack",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 86,
+        "tag": "e-hurt",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 87,
+        "tag": "e-hurt",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 88,
+        "tag": "e-hurt",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 89,
+        "tag": "e-hurt",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 43,
+            "y": 75
+          },
+          {
+            "x": 56,
+            "y": 75
+          }
+        ],
+        "hand": [
+          60,
+          51
+        ],
+        "tip": [
+          65,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 90,
+        "tag": "e-death",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 37,
+            "y": 74
+          },
+          {
+            "x": 60,
+            "y": 74
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 91,
+        "tag": "e-death",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 37,
+            "y": 74
+          },
+          {
+            "x": 60,
+            "y": 74
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 92,
+        "tag": "e-death",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 37,
+            "y": 74
+          },
+          {
+            "x": 60,
+            "y": 74
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 93,
+        "tag": "e-death",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 94,
+        "tag": "e-death",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 95,
+        "tag": "e-death",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 96,
+        "tag": "e-death",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 97,
+        "tag": "w-idle",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 98,
+        "tag": "w-idle",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 99,
+        "tag": "w-idle",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 100,
+        "tag": "w-idle",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 101,
+        "tag": "w-walk",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 36,
+            "y": 75
+          },
+          {
+            "x": 60,
+            "y": 72
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 102,
+        "tag": "w-walk",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 41,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 70
+          }
+        ],
+        "hand": [
+          36,
+          52
+        ],
+        "tip": [
+          31,
+          29
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 103,
+        "tag": "w-walk",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 75
+          },
+          {
+            "x": 47,
+            "y": 69
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 104,
+        "tag": "w-walk",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 56,
+            "y": 75
+          },
+          {
+            "x": 38,
+            "y": 72
+          }
+        ],
+        "hand": [
+          36,
+          50
+        ],
+        "tip": [
+          31,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 105,
+        "tag": "w-walk",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 60,
+            "y": 72
+          },
+          {
+            "x": 34,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 106,
+        "tag": "w-walk",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 56,
+            "y": 70
+          },
+          {
+            "x": 39,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          52
+        ],
+        "tip": [
+          31,
+          29
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 107,
+        "tag": "w-walk",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 48,
+            "y": 69
+          },
+          {
+            "x": 46,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 108,
+        "tag": "w-walk",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 41,
+            "y": 72
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          50
+        ],
+        "tip": [
+          31,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 109,
+        "tag": "w-attack",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          50
+        ],
+        "tip": [
+          31,
+          27
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 110,
+        "tag": "w-attack",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          45,
+          33
+        ],
+        "tip": [
+          64,
+          15
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 111,
+        "tag": "w-attack",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          40,
+          30
+        ],
+        "tip": [
+          32,
+          9
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 112,
+        "tag": "w-attack",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 30,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 75
+          }
+        ],
+        "hand": [
+          28,
+          45
+        ],
+        "tip": [
+          4,
+          41
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 113,
+        "tag": "w-attack",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 30,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 75
+          }
+        ],
+        "hand": [
+          25,
+          51
+        ],
+        "tip": [
+          2,
+          55
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 114,
+        "tag": "w-attack",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 30,
+            "y": 75
+          },
+          {
+            "x": 58,
+            "y": 75
+          }
+        ],
+        "hand": [
+          29,
+          58
+        ],
+        "tip": [
+          13,
+          78
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 115,
+        "tag": "w-attack",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          58
+        ],
+        "tip": [
+          36,
+          81
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 116,
+        "tag": "w-attack",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          37,
+          53
+        ],
+        "tip": [
+          32,
+          30
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 117,
+        "tag": "w-attack",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 39,
+            "y": 75
+          },
+          {
+            "x": 57,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 118,
+        "tag": "w-hurt",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 119,
+        "tag": "w-hurt",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 120,
+        "tag": "w-hurt",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 121,
+        "tag": "w-hurt",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 40,
+            "y": 75
+          },
+          {
+            "x": 53,
+            "y": 75
+          }
+        ],
+        "hand": [
+          36,
+          51
+        ],
+        "tip": [
+          31,
+          28
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 122,
+        "tag": "w-death",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 37,
+            "y": 74
+          },
+          {
+            "x": 60,
+            "y": 74
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 123,
+        "tag": "w-death",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 37,
+            "y": 74
+          },
+          {
+            "x": 60,
+            "y": 74
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 124,
+        "tag": "w-death",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 37,
+            "y": 74
+          },
+          {
+            "x": 60,
+            "y": 74
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 125,
+        "tag": "w-death",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 126,
+        "tag": "w-death",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 127,
+        "tag": "w-death",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 128,
+        "tag": "w-death",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 72,
+            "y": 75
+          }
+        ],
+        "airborne": false
+      }
+    ]
+  },
+  "warden": {
+    "width": 144,
+    "height": 112,
+    "pivot": {
+      "x": 64,
+      "y": 96
+    },
+    "frames": [
+      {
+        "frame": 1,
+        "tag": "s-idle",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 2,
+        "tag": "s-idle",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 3,
+        "tag": "s-idle",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          75
+        ],
+        "secondHand": [
+          90,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 4,
+        "tag": "s-idle",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 5,
+        "tag": "s-walk",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 80,
+            "y": 92
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 6,
+        "tag": "s-walk",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 51,
+            "y": 95
+          },
+          {
+            "x": 77,
+            "y": 91
+          }
+        ],
+        "hand": [
+          39,
+          77
+        ],
+        "secondHand": [
+          90,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 7,
+        "tag": "s-walk",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 55,
+            "y": 95
+          },
+          {
+            "x": 72,
+            "y": 90
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 8,
+        "tag": "s-walk",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 60,
+            "y": 93
+          },
+          {
+            "x": 77,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          75
+        ],
+        "secondHand": [
+          90,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 9,
+        "tag": "s-walk",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 48,
+            "y": 92
+          },
+          {
+            "x": 81,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 10,
+        "tag": "s-walk",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 51,
+            "y": 91
+          },
+          {
+            "x": 78,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          77
+        ],
+        "secondHand": [
+          90,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 11,
+        "tag": "s-walk",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 57,
+            "y": 90
+          },
+          {
+            "x": 74,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 12,
+        "tag": "s-walk",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 51,
+            "y": 95
+          },
+          {
+            "x": 68,
+            "y": 93
+          }
+        ],
+        "hand": [
+          39,
+          75
+        ],
+        "secondHand": [
+          90,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 13,
+        "tag": "s-attack",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          89,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 14,
+        "tag": "s-attack",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          33
+        ],
+        "secondHand": [
+          89,
+          33
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 15,
+        "tag": "s-attack",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          53,
+          24
+        ],
+        "secondHand": [
+          75,
+          24
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 16,
+        "tag": "s-attack",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 44,
+            "y": 95
+          },
+          {
+            "x": 87,
+            "y": 95
+          }
+        ],
+        "hand": [
+          42,
+          71
+        ],
+        "secondHand": [
+          86,
+          71
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 17,
+        "tag": "s-attack",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 44,
+            "y": 95
+          },
+          {
+            "x": 87,
+            "y": 95
+          }
+        ],
+        "hand": [
+          40,
+          90
+        ],
+        "secondHand": [
+          88,
+          90
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 18,
+        "tag": "s-attack",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 44,
+            "y": 95
+          },
+          {
+            "x": 87,
+            "y": 95
+          }
+        ],
+        "hand": [
+          43,
+          90
+        ],
+        "secondHand": [
+          85,
+          90
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 19,
+        "tag": "s-attack",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          41,
+          82
+        ],
+        "secondHand": [
+          87,
+          82
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 20,
+        "tag": "s-attack",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          40,
+          77
+        ],
+        "secondHand": [
+          88,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 21,
+        "tag": "s-attack",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          89,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 22,
+        "tag": "s-hurt",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          36,
+          78
+        ],
+        "secondHand": [
+          87,
+          78
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 23,
+        "tag": "s-hurt",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          38,
+          77
+        ],
+        "secondHand": [
+          89,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 24,
+        "tag": "s-hurt",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          40,
+          76
+        ],
+        "secondHand": [
+          91,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 25,
+        "tag": "s-hurt",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 26,
+        "tag": "s-death",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 49,
+            "y": 95
+          },
+          {
+            "x": 83,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 27,
+        "tag": "s-death",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 49,
+            "y": 95
+          },
+          {
+            "x": 83,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 28,
+        "tag": "s-death",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 49,
+            "y": 95
+          },
+          {
+            "x": 83,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 29,
+        "tag": "s-death",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 30,
+        "tag": "s-death",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 31,
+        "tag": "s-death",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 32,
+        "tag": "s-death",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 33,
+        "tag": "n-idle",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 34,
+        "tag": "n-idle",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 35,
+        "tag": "n-idle",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          75
+        ],
+        "secondHand": [
+          90,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 36,
+        "tag": "n-idle",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 37,
+        "tag": "n-walk",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 80,
+            "y": 92
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 38,
+        "tag": "n-walk",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 51,
+            "y": 95
+          },
+          {
+            "x": 77,
+            "y": 91
+          }
+        ],
+        "hand": [
+          39,
+          77
+        ],
+        "secondHand": [
+          90,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 39,
+        "tag": "n-walk",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 55,
+            "y": 95
+          },
+          {
+            "x": 72,
+            "y": 90
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 40,
+        "tag": "n-walk",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 60,
+            "y": 93
+          },
+          {
+            "x": 77,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          75
+        ],
+        "secondHand": [
+          90,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 41,
+        "tag": "n-walk",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 48,
+            "y": 92
+          },
+          {
+            "x": 81,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 42,
+        "tag": "n-walk",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 51,
+            "y": 91
+          },
+          {
+            "x": 78,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          77
+        ],
+        "secondHand": [
+          90,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 43,
+        "tag": "n-walk",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 57,
+            "y": 90
+          },
+          {
+            "x": 74,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 44,
+        "tag": "n-walk",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 51,
+            "y": 95
+          },
+          {
+            "x": 68,
+            "y": 93
+          }
+        ],
+        "hand": [
+          39,
+          75
+        ],
+        "secondHand": [
+          90,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 45,
+        "tag": "n-attack",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          89,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 46,
+        "tag": "n-attack",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          31
+        ],
+        "secondHand": [
+          89,
+          31
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 47,
+        "tag": "n-attack",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          53,
+          23
+        ],
+        "secondHand": [
+          75,
+          23
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 48,
+        "tag": "n-attack",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 44,
+            "y": 95
+          },
+          {
+            "x": 87,
+            "y": 95
+          }
+        ],
+        "hand": [
+          42,
+          34
+        ],
+        "secondHand": [
+          86,
+          34
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 49,
+        "tag": "n-attack",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 44,
+            "y": 95
+          },
+          {
+            "x": 87,
+            "y": 95
+          }
+        ],
+        "hand": [
+          38,
+          30
+        ],
+        "secondHand": [
+          90,
+          30
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 50,
+        "tag": "n-attack",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 44,
+            "y": 95
+          },
+          {
+            "x": 87,
+            "y": 95
+          }
+        ],
+        "hand": [
+          40,
+          35
+        ],
+        "secondHand": [
+          88,
+          35
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 51,
+        "tag": "n-attack",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          41,
+          54
+        ],
+        "secondHand": [
+          87,
+          54
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 52,
+        "tag": "n-attack",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          40,
+          71
+        ],
+        "secondHand": [
+          88,
+          71
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 53,
+        "tag": "n-attack",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          89,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 54,
+        "tag": "n-hurt",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          36,
+          78
+        ],
+        "secondHand": [
+          87,
+          78
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 55,
+        "tag": "n-hurt",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          38,
+          77
+        ],
+        "secondHand": [
+          89,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 56,
+        "tag": "n-hurt",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          40,
+          76
+        ],
+        "secondHand": [
+          91,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 57,
+        "tag": "n-hurt",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 58,
+        "tag": "n-death",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 49,
+            "y": 95
+          },
+          {
+            "x": 83,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 59,
+        "tag": "n-death",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 49,
+            "y": 95
+          },
+          {
+            "x": 83,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 60,
+        "tag": "n-death",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 49,
+            "y": 95
+          },
+          {
+            "x": 83,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 61,
+        "tag": "n-death",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 62,
+        "tag": "n-death",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 63,
+        "tag": "n-death",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 64,
+        "tag": "n-death",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 65,
+        "tag": "e-idle",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 66,
+        "tag": "e-idle",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 67,
+        "tag": "e-idle",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          75
+        ],
+        "secondHand": [
+          90,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 68,
+        "tag": "e-idle",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 69,
+        "tag": "e-walk",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 80,
+            "y": 92
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 70,
+        "tag": "e-walk",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 51,
+            "y": 95
+          },
+          {
+            "x": 77,
+            "y": 91
+          }
+        ],
+        "hand": [
+          39,
+          77
+        ],
+        "secondHand": [
+          90,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 71,
+        "tag": "e-walk",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 55,
+            "y": 95
+          },
+          {
+            "x": 72,
+            "y": 90
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 72,
+        "tag": "e-walk",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 60,
+            "y": 93
+          },
+          {
+            "x": 77,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          75
+        ],
+        "secondHand": [
+          90,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 73,
+        "tag": "e-walk",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 48,
+            "y": 92
+          },
+          {
+            "x": 81,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 74,
+        "tag": "e-walk",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 51,
+            "y": 91
+          },
+          {
+            "x": 78,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          77
+        ],
+        "secondHand": [
+          90,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 75,
+        "tag": "e-walk",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 57,
+            "y": 90
+          },
+          {
+            "x": 74,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 76,
+        "tag": "e-walk",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 51,
+            "y": 95
+          },
+          {
+            "x": 68,
+            "y": 93
+          }
+        ],
+        "hand": [
+          39,
+          75
+        ],
+        "secondHand": [
+          90,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 77,
+        "tag": "e-attack",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          116,
+          66
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 78,
+        "tag": "e-attack",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          64,
+          31
+        ],
+        "secondHand": [
+          116,
+          66
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 79,
+        "tag": "e-attack",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          75,
+          25
+        ],
+        "secondHand": [
+          116,
+          66
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 80,
+        "tag": "e-attack",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 44,
+            "y": 95
+          },
+          {
+            "x": 87,
+            "y": 95
+          }
+        ],
+        "hand": [
+          87,
+          55
+        ],
+        "secondHand": [
+          116,
+          66
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 81,
+        "tag": "e-attack",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 44,
+            "y": 95
+          },
+          {
+            "x": 87,
+            "y": 95
+          }
+        ],
+        "hand": [
+          105,
+          66
+        ],
+        "secondHand": [
+          116,
+          73
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 82,
+        "tag": "e-attack",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 44,
+            "y": 95
+          },
+          {
+            "x": 87,
+            "y": 95
+          }
+        ],
+        "hand": [
+          108,
+          73
+        ],
+        "secondHand": [
+          116,
+          73
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 83,
+        "tag": "e-attack",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          82,
+          74
+        ],
+        "secondHand": [
+          116,
+          66
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 84,
+        "tag": "e-attack",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          54,
+          78
+        ],
+        "secondHand": [
+          116,
+          66
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 85,
+        "tag": "e-attack",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          116,
+          66
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 86,
+        "tag": "e-hurt",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          36,
+          78
+        ],
+        "secondHand": [
+          87,
+          78
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 87,
+        "tag": "e-hurt",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          38,
+          77
+        ],
+        "secondHand": [
+          89,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 88,
+        "tag": "e-hurt",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          40,
+          76
+        ],
+        "secondHand": [
+          91,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 89,
+        "tag": "e-hurt",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 90,
+        "tag": "e-death",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 49,
+            "y": 95
+          },
+          {
+            "x": 83,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 91,
+        "tag": "e-death",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 49,
+            "y": 95
+          },
+          {
+            "x": 83,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 92,
+        "tag": "e-death",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 49,
+            "y": 95
+          },
+          {
+            "x": 83,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 93,
+        "tag": "e-death",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 94,
+        "tag": "e-death",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 95,
+        "tag": "e-death",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 96,
+        "tag": "e-death",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 97,
+        "tag": "w-idle",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 98,
+        "tag": "w-idle",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 99,
+        "tag": "w-idle",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          75
+        ],
+        "secondHand": [
+          90,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 100,
+        "tag": "w-idle",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 101,
+        "tag": "w-walk",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 80,
+            "y": 92
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 102,
+        "tag": "w-walk",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 51,
+            "y": 95
+          },
+          {
+            "x": 77,
+            "y": 91
+          }
+        ],
+        "hand": [
+          39,
+          77
+        ],
+        "secondHand": [
+          90,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 103,
+        "tag": "w-walk",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 55,
+            "y": 95
+          },
+          {
+            "x": 72,
+            "y": 90
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 104,
+        "tag": "w-walk",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 60,
+            "y": 93
+          },
+          {
+            "x": 77,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          75
+        ],
+        "secondHand": [
+          90,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 105,
+        "tag": "w-walk",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 48,
+            "y": 92
+          },
+          {
+            "x": 81,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 106,
+        "tag": "w-walk",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 51,
+            "y": 91
+          },
+          {
+            "x": 78,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          77
+        ],
+        "secondHand": [
+          90,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 107,
+        "tag": "w-walk",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 57,
+            "y": 90
+          },
+          {
+            "x": 74,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 108,
+        "tag": "w-walk",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 51,
+            "y": 95
+          },
+          {
+            "x": 68,
+            "y": 93
+          }
+        ],
+        "hand": [
+          39,
+          75
+        ],
+        "secondHand": [
+          90,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 109,
+        "tag": "w-attack",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          55,
+          68
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 110,
+        "tag": "w-attack",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          35,
+          31
+        ],
+        "secondHand": [
+          55,
+          68
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 111,
+        "tag": "w-attack",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          32,
+          25
+        ],
+        "secondHand": [
+          55,
+          68
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 112,
+        "tag": "w-attack",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 44,
+            "y": 95
+          },
+          {
+            "x": 87,
+            "y": 95
+          }
+        ],
+        "hand": [
+          22,
+          55
+        ],
+        "secondHand": [
+          55,
+          68
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 113,
+        "tag": "w-attack",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 44,
+            "y": 95
+          },
+          {
+            "x": 87,
+            "y": 95
+          }
+        ],
+        "hand": [
+          11,
+          66
+        ],
+        "secondHand": [
+          55,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 114,
+        "tag": "w-attack",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 44,
+            "y": 95
+          },
+          {
+            "x": 87,
+            "y": 95
+          }
+        ],
+        "hand": [
+          8,
+          73
+        ],
+        "secondHand": [
+          55,
+          75
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 115,
+        "tag": "w-attack",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          25,
+          74
+        ],
+        "secondHand": [
+          55,
+          68
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 116,
+        "tag": "w-attack",
+        "pose": 7,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          37,
+          78
+        ],
+        "secondHand": [
+          55,
+          68
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 117,
+        "tag": "w-attack",
+        "pose": 8,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          55,
+          68
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 118,
+        "tag": "w-hurt",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          42,
+          78
+        ],
+        "secondHand": [
+          93,
+          78
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 119,
+        "tag": "w-hurt",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          40,
+          77
+        ],
+        "secondHand": [
+          91,
+          77
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 120,
+        "tag": "w-hurt",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          38,
+          76
+        ],
+        "secondHand": [
+          89,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 121,
+        "tag": "w-hurt",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 48,
+            "y": 95
+          },
+          {
+            "x": 82,
+            "y": 95
+          }
+        ],
+        "hand": [
+          39,
+          76
+        ],
+        "secondHand": [
+          90,
+          76
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 122,
+        "tag": "w-death",
+        "pose": 0,
+        "feet": [
+          {
+            "x": 49,
+            "y": 95
+          },
+          {
+            "x": 83,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 123,
+        "tag": "w-death",
+        "pose": 1,
+        "feet": [
+          {
+            "x": 49,
+            "y": 95
+          },
+          {
+            "x": 83,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 124,
+        "tag": "w-death",
+        "pose": 2,
+        "feet": [
+          {
+            "x": 49,
+            "y": 95
+          },
+          {
+            "x": 83,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 125,
+        "tag": "w-death",
+        "pose": 3,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 126,
+        "tag": "w-death",
+        "pose": 4,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 127,
+        "tag": "w-death",
+        "pose": 5,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      },
+      {
+        "frame": 128,
+        "tag": "w-death",
+        "pose": 6,
+        "feet": [
+          {
+            "x": 92,
+            "y": 95
+          }
+        ],
+        "airborne": false
+      }
+    ]
+  },
+  "wisp": {
+    "width": 64,
+    "height": 64,
+    "pivot": {
+      "x": 32,
+      "y": 58
+    },
+    "frames": [
+      {
+        "frame": 1,
+        "tag": "idle",
+        "pose": 0,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 2,
+        "tag": "idle",
+        "pose": 1,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 3,
+        "tag": "idle",
+        "pose": 2,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 4,
+        "tag": "idle",
+        "pose": 3,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 5,
+        "tag": "walk",
+        "pose": 0,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 6,
+        "tag": "walk",
+        "pose": 1,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 7,
+        "tag": "walk",
+        "pose": 2,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 8,
+        "tag": "walk",
+        "pose": 3,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 9,
+        "tag": "walk",
+        "pose": 4,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 10,
+        "tag": "walk",
+        "pose": 5,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 11,
+        "tag": "walk",
+        "pose": 6,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 12,
+        "tag": "walk",
+        "pose": 7,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 13,
+        "tag": "attack",
+        "pose": 0,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 14,
+        "tag": "attack",
+        "pose": 1,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 15,
+        "tag": "attack",
+        "pose": 2,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 16,
+        "tag": "attack",
+        "pose": 3,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 17,
+        "tag": "attack",
+        "pose": 4,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 18,
+        "tag": "attack",
+        "pose": 5,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 19,
+        "tag": "attack",
+        "pose": 6,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 20,
+        "tag": "attack",
+        "pose": 7,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 21,
+        "tag": "attack",
+        "pose": 8,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 22,
+        "tag": "hurt",
+        "pose": 0,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 23,
+        "tag": "hurt",
+        "pose": 1,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 24,
+        "tag": "hurt",
+        "pose": 2,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 25,
+        "tag": "hurt",
+        "pose": 3,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 26,
+        "tag": "death",
+        "pose": 0,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 27,
+        "tag": "death",
+        "pose": 1,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 28,
+        "tag": "death",
+        "pose": 2,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 29,
+        "tag": "death",
+        "pose": 3,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 30,
+        "tag": "death",
+        "pose": 4,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 31,
+        "tag": "death",
+        "pose": 5,
+        "feet": [],
+        "airborne": true
+      },
+      {
+        "frame": 32,
+        "tag": "death",
+        "pose": 6,
+        "feet": [],
+        "airborne": true
+      }
+    ]
+  }
+}

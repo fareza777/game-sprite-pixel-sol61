@@ -1,0 +1,51 @@
+{
+  "op": "ascii",
+  "sprite": "hollow.aseprite",
+  "width": 19,
+  "height": 22,
+  "text": "...................\n...................\n.......PP..........\n......PoQP.........\n.....PnqomP........\n....PnqqnnmP.......\n...PmnonnmmQP......\n..PmnoonnmmQQP.....\n.PmnooQonmmQQPL....\nLLnoQQonnmmmmPPL...\nSLooooooooomQQPL...\nLLmmQmmmmQQmPLL....\n..PPmmP#PPmmPL.....\n..P9#######9KP.....\n.P9#########9KP....\nLL9LL99#9LL99KP....\nSL9LL99#9LL99KP....\nLLP9999L9999KPL....\n...P99#LL#99PL.....\n....9#KKK#9KL......\n....P9KKK9PP.......\n.....hiiihL........",
+  "legend": {
+    "9": "#d0c4a2",
+    "P": "#314958",
+    "o": "#a77c4b",
+    "Q": "#486271",
+    "n": "#77573d",
+    "q": "#e6ba6d",
+    "m": "#57423a",
+    "L": "#0b101b",
+    "S": "#9bb9bc",
+    "#": "#eee4cd",
+    "K": "#a29476",
+    "h": "#652e3b",
+    "i": "#9d4249"
+  },
+  "offPalette": [],
+  "gridRows": [
+    "...................",
+    "...................",
+    ".......PP..........",
+    "......PoQP.........",
+    ".....PnqomP........",
+    "....PnqqnnmP.......",
+    "...PmnonnmmQP......",
+    "..PmnoonnmmQQP.....",
+    ".PmnooQonmmQQPL....",
+    "LLnoQQonnmmmmPPL...",
+    "SLooooooooomQQPL...",
+    "LLmmQmmmmQQmPLL....",
+    "..PPmmP#PPmmPL.....",
+    "..P9#######9KP.....",
+    ".P9#########9KP....",
+    "LL9LL99#9LL99KP....",
+    "SL9LL99#9LL99KP....",
+    "LLP9999L9999KPL....",
+    "...P99#LL#99PL.....",
+    "....9#KKK#9KL......",
+    "....P9KKK9PP.......",
+    ".....hiiihL........"
+  ],
+  "origin": {
+    "x": 40,
+    "y": 20
+  }
+}

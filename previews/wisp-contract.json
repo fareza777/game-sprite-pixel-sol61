@@ -1,0 +1,234 @@
+{
+  "width": 64,
+  "height": 64,
+  "pivot": {
+    "x": 32,
+    "y": 58
+  },
+  "frames": [
+    {
+      "frame": 1,
+      "tag": "idle",
+      "pose": 0,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 2,
+      "tag": "idle",
+      "pose": 1,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 3,
+      "tag": "idle",
+      "pose": 2,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 4,
+      "tag": "idle",
+      "pose": 3,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 5,
+      "tag": "walk",
+      "pose": 0,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 6,
+      "tag": "walk",
+      "pose": 1,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 7,
+      "tag": "walk",
+      "pose": 2,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 8,
+      "tag": "walk",
+      "pose": 3,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 9,
+      "tag": "walk",
+      "pose": 4,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 10,
+      "tag": "walk",
+      "pose": 5,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 11,
+      "tag": "walk",
+      "pose": 6,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 12,
+      "tag": "walk",
+      "pose": 7,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 13,
+      "tag": "attack",
+      "pose": 0,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 14,
+      "tag": "attack",
+      "pose": 1,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 15,
+      "tag": "attack",
+      "pose": 2,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 16,
+      "tag": "attack",
+      "pose": 3,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 17,
+      "tag": "attack",
+      "pose": 4,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 18,
+      "tag": "attack",
+      "pose": 5,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 19,
+      "tag": "attack",
+      "pose": 6,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 20,
+      "tag": "attack",
+      "pose": 7,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 21,
+      "tag": "attack",
+      "pose": 8,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 22,
+      "tag": "hurt",
+      "pose": 0,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 23,
+      "tag": "hurt",
+      "pose": 1,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 24,
+      "tag": "hurt",
+      "pose": 2,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 25,
+      "tag": "hurt",
+      "pose": 3,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 26,
+      "tag": "death",
+      "pose": 0,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 27,
+      "tag": "death",
+      "pose": 1,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 28,
+      "tag": "death",
+      "pose": 2,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 29,
+      "tag": "death",
+      "pose": 3,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 30,
+      "tag": "death",
+      "pose": 4,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 31,
+      "tag": "death",
+      "pose": 5,
+      "feet": [],
+      "airborne": true
+    },
+    {
+      "frame": 32,
+      "tag": "death",
+      "pose": 6,
+      "feet": [],
+      "airborne": true
+    }
+  ]
+}

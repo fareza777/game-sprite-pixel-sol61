@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "name": "All exported actor tags resolve to saved, nonempty frames",
+      "passed": true
+    },
+    {
+      "name": "All three combo clips match the runtime strike and recovery timing",
+      "passed": true
+    },
+    {
+      "name": "Combo cycles through crosscut, backhand, heavy; heavy interrupts the ogre",
+      "passed": true
+    },
+    {
+      "name": "Movement respects walls and the water trench",
+      "passed": true
+    },
+    {
+      "name": "A sword strike hits each target once and excludes targets behind the knight",
+      "passed": true
+    },
+    {
+      "name": "Stone columns block melee through their collision footprint",
+      "passed": true
+    },
+    {
+      "name": "Roll spends stamina, moves the player and grants temporary invulnerability",
+      "passed": true
+    },
+    {
+      "name": "A facing shield blocks damage; an attack from behind still hurts",
+      "passed": true
+    },
+    {
+      "name": "Chest and healing shrine can each be used only once per run",
+      "passed": true
+    },
+    {
+      "name": "Encounter clear leads to relic choice and applies the selected upgrade",
+      "passed": true
+    },
+    {
+      "name": "Enemies telegraph before dealing damage",
+      "passed": true
+    },
+    {
+      "name": "Final encounter clear opens the exit; interacting at the gate wins",
+      "passed": true
+    },
+    {
+      "name": "Death completes its animation and a fresh run resets inventory and actors",
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "seed": 61,
+      "state": "won",
+      "floor": 3,
+      "kills": 11,
+      "hp": 48,
+      "time": 31,
+      "remaining": 0
+    },
+    {
+      "seed": 16361,
+      "state": "won",
+      "floor": 3,
+      "kills": 11,
+      "hp": 20,
+      "time": 28,
+      "remaining": 0
+    },
+    {
+      "seed": 2026,
+      "state": "won",
+      "floor": 3,
+      "kills": 11,
+      "hp": 28,
+      "time": 39,
+      "remaining": 0
+    }
+  ]
+}

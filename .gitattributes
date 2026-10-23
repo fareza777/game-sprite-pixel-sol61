@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.mjs text eol=lf
+*.java text eol=lf
+*.gradle text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.bat text eol=crlf
+*.aseprite binary
+*.png binary
+*.gif binary
+*.apk binary
+*.jar binary

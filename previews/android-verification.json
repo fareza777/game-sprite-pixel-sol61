@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "portrait": true,
+  "english": true,
+  "offline": true,
+  "independentTouchPointers": true,
+  "cancelReleasesInput": true,
+  "snapshot": {
+    "state": "paused",
+    "portrait": true,
+    "controls": {
+      "up": false,
+      "down": false,
+      "left": false,
+      "right": false,
+      "attack": false,
+      "block": false,
+      "roll": false,
+      "interact": false
+    },
+    "floor": 1,
+    "hp": 100,
+    "stamina": 99.99900000000001,
+    "kills": 0,
+    "gold": 0,
+    "enemies": [
+      {
+        "type": "hollow",
+        "hp": 55,
+        "phase": "chase",
+        "x": 284.8395393973718,
+        "y": 261.3142520438122
+      },
+      {
+        "type": "hollow",
+        "hp": 55,
+        "phase": "chase",
+        "x": 350.1373019850598,
+        "y": 263.86757179562824
+      },
+      {
+        "type": "wisp",
+        "hp": 38,
+        "phase": "windup",
+        "x": 258.2263490639091,
+        "y": 161.97496939701966
+      }
+    ],
+    "player": {
+      "x": 320,
+      "y": 261.9766000000002,
+      "action": "idle",
+      "face": "n"
+    }
+  }
+}

@@ -1,0 +1,4209 @@
+[
+  {
+    "name": "preflight",
+    "title": "Preflight",
+    "description": "Check that Aseprite is connected and report what this session can do. Call this FIRST in any pixel-art task and stop if `ready` is false — every editing tool writes into the user's open Aseprite window ('live') or into a batch Aseprite this server owns ('headless'), and there is no useful fallback when that Aseprite is not there. Pass `mode` to choose which one the session works with from now on — only because the user asked (e.g. --headless) or the request plainly needs no window (files for CI, a batch of assets). Never switch to get around a live session that is not ready: ask the user instead. Switching loses nothing; each side keeps its documents.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "live",
+            "headless"
+          ],
+          "description": "Switch the session to this Aseprite before checking. Omit to keep the current one."
+        }
+      },
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "ready": {
+          "type": "boolean",
+          "description": "True only when Aseprite is attached and accepting commands."
+        },
+        "switched": {
+          "type": "boolean",
+          "description": "True when this call changed the session's mode."
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "live",
+            "headless"
+          ],
+          "description": "'live' = the user's open window. 'headless' = a batch Aseprite with no window; nothing is on disk until you save or export."
+        },
+        "bridgeConnected": {
+          "type": "boolean"
+        },
+        "pluginConnected": {
+          "type": "boolean"
+        },
+        "asepriteVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "extensionVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Optional capabilities this extension build supports."
+        },
+        "activeSprite": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "colorMode": {
+                  "type": "string"
+                },
+                "frames": {
+                  "type": "integer"
+                },
+                "layers": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "name",
+                "width",
+                "height",
+                "colorMode",
+                "frames",
+                "layers"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "directive": {
+          "type": "string",
+          "description": "What to do next, in one sentence."
+        }
+      },
+      "required": [
+        "ready",
+        "switched",
+        "mode",
+        "bridgeConnected",
+        "pluginConnected",
+        "features",
+        "directive"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "sprite_info",
+    "title": "Sprite info",
+    "description": "Full structured state of a sprite: dimensions, colour mode, palette, every layer (with opacity, blend mode, visibility, group nesting), every frame with its duration, animation tags, slices and the current selection. Read this before editing — guessing at layer names or frame counts is the most common way an agent corrupts someone's file.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "includePalette": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include the full palette as hex."
+        },
+        "includeSlices": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "Stable id for this open document. Pass it back as '#<id>'."
+        },
+        "name": {
+          "type": "string"
+        },
+        "filename": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "colorMode": {
+          "type": "string",
+          "enum": [
+            "rgb",
+            "grayscale",
+            "indexed"
+          ]
+        },
+        "transparentIndex": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "frameCount": {
+          "type": "integer"
+        },
+        "modified": {
+          "type": "boolean",
+          "description": "Unsaved changes present in this document."
+        },
+        "layers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "index": {
+                "type": "integer"
+              },
+              "visible": {
+                "type": "boolean"
+              },
+              "editable": {
+                "type": "boolean"
+              },
+              "opacity": {
+                "type": "integer"
+              },
+              "blendMode": {
+                "type": "string"
+              },
+              "isGroup": {
+                "type": "boolean"
+              },
+              "isTilemap": {
+                "type": "boolean"
+              },
+              "parent": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "cels": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                },
+                "description": "1-based frames that have a cel on this layer."
+              }
+            },
+            "required": [
+              "name",
+              "index",
+              "visible",
+              "editable",
+              "opacity",
+              "blendMode",
+              "isGroup",
+              "isTilemap",
+              "cels"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "frames": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "number": {
+                "type": "integer"
+              },
+              "durationMs": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "number",
+              "durationMs"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "from": {
+                "type": "integer"
+              },
+              "to": {
+                "type": "integer"
+              },
+              "direction": {
+                "type": "string"
+              },
+              "repeats": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "Loop count; 0 means forever."
+              }
+            },
+            "required": [
+              "name",
+              "from",
+              "to",
+              "direction"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "palette": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "slices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "bounds": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "integer"
+                  },
+                  "y": {
+                    "type": "integer"
+                  },
+                  "width": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0
+                  },
+                  "height": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0
+                  }
+                },
+                "required": [
+                  "x",
+                  "y",
+                  "width",
+                  "height"
+                ],
+                "additionalProperties": false
+              },
+              "center": {
+                "$ref": "#/properties/slices/items/properties/bounds",
+                "description": "Nine-slice centre region, relative to the slice. Only when set."
+              },
+              "pivot": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "integer"
+                  },
+                  "y": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "name",
+              "bounds"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "selection": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "integer"
+                },
+                "y": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "x",
+                "y",
+                "width",
+                "height"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "activeLayer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "activeFrame": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "width",
+        "height",
+        "colorMode",
+        "frameCount",
+        "modified",
+        "layers",
+        "frames",
+        "tags"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "sprite_manage",
+    "title": "Manage sprites",
+    "description": "Open, create, focus, resize, save and close sprites in the running Aseprite session. Ops: 'list' (open documents), 'new', 'open', 'activate', 'save', 'save_as', 'close', 'resize_canvas', 'set_properties', 'slice_create', 'slice_update', 'slice_delete'. Canvas resize keeps existing pixels — pass an anchor to say where they land. Slices name a rectangular region of the canvas for an engine to read back — a 9-patch panel's `center`, or a hotspot's `pivot`.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "list",
+            "new",
+            "open",
+            "activate",
+            "save",
+            "save_as",
+            "close",
+            "resize_canvas",
+            "set_properties",
+            "slice_create",
+            "slice_update",
+            "slice_delete"
+          ]
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "path": {
+          "type": "string",
+          "description": "File path for 'open' and 'save_as'."
+        },
+        "width": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "height": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "colorMode": {
+          "type": "string",
+          "enum": [
+            "rgb",
+            "grayscale",
+            "indexed"
+          ],
+          "description": "For 'new'. Indexed keeps a sprite honest about its palette."
+        },
+        "anchor": {
+          "type": "string",
+          "enum": [
+            "top_left",
+            "top",
+            "top_right",
+            "left",
+            "center",
+            "right",
+            "bottom_left",
+            "bottom",
+            "bottom_right"
+          ],
+          "default": "center",
+          "description": "Where existing pixels sit after 'resize_canvas'."
+        },
+        "pixelAspect": {
+          "type": "string",
+          "description": "e.g. '1:1' or '1:2'."
+        },
+        "force": {
+          "type": "boolean",
+          "default": false,
+          "description": "Allow 'close' to discard unsaved changes. Ask the user before setting this."
+        },
+        "name": {
+          "type": "string",
+          "description": "Slice name. Required for 'slice_create'; identifies it for update/delete."
+        },
+        "bounds": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            },
+            "height": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "width",
+            "height"
+          ],
+          "additionalProperties": false,
+          "description": "Slice rectangle. Required for 'slice_create'."
+        },
+        "center": {
+          "$ref": "#/properties/bounds",
+          "description": "For slice ops: nine-slice centre region, relative to `bounds`."
+        },
+        "pivot": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false,
+          "description": "For slice ops."
+        },
+        "color": {
+          "type": "string",
+          "description": "For slice ops: slice colour in the timeline, #rrggbb."
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string"
+        },
+        "sprites": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "filename": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "colorMode": {
+                "type": "string"
+              },
+              "frames": {
+                "type": "integer"
+              },
+              "layers": {
+                "type": "integer"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "modified": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "width",
+              "height",
+              "colorMode",
+              "frames",
+              "layers",
+              "active",
+              "modified"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "sprite": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "description": "Stable id of the affected document; pass it back as '#<id>'."
+        },
+        "path": {
+          "type": "string"
+        },
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string",
+          "description": "Slice name, for 'slice_delete'."
+        },
+        "slice": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "bounds": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "integer"
+                },
+                "y": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0
+                },
+                "height": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0
+                }
+              },
+              "required": [
+                "x",
+                "y",
+                "width",
+                "height"
+              ],
+              "additionalProperties": false
+            },
+            "center": {
+              "$ref": "#/properties/slice/properties/bounds",
+              "description": "Nine-slice centre region, relative to the slice. Only when set."
+            },
+            "pivot": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "integer"
+                },
+                "y": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "name",
+            "bounds"
+          ],
+          "additionalProperties": false,
+          "description": "The affected slice, for 'slice_create'/'slice_update'."
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "idempotentHint": false,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "look",
+    "title": "Look at the sprite",
+    "description": "See what is actually on the canvas. Ops:\n• 'preview' — a nearest-neighbour upscaled PNG of the active frame (~1024px long edge). Use for overall read: silhouette, colour, whether it looks like the thing.\n• 'ascii' — an exact text grid, one glyph per pixel with a colour legend and coordinate rulers. Use to verify precise pixel positions and values, to count cells, or on any client without vision. Reads up to the whole canvas; pass a region to crop. Glyphs are bound to palette indices, so every region and frame of a sprite agrees on what a glyph means; each read's legend lists only the colours it contains, so merge legends when rows from one piece go into another. Only colours outside the palette (listed in `offPalette`) get per-read glyphs. `rulers=false` prints the bare rows, which `draw` kind 'grid' takes back as-is: read a layer, edit the rows, send them at the same x/y.\n• 'filmstrip' — every frame composited into one image. The only reliable way to review an animation, since a vision model reads just the first frame of a GIF.\n• 'onion' — the target frame at full opacity over ghosted neighbouring frames, oldest-first. Use to check in-betweens and spacing while animating, without stepping through frames one at a time. Over an opaque background the target hides every ghost — pass `layer` to onion-skin just the part that moves.\n• 'diff' — a pixel-level text diff between two frames: '.' unchanged, '-' erased, glyph = the new colour. Use it to confirm exactly what an edit touched.\n• 'compare' — the reference layer (left, full opacity) beside the art without any reference layer (right), same frame, same scale. Use it when drawing from a concept or storyboard: name the few largest mismatches and fix only those.\nDraw, then look, then fix. Do not report a sprite finished without looking at it.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "preview",
+            "ascii",
+            "filmstrip",
+            "diff",
+            "onion",
+            "compare"
+          ],
+          "default": "preview"
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "frame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "1-based frame number. Omit to use the active frame."
+        },
+        "reference": {
+          "type": "string",
+          "description": "Compare: the reference layer. Default 'reference'."
+        },
+        "fromFrame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "Diff: the earlier frame."
+        },
+        "toFrame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "Diff: the later frame."
+        },
+        "framesBefore": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8,
+          "default": 1,
+          "description": "Onion: ghost frames before the target."
+        },
+        "framesAfter": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8,
+          "default": 1,
+          "description": "Onion: ghost frames after the target."
+        },
+        "ghostOpacity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255,
+          "default": 90,
+          "description": "Onion: opacity of the ghosted (non-target) frames."
+        },
+        "region": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            },
+            "height": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "width",
+            "height"
+          ],
+          "additionalProperties": false,
+          "description": "Crop. Omit to read the whole canvas."
+        },
+        "layer": {
+          "type": "string",
+          "description": "Read a single layer instead of the composited image. Honoured by preview, ascii, diff, filmstrip and onion; compare has its own `reference`."
+        },
+        "rulers": {
+          "type": "boolean",
+          "default": true,
+          "description": "ascii: false drops the coordinate rulers and row labels, leaving rows you can edit and pass straight to `draw` kind 'grid' with the reported origin."
+        },
+        "scale": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 128,
+          "description": "Integer upscale for image ops, 1-128 (clamped so the output stays under ~2048px). Omit it — the automatic choice targets a ~1024px long edge, which is what a vision model can actually read."
+        }
+      },
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string"
+        },
+        "sprite": {
+          "type": "string"
+        },
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "scale": {
+          "type": "integer"
+        },
+        "text": {
+          "type": "string",
+          "description": "The grid, for 'ascii' and 'diff'."
+        },
+        "legend": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "glyph → #rrggbb. Palette colours keep the same glyph across every read of the sprite."
+        },
+        "offPalette": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "ascii/diff: glyphs whose colour is not in the palette. Their assignment can change between reads — do not reuse them across regions."
+        },
+        "gridRows": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "ascii: the bare rows, '.' transparent — `draw` kind 'grid' `rows`, with `legend` and `origin`."
+        },
+        "origin": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false,
+          "description": "ascii: sprite position of the grid's top-left cell — the `x`/`y` for `draw` kind 'grid'."
+        },
+        "changedPixels": {
+          "type": "integer"
+        },
+        "totalPixels": {
+          "type": "integer"
+        },
+        "changedBounds": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "integer"
+                },
+                "y": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "x",
+                "y",
+                "width",
+                "height"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Diff: tight bounding box of every changed pixel. Null when nothing changed."
+        },
+        "percentChanged": {
+          "type": "number",
+          "description": "Diff: changed / total * 100."
+        },
+        "frames": {
+          "type": "integer",
+          "description": "Filmstrip: frame count."
+        },
+        "framesUsed": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "Onion: 1-based frame numbers composited."
+        },
+        "columns": {
+          "type": "integer"
+        },
+        "rows": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "op",
+        "sprite",
+        "width",
+        "height"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "read_pixels",
+    "title": "Read pixels",
+    "description": "Read a rectangular region as structured data: a list of distinct colours plus a row-major index grid. Use this when you need to compute over pixels (sample a palette from art, find a silhouette edge, copy a region) rather than just look at them. For eyeballing, 'look' is cheaper.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "layer": {
+          "type": "string",
+          "description": "Layer name. Omit to use the active layer."
+        },
+        "frame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "1-based frame number. Omit to use the active frame."
+        },
+        "region": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            },
+            "height": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "width",
+            "height"
+          ],
+          "additionalProperties": false,
+          "description": "Omit to read the whole canvas."
+        },
+        "composite": {
+          "type": "boolean",
+          "default": true,
+          "description": "Read the flattened image. False reads only the target layer's cel."
+        }
+      },
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "x": {
+          "type": "integer"
+        },
+        "y": {
+          "type": "integer"
+        },
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "colors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Distinct colours; index 0 is fully transparent."
+        },
+        "grid": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "Row-major indices into `colors`."
+        },
+        "uniqueColors": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sprite",
+        "x",
+        "y",
+        "width",
+        "height",
+        "colors",
+        "grid",
+        "uniqueColors"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "draw",
+    "title": "Draw",
+    "description": "Apply a batch of drawing operations to one cel, as a single undoable action. Ops: pixels, line, polyline, rect, ellipse, fill, replace, dither, gradient, clear, blit, text, grid. Batch aggressively — a whole sprite in one call is normal and correct, and it means the user can undo your work with one Ctrl+Z. Set `paletteLock` (default true) to snap every colour to the sprite's palette by perceptual distance before anything is written, so you cannot silently widen a curated palette. Ops run in array order, so paint fills before outlines and outlines before highlights. 'text' is laid out here from a bitmap font and expanded to plain pixels before it reaches Aseprite — pass `measureOnly: true` with only 'text' ops to get each one's ink bounds without touching the sprite, e.g. to centre a label first. 'grid' paints a picture written as text — one character per pixel, a legend mapping characters to colours, the same shape `look op=\"ascii\"` returns — so you can see the whole silhouette while you write it instead of composing it from shapes. It is the easiest way to draw a small sprite or a whole animation frame, and to edit one: read a region with `look op=\"ascii\" layer=… rulers=false`, change the rows, and send them back as a grid at the region's x/y.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "layer": {
+          "type": "string",
+          "description": "Layer name. Omit to use the active layer."
+        },
+        "frame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "1-based frame number. Omit to use the active frame."
+        },
+        "ops": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "pixels"
+                  },
+                  "color": {
+                    "type": "string",
+                    "pattern": "^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$",
+                    "description": "Colour as #rrggbb or #rrggbbaa."
+                  },
+                  "points": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "x": {
+                          "type": "integer"
+                        },
+                        "y": {
+                          "type": "integer"
+                        },
+                        "color": {
+                          "$ref": "#/properties/ops/items/anyOf/0/properties/color",
+                          "description": "Per-pixel colour. Falls back to the op's `color`."
+                        }
+                      },
+                      "required": [
+                        "x",
+                        "y"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 1,
+                    "maxItems": 20000
+                  }
+                },
+                "required": [
+                  "kind",
+                  "points"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "line"
+                  },
+                  "color": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color"
+                  },
+                  "from": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer"
+                      },
+                      "y": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "to": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer"
+                      },
+                      "y": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "thickness": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "maximum": 64,
+                    "default": 1
+                  }
+                },
+                "required": [
+                  "kind",
+                  "color",
+                  "from",
+                  "to"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "polyline"
+                  },
+                  "color": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color"
+                  },
+                  "points": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "x": {
+                          "type": "integer"
+                        },
+                        "y": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "x",
+                        "y"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 2
+                  },
+                  "closed": {
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "fill": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color",
+                    "description": "Fill colour; only meaningful when closed."
+                  }
+                },
+                "required": [
+                  "kind",
+                  "color",
+                  "points"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "rect"
+                  },
+                  "color": {
+                    "type": "string",
+                    "pattern": "^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$",
+                    "description": "Outline colour."
+                  },
+                  "rect": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer"
+                      },
+                      "y": {
+                        "type": "integer"
+                      },
+                      "width": {
+                        "type": "integer",
+                        "exclusiveMinimum": 0
+                      },
+                      "height": {
+                        "type": "integer",
+                        "exclusiveMinimum": 0
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y",
+                      "width",
+                      "height"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "fill": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color",
+                    "description": "Omit for an outline only."
+                  }
+                },
+                "required": [
+                  "kind",
+                  "color",
+                  "rect"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "ellipse"
+                  },
+                  "color": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color"
+                  },
+                  "rect": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "$ref": "#/properties/ops/items/anyOf/3/properties/rect/properties/x"
+                      },
+                      "y": {
+                        "$ref": "#/properties/ops/items/anyOf/3/properties/rect/properties/y"
+                      },
+                      "width": {
+                        "$ref": "#/properties/ops/items/anyOf/3/properties/rect/properties/width"
+                      },
+                      "height": {
+                        "$ref": "#/properties/ops/items/anyOf/3/properties/rect/properties/height"
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y",
+                      "width",
+                      "height"
+                    ],
+                    "additionalProperties": false,
+                    "description": "Bounding box of the ellipse."
+                  },
+                  "fill": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color",
+                    "description": "Colour as #rrggbb or #rrggbbaa."
+                  }
+                },
+                "required": [
+                  "kind",
+                  "color",
+                  "rect"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "fill"
+                  },
+                  "color": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color"
+                  },
+                  "at": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer"
+                      },
+                      "y": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "tolerance": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 255,
+                    "default": 0,
+                    "description": "Largest per-channel difference (0–255) still counted as the clicked colour. RGB sprites only; indexed and grayscale fills stay exact."
+                  },
+                  "contiguous": {
+                    "type": "boolean",
+                    "default": true
+                  }
+                },
+                "required": [
+                  "kind",
+                  "color",
+                  "at"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "replace"
+                  },
+                  "from": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color"
+                  },
+                  "to": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color"
+                  },
+                  "region": {
+                    "$ref": "#/properties/ops/items/anyOf/3/properties/rect"
+                  }
+                },
+                "required": [
+                  "kind",
+                  "from",
+                  "to"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "dither"
+                  },
+                  "rect": {
+                    "$ref": "#/properties/ops/items/anyOf/3/properties/rect"
+                  },
+                  "colorA": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color"
+                  },
+                  "colorB": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color"
+                  },
+                  "pattern": {
+                    "type": "string",
+                    "enum": [
+                      "checker",
+                      "bayer2",
+                      "bayer4",
+                      "bayer8",
+                      "noise"
+                    ],
+                    "default": "bayer4"
+                  },
+                  "ratio": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "default": 0.5,
+                    "description": "0 = all colorA, 1 = all colorB."
+                  }
+                },
+                "required": [
+                  "kind",
+                  "rect",
+                  "colorA",
+                  "colorB"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "gradient"
+                  },
+                  "rect": {
+                    "$ref": "#/properties/ops/items/anyOf/3/properties/rect"
+                  },
+                  "from": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color"
+                  },
+                  "to": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color"
+                  },
+                  "direction": {
+                    "type": "string",
+                    "enum": [
+                      "vertical",
+                      "horizontal",
+                      "diagonal",
+                      "radial"
+                    ],
+                    "default": "vertical"
+                  },
+                  "steps": {
+                    "type": "integer",
+                    "minimum": 2,
+                    "maximum": 64,
+                    "default": 4,
+                    "description": "Banded, not smooth — a smooth gradient is not pixel art."
+                  },
+                  "dither": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Dither the band boundaries."
+                  }
+                },
+                "required": [
+                  "kind",
+                  "rect",
+                  "from",
+                  "to"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "clear"
+                  },
+                  "region": {
+                    "$ref": "#/properties/ops/items/anyOf/3/properties/rect",
+                    "description": "Omit to clear the whole cel."
+                  }
+                },
+                "required": [
+                  "kind"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "blit"
+                  },
+                  "from": {
+                    "$ref": "#/properties/ops/items/anyOf/3/properties/rect"
+                  },
+                  "to": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer"
+                      },
+                      "y": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "fromFrame": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0
+                  },
+                  "fromLayer": {
+                    "type": "string"
+                  },
+                  "flipHorizontal": {
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "flipVertical": {
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "skipTransparent": {
+                    "type": "boolean",
+                    "default": true
+                  }
+                },
+                "required": [
+                  "kind",
+                  "from",
+                  "to"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "text"
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Multiline via \\n."
+                  },
+                  "x": {
+                    "type": "integer"
+                  },
+                  "y": {
+                    "type": "integer"
+                  },
+                  "color": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color"
+                  },
+                  "font": {
+                    "type": "string",
+                    "default": "pixel5x7",
+                    "description": "Name in knowledge/fonts, without the .json extension."
+                  },
+                  "anchor": {
+                    "type": "string",
+                    "enum": [
+                      "top_left",
+                      "top",
+                      "top_right",
+                      "left",
+                      "center",
+                      "right",
+                      "bottom_left",
+                      "bottom",
+                      "bottom_right",
+                      "baseline_left",
+                      "baseline",
+                      "baseline_right"
+                    ],
+                    "default": "top_left",
+                    "description": "Resolved against the glyph ink box, not the full advance box — outline and shadow never shift it."
+                  },
+                  "letterSpacing": {
+                    "type": "integer",
+                    "default": 1
+                  },
+                  "lineSpacing": {
+                    "type": "integer",
+                    "default": 1
+                  },
+                  "bold": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 3,
+                    "default": 0,
+                    "description": "Grid-cell passes grown rightward; 0 is regular weight."
+                  },
+                  "outlineColor": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color",
+                    "description": "Colour as #rrggbb or #rrggbbaa."
+                  },
+                  "outlineDiagonals": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "8-neighbour outline instead of 4."
+                  },
+                  "shadowColor": {
+                    "$ref": "#/properties/ops/items/anyOf/0/properties/color",
+                    "description": "Colour as #rrggbb or #rrggbbaa."
+                  },
+                  "shadowOffset": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer"
+                      },
+                      "y": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "additionalProperties": false,
+                    "default": {
+                      "x": 1,
+                      "y": 1
+                    }
+                  },
+                  "scale": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 8,
+                    "default": 1
+                  }
+                },
+                "required": [
+                  "kind",
+                  "text",
+                  "x",
+                  "y",
+                  "color"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "type": "string",
+                    "const": "grid"
+                  },
+                  "x": {
+                    "type": "integer",
+                    "default": 0,
+                    "description": "Sprite x of the grid's left column."
+                  },
+                  "y": {
+                    "type": "integer",
+                    "default": 0,
+                    "description": "Sprite y of the grid's top row."
+                  },
+                  "legend": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "anyOf": [
+                        {
+                          "$ref": "#/properties/ops/items/anyOf/0/properties/color"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "description": "Colour as #rrggbb or #rrggbbaa."
+                    },
+                    "description": "One character → colour; null is transparent. '.' is transparent unless you redefine it."
+                  },
+                  "rows": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "minItems": 1,
+                    "description": "Top to bottom, one character per pixel, every row the same width. Up to the canvas size."
+                  },
+                  "transparent": {
+                    "type": "string",
+                    "enum": [
+                      "erase",
+                      "skip"
+                    ],
+                    "default": "erase",
+                    "description": "Transparent cells: 'erase' clears them, so the grid's rectangle ends up exactly as written; 'skip' leaves the pixel underneath, to stamp a shape over existing art."
+                  }
+                },
+                "required": [
+                  "kind",
+                  "legend",
+                  "rows"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 512,
+          "description": "Applied in order, in one transaction."
+        },
+        "paletteLock": {
+          "type": "boolean",
+          "default": true,
+          "description": "Snap every colour to the nearest palette entry (CIELAB ΔE). Set false only when the user asked to introduce new colours."
+        },
+        "selectionOnly": {
+          "type": "boolean",
+          "default": false,
+          "description": "Clip every op to the current selection."
+        },
+        "createCel": {
+          "type": "boolean",
+          "default": true,
+          "description": "Create the cel if the target layer/frame has none."
+        },
+        "label": {
+          "type": "string",
+          "description": "Name shown in Aseprite's undo history. Describe the intent, e.g. 'shade helmet'."
+        },
+        "measureOnly": {
+          "type": "boolean",
+          "default": false,
+          "description": "Every op must be 'text'. Returns each one's ink bounds without calling Aseprite at all — use to size a panel or centre a label before actually drawing it."
+        }
+      },
+      "required": [
+        "ops"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "layer": {
+          "type": "string"
+        },
+        "frame": {
+          "type": "integer"
+        },
+        "opsApplied": {
+          "type": "integer"
+        },
+        "pixelsChanged": {
+          "type": "integer"
+        },
+        "colorsSnapped": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              },
+              "deltaE": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "deltaE"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Colours palette-lock moved, and how far. A large ΔE means the palette lacks that colour."
+        },
+        "bounds": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "integer"
+                },
+                "y": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "x",
+                "y",
+                "width",
+                "height"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Bounding box actually touched."
+        },
+        "measureOnly": {
+          "type": "boolean"
+        },
+        "textBounds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "index": {
+                "type": "integer",
+                "description": "Position of this op in the `ops` array."
+              },
+              "bounds": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer"
+                      },
+                      "y": {
+                        "type": "integer"
+                      },
+                      "width": {
+                        "type": "integer"
+                      },
+                      "height": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y",
+                      "width",
+                      "height"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "Ink bounds of the laid-out text; null for text with no ink (e.g. all spaces)."
+              }
+            },
+            "required": [
+              "index"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Only present when `measureOnly` was set."
+        }
+      },
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "select",
+    "title": "Selection",
+    "description": "Read or change the active selection. Ops: 'get', 'none', 'all', 'rect', 'ellipse', 'color' (select every pixel matching a colour), 'invert', 'grow', 'shrink'. A selection scopes draw, transform and recolor, which is usually cheaper and safer than masking by hand.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "get",
+            "none",
+            "all",
+            "rect",
+            "ellipse",
+            "color",
+            "invert",
+            "grow",
+            "shrink"
+          ]
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "layer": {
+          "type": "string",
+          "description": "Layer name. Omit to use the active layer."
+        },
+        "frame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "1-based frame number. Omit to use the active frame."
+        },
+        "rect": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            },
+            "height": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "width",
+            "height"
+          ],
+          "additionalProperties": false
+        },
+        "color": {
+          "type": "string",
+          "pattern": "^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$",
+          "description": "For op 'color'."
+        },
+        "tolerance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255,
+          "default": 0,
+          "description": "Largest per-channel difference (0–255) still counted as the clicked colour. RGB sprites only; indexed and grayscale fills stay exact."
+        },
+        "contiguous": {
+          "type": "boolean",
+          "default": false,
+          "description": "For op 'color'."
+        },
+        "amount": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "default": 1,
+          "description": "Pixels, for grow/shrink."
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "replace",
+            "add",
+            "subtract",
+            "intersect"
+          ],
+          "default": "replace",
+          "description": "How this selection combines with the existing one."
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "empty": {
+          "type": "boolean"
+        },
+        "bounds": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "integer"
+                },
+                "y": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "x",
+                "y",
+                "width",
+                "height"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pixelCount": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sprite",
+        "empty",
+        "pixelCount"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "transform",
+    "title": "Transform",
+    "description": "Move, flip, rotate or scale pixels on ONE cel — the target layer's image on the target frame. Ops: 'translate', 'flip', 'rotate', 'scale', 'outline', 'crop_to_content'. To transform part of a cel, crop the region out with `draw` op 'blit' first; there is no selection-scoped transform. Rotation is only clean at 90° multiples — arbitrary angles destroy pixel art, so anything else needs `allowLossy`. Scaling is nearest-neighbour and integer-only for the same reason.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "translate",
+            "flip",
+            "rotate",
+            "scale",
+            "outline",
+            "crop_to_content"
+          ]
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "layer": {
+          "type": "string",
+          "description": "Layer name. Omit to use the active layer."
+        },
+        "frame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "1-based frame number. Omit to use the active frame."
+        },
+        "dx": {
+          "type": "integer",
+          "default": 0
+        },
+        "dy": {
+          "type": "integer",
+          "default": 0
+        },
+        "axis": {
+          "type": "string",
+          "enum": [
+            "horizontal",
+            "vertical"
+          ],
+          "description": "For 'flip'."
+        },
+        "angle": {
+          "type": "number",
+          "default": 90,
+          "description": "Degrees, clockwise. For 'rotate'."
+        },
+        "factor": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16,
+          "default": 2,
+          "description": "For 'scale'."
+        },
+        "color": {
+          "type": "string",
+          "pattern": "^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$",
+          "description": "Outline colour, for 'outline'."
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "outside",
+            "inside"
+          ],
+          "default": "outside",
+          "description": "For 'outline'. 'outside' paints transparent pixels touching opaque ones, growing the cel by one pixel each way. 'inside' recolours opaque pixels that touch transparency instead, same size in and out."
+        },
+        "diagonals": {
+          "type": "boolean",
+          "default": false,
+          "description": "For 'outline'. Treat diagonal neighbours as touching too (8-neighbour instead of 4)."
+        },
+        "thickness": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 8,
+          "default": 1
+        },
+        "allowLossy": {
+          "type": "boolean",
+          "default": false,
+          "description": "Permit a non-90° rotation or non-integer scale. Ask the user first."
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "op": {
+          "type": "string"
+        },
+        "pixelsChanged": {
+          "type": "integer"
+        },
+        "bounds": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "integer"
+                },
+                "y": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "x",
+                "y",
+                "width",
+                "height"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "sprite",
+        "op",
+        "pixelsChanged"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "layer",
+    "title": "Layers",
+    "description": "Manage layers. Ops: 'list', 'create', 'rename', 'delete', 'reorder', 'set' (visibility/opacity/blend/lock), 'group', 'ungroup', 'merge', 'duplicate', 'activate'. Pass `batch` to run several in one undoable action — building a rig in one call is the normal use. 'duplicate' takes an optional `toSprite` to copy the layer's cels into another OPEN sprite instead of this one, by frame index; frames past the target's frame count are dropped and reported. A character that will be animated wants its parts on separate layers (head, torso, arm-far, arm-near, leg-far, leg-near) before any frames exist; splitting baked pixels apart later is far more work.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "list",
+            "create",
+            "rename",
+            "delete",
+            "reorder",
+            "set",
+            "group",
+            "ungroup",
+            "merge",
+            "duplicate",
+            "activate"
+          ],
+          "description": "Single operation. Use `batch` instead for several."
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "name": {
+          "type": "string"
+        },
+        "newName": {
+          "type": "string"
+        },
+        "parent": {
+          "type": "string",
+          "description": "Group layer to nest under."
+        },
+        "index": {
+          "type": "integer",
+          "description": "Target stack position for 'reorder'; 0 is bottom."
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "editable": {
+          "type": "boolean"
+        },
+        "opacity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "blendMode": {
+          "type": "string",
+          "enum": [
+            "normal",
+            "multiply",
+            "screen",
+            "overlay",
+            "darken",
+            "lighten",
+            "color_dodge",
+            "color_burn",
+            "hard_light",
+            "soft_light",
+            "difference",
+            "exclusion",
+            "hue",
+            "saturation",
+            "color",
+            "luminosity",
+            "addition",
+            "subtract",
+            "divide"
+          ]
+        },
+        "names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "For 'merge' and bulk 'group'."
+        },
+        "toSprite": {
+          "type": "string",
+          "description": "For 'duplicate': copy the layer into another OPEN sprite instead of this one."
+        },
+        "batch": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "op": {
+                "$ref": "#/properties/op"
+              },
+              "name": {
+                "type": "string"
+              },
+              "newName": {
+                "type": "string"
+              },
+              "parent": {
+                "type": "string",
+                "description": "Group layer to nest under."
+              },
+              "index": {
+                "type": "integer",
+                "description": "Target stack position; 0 is bottom."
+              },
+              "visible": {
+                "type": "boolean"
+              },
+              "editable": {
+                "type": "boolean"
+              },
+              "opacity": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255
+              },
+              "blendMode": {
+                "$ref": "#/properties/blendMode"
+              },
+              "names": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "For 'merge' and bulk 'group'."
+              },
+              "toSprite": {
+                "type": "string",
+                "description": "For 'duplicate': copy the layer into another OPEN sprite instead of this one."
+              }
+            },
+            "required": [
+              "op"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 128,
+          "description": "Operations applied in order, in one undoable action. Same shape as the single-op arguments."
+        }
+      },
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "layers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "index": {
+                "type": "integer"
+              },
+              "visible": {
+                "type": "boolean"
+              },
+              "editable": {
+                "type": "boolean"
+              },
+              "opacity": {
+                "type": "integer"
+              },
+              "blendMode": {
+                "type": "string"
+              },
+              "isGroup": {
+                "type": "boolean"
+              },
+              "isTilemap": {
+                "type": "boolean"
+              },
+              "parent": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "cels": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                },
+                "description": "1-based frames that have a cel on this layer."
+              }
+            },
+            "required": [
+              "name",
+              "index",
+              "visible",
+              "editable",
+              "opacity",
+              "blendMode",
+              "isGroup",
+              "isTilemap",
+              "cels"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "applied": {
+          "type": "integer"
+        },
+        "activeLayer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "duplicated": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sourceLayer": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string",
+                "description": "Name it got in the target sprite; suffixed on a name clash."
+              },
+              "toSprite": {
+                "type": "string",
+                "description": "Target as '#<id>' — stable even when several documents share a name."
+              },
+              "framesDropped": {
+                "type": "integer",
+                "description": "Cels whose frame index exceeded the target's frame count."
+              }
+            },
+            "required": [
+              "sourceLayer",
+              "name",
+              "toSprite",
+              "framesDropped"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Present when a 'duplicate' op in this call used `toSprite`."
+        }
+      },
+      "required": [
+        "sprite"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "frame",
+    "title": "Frames",
+    "description": "Manage animation frames. Ops: 'list', 'add', 'duplicate', 'delete', 'set_duration', 'activate', 'reorder'. Durations are milliseconds per frame and carry most of the life in a cycle — hold a contact pose longer than a pass pose. Use `count` to add several at once and `durations` to set a whole cycle's timing in one call.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "list",
+            "add",
+            "duplicate",
+            "delete",
+            "set_duration",
+            "activate",
+            "reorder"
+          ]
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "frame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "1-based frame number. Omit to use the active frame."
+        },
+        "count": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 256,
+          "default": 1
+        },
+        "afterFrame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "Insert position. Default: at the end."
+        },
+        "durationMs": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 65535
+        },
+        "durations": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "exclusiveMinimum": 0
+          },
+          "description": "Per-frame durations from frame 1, for 'set_duration'."
+        },
+        "toIndex": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "For 'reorder': the 1-based position `frame` ends up at. Its cels and duration move with it; tag ranges stay where they are."
+        },
+        "linkCels": {
+          "type": "boolean",
+          "default": false,
+          "description": "For 'duplicate': share the cel image instead of copying it, so edits apply to both."
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "frameCount": {
+          "type": "integer"
+        },
+        "frames": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "number": {
+                "type": "integer"
+              },
+              "durationMs": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "number",
+              "durationMs"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "activeFrame": {
+          "type": "integer"
+        },
+        "totalDurationMs": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sprite",
+        "frameCount"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "tag",
+    "title": "Animation tags",
+    "description": "Manage animation tags — the named frame ranges a game engine imports as 'idle', 'walk', 'attack'. Ops: 'list', 'create', 'update', 'delete'. Tag every cycle before export; an untagged spritesheet is a pile of frames the engine cannot address.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "list",
+            "create",
+            "update",
+            "delete"
+          ]
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "name": {
+          "type": "string"
+        },
+        "newName": {
+          "type": "string"
+        },
+        "from": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "First frame, 1-based, inclusive."
+        },
+        "to": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "Last frame, 1-based, inclusive."
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "forward",
+            "reverse",
+            "pingpong",
+            "pingpong_reverse"
+          ]
+        },
+        "repeats": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Loop count; 0 means forever."
+        },
+        "color": {
+          "type": "string",
+          "description": "Tag colour in the timeline, #rrggbb."
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "from": {
+                "type": "integer"
+              },
+              "to": {
+                "type": "integer"
+              },
+              "direction": {
+                "type": "string"
+              },
+              "frames": {
+                "type": "integer"
+              },
+              "durationMs": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "name",
+              "from",
+              "to",
+              "direction",
+              "frames",
+              "durationMs"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "sprite",
+        "tags"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "cel",
+    "title": "Cels",
+    "description": "Manage cels — one layer's image on one frame. Ops: 'list', 'create', 'clear', 'delete', 'move', 'copy', 'link', 'unlink', 'set' (position/opacity), 'tween', 'oscillate'. 'move' is how you shift a whole limb between frames without redrawing it; 'link' shares one image across frames so a static part of a cycle stays in sync. 'tween' interpolates position or opacity between two frames with an easing curve; 'oscillate' adds a sinusoidal position offset over a frame range — both fill in any missing in-between cels from the start cel, in one transaction.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "list",
+            "create",
+            "clear",
+            "delete",
+            "move",
+            "copy",
+            "link",
+            "unlink",
+            "set",
+            "tween",
+            "oscillate"
+          ]
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "layer": {
+          "type": "string",
+          "description": "Layer name. Omit to use the active layer."
+        },
+        "frame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "1-based frame number. Omit to use the active frame."
+        },
+        "toFrame": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "toLayer": {
+          "type": "string"
+        },
+        "frames": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "exclusiveMinimum": 0
+          },
+          "description": "For 'link' across a range."
+        },
+        "x": {
+          "type": "integer",
+          "description": "Cel origin, for 'set' and 'move'."
+        },
+        "y": {
+          "type": "integer"
+        },
+        "dx": {
+          "type": "integer",
+          "description": "Relative move."
+        },
+        "dy": {
+          "type": "integer"
+        },
+        "opacity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "fromFrame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "For 'tween'/'oscillate': the start frame."
+        },
+        "property": {
+          "type": "string",
+          "enum": [
+            "position",
+            "opacity"
+          ],
+          "description": "For 'tween'."
+        },
+        "to": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "integer"
+                },
+                "y": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 255
+            }
+          ],
+          "description": "For 'tween': end value — {x,y} for property 'position', 0-255 for 'opacity'."
+        },
+        "easing": {
+          "type": "string",
+          "enum": [
+            "linear",
+            "ease_in",
+            "ease_out",
+            "ease_in_out",
+            "smoothstep"
+          ],
+          "default": "linear",
+          "description": "For 'tween'."
+        },
+        "amplitudeX": {
+          "type": "integer",
+          "default": 0,
+          "description": "For 'oscillate'."
+        },
+        "amplitudeY": {
+          "type": "integer",
+          "default": 0,
+          "description": "For 'oscillate'."
+        },
+        "period": {
+          "type": "integer",
+          "minimum": 2,
+          "description": "For 'oscillate', in frames. Default: the whole fromFrame..toFrame span."
+        },
+        "phase": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0,
+          "description": "For 'oscillate': 0-1 fraction of one period."
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "cels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "layer": {
+                "type": "string"
+              },
+              "frame": {
+                "type": "integer"
+              },
+              "x": {
+                "type": "integer"
+              },
+              "y": {
+                "type": "integer"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "opacity": {
+                "type": "integer"
+              },
+              "linked": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "layer",
+              "frame",
+              "x",
+              "y",
+              "width",
+              "height",
+              "opacity",
+              "linked"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "applied": {
+          "type": "integer"
+        },
+        "frames": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "frame": {
+                "type": "integer"
+              },
+              "x": {
+                "type": "integer"
+              },
+              "y": {
+                "type": "integer"
+              },
+              "opacity": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "frame"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Only present for 'tween' and 'oscillate': one entry per frame touched, ascending."
+        }
+      },
+      "required": [
+        "sprite"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "palette",
+    "title": "Palette",
+    "description": "Read and shape the sprite's palette. Ops:\n• 'get' — current palette with per-colour usage counts.\n• 'set' — write specific indices, or replace the palette wholesale.\n• 'preset' — load a bundled palette by key: ~2000 of them, the classics (pico8, gameboy, cga, nes…) and the most-downloaded on Lospec (sweetie-16, endesga-32, resurrect-64, aap-64…). An unknown key or a name answers with the matching keys, so 'preset: \"gameboy\"' or 'preset: \"endesga\"' is a search.\n• 'load' — read a .gpl/.hex/.pal/.png palette file from disk.\n• 'ramp' — generate a hue-shifted ramp from a base colour and append it. Shadows rotate toward blue, highlights toward orange; a ramp that only changes brightness is the clearest tell of machine-made pixel art.\n• 'analyze' — report ramp structure, contrast, near-duplicate entries and colours used in the art that are not in the palette.\n• 'extract' — replace the palette with one quantized from the art itself (RGB sprites only). Use to derive a curated palette from a reference image imported at full colour.\nDecide the palette before drawing. Retro-fitting one onto finished art means repainting.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "get",
+            "set",
+            "preset",
+            "load",
+            "ramp",
+            "analyze",
+            "extract"
+          ]
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "preset": {
+          "type": "string",
+          "description": "Preset key for op 'preset'."
+        },
+        "path": {
+          "type": "string",
+          "description": "Palette file for op 'load'."
+        },
+        "colors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$",
+            "description": "Colour as #rrggbb or #rrggbbaa."
+          },
+          "description": "For op 'set': the colours to write."
+        },
+        "startIndex": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0,
+          "description": "For op 'set': where `colors` starts. Ignored when `replace` is true."
+        },
+        "replace": {
+          "type": "boolean",
+          "default": false,
+          "description": "For op 'set'/'preset': replace the whole palette instead of merging."
+        },
+        "base": {
+          "$ref": "#/properties/colors/items",
+          "description": "Base colour for op 'ramp'."
+        },
+        "steps": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 16,
+          "default": 5,
+          "description": "Ramp length."
+        },
+        "spread": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 1,
+          "default": 0.55,
+          "description": "How far the ramp reaches into shadow and light."
+        },
+        "remapArt": {
+          "type": "boolean",
+          "default": false,
+          "description": "When replacing a palette, repaint existing pixels to the nearest new colour instead of leaving them off-palette."
+        },
+        "maxColors": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 256,
+          "default": 16,
+          "description": "For op 'extract': target palette size."
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string"
+        },
+        "sprite": {
+          "type": "string"
+        },
+        "colors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "size": {
+          "type": "integer"
+        },
+        "path": {
+          "type": "string",
+          "description": "Palette file read by op 'load'."
+        },
+        "usage": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "index": {
+                "type": "integer"
+              },
+              "hex": {
+                "type": "string"
+              },
+              "pixels": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "index",
+              "hex",
+              "pixels"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "ramp": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "analysis": {
+          "type": "object",
+          "properties": {
+            "size": {
+              "type": "integer"
+            },
+            "unusedIndices": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "nearDuplicates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "a": {
+                    "type": "string"
+                  },
+                  "b": {
+                    "type": "string"
+                  },
+                  "deltaE": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "a",
+                  "b",
+                  "deltaE"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "offPaletteColors": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "hex": {
+                    "type": "string"
+                  },
+                  "pixels": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "hex",
+                  "pixels"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "lowestContrastPair": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "a": {
+                      "type": "string"
+                    },
+                    "b": {
+                      "type": "string"
+                    },
+                    "ratio": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "a",
+                    "b",
+                    "ratio"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "verdict": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "size",
+            "unusedIndices",
+            "nearDuplicates",
+            "offPaletteColors",
+            "verdict"
+          ],
+          "additionalProperties": false
+        },
+        "total": {
+          "type": "integer",
+          "description": "Op 'preset' with no such key: presets bundled."
+        },
+        "matches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "author": {
+                "type": "string"
+              },
+              "size": {
+                "type": "integer"
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "key",
+              "name",
+              "author",
+              "size"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Op 'preset' with no such key: presets whose key, name, author or tags match it."
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "idempotentHint": false,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "recolor",
+    "title": "Recolor",
+    "description": "Change colours in a region by intent, staying palette-legal. Ops:\n• 'shade' — darken or lighten with proper hue shifting (shadows cool, highlights warm). Use this instead of picking a darker hex by hand.\n• 'snap' — pull off-palette pixels onto the nearest palette colour by perceptual (CIELAB) distance.\n• 'replace' — swap one exact colour for another.\n• 'hue_shift' — rotate hue, e.g. to make a colour variant of a finished sprite.\n• 'desaturate' — drop toward grey, useful for a value check.\nOperates on a region's distinct colours in one pass, so a 64×64 recolour is one undo step, not four thousand.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "shade",
+            "snap",
+            "replace",
+            "hue_shift",
+            "desaturate"
+          ]
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "layer": {
+          "type": "string",
+          "description": "Layer name. Omit to use the active layer."
+        },
+        "frame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "1-based frame number. Omit to use the active frame."
+        },
+        "region": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            },
+            "height": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "width",
+            "height"
+          ],
+          "additionalProperties": false,
+          "description": "Omit to affect the whole cel."
+        },
+        "selectionOnly": {
+          "type": "boolean",
+          "default": false
+        },
+        "amount": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1,
+          "default": -0.2,
+          "description": "For 'shade': negative darkens, positive lightens. One ramp step is roughly 0.15."
+        },
+        "degrees": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180,
+          "default": 30,
+          "description": "For 'hue_shift'."
+        },
+        "strength": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 1,
+          "description": "For 'desaturate'."
+        },
+        "from": {
+          "type": "string",
+          "pattern": "^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$",
+          "description": "For 'replace'."
+        },
+        "to": {
+          "$ref": "#/properties/from",
+          "description": "For 'replace'."
+        },
+        "clampToPalette": {
+          "type": "boolean",
+          "default": true,
+          "description": "Snap the result back onto the palette. Turn off only when growing the palette deliberately."
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "op": {
+          "type": "string"
+        },
+        "pixelsChanged": {
+          "type": "integer"
+        },
+        "mapping": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              },
+              "pixels": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "pixels"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Exactly which colour became which, and how many pixels each move touched."
+        }
+      },
+      "required": [
+        "sprite",
+        "op",
+        "pixelsChanged",
+        "mapping"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "validate",
+    "title": "Validate",
+    "description": "Lint a sprite against pixel-art rules and report concrete, located problems. Checks: off-palette colours, orphan/stray pixels, broken or doubled outlines, banding, semi-transparent (soft or resized) pixels, empty layers, untagged frames and uniform frame timing; `expect` adds per-layer frame ranges and layers that must not overlap. Symmetry and cross-frame volume drift are not checked — judge those with `look` op 'ascii' and 'filmstrip'. Run this before telling the user a sprite is finished. It answers 'is this actually done' with evidence rather than optimism.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "palette",
+              "strays",
+              "outline",
+              "banding",
+              "antialiasing",
+              "layers",
+              "animation",
+              "export_readiness"
+            ]
+          },
+          "description": "Omit to run everything."
+        },
+        "strict": {
+          "type": "boolean",
+          "default": false,
+          "description": "Treat style warnings as failures. Use when the user asked for a specific discipline."
+        },
+        "expect": {
+          "type": "object",
+          "properties": {
+            "layerFrames": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "items": [
+                    {
+                      "type": "integer",
+                      "exclusiveMinimum": 0
+                    },
+                    {
+                      "type": "integer",
+                      "exclusiveMinimum": 0
+                    }
+                  ]
+                }
+              },
+              "description": "Per layer, the [from,to] frame ranges (1-based, inclusive) it should hold ink in."
+            },
+            "mustNotOverlap": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "items": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "description": "Layer name pairs whose opaque pixels must never intersect on the same frame."
+            }
+          },
+          "additionalProperties": false,
+          "description": "The animation contract you already know. Runs independently of `checks`, whenever given: flags art outside a layer's expected frame ranges (or a missing cel inside one), and any frame where two named layers' opaque pixels overlap."
+        }
+      },
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "passed": {
+          "type": "boolean"
+        },
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "check": {
+                "type": "string"
+              },
+              "severity": {
+                "type": "string",
+                "enum": [
+                  "error",
+                  "warning",
+                  "note"
+                ]
+              },
+              "message": {
+                "type": "string"
+              },
+              "layer": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "frame": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "at": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer"
+                      },
+                      "y": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "Where to look, when the problem has a location."
+              },
+              "count": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "check",
+              "severity",
+              "message"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "summary": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sprite",
+        "passed",
+        "score",
+        "findings",
+        "summary"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "reference",
+    "title": "Reference image",
+    "description": "Bring an external image into the sprite as a reference layer, so you can trace proportions or sample colours from it. Ops: 'import' (place an image on a locked, semi-transparent layer above the art), 'sample_palette' (read its dominant colours without importing), 'list', 'remove'. A concept sheet or storyboard arrives as one image: `region` crops one panel of it, and `grid` cuts it into panels and puts panel i on frame i of a single reference layer, so each animation frame is drawn over its own storyboard panel. Importing at a different size uses nearest-neighbour; a reference scaled down to 32×32 is a guide for proportion and pose, never a finished sprite.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "import",
+            "sample_palette",
+            "list",
+            "remove"
+          ]
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "frame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "Import: the frame the image — or the first `grid` panel — lands on. Default: the active frame, or frame 1 with `grid`."
+        },
+        "path": {
+          "type": "string",
+          "description": "Image file to read."
+        },
+        "name": {
+          "type": "string",
+          "description": "Layer name. Default: 'reference'."
+        },
+        "region": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "width": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            },
+            "height": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "width",
+            "height"
+          ],
+          "additionalProperties": false,
+          "description": "Use only this rectangle of the SOURCE image, in its own pixels — one panel of a concept sheet. Applies to 'import' and 'sample_palette'."
+        },
+        "grid": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            },
+            "rows": {
+              "type": "integer",
+              "exclusiveMinimum": 0
+            },
+            "count": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "description": "Panels actually used, read row-major. Default: columns × rows."
+            },
+            "gap": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "description": "Source pixels between panels."
+            }
+          },
+          "required": [
+            "columns",
+            "rows"
+          ],
+          "additionalProperties": false,
+          "description": "Import a storyboard: split the (cropped) source into equal panels and place panel i on frame `frame`+i-1 of one reference layer. The sprite must already have enough frames."
+        },
+        "x": {
+          "type": "integer",
+          "default": 0
+        },
+        "y": {
+          "type": "integer",
+          "default": 0
+        },
+        "fit": {
+          "type": "string",
+          "enum": [
+            "none",
+            "contain",
+            "cover",
+            "stretch"
+          ],
+          "default": "contain",
+          "description": "How to size the image (or each panel) against the canvas."
+        },
+        "opacity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255,
+          "default": 128
+        },
+        "colors": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 64,
+          "default": 16,
+          "description": "For 'sample_palette'."
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "op": {
+          "type": "string"
+        },
+        "layer": {
+          "type": "string"
+        },
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "panels": {
+          "type": "integer",
+          "description": "Import: how many panels were placed."
+        },
+        "frames": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "Import: the frames that received a reference cel."
+        },
+        "palette": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "hex": {
+                "type": "string"
+              },
+              "share": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "hex",
+              "share"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Dominant colours with their share of the image."
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "sprite",
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "export",
+    "title": "Export",
+    "description": "Write game-ready files. Ops: 'png' (single frame), 'gif' (animation), 'spritesheet' (packed sheet plus a JSON atlas with per-frame and per-tag data), 'frames' (numbered PNGs), 'aseprite' (save a copy of the source). Spritesheet is what an engine actually consumes: pass `sheetType` and `byTag` to control layout. Exporting does not save the working document — use sprite_manage op 'save' for that.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "png",
+            "gif",
+            "spritesheet",
+            "frames",
+            "aseprite"
+          ]
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "path": {
+          "type": "string",
+          "description": "Output file path. For 'frames', a pattern containing {frame}, e.g. 'walk_{frame}.png' — Aseprite expands it into one file per frame, numbered from 0."
+        },
+        "frame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "1-based frame number. Omit to use the active frame."
+        },
+        "scale": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16,
+          "default": 1,
+          "description": "Integer upscale, nearest-neighbour."
+        },
+        "sheetType": {
+          "type": "string",
+          "enum": [
+            "horizontal",
+            "vertical",
+            "rows",
+            "columns",
+            "packed"
+          ],
+          "default": "horizontal",
+          "description": "Spritesheet layout."
+        },
+        "byTag": {
+          "type": "boolean",
+          "default": false,
+          "description": "Split the sheet by animation tag."
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 16,
+          "default": 0,
+          "description": "Pixels between frames; prevents bleed at non-integer zoom."
+        },
+        "trim": {
+          "type": "boolean",
+          "default": false,
+          "description": "Trim transparent margins; the atlas keeps the original offsets."
+        },
+        "includeJson": {
+          "type": "boolean",
+          "default": true,
+          "description": "Write a sibling JSON atlas for 'spritesheet'."
+        },
+        "layers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Export only these layers (names or group paths; a group brings its children). png, gif, frames, spritesheet; 'aseprite' refuses it."
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Export only the frames these tags cover. gif, frames, spritesheet; 'png' and 'aseprite' refuse it. An unknown tag is refused."
+        }
+      },
+      "required": [
+        "op",
+        "path"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "op": {
+          "type": "string"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "frameCount": {
+          "type": "integer"
+        },
+        "frame": {
+          "type": "integer",
+          "description": "Which frame a single-frame export wrote. Defaults to the active frame, which is not always the one you drew on."
+        },
+        "atlas": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "sprite",
+        "op",
+        "files"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": true,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "tileset",
+    "title": "Tilesets",
+    "description": "Work with Aseprite tilemap layers. Ops:\n• 'list' — tilesets in the sprite.\n• 'create_layer' — a new empty tilemap layer on a given grid.\n• 'get' — tile count and, with a path, the tiles as one packed PNG.\n• 'stamp' — place tiles by grid coordinate. x/y are grid cells, not pixels.\n• 'pack' — turn a hand-painted mockup layer into a tileset plus a tilemap that reconstructs it exactly. Deduplicates identical cells; `tolerance` also merges near-identical ones. The canvas must be a whole number of tiles, and the source layer is hidden rather than deleted so you can compare.\n• 'export' — writes the packed PNG plus the file the engine reads: 'tiled' (.tsj tileset and a .tmj map that uses it), 'godot' (Godot 4 .tres TileSet), or 'json' (tile grid plus the tilemap layout).\nPainting a level by hand and packing it produces better tilesets than authoring tiles in isolation, because you see the whole picture while drawing. `layout: 'blob47'` adds a Tiled wangset for autotiling, and assumes the tileset is authored in canonical blob47 order after the empty tile — it refuses rather than writing a wangset that would autotile wrongly. Requires an extension build advertising the 'tileset' feature — check preflight first.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "list",
+            "create_layer",
+            "get",
+            "stamp",
+            "pack",
+            "export"
+          ]
+        },
+        "sprite": {
+          "type": "string",
+          "description": "Which sprite: its id as '#7' (what every result reports back, and the only unambiguous form — two unsaved documents are both called 'Sprite'), its filename, or its display name. Omit to use the sprite Aseprite has focused."
+        },
+        "layer": {
+          "type": "string",
+          "description": "Layer name. Omit to use the active layer."
+        },
+        "frame": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "description": "1-based frame number. Omit to use the active frame."
+        },
+        "name": {
+          "type": "string"
+        },
+        "tileWidth": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 256,
+          "default": 16
+        },
+        "tileHeight": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 256,
+          "default": 16
+        },
+        "tiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "integer"
+              },
+              "y": {
+                "type": "integer"
+              },
+              "tile": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "tile"
+            ],
+            "additionalProperties": false
+          },
+          "description": "For 'stamp'. x/y are tile-grid cells, not pixels."
+        },
+        "path": {
+          "type": "string",
+          "description": "Output path for 'export' and 'get'."
+        },
+        "format": {
+          "type": "string",
+          "enum": [
+            "tiled",
+            "godot",
+            "json"
+          ],
+          "default": "tiled"
+        },
+        "layout": {
+          "type": "string",
+          "enum": [
+            "grid",
+            "blob47"
+          ],
+          "default": "grid",
+          "description": "Autotile layout for 'export'."
+        },
+        "tolerance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255,
+          "default": 0,
+          "description": "For 'pack': maximum per-channel difference at which two cells count as the same tile. 0 means exact, which is also much faster — anything above 0 compares every cell against every tile found so far."
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "sprite": {
+          "type": "string"
+        },
+        "op": {
+          "type": "string"
+        },
+        "tilesets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "tileCount": {
+                "type": "integer"
+              },
+              "tileWidth": {
+                "type": "integer"
+              },
+              "tileHeight": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "name",
+              "tileCount",
+              "tileWidth",
+              "tileHeight"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "tileCount": {
+          "type": "integer"
+        },
+        "tileWidth": {
+          "type": "integer"
+        },
+        "tileHeight": {
+          "type": "integer"
+        },
+        "columns": {
+          "type": "integer"
+        },
+        "rows": {
+          "type": "integer"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "layer": {
+          "type": "string"
+        },
+        "sourceLayer": {
+          "type": "string",
+          "description": "For 'pack': the mockup layer, now hidden."
+        },
+        "cellCount": {
+          "type": "integer",
+          "description": "For 'pack': grid cells examined."
+        },
+        "reusedExact": {
+          "type": "integer",
+          "description": "For 'pack': cells that matched an existing tile exactly."
+        },
+        "reusedFuzzy": {
+          "type": "integer",
+          "description": "For 'pack': cells merged by `tolerance`. A high number here with a low tolerance means the mockup has near-duplicate tiles worth cleaning up."
+        },
+        "skipped": {
+          "type": "integer",
+          "description": "For 'stamp': placements outside the grid or naming a tile that does not exist."
+        },
+        "format": {
+          "type": "string"
+        },
+        "layout": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sprite",
+        "op"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "openWorldHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  }
+]

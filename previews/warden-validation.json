@@ -1,0 +1,14 @@
+{
+  "sprite": "warden.aseprite",
+  "findings": [
+    {
+      "layer": "plume",
+      "check": "layers",
+      "message": "Layer 'plume' has no cels on any frame.",
+      "severity": "note"
+    }
+  ],
+  "passed": true,
+  "score": 100,
+  "summary": "Clean."
+}

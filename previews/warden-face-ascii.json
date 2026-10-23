@@ -1,0 +1,50 @@
+{
+  "op": "ascii",
+  "sprite": "warden.aseprite",
+  "width": 25,
+  "height": 20,
+  "text": "........DDDDDDDDD........\n......DDEFGGGGGFEDD......\n.....DEFGHHHHGGGFEDD.....\n....DEFGHHHGGGGGFFEDD....\n...CDEFGGGFFFFGGGFFEDC...\n..CCDEFFEEEEEEEFFEEDCC...\n.CDDEFFEMMEEDEMMEFFEEDDC.\n.CDEEFFEjkEDDEkjEFFEEEDC.\n..CDEFFEEEDDDDEEEFFEDC...\n...CDEFFEDEFFFEDEFFEDC...\n...CDEFF#CDEFEDC#FFEDC...\n....DEFF#9LLLLL#9FFED....\n....DEFF#9LMLML#9FFED....\n....CDEF#9MMMMM#9FEDC....\n.....CDE#9999999#EDC.....\n......CDEFFFFFFFEDC......\n.......CDEEEEEEEDC.......\nm.......CDDDDDDDC........\nm........DDDDDDD.........\nJm.....EEEEEEEEEEEE......",
+  "legend": {
+    "9": "#d0c4a2",
+    "D": "#3c4726",
+    "E": "#596735",
+    "F": "#798742",
+    "G": "#9eac53",
+    "H": "#c3cb72",
+    "C": "#242d1b",
+    "M": "#101a26",
+    "j": "#ca6559",
+    "k": "#e59472",
+    "#": "#eee4cd",
+    "L": "#0b101b",
+    "m": "#57423a",
+    "J": "#70654f"
+  },
+  "offPalette": [],
+  "gridRows": [
+    "........DDDDDDDDD........",
+    "......DDEFGGGGGFEDD......",
+    ".....DEFGHHHHGGGFEDD.....",
+    "....DEFGHHHGGGGGFFEDD....",
+    "...CDEFGGGFFFFGGGFFEDC...",
+    "..CCDEFFEEEEEEEFFEEDCC...",
+    ".CDDEFFEMMEEDEMMEFFEEDDC.",
+    ".CDEEFFEjkEDDEkjEFFEEEDC.",
+    "..CDEFFEEEDDDDEEEFFEDC...",
+    "...CDEFFEDEFFFEDEFFEDC...",
+    "...CDEFF#CDEFEDC#FFEDC...",
+    "....DEFF#9LLLLL#9FFED....",
+    "....DEFF#9LMLML#9FFED....",
+    "....CDEF#9MMMMM#9FEDC....",
+    ".....CDE#9999999#EDC.....",
+    "......CDEFFFFFFFEDC......",
+    ".......CDEEEEEEEDC.......",
+    "m.......CDDDDDDDC........",
+    "m........DDDDDDD.........",
+    "Jm.....EEEEEEEEEEEE......"
+  ],
+  "origin": {
+    "x": 52,
+    "y": 25
+  }
+}

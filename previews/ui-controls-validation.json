@@ -1,0 +1,13 @@
+{
+  "sprite": "ui-controls.aseprite",
+  "findings": [
+    {
+      "check": "animation",
+      "message": "Every frame has the same duration. Uniform timing reads mechanical; hold contact poses longer than pass poses.",
+      "severity": "note"
+    }
+  ],
+  "passed": true,
+  "score": 100,
+  "summary": "Clean."
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-23",
+  "method": "Aseprite MCP preview, ASCII, filmstrip, onion skin, per-layer validation, composited pixel checks, actual browser review",
+  "coldRead": {
+    "knight": "Armoured medieval knight; visor and plume, gold heater shield, plated stance.",
+    "hollow": "Undead raider; rust helmet, ivory skull and ribs, spiked wooden club.",
+    "warden": "Heavy olive ogre; tusked jaw, spiked collar, large articulated fists.",
+    "wisp": "Hooded spectral caster; luminous eyes, wispy tail, casting hands."
+  },
+  "changes": [
+    "Rebuilt plate armour and articulated boots; authored four facing sets and planted attack poses.",
+    "Replaced rectangular sword cap with a seven-pixel taper ending at a single pixel; updated every equipment cel.",
+    "Replaced enemy king with a native-size ogre; changed hollow weapon to a club and wisp to a hooded wraith.",
+    "Joined diagonal FX strokes into continuous clusters and synchronized impact with attack phases."
+  ],
+  "checks": [
+    {
+      "name": "knight",
+      "errors": 0,
+      "summary": "Clean (470 style note(s))."
+    },
+    {
+      "name": "hollow",
+      "errors": 0,
+      "summary": "Clean (230 style note(s))."
+    },
+    {
+      "name": "warden",
+      "errors": 0,
+      "summary": "Clean (251 style note(s))."
+    },
+    {
+      "name": "wisp",
+      "errors": 0,
+      "summary": "Clean (57 style note(s))."
+    }
+  ],
+  "groundedContacts": 496,
+  "connectedLiveGroundedPoses": 412,
+  "anchorIssues": [],
+  "acceptedStyleNotes": "Selective outlines differ across metal, bone, cloth and glow layers. Hidden layer edges deliberately overlap; composite structure is connected. Wraith is intentionally airborne.",
+  "referenceDeviations": "Game-scale simplification of local reference: fewer vents, plate seams and cloth folds; four authored views instead of a full portrait reconstruction."
+}

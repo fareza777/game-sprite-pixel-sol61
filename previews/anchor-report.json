@@ -1,0 +1,30 @@
+[
+  {
+    "name": "knight",
+    "frames": 240,
+    "grounded": 240,
+    "connected": 212,
+    "issues": []
+  },
+  {
+    "name": "hollow",
+    "frames": 128,
+    "grounded": 128,
+    "connected": 100,
+    "issues": []
+  },
+  {
+    "name": "warden",
+    "frames": 128,
+    "grounded": 128,
+    "connected": 100,
+    "issues": []
+  },
+  {
+    "name": "wisp",
+    "frames": 32,
+    "grounded": 0,
+    "connected": 0,
+    "issues": []
+  }
+]

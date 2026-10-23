@@ -1,0 +1,40 @@
+plugins { id 'com.android.application' }
+def signingProperties = new Properties()
+def signingFile = new File(System.getProperty('user.home'), '.android/cinder-vow/signing.properties')
+if (signingFile.exists()) signingFile.withInputStream { signingProperties.load(it) }
+android {
+    namespace 'io.github.fareza777.cindervow'
+    compileSdk 35
+    buildFeatures { buildConfig true }
+    defaultConfig {
+        applicationId 'io.github.fareza777.cindervow'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '2.1.0'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    signingConfigs {
+        release {
+            if (signingFile.exists()) {
+                storeFile file(signingProperties['storeFile'])
+                storePassword signingProperties['storePassword']
+                keyAlias signingProperties['keyAlias']
+                keyPassword signingProperties['keyPassword']
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (signingFile.exists()) signingConfig signingConfigs.release
+        }
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
+dependencies {
+    implementation 'androidx.webkit:webkit:1.12.1'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test:core:1.6.1'
+}

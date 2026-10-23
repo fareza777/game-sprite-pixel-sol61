@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {TouchInput} from '../game/touch.mjs';
+import {Game} from '../game/core.mjs';
+const touch=new TouchInput();
+touch.setPad(1,1,-1);touch.press(2,'attack');
+assert.deepEqual(touch.snapshot(),{up:true,down:false,left:false,right:true,attack:true,block:false,roll:false,interact:false});
+touch.release(2);assert.equal(touch.snapshot().right,true);assert.equal(touch.snapshot().attack,false);
+touch.press(3,'roll');assert.equal(touch.consume().roll,true);assert.equal(touch.consume().roll,false);assert.equal(touch.snapshot().right,true);
+touch.press(4,'block');touch.press(5,'block');touch.release(4);assert.equal(touch.snapshot().block,true);
+touch.release(1);assert.equal(touch.snapshot().right,false);assert.equal(touch.snapshot().block,true);
+touch.clear();assert.ok(Object.values(touch.snapshot()).every(x=>!x));
+touch.setPad(6,.1,.1);assert.equal(touch.snapshot().down,false);assert.equal(touch.setPad(7,1,0),false);touch.release(6);
+const g=new Game(61);g.start();g.enemies=[];g.player.x=320;g.player.y=210;
+touch.setPad(8,1,0);for(let i=0;i<25;i++)g.update(1/60,touch.consume());assert.ok(g.player.x>355);assert.equal(g.player.face,'e');
+touch.press(9,'attack');g.update(1/60,touch.consume());assert.equal(g.player.action,'attack');touch.release(9);touch.release(8);assert.ok(Object.values(touch.snapshot()).every(x=>!x));
+console.log('PASS diagonal D-pad, independent attack/block fingers, one-shot roll, deadzone, cancel/release and gameplay input');

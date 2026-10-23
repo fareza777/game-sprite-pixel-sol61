@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cinder Vow — Pixel Atelier</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0b101b;color:#d9e4d5;font-family:Consolas,monospace;min-height:100vh;display:grid;place-items:center;padding:28px}.atelier{max-width:1080px;width:100%}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #314958;margin-bottom:26px;padding-bottom:16px}h1{font:normal 24px Georgia,serif;letter-spacing:4px;margin:0}a{color:#e6ba6d;font-size:12px}.body{display:grid;grid-template-columns:1fr 300px;gap:32px}.stage{background-color:#17232b;background-image:conic-gradient(#20303a 25%,transparent 0 50%,#20303a 0 75%,transparent 0);background-size:32px 32px;display:grid;place-items:center;border:1px solid #314958;min-height:440px;overflow:hidden}canvas{width:576px;max-width:100%;height:auto;image-rendering:pixelated}.controls{padding:10px 0}label{display:block;font-size:10px;letter-spacing:2px;color:#8ca4ae;margin:0 0 8px}select,button{background:#172737;color:#d9e4d5;border:1px solid #486271;padding:10px;font:13px Consolas,monospace;margin:0 0 22px;width:100%}button{cursor:pointer;color:#e6ba6d}button:hover{background:#314958}.transport{display:flex;gap:8px}.transport button{margin:0}p{font-size:12px;line-height:1.8;color:#8ca4ae}.meta{font-size:11px;color:#e6ba6d;line-height:1.8;margin:18px 0;white-space:pre-line}.caption{margin-top:22px;display:flex;justify-content:space-between;font-size:11px;color:#8ca4ae}@media(max-width:700px){.body{grid-template-columns:1fr}.stage{min-height:300px}.controls{display:grid;grid-template-columns:1fr 1fr;gap:15px}.controls p{grid-column:1/-1}.caption{display:block}h1{font-size:18px}}
+</style>
+<main class="atelier">
+<header><h1>CINDER VOW <span style="color:#6a8992;font-size:14px">/ PIXEL ATELIER</span></h1><a href="index.html">← PLAY THE DUNGEON</a></header>
+<div class="body">
+ <div class="stage"><canvas id="stage" width="192" height="144" aria-label="Character animation preview"></canvas></div>
+ <div class="controls">
+  <div><label for="actor">CHARACTER</label><select id="actor"><option value="knight">Knight — The Pilgrim</option><option value="hollow">Skeleton — Rustclub Raider</option><option value="wisp">Wraith — Mist Caster</option><option value="warden">Ogre — The Oathkeeper</option></select></div>
+  <div><label for="tag">ANIMATION / FACING</label><select id="tag"></select></div>
+  <div><label for="speed">SPEED</label><select id="speed"><option value="1">Normal</option><option value="0.5">Slow · ½×</option><option value="0.25">Very slow · ¼×</option></select></div>
+  <div><label>PLAYBACK</label><div class="transport"><button id="prev" aria-label="Previous frame">←</button><button id="pause">PAUSE</button><button id="next" aria-label="Next frame">→</button></div><div class="meta" id="meta"></div></div>
+  <p id="description"></p>
+ </div>
+</div>
+<div class="caption"><span>528 CHARACTER FRAMES · FOUR MELEE FACINGS · THREE-HIT COMBO</span><a id="capture" href="#" download="cinder-vow-pose.png">SAVE POSE</a></div>
+</main>
+<script>
+const ASSETS=__ASSETS__;
+const imgs={},labels={s:'South',n:'North',e:'East',w:'West',idle:'Idle',walk:'Walk',attack:'Crosscut',roll:'Roll',block:'Block',hurt:'Hurt',death:'Death'};
+const descriptions={knight:'A great helm, red plume, layered plate armour, gold tabard, longsword and heater shield. Combo: crosscut → backhand → heavy slash.',hollow:'An undead raider with a rusted helmet, exposed ribs, torn red cloth and spiked wooden club. A clear windup precedes each swing.',warden:'A tusked ogre with broad shoulders, leather armour and heavy fists. Both hands rise before the ground-shaking slam.',wisp:'A hooded mist caster with glowing eyes and a drifting robe. Its hands converge to release a spell.'};
+const c=document.getElementById('stage'),ctx=c.getContext('2d');ctx.imageSmoothingEnabled=false;
+let actor='knight',tag,current=0,elapsed=0,paused=false,last=performance.now();
+const actorEl=document.getElementById('actor'),tagEl=document.getElementById('tag');
+for(const [n,a]of Object.entries(ASSETS)){const i=new Image();i.src=a.image;imgs[n]=i;}
+function labelTag(name){const parts=name.split('-'),dir=['s','n','e','w'].includes(parts[0])?labels[parts[0]]:null;if(dir)parts.shift();const action=parts.join('-'),title=action==='attack-backhand'?'Backhand':action==='attack-heavy'?'Heavy slash':action==='attack'?({knight:'Crosscut',hollow:'Club swing',warden:'Slam',wisp:'Cast'}[actor]):labels[action]??action;return dir?`${dir} · ${title}`:title;}
+function populate(){actor=actorEl.value;tagEl.replaceChildren();for(const t of ASSETS[actor].meta.frameTags){const o=document.createElement('option');o.value=t.name;o.textContent=labelTag(t.name);tagEl.append(o);}document.getElementById('description').textContent=descriptions[actor];setTag();}
+function setTag(){tag=ASSETS[actor].meta.frameTags.find(t=>t.name===tagEl.value);current=tag.from;elapsed=0;}
+function setPaused(value){paused=value;document.getElementById('pause').textContent=paused?'PLAY':'PAUSE';}
+actorEl.onchange=populate;tagEl.onchange=setTag;
+document.getElementById('pause').onclick=()=>setPaused(!paused);
+document.getElementById('prev').onclick=()=>{setPaused(true);current=current<=tag.from?tag.to:current-1;elapsed=0;};
+document.getElementById('next').onclick=()=>{setPaused(true);current=current>=tag.to?tag.from:current+1;elapsed=0;};
+document.getElementById('capture').onclick=()=>{document.getElementById('capture').href=c.toDataURL('image/png');};
+populate();
+function draw(now){
+ const a=ASSETS[actor],dt=Math.min(now-last,100)*Number(document.getElementById('speed').value);last=now;
+ if(!paused){elapsed+=dt;while(elapsed>=a.frames[current].duration){elapsed-=a.frames[current].duration;current=current>=tag.to?tag.from:current+1;}}
+ const f=a.frames[current],r=f.frame,anchor=a.meta.anchor;
+ ctx.clearRect(0,0,c.width,c.height);ctx.fillStyle='#0b101b88';ctx.fillRect(78,118,36,3);ctx.fillRect(81,117,30,5);
+ if(imgs[actor].complete)ctx.drawImage(imgs[actor],r.x,r.y,r.w,r.h,96-anchor.x,119-anchor.y,r.w,r.h);
+ document.getElementById('meta').textContent=`${current-tag.from+1} / ${tag.to-tag.from+1} FRAME  ·  ${f.duration} MS\n${r.w} × ${r.h} PX  ·  ${a.frames.length} FRAME TOTAL`;
+ c.dataset.actor=actor;c.dataset.tag=tag.name;c.dataset.frame=current;c.dataset.paused=String(paused);
+ requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+</script>
+</html>
