@@ -2,10 +2,10 @@
   "version": "3.0.0",
   "verified": "2026-10-24",
   "apk": "Vespergrave-3.0.0.apk",
-  "bytes": 5194520,
-  "sha256": "497ba91f3bd2a2ad74dee8ee82a8b0d3011c7dc4051ff4e45a73e5de60a0d92c",
+  "bytes": 5194532,
+  "sha256": "51b8a296b1d4b9f061aa4b9331639e54fa9181a4290024c2384e6158913fccc9",
   "certificateSha256": "5abd29cf401e2f84cdb80f37621e649ca8bde259f4784427f79985e4f66430b4",
-  "embeddedGameSha256": "ce43ecebaf0180a8ff00f5380551abe80d17d1954e113f84da8dc0ce2d57e36d",
+  "embeddedGameSha256": "0fdbb171256183428f62e053c7f0e7d66dde5fa7dfbdcac5a812a90bba0b0cd6",
   "minimumAndroid": "8.0 (API 26)",
   "targetApi": 35,
   "permissions": [

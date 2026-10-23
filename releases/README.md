@@ -9,7 +9,7 @@
 - Signed with the existing Cinder Vow certificate; an update from 2.2.0 was installed successfully on the Android 15 test emulator.
 - Release startup, embedded game hash and APK signature verified. Two native tests cover gameplay, audio, controls, equipment, persistence, all room layouts and event UI.
 
-Size: 4.95 MiB. SHA-256: `497ba91f3bd2a2ad74dee8ee82a8b0d3011c7dc4051ff4e45a73e5de60a0d92c`.
+Size: 4.95 MiB. SHA-256: `51b8a296b1d4b9f061aa4b9331639e54fa9181a4290024c2384e6158913fccc9`.
 
 [Verification report](Vespergrave-3.0.0-verification.json) · [Checksums](SHA256SUMS) · [Build instructions](../android/README.md) · [Room review gallery](../previews/level-gallery.html)
 
