@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import {Game,dist,RELICS,HERO_COMBAT} from '../game/core.mjs';
+import {Game,dist,RELICS,HERO_COMBAT,portraitArena} from '../game/core.mjs';
 const findings=[];
 function test(name,fn){fn();findings.push({name,passed:true});console.log('PASS',name);}
 function tick(g,n,input={}){for(let i=0;i<n;i++)g.update(1/60,input);}
@@ -59,13 +59,13 @@ test('Death completes its animation and a fresh run resets inventory and actors'
 });
 
 // A real-time rules simulation, without changing health, damage, or enemy AI.
-function play(seed){
- const g=new Game(seed);g.start();let frames=0;
+function play(seed,layout){
+ const g=new Game(seed,layout);g.start();let frames=0;
  for(;frames<60*240&&!['won','dead'].includes(g.state);frames++){
   if(g.state==='relic'){const priority=['edge','heart','well','reach','stride','guard'];g.chooseRelic(g.choices.map((r,i)=>({i,v:priority.indexOf(r.id)})).sort((a,b)=>a.v-b.v)[0].i);continue;}
   const p=g.player;
   if(g.state==='exit'){
-    const dx=320-p.x,dy=125-p.y;g.update(1/60,{left:dx<-3,right:dx>3,up:dy<-3,down:dy>3,interact:Math.hypot(dx,dy)<35});continue;
+    const dx=g.arena.gate.x-p.x,dy=g.arena.gate.y+1-p.y;g.update(1/60,{left:dx<-3,right:dx>3,up:dy<-3,down:dy>3,interact:Math.hypot(dx,dy)<35});continue;
   }
   const e=[...g.enemies].sort((a,b)=>dist(p,a)-dist(p,b))[0];if(!e){g.update(1/60);continue;}
   const dx=e.x-p.x,dy=e.y-p.y,d=Math.hypot(dx,dy),danger=g.enemies.some(x=>x.phase==='windup'&&dist(p,x)<(x.type==='warden'?76:45));
@@ -79,8 +79,20 @@ function play(seed){
  }
  return {seed,state:g.state,floor:g.floor,kills:g.kills,hp:g.player.hp,time:Math.round(frames/60),remaining:g.enemies.length};
 }
-const runs=[61,16361,2026].map(play);
+test('Compact portrait arenas keep all spawns on clear floor at different screen heights',()=>{
+ for(const height of [468,568,688,800])for(const seed of [61,16361,2026]){
+  const g=new Game(seed,portraitArena(height));g.start();assert.equal(g.arena.width,360);assert.equal(g.solid(g.player.x,g.player.y),false);
+  assert.ok(g.arena.bounds.left+7>=48&&g.arena.bounds.right-7+48<=360,'Full knight attack cells stay inside the screen at either movement boundary');
+  for(const floor of [1,2,3]){g.enemies=[];g.floor=floor;g.spawnEncounter();for(const e of g.enemies)assert.equal(g.solid(e.x,e.y,e.type==='warden'?12:7),false,`${height}: ${e.type} spawn`);}
+  g.resizeArena(portraitArena(608));assert.equal(g.solid(g.player.x,g.player.y),false);for(const e of g.enemies)assert.equal(g.solid(e.x,e.y,e.type==='warden'?12:7),false);
+  g.start();assert.equal(g.arena.height,608,'Restart keeps the responsive arena');g.enemies=[];g.floor=3;tick(g,85);Object.assign(g.player,g.arena.gate);assert.equal(g.interact(),'won');
+ }
+});
+const runs=[61,16361,2026].map(seed=>play(seed));
+const portraitRuns=[468,608,688,800].flatMap(height=>[61,16361,2026].map(seed=>({height,...play(seed,portraitArena(height))})));
 console.log('Playthroughs',JSON.stringify(runs));
-fs.writeFileSync(new URL('../previews/verification.json',import.meta.url),JSON.stringify({checks:findings,runs},null,2));
+console.log('Portrait playthroughs',JSON.stringify(portraitRuns));
+fs.writeFileSync(new URL('../previews/verification.json',import.meta.url),JSON.stringify({checks:findings,runs,portraitRuns},null,2));
 assert.ok(runs.some(r=>r.state==='won'),'At least one ordinary-rule playthrough must complete all three encounters');
+for(const height of [468,608,688,800])assert.ok(portraitRuns.some(r=>r.height===height&&r.state==='won'),`Portrait height ${height} must support a complete ordinary-rule run`);
 console.log(`${findings.length} checks passed; a full roguelike run completed.`);

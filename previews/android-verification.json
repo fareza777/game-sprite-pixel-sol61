@@ -3,11 +3,33 @@
   "portrait": true,
   "english": true,
   "offline": true,
+  "fullViewport": true,
+  "completeCompactRoom": true,
+  "floatingPad": true,
+  "flexibleOrigin": true,
+  "padHiddenOnRelease": true,
+  "responsiveResize": true,
   "independentTouchPointers": true,
   "cancelReleasesInput": true,
   "snapshot": {
     "state": "paused",
     "portrait": true,
+    "viewport": {
+      "width": 360,
+      "height": 720,
+      "fullRoom": true
+    },
+    "arena": {
+      "width": 360,
+      "height": 688,
+      "bounds": {
+        "left": 41,
+        "right": 319,
+        "top": 116,
+        "bottom": 616
+      }
+    },
+    "pad": null,
     "controls": {
       "up": false,
       "down": false,
@@ -20,7 +42,7 @@
     },
     "floor": 1,
     "hp": 100,
-    "stamina": 99.99900000000001,
+    "stamina": 100,
     "kills": 0,
     "gold": 0,
     "enemies": [
@@ -28,27 +50,27 @@
         "type": "hollow",
         "hp": 55,
         "phase": "chase",
-        "x": 284.8395393973718,
-        "y": 261.3142520438122
+        "x": 144.6118063463626,
+        "y": 308.8991618436841
       },
       {
         "type": "hollow",
         "hp": 55,
         "phase": "chase",
-        "x": 350.1373019850598,
-        "y": 263.86757179562824
+        "x": 215.46993296509393,
+        "y": 313.6194279144382
       },
       {
         "type": "wisp",
         "hp": 38,
         "phase": "windup",
-        "x": 258.2263490639091,
-        "y": 161.97496939701966
+        "x": 115.12025085926899,
+        "y": 376.68923521738503
       }
     ],
     "player": {
-      "x": 320,
-      "y": 261.9766000000002,
+      "x": 180,
+      "y": 441.58000000000004,
       "action": "idle",
       "face": "n"
     }

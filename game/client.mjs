@@ -1,8 +1,11 @@
 const query=new URLSearchParams(location.search);
 const isPortrait=query.get('mobile')==='1'||(window.matchMedia?.('(pointer: coarse) and (max-width: 900px) and (orientation: portrait)').matches??false);
 document.body?.classList.toggle('mobile',isPortrait);
-const canvas=document.getElementById('game'),worldCanvas=document.createElement('canvas');worldCanvas.width=640;worldCanvas.height=400;
-canvas.width=isPortrait?360:640;canvas.height=isPortrait?480:400;
+const canvas=document.getElementById('game'),worldCanvas=document.createElement('canvas');
+canvas.setAttribute('aria-label',isPortrait?'Cinder Vow dungeon roguelike. Touch and drag the arena to move. Use the sword, shield, roll and hand buttons.':'Cinder Vow dungeon roguelike. Move with WASD or arrows. J attacks, Shift rolls, L blocks and E interacts.');
+function viewHeight(){const r=canvas.getBoundingClientRect();return Math.max(360,Math.round(360*r.height/r.width));}
+canvas.width=isPortrait?360:640;canvas.height=isPortrait?viewHeight():400;
+worldCanvas.width=canvas.width;worldCanvas.height=canvas.height;
 const ctx=worldCanvas.getContext('2d',{alpha:false}),screenCtx=canvas.getContext('2d',{alpha:false});screenCtx.imageSmoothingEnabled=false;
 for(const el of document.querySelectorAll?.('[data-icon]')??[])el.src=UI_ICONS[el.dataset.icon];
 window.addEventListener('error',e=>{canvas.dataset.error=e.message;});
@@ -11,10 +14,14 @@ ctx.imageSmoothingEnabled=false;
 const images={};
 await Promise.all(Object.entries(ASSETS).map(([name,a])=>new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>{images[name]=img;resolve();};img.onerror=reject;img.src=a.image;})));
 document.getElementById('loading').hidden=true;
-let game=new Game(),last=performance.now(),lastScreen='',soundOn=true,audio=null;
+let game=new Game(Date.now()&0xffff,isPortrait?portraitArena(canvas.height-32):DESKTOP_ARENA),last=performance.now(),lastScreen='',soundOn=true,audio=null;
 const keys=new Set(),pressed=new Set();const pointer={active:false,x:320,y:200};let mouseAttack=false,mouseBlock=false;
 const $=id=>document.getElementById(id);
-const touchInput=new TouchInput(),clearTouch=isPortrait?bindTouchControls(touchInput,document,pause):()=>touchInput.clear();
+const touchInput=new TouchInput(),clearTouch=isPortrait?bindTouchControls(touchInput,document,pause,()=>['playing','exit'].includes(game.state)):()=>touchInput.clear();
+window.addEventListener('resize',()=>{
+ if(!isPortrait)return;const height=viewHeight();if(height===canvas.height)return;
+ clearTouch();canvas.height=height;worldCanvas.height=height;ctx.imageSmoothingEnabled=false;screenCtx.imageSmoothingEnabled=false;game.resizeArena(portraitArena(height-32));
+});
 function initSound(){
  if(audio)return;const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
  audio=new AC();const master=audio.createGain();master.gain.value=.18;master.connect(audio.destination);audio.master=master;
@@ -126,18 +133,19 @@ function drawProp(p){
 }
 const lightCanvas=document.createElement('canvas');lightCanvas.width=160;lightCanvas.height=90;const lc=lightCanvas.getContext('2d');
 function lighting(){
- lc.clearRect(0,0,160,90);lc.fillStyle=game.floor===3?'#0e101b48':'#0a142838';lc.fillRect(0,0,160,90);
+ const a=game.arena,lw=Math.ceil(a.width/4),lh=Math.ceil(a.height/4);if(lightCanvas.width!==lw||lightCanvas.height!==lh){lightCanvas.width=lw;lightCanvas.height=lh;}
+ lc.clearRect(0,0,lw,lh);lc.fillStyle=game.floor===3?'#0e101b38':'#0a142828';lc.fillRect(0,0,lw,lh);
  lc.globalCompositeOperation='destination-out';
- const lights=PROPS.filter(p=>p.type==='brazier').map(p=>({...p,r:57}));lights.push({x:320,y:205,r:80});
+ const lights=a.props.filter(p=>p.type==='brazier').map(p=>({...p,r:57}));lights.push({x:a.width/2,y:a.height*.52,r:isPortrait?130:80});
  for(const l of lights){const x=l.x/4,y=(l.y-12)/4,r=l.r/4;const g=lc.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,'#000b');g.addColorStop(1,'#0000');lc.fillStyle=g;lc.fillRect(x-r,y-r,r*2,r*2);}
- lc.globalCompositeOperation='source-over';ctx.drawImage(lightCanvas,0,32,640,360);
+ lc.globalCompositeOperation='source-over';ctx.drawImage(lightCanvas,0,32,a.width,a.height);
  ctx.save();ctx.globalCompositeOperation='screen';
- for(const p of PROPS.filter(p=>p.type==='brazier')){
+ for(const p of a.props.filter(p=>p.type==='brazier')){
   const x=p.x,y=p.y+10,r=48+Math.sin(game.time*5+p.x)*2;const g=ctx.createRadialGradient(x,y,2,x,y,r);g.addColorStop(0,'#a77c4b29');g.addColorStop(.45,'#77573d14');g.addColorStop(1,'#77573d00');ctx.fillStyle=g;ctx.fillRect(x-r,y-r,r*2,r*2);
  }
  ctx.restore();
  // Quiet motes use fixed paths; they never mask silhouettes or telegraphs.
- for(let i=0;i<29;i++){const x=(i*83+Math.sin(game.time*.2+i)*13)%554+43,y=(i*47-game.time*(2+i%3)+3600)%235+108;ctx.fillStyle=i%4===0?'#e6ba6d50':'#9bb9bc25';ctx.fillRect(Math.round(x),Math.round(y)+32,1,1);}
+ for(let i=0;i<29;i++){const x=(i*83+Math.sin(game.time*.2+i)*13)%(a.width-70)+35,y=(i*47-game.time*(2+i%3)+3600)%(a.height-125)+108;ctx.fillStyle=i%4===0?'#e6ba6d50':'#9bb9bc25';ctx.fillRect(Math.round(x),Math.round(y)+32,1,1);}
 }
 function hud(){
  const p=game.player;ctx.fillStyle='#0b101b';ctx.fillRect(0,0,640,31);ctx.fillStyle='#314958';ctx.fillRect(0,30,640,1);
@@ -160,42 +168,53 @@ function hud(){
   if(hint){text(hint,Math.round(p.x),Math.round(p.y)+45,'#f6dda0',1,'center');}
  }
 }
+function portraitRoom(){
+ const image=images['portrait-chapterhouse'],h=game.arena.height;
+ ctx.drawImage(image,0,0,360,128,0,32,360,128);
+ for(let y=128;y<h-96;y+=256){const band=Math.min(256,h-96-y);ctx.drawImage(image,0,128,360,band,0,y+32,360,band);}
+ ctx.drawImage(image,0,544,360,96,0,h-96+32,360,96);
+ const my=Math.round(124+(h-204)*.44);
+ ctx.save();ctx.beginPath();ctx.ellipse(180,my+32,79,53,0,0,TAU);ctx.clip();ctx.drawImage(images['chapter-house'],241,158,158,106,101,my-53+32,158,106);ctx.restore();
+}
 function render(){
- ctx.fillStyle='#0b101b';ctx.fillRect(0,0,640,400);ctx.save();
+ ctx.fillStyle='#0b101b';ctx.fillRect(0,0,worldCanvas.width,worldCanvas.height);ctx.save();
  if(game.shake>0)ctx.translate(Math.round((Math.random()-.5)*game.shake),Math.round((Math.random()-.5)*game.shake));
- ctx.drawImage(images['chapter-house'],0,32);
+ if(isPortrait)portraitRoom();else ctx.drawImage(images['chapter-house'],0,32);
  if(['exit','won'].includes(game.state)){
-  ctx.fillStyle='#0b101b';ctx.fillRect(291,75,58,54);ctx.fillStyle='#1c4148';ctx.fillRect(296,76,48,52);ctx.fillStyle='#101a26';ctx.fillRect(301,76,38,52);text('EXIT',320,101,'#9bd5b0',1,'center');
-  ctx.fillStyle='#9bd5b040';ctx.fillRect(303,128,34,2);
+  const x=game.arena.gate.x;ctx.fillStyle='#0b101b';ctx.fillRect(x-27,75,54,54);ctx.fillStyle='#1c4148';ctx.fillRect(x-23,76,46,52);ctx.fillStyle='#101a26';ctx.fillRect(x-18,76,36,52);text('EXIT',x,101,'#9bd5b0',1,'center');
+  ctx.fillStyle='#9bd5b040';ctx.fillRect(x-17,128,34,2);
  }
  for(const e of game.enemies)telegraph(e);
  for(const e of game.effects){if(e.type==='spawn'){ctx.strokeStyle='#58a79b';ctx.beginPath();ctx.ellipse(e.x,e.y+32,15*(1-e.life/e.max)+2,6,0,0,TAU);ctx.stroke();}}
  for(const c of game.coins){ctx.fillStyle='#77573d';ctx.fillRect(Math.round(c.x)-1,Math.round(c.y)+31,4,2);ctx.fillStyle='#e6ba6d';ctx.fillRect(Math.round(c.x),Math.round(c.y)+29-Math.round(Math.sin(c.t*5)*1),2,3);}
- const drawables=[...PROPS.map(p=>({y:p.y,draw:()=>drawProp(p)})),...game.corpses.map(e=>({y:e.y-1,draw:()=>actor(e)})),...game.enemies.map(e=>({y:e.y,draw:()=>actor(e)})),{y:game.player.y,draw:()=>actor(game.player,true)}];
+ const drawables=[...game.arena.props.map(p=>({y:p.y,draw:()=>drawProp(p)})),...game.corpses.map(e=>({y:e.y-1,draw:()=>actor(e)})),...game.enemies.map(e=>({y:e.y,draw:()=>actor(e)})),{y:game.player.y,draw:()=>actor(game.player,true)}];
  drawables.sort((a,b)=>a.y-b.y);for(const d of drawables)d.draw();
  for(const b of game.bolts){ctx.fillStyle='#26565a';ctx.fillRect(Math.round(b.x)-3,Math.round(b.y)+5,7,5);ctx.fillStyle='#58a79b';ctx.fillRect(Math.round(b.x)-2,Math.round(b.y)+4,5,5);ctx.fillStyle='#d2e9c0';ctx.fillRect(Math.round(b.x),Math.round(b.y)+5,2,2);}
  for(const p of game.particles){ctx.fillStyle=p.color==='gold'?'#f6dda0':p.color==='mint'?'#9bd5b0':'#ca6559';ctx.globalAlpha=clamp(p.life/p.max,0,1);ctx.fillRect(Math.round(p.x),Math.round(p.y)+32,p.size,p.size);}ctx.globalAlpha=1;
  for(const e of game.effects){if(e.type==='number')text(e.text,e.x,e.y+30-(1-e.life/e.max)*14,'#fff0c5',1,'center');if(e.type==='dust'){ctx.fillStyle='#9bb9bc30';ctx.fillRect(Math.round(e.x)-3,Math.round(e.y)+31,6,2);}}
- lighting();ctx.restore();hud();present();
+ lighting();ctx.restore();if(!isPortrait)hud();present();
 }
 function present(){
  if(!isPortrait){screenCtx.drawImage(worldCanvas,0,0);return;}
- const s=screenCtx,p=game.player,cameraX=Math.round(clamp(p.x-180,0,280));
- s.fillStyle='#0b101b';s.fillRect(0,0,360,480);s.drawImage(worldCanvas,cameraX,32,360,350,0,48,360,350);
+ const s=screenCtx,p=game.player;s.drawImage(worldCanvas,0,0);
+ s.fillStyle='#0b101bf0';s.fillRect(0,0,360,44);s.fillStyle='#48627180';s.fillRect(0,43,360,1);
  const label=(str,x,y,color='#8ca4ae',align='left')=>text(str,x,y,color,1,align,s);
- label('HEALTH',12,8);label(`${Math.ceil(p.hp)}/${p.maxHp}`,151,8,'#d9e4d5','right');s.fillStyle='#263a43';s.fillRect(12,20,139,6);s.fillStyle='#9d4249';s.fillRect(12,20,139*p.hp/p.maxHp,6);s.fillStyle='#e59472';s.fillRect(12,20,139*p.hp/p.maxHp,1);
- label('STAMINA',172,8);label(`${String(game.gold).padStart(3,'0')} G`,348,8,'#e6ba6d','right');s.fillStyle='#263a43';s.fillRect(172,20,176,6);s.fillStyle='#a77c4b';s.fillRect(172,20,176*p.stamina/100,6);s.fillStyle='#e6ba6d';s.fillRect(172,20,176*p.stamina/100,1);
- label(`TRIAL ${['I','II','III'][game.floor-1]} / III`,12,34,'#b2ba8b');label('THE SUNKEN CHAPTERHOUSE',348,34,'#6a8992','right');s.fillStyle='#314958';s.fillRect(0,46,360,1);
+ label('HEALTH',12,7);label(`${Math.ceil(p.hp)}/${p.maxHp}`,142,7,'#d9e4d5','right');s.fillStyle='#263a43';s.fillRect(12,19,130,5);s.fillStyle='#9d4249';s.fillRect(12,19,130*p.hp/p.maxHp,5);s.fillStyle='#e59472';s.fillRect(12,19,130*p.hp/p.maxHp,1);
+ label('STAMINA',162,7);s.fillStyle='#263a43';s.fillRect(162,19,134,5);s.fillStyle='#a77c4b';s.fillRect(162,19,134*p.stamina/100,5);s.fillStyle='#e6ba6d';s.fillRect(162,19,134*p.stamina/100,1);
+ label(`TRIAL ${['I','II','III'][game.floor-1]} / III`,12,32,'#b2ba8b');label('CHAPTERHOUSE',180,32,'#6a8992','center');label(`${String(game.gold).padStart(3,'0')} G`,296,32,'#e6ba6d','right');
  const boss=game.enemies.find(e=>e.type==='warden');
- if(boss){label('THE OATHKEEPER',180,408,'#e6ba6d','center');s.fillStyle='#652e3b';s.fillRect(36,420,288,4);s.fillStyle='#ca6559';s.fillRect(36,420,288*boss.hp/boss.maxHp,4);}
- else label(game.state==='exit'?'THE NORTH GATE IS OPEN':'CINDER VOW',180,412,'#a77c4b','center');
+ if(boss){s.fillStyle='#0b101bdd';s.fillRect(72,49,216,23);label('THE OATHKEEPER',180,53,'#e6ba6d','center');s.fillStyle='#652e3b';s.fillRect(82,65,196,3);s.fillStyle='#ca6559';s.fillRect(82,65,196*boss.hp/boss.maxHp,3);}
  if(game.toastTime>0&&game.state!=='title'){
-  const words=game.toast.replaceAll('—','-').split(' '),lines=[''];for(const word of words){let i=lines.length-1;if((lines[i]+' '+word).trim().length>51)lines.push(word);else lines[i]+=(lines[i]?' ':'')+word;}lines.slice(0,2).forEach((line,i)=>label(line,180,438+i*10,'#d9e4d5','center'));
+  const words=game.toast.replaceAll('—','-').split(' '),lines=[''];for(const word of words){let i=lines.length-1;if((lines[i]+' '+word).trim().length>49)lines.push(word);else lines[i]+=(lines[i]?' ':'')+word;}const y=canvas.height-22-lines.slice(0,2).length*10;s.fillStyle='#0b101bbd';s.fillRect(12,y-5,336,lines.slice(0,2).length*10+9);lines.slice(0,2).forEach((line,i)=>label(line,180,y+i*10,'#d9e4d5','center'));
  }
- let hint='FACE YOUR ENEMY. WATCH THE WINDUP.';if(dist(p,{x:546,y:220})<37&&!game.chestOpen)hint='TAP THE HAND TO OPEN THE CHEST';if(dist(p,{x:91,y:300})<35&&!game.shrineUsed)hint='TAP THE HAND TO RESTORE HEALTH';if(game.state==='exit'&&dist(p,{x:320,y:124})<38)hint='TAP THE HAND TO LEAVE';label(hint,180,467,'#6a8992','center');
+ const chest=game.arena.props.find(p=>p.type==='chest-closed'),shrine=game.arena.props.find(p=>p.type==='shrine');
+ let hint='';if(dist(p,chest)<37&&!game.chestOpen)hint='OPEN CHEST';if(dist(p,shrine)<35&&!game.shrineUsed)hint='RESTORE HEALTH';if(game.state==='exit')hint=dist(p,game.arena.gate)<38?'LEAVE THE DUNGEON':'NORTH GATE OPEN';
+ if(hint){s.fillStyle='#0b101bdd';s.fillRect(70,77,220,17);label(hint,180,82,'#f6dda0','center');}
+ $('touch-use').classList.toggle('available',Boolean(hint)&&(!hint.includes('GATE OPEN')));
 }
 function syncUI(){
  if(game.state===lastScreen)return;lastScreen=game.state;clearTouch();
+ if(document.body)document.body.dataset.playing=String(['playing','exit'].includes(game.state));
  $('title').classList.toggle('show',game.state==='title');$('relic').classList.toggle('show',game.state==='relic');$('pause').classList.toggle('show',game.state==='paused');$('result').classList.toggle('show',['dead','won'].includes(game.state));
  if(game.state==='relic'){
   $('choices').replaceChildren();
@@ -215,6 +234,6 @@ function frame(now){
  requestAnimationFrame(frame);
 }
 // A stable read-only snapshot makes visual/playthrough checks inspectable.
-window.CinderVow={get game(){return game;},pauseForBackground,back:()=>{if(['title','dead','won','paused'].includes(game.state))return'exit';game.beforePause=game.state;game.state='paused';clearTouch();syncUI();return'paused';},snapshot:()=>({state:game.state,portrait:isPortrait,controls:touchInput.snapshot(),floor:game.floor,hp:game.player.hp,stamina:game.player.stamina,kills:game.kills,gold:game.gold,enemies:game.enemies.map(e=>({type:e.type,hp:e.hp,phase:e.phase,x:e.x,y:e.y})),player:{x:game.player.x,y:game.player.y,action:game.player.action,face:game.player.face}})};
+window.CinderVow={get game(){return game;},pauseForBackground,back:()=>{if(['title','dead','won','paused'].includes(game.state))return'exit';game.beforePause=game.state;game.state='paused';clearTouch();syncUI();return'paused';},snapshot:()=>({state:game.state,portrait:isPortrait,viewport:{width:canvas.width,height:canvas.height,fullRoom:isPortrait},arena:{width:game.arena.width,height:game.arena.height,bounds:game.arena.bounds},pad:touchInput.origin?{...touchInput.origin}:null,controls:touchInput.snapshot(),floor:game.floor,hp:game.player.hp,stamina:game.player.stamina,kills:game.kills,gold:game.gold,enemies:game.enemies.map(e=>({type:e.type,hp:e.hp,phase:e.phase,x:e.x,y:e.y})),player:{x:game.player.x,y:game.player.y,action:game.player.action,face:game.player.face}})};
 if(query.has('play'))game.start(Number(query.get('seed')??16361));
 requestAnimationFrame(frame);

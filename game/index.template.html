@@ -16,6 +16,10 @@
  footer{display:flex;justify-content:space-between;gap:20px;padding-top:14px;color:#6e828d;font-size:10px;line-height:1.8}.help{color:#b0b7a8}kbd{color:#c9cbb4;font:10px Consolas,monospace;background:#17232c;border:1px solid #30434e;padding:1px 4px}#sound{position:absolute;right:12px;bottom:33px;padding:5px 8px;font-size:9px;letter-spacing:1px;background:#101a26bd;border:1px solid #314958;box-shadow:none;z-index:3}#loading{position:absolute;inset:0;display:grid;place-items:center;background:var(--ink);font-size:12px;color:var(--gold);letter-spacing:3px}#loading[hidden]{display:none}.stats{display:flex;gap:28px;margin:8px 0 23px}.stats b{display:block;font-size:24px;color:#e6ba6d;font-weight:normal}.stats span{font-size:9px;letter-spacing:1.5px;color:#8ca4ae}.screen .hint{font-size:10px;color:#8ca4ae;margin:7px 0 15px}.badge{border:1px solid #314958;padding:4px 8px;font-size:9px;letter-spacing:1px}
  @media(max-width:800px){.app{width:calc(100vw - 20px);padding:10px 0}.edition{display:none}.brand{font-size:15px}header{font-size:8px}.frame{aspect-ratio:8/5}.screen.title{padding-bottom:15px}h1{font-size:36px}.subtitle{font-size:12px;margin-bottom:12px}.eyebrow{font-size:8px;margin-bottom:8px}button{font-size:10px;padding:9px 17px}.small{font-size:8px}.relic{min-height:190px;padding:8px}.relic .symbol{margin:0 0 7px;font-size:22px}.relic strong{font-size:9px}.relic em{font-size:10px;margin:5px 0 8px}.relic .description{font-size:9px}h2{font-size:22px}.relics{gap:8px;margin:4px 0}footer{font-size:8px}.stats{gap:18px}.stats b{font-size:18px}}
  .mobile-copy{display:none}.mobile .mobile-copy{display:inline}.mobile .desktop-copy{display:none}
+ body:not(.mobile) .app{width:min(100vw,160dvh);height:min(100dvh,62.5vw);padding:0;position:relative}
+ body:not(.mobile) header{display:none}body:not(.mobile) .frame{box-shadow:none}
+ body:not(.mobile) footer{position:absolute;bottom:35px;left:100px;right:105px;justify-content:center;padding:0;z-index:3;font-size:9px;line-height:1.4;pointer-events:none}
+ body:not(.mobile) footer .help{display:none}body:not(.mobile) footer a{pointer-events:auto;background:#101a26bd;padding:3px 5px;text-decoration:none}
 __MOBILE_CSS__
 </style>
 </head>
@@ -23,23 +27,26 @@ __MOBILE_CSS__
 <main class="app">
  <header><div class="brand"><i>✦</i>CINDER VOW</div><div class="edition">THE SUNKEN CHAPTERHOUSE <span class="badge">VERTICAL SLICE · 02</span></div></header>
  <div class="frame">
-  <canvas id="game" width="640" height="400" tabindex="0" aria-label="Cinder Vow dungeon roguelike. Move with WASD or the D-pad. Attack, roll, block and interact."></canvas>
+  <canvas id="game" width="640" height="400" tabindex="0" aria-label="Cinder Vow dungeon roguelike. Touch and drag anywhere on the arena to move. Attack, roll, block and interact."></canvas>
   <div id="loading">KINDLING THE EMBER...</div>
   <section id="title" class="screen title show" aria-label="Main menu">
+   <img class="title-crest mobile-copy" src="__APP_ICON__" alt="Steel knight crest">
    <p class="eyebrow">A HAND-DRAWN PIXEL ROGUELIKE</p><h1>CINDER VOW</h1><p class="subtitle">The Sunken Chapterhouse</p>
-   <button id="begin">ENTER THE DUNGEON <span aria-hidden="true">→</span></button><p class="small">Three trials. Two relics. One vow to break.<br><span class="desktop-copy">Press Enter to begin · Headphones recommended</span><span class="mobile-copy">Move with the D-pad. Hold the sword to attack.</span></p>
+   <button id="begin">ENTER THE DUNGEON <span aria-hidden="true">→</span></button><p class="small">Three trials. Two relics. One vow to break.<br><span class="desktop-copy">Press Enter to begin · Headphones recommended</span><span class="mobile-copy">Touch and drag to move. Hold the sword to attack.</span></p>
   </section>
   <section id="relic" class="screen" aria-label="Relic choice"><p class="eyebrow">TRIAL COMPLETE</p><h2>What remains</h2><p class="hint">Choose one relic for the journey. Restore 10 health.</p><div id="choices" class="relics"></div></section>
-  <section id="pause" class="screen" aria-label="Game paused"><p class="eyebrow">THE EMBER STILL BURNS</p><h2>Catch your breath.</h2><p class="small desktop-copy">WASD / arrows: move · J / left click: attack<br>Shift / K: roll · L / right click: block · E: interact</p><p class="small mobile-copy">Use the D-pad to move and face your enemy.<br>Sword: attack · Arrow: roll · Shield: block · Hand: interact</p><button id="resume" style="margin-top:16px">RESUME</button><button id="mobile-sound" class="mobile-copy" style="margin-top:12px">SOUND: ON</button><p class="small desktop-copy">P / Esc to return</p></section>
+  <section id="pause" class="screen" aria-label="Game paused"><p class="eyebrow">THE EMBER STILL BURNS</p><h2>Catch your breath.</h2><p class="small desktop-copy">WASD / arrows: move · J / left click: attack<br>Shift / K: roll · L / right click: block · E: interact</p><p class="small mobile-copy">Touch the arena and drag to move.<br>The D-pad follows your thumb and fades on release.<br>Sword: attack · Arrow: roll · Shield: block · Hand: interact</p><button id="resume" style="margin-top:16px">RESUME</button><button id="mobile-sound" class="mobile-copy" style="margin-top:12px">SOUND: ON</button><p class="small desktop-copy">P / Esc to return</p></section>
   <section id="result" class="screen" aria-live="polite"><p id="result-tag" class="eyebrow"></p><h2 id="result-title"></h2><p id="result-copy" class="small"></p><div id="stats" class="stats"></div><button id="retry">TAKE THE VOW AGAIN →</button><p class="small desktop-copy">Press Enter for a new journey</p></section>
   <button id="sound" aria-pressed="true">SOUND: ON</button><button id="fullscreen" style="position:absolute;left:12px;bottom:33px;padding:5px 8px;font-size:9px;letter-spacing:1px;background:#101a26bd;border:1px solid #314958;box-shadow:none;z-index:3">FULLSCREEN</button>
- </div>
  <section class="touch-deck" aria-label="Touch controls">
-  <div id="dpad" class="dpad" role="group" aria-label="Movement D-pad">
-   <button class="up" data-direction="up" aria-label="Move up"><img data-icon="up" alt=""></button><button class="left" data-direction="left" aria-label="Move left"><img data-icon="left" alt=""></button><span class="pad-center" aria-hidden="true">◆</span><button class="right" data-direction="right" aria-label="Move right"><img data-icon="right" alt=""></button><button class="down" data-direction="down" aria-label="Move down"><img data-icon="down" alt=""></button>
+  <div id="dpad" class="dpad" hidden aria-hidden="true" role="img" aria-label="Floating movement D-pad">
+   <span class="up" data-direction="up"><img data-icon="up" alt=""></span><span class="left" data-direction="left"><img data-icon="left" alt=""></span><span class="right" data-direction="right"><img data-icon="right" alt=""></span><span class="down" data-direction="down"><img data-icon="down" alt=""></span><span class="pad-thumb"><i>◆</i></span>
   </div>
-  <div class="touch-actions"><button class="touch-action block" data-action="block" aria-label="Hold to block"><img data-icon="block" alt=""><span>BLOCK</span></button><button class="touch-action attack" data-action="attack" aria-label="Hold to attack"><img data-icon="attack" alt=""><span>ATTACK</span></button><button class="touch-action roll" data-action="roll" aria-label="Dodge roll"><img data-icon="roll" alt=""><span>ROLL</span></button><button class="touch-action interact" data-action="interact" aria-label="Interact"><img data-icon="interact" alt=""><span>USE</span></button><button id="touch-pause" class="touch-action pause-action" aria-label="Pause game"><img data-icon="pause" alt=""><span>PAUSE</span></button></div>
+  <p class="move-guide"><i>◇</i><span>TOUCH &amp; DRAG<small>ANYWHERE TO MOVE</small></span></p>
+  <div class="touch-actions"><button class="touch-action block" data-action="block" aria-label="Hold to block"><img data-icon="block" alt=""><span>BLOCK</span></button><button class="touch-action attack" data-action="attack" aria-label="Hold to attack"><img data-icon="attack" alt=""><span>ATTACK</span></button><button class="touch-action roll" data-action="roll" aria-label="Dodge roll"><img data-icon="roll" alt=""><span>ROLL</span></button><button id="touch-use" class="touch-action interact" data-action="interact" aria-label="Interact"><img data-icon="interact" alt=""><span>USE</span></button></div>
+  <button id="touch-pause" class="touch-action pause-action" aria-label="Pause game"><img data-icon="pause" alt=""></button>
  </section>
+ </div>
  <footer><div class="help"><kbd>WASD</kbd> move &nbsp; <kbd>J</kbd> attack &nbsp; <kbd>SHIFT</kbd> roll &nbsp; <kbd>L</kbd> block &nbsp; <kbd>E</kbd> interact &nbsp; <kbd>P</kbd> pause</div><div><a href="atelier.html" style="color:#e6ba6d">ANIMATION ATELIER</a> &nbsp;·&nbsp; <a id="capture" href="#" style="color:#9bb9bc">SAVE IMAGE</a></div></footer>
 </main>
 <script>

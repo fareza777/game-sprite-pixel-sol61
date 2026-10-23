@@ -18,6 +18,20 @@ export const PROPS=[
  {type:'shrine',x:91,y:300,w:25,h:12}, {type:'chest-closed',x:546,y:220,w:31,h:13}
 ];
 export const COLLIDERS=[...PROPS.map(p=>({x:p.x-p.w/2,y:p.y-p.h/2,w:p.w,h:p.h})),{x:58,y:164,w:50,h:99}];
+export const DESKTOP_ARENA={width:640,height:360,props:PROPS,colliders:COLLIDERS,bounds:{left:49,right:590,top:115,bottom:318},start:{x:320,y:280},gate:{x:320,y:124},boss:{x:320,y:176},bossEscorts:[[235,152],[415,151]],formations:[[[230,148],[403,153],[370,276],[227,249]],[[241,259],[394,265],[250,148],[403,151]],[[231,168],[409,165],[270,279],[390,281]]],caster:{x:320,y:147}};
+// A narrow, complete chamber follows the available portrait height. Actors keep
+// their native pixel size; a wide desktop room is never cropped into a phone.
+export function portraitArena(height=688){
+ const span=height-204,y=t=>Math.round(124+span*t);
+ const props=[
+  {type:'pillar',x:45,y:y(.42),w:24,h:14},{type:'pillar',x:315,y:y(.42),w:24,h:14},
+  {type:'books',x:35,y:154,w:34,h:16},{type:'coffin',x:325,y:167,w:38,h:18},
+  {type:'brazier',x:31,y:120,w:19,h:9},{type:'brazier',x:329,y:120,w:19,h:9},
+  {type:'brazier',x:77,y:height-59,w:19,h:9},{type:'brazier',x:283,y:height-59,w:19,h:9},
+  {type:'shrine',x:37,y:y(.79),w:25,h:12},{type:'chest-closed',x:323,y:y(.72),w:31,h:13}
+ ];
+ return {portrait:true,width:360,height,props,colliders:props.map(p=>({x:p.x-p.w/2,y:p.y-p.h/2,w:p.w,h:p.h})),bounds:{left:41,right:319,top:116,bottom:height-72},start:{x:180,y:y(.7)},gate:{x:180,y:124},boss:{x:180,y:y(.26)},bossEscorts:[[112,y(.17)],[250,y(.18)]],formations:[[[112,y(.16)],[250,y(.23)],[223,y(.52)],[115,y(.48)]],[[116,y(.41)],[245,y(.39)],[128,y(.13)],[251,y(.15)]],[[119,y(.18)],[242,y(.19)],[125,y(.53)],[249,y(.54)]]],caster:{x:180,y:y(.08)}};
+}
 export const RELICS=[
  {id:'edge',name:'WARDEN STEEL',subtitle:'A blade that remembers war',description:'Sword strikes deal +8 damage.',icon:'attack'},
  {id:'heart',name:'EMBER HEART',subtitle:'A small flame. A lasting oath.',description:'+20 maximum health. Restore 30 health.',icon:'heart'},
@@ -27,11 +41,22 @@ export const RELICS=[
  {id:'well',name:'SILENT SPRING',subtitle:'A moment between battles',description:'Restore 45 health. Stamina regeneration +20%.',icon:'flask'}
 ];
 export class Game{
- constructor(seed=Date.now()&0xffff){
+ constructor(seed=Date.now()&0xffff,arena=DESKTOP_ARENA){
+  this.arena=arena;
   this.seed=seed;this.random=rng(seed);this.time=0;this.state='title';this.floor=1;this.enemies=[];this.particles=[];this.bolts=[];this.coins=[];this.corpses=[];this.effects=[];this.events=[];this.shake=0;this.freeze=0;this.kills=0;this.gold=0;this.runTime=0;this.combo=0;this.comboTimer=0;this.relics=[];this.chestOpen=false;this.shrineUsed=false;this.spawnTimer=0;this.floorTimer=0;this.nextId=1;this.toast='';this.toastTime=0;
-  this.player={x:320,y:280,hp:100,maxHp:100,stamina:100,damage:25,range:44,speed:102,rollCD:.66,guardCost:1,regen:1,face:'s',aim:Math.PI/2,action:'idle',at:0,invuln:0,rollCooldown:0,attackId:0,attackKind:0,hitIds:new Set(),rollX:0,rollY:1};
+  this.player={...arena.start,hp:100,maxHp:100,stamina:100,damage:25,range:44,speed:102,rollCD:.66,guardCost:1,regen:1,face:'s',aim:Math.PI/2,action:'idle',at:0,invuln:0,rollCooldown:0,attackId:0,attackKind:0,hitIds:new Set(),rollX:0,rollY:1};
  }
- start(seed=this.seed){const fresh=new Game(seed);Object.assign(this,fresh);this.state='playing';this.spawnEncounter();this.notify('TRIAL I / III — break the hollow oath',3.8);this.events.push('start');}
+ start(seed=this.seed){const fresh=new Game(seed,this.arena);Object.assign(this,fresh);this.state='playing';this.spawnEncounter();this.notify('TRIAL I / III — break the hollow oath',3.8);this.events.push('start');}
+ resizeArena(arena){
+  const old=this.arena.bounds,next=arena.bounds;
+  for(const o of [this.player,...this.enemies,...this.corpses,...this.coins,...this.bolts,...this.effects,...this.particles])o.y=next.top+(o.y-old.top)/(old.bottom-old.top)*(next.bottom-next.top);
+  this.arena=arena;
+  for(const o of [this.player,...this.enemies]){
+   if(!this.solid(o.x,o.y,o.type==='warden'?12:7))continue;
+   // Window changes can move a pillar under an actor. Find nearby clear floor.
+   let found=false;for(let r=8;r<160&&!found;r+=8)for(let a=0;a<TAU;a+=Math.PI/8){const x=o.x+Math.cos(a)*r,y=o.y+Math.sin(a)*r;if(!this.solid(x,y,o.type==='warden'?12:7)){o.x=x;o.y=y;found=true;break;}}
+  }
+ }
  notify(text,duration=2.5){this.toast=text;this.toastTime=duration;}
  face(angle){const p=this.player;p.aim=angle;p.face=facing(angle);}
  spawn(type,x,y){
@@ -41,18 +66,20 @@ export class Game{
  }
  spawnEncounter(){
   this.floorTimer=0;this.clearTimer=0;
-  const formations=[[[230,148],[403,153],[370,276],[227,249]],[[241,259],[394,265],[250,148],[403,151]],[[231,168],[409,165],[270,279],[390,281]]];
+  const formations=this.arena.formations;
   const points=formations[Math.floor(this.random()*formations.length)];
   if(this.floor===1){this.spawn('hollow',...points[0]);this.spawn('hollow',...points[1]);this.spawn('wisp',...points[2]);}
-  else if(this.floor===2){this.spawn('hollow',...points[0]);this.spawn('hollow',...points[1]);this.spawn('hollow',...points[2]);this.spawn('wisp',...points[3]);this.spawn('wisp',320,147);}
-  else {this.spawn('warden',320,176);this.spawn('hollow',235,152);this.spawn('wisp',415,151);this.events.push('boss');this.notify('THE OATHKEEPER — watch for the heavy slam',4);}
+  else if(this.floor===2){this.spawn('hollow',...points[0]);this.spawn('hollow',...points[1]);this.spawn('hollow',...points[2]);this.spawn('wisp',...points[3]);this.spawn('wisp',this.arena.caster.x,this.arena.caster.y);}
+  else {this.spawn('warden',this.arena.boss.x,this.arena.boss.y);this.spawn('hollow',...this.arena.bossEscorts[0]);this.spawn('wisp',...this.arena.bossEscorts[1]);this.events.push('boss');this.notify('THE OATHKEEPER — watch for the heavy slam',4);}
  }
  solid(x,y,r=7){
-  if(x<49+r||x>590-r||y<115+r||y>318-r)return true;
-  return COLLIDERS.some(b=>x+r>b.x&&x-r<b.x+b.w&&y+r>b.y&&y-r<b.y+b.h);
+  const b=this.arena.bounds;if(x<b.left+r||x>b.right-r||y<b.top+r||y>b.bottom-r)return true;
+  // Reserve space for the ogre's wider attack silhouette at either screen edge.
+  if(this.arena.portrait&&r>=12&&(x<88||x>272))return true;
+  return this.arena.colliders.some(b=>x+r>b.x&&x-r<b.x+b.w&&y+r>b.y&&y-r<b.y+b.h);
  }
  move(o,dx,dy,r=7){if(!this.solid(o.x+dx,o.y,r))o.x+=dx;if(!this.solid(o.x,o.y+dy,r))o.y+=dy;}
- clearLine(a,b){const length=dist(a,b);for(let i=6;i<length;i+=6){const t=i/length;if(COLLIDERS.some(c=>{const x=a.x+(b.x-a.x)*t,y=a.y+(b.y-a.y)*t;return x>c.x&&x<c.x+c.w&&y>c.y&&y<c.y+c.h;}))return false;}return true;}
+ clearLine(a,b){const length=dist(a,b);for(let i=6;i<length;i+=6){const t=i/length;if(this.arena.colliders.some(c=>{const x=a.x+(b.x-a.x)*t,y=a.y+(b.y-a.y)*t;return x>c.x&&x<c.x+c.w&&y>c.y&&y<c.y+c.h;}))return false;}return true;}
  attack(){
   const p=this.player;if(this.state!=='playing'&&this.state!=='exit')return false;
   const next=this.comboTimer>0?(this.combo+1)%3:0,attack=HERO_COMBAT[next];
@@ -85,10 +112,11 @@ export class Game{
  }
  burst(x,y,color,count){for(let i=0;i<count;i++)this.particles.push({x,y,vx:(this.random()-.5)*100,vy:(this.random()-.5)*90-25,life:.2+this.random()*.35,max:.55,color,size:i<3?2:1});}
  interact(){
-  if(this.state==='exit'&&dist(this.player,{x:320,y:124})<38){this.state='won';this.events.push('win');return 'won';}
+  if(this.state==='exit'&&dist(this.player,this.arena.gate)<38){this.state='won';this.events.push('win');return 'won';}
   if(!['playing','exit'].includes(this.state))return false;
-  if(!this.chestOpen&&dist(this.player,{x:546,y:220})<37){this.chestOpen=true;this.gold+=20;this.player.hp=clamp(this.player.hp+15,0,this.player.maxHp);this.burst(546,202,'gold',18);this.events.push('chest');this.notify('An old offering: +20 gold, +15 health');return 'chest';}
-  if(!this.shrineUsed&&dist(this.player,{x:91,y:300})<35){this.shrineUsed=true;this.player.hp=clamp(this.player.hp+30,0,this.player.maxHp);this.burst(91,277,'mint',18);this.events.push('heal');this.notify('Oath restored: +30 health');return 'shrine';}
+  const chest=this.arena.props.find(p=>p.type==='chest-closed'),shrine=this.arena.props.find(p=>p.type==='shrine');
+  if(!this.chestOpen&&dist(this.player,chest)<37){this.chestOpen=true;this.gold+=20;this.player.hp=clamp(this.player.hp+15,0,this.player.maxHp);this.burst(chest.x,chest.y-18,'gold',18);this.events.push('chest');this.notify('An old offering: +20 gold, +15 health');return 'chest';}
+  if(!this.shrineUsed&&dist(this.player,shrine)<35){this.shrineUsed=true;this.player.hp=clamp(this.player.hp+30,0,this.player.maxHp);this.burst(shrine.x,shrine.y-23,'mint',18);this.events.push('heal');this.notify('Oath restored: +30 health');return 'shrine';}
   return false;
  }
  offerRelics(){const options=[...RELICS];this.choices=[];while(this.choices.length<3)this.choices.push(options.splice(Math.floor(this.random()*options.length),1)[0]);this.state='relic';this.events.push('relic');}

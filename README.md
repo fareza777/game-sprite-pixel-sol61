@@ -2,15 +2,15 @@
 
 A hand-authored pixel action roguelike, with a desktop browser version and an offline **portrait Android APK**. English is the default throughout the game, animation viewer and Android application.
 
-[Download the Android APK](releases/CinderVow-2.1.0.apk?raw=true) · [Android build instructions](android/README.md) · [Editable Aseprite sources](art)
+[Download the Android APK](releases/CinderVow-2.2.0.apk?raw=true) · [Android build instructions](android/README.md) · [Editable Aseprite sources](art)
 
-![Portrait Android release](previews/android-release.png)
+![Full-screen portrait dungeon](previews/android-portrait.png)
 
 ## Play
 
 Open `index.html` directly, or run `npm start` and visit `http://127.0.0.1:4173/`. The HTML bundles the art, animation metadata, bitmap font and game logic. No runtime internet connection is needed.
 
-For the portrait browser layout, use `http://127.0.0.1:4173/?mobile=1`. Portrait touch devices select this layout automatically. The Android app always opens it in portrait. Its following camera keeps the original pixel proportions, with the D-pad and action buttons below the play area.
+For the portrait browser layout, use `http://127.0.0.1:4173/?mobile=1`. Portrait touch devices select this layout automatically. The Android app always opens it in portrait. Version 2.2 fills the phone screen with a complete, compact chamber: no horizontal following crop or separate control panel. The room adapts to viewport height while characters retain their pixel proportions. Desktop play also fits the available screen height.
 
 Open `atelier.html` to inspect all characters, facings and animations. The viewer offers pause, slow playback and individual frame stepping.
 
@@ -26,7 +26,7 @@ Open `atelier.html` to inspect all characters, facings and animations. The viewe
 | 1 / 2 / 3 | Choose a relic |
 | Enter | Start or restart |
 
-On Android, use the eight-direction D-pad, sword, shield, roll arrow and hand buttons. Movement and actions accept separate simultaneous fingers. Pointer cancellation, pause and backgrounding release held inputs. The pause menu includes sound control.
+On Android, touch and drag anywhere on the arena to reveal the floating eight-direction D-pad. Its base follows a long drag, so direction can be reversed near the current thumb position. Releasing or cancelling hides it; the next touch chooses a fresh origin. Sword, shield, roll and hand buttons overlay the lower right corner. Movement and actions accept separate simultaneous fingers. Pause and backgrounding release held inputs. The pause menu includes sound control.
 
 ## Artwork
 
@@ -43,13 +43,13 @@ The enemies contrast in silhouette and movement: a rust-helmeted skeleton with e
 | Ogre / warden | 144×112 | 128 | Four facings × idle 4, walk 8, attack 9, hurt 4, death 7 |
 | Wraith / wisp | 64×64 | 32 | Idle 4, walk 8, cast 9, hurt 4, death 7 |
 
-There are **528 character frames**, 14 control/relic icons and 10 editable Aseprite sources. The wraith deliberately floats. Grounded actors share a floor contact; the ogre is drawn at its own native resolution.
+There are **528 character frames**, 14 control/relic icons and 11 editable Aseprite sources. The wraith deliberately floats. Grounded actors share a floor contact; the ogre is drawn at its own native resolution.
 
 ![Character lineup](previews/cast-design.png)
 
 ## The slice
 
-One detailed 640×360 stone hall, with masonry, lancet windows, reliefs, banners, an oath mosaic, ivy, a water trench, tombs, books, shrine, chest and animated braziers. Three encounters lead to the ogre and the north exit. Six relics modify a run, with stamina, combo attacks, blocking, rolling, hitstop, knockback, coins, healing, death and restart. Sound is synthesized locally.
+One detailed stone hall, with a 640×360 desktop layout and a newly authored 360-pixel-wide portrait layout. Portrait architecture uses height-adaptive floor bands, a complete north gate, jade lancets, crimson banners, oath mosaic, ivy, tomb, books, shrine, chest and animated braziers. Furniture, collisions, formations and interactions use the compact layout's own coordinates. Three encounters lead to the ogre and the north exit. Six relics modify a run, with stamina, combo attacks, blocking, rolling, hitstop, knockback, coins, healing, death and restart. Sound is synthesized locally.
 
 This is one arena with three encounters. Run variation comes from enemy formations and relic choices. It does not yet generate multiple dungeon rooms or save progression between runs.
 
@@ -57,9 +57,9 @@ This is one arena with three encounters. Run variation comes from enemy formatio
 
 - `index.html`: standalone game with desktop and portrait layouts.
 - `atelier.html`: standalone animation viewer.
-- `releases/CinderVow-2.1.0.apk`: signed universal Android release, Android 8.0+.
+- `releases/CinderVow-2.2.0.apk`: signed universal Android release, Android 8.0+.
 - `android/`: Gradle wrapper, native offline WebView host and instrumentation test.
-- `art/*.aseprite`: ten editable layered sources.
+- `art/*.aseprite`: eleven editable layered sources, including the compact portrait chamber.
 - `assets/`: PNG atlases, timing, animation tags, pivots and individual UI icons.
 - `previews/cast-design.png`: MCP character lineup.
 - `previews/knight-sword-detail.png`: pointed sword close-up.
@@ -84,7 +84,7 @@ npm start
 
 Android requires JDK 17+, SDK platform 35 and Android build tools. See [android/README.md](android/README.md). The release signing key is kept outside this repository. The GitHub Actions workflow verifies the web game and builds a debug APK; the committed release APK is signed separately.
 
-`npm test` checks 496 authored ground contacts, all 412 live grounded body/gear connections, pointed idle swords in four facings, animation tags, combo timing, 13 gameplay cases, multi-pointer touch behaviour and every one of the 528 poses through the shipping renderer. Three ordinary-rule seeded playthroughs complete all encounters and the exit. Android instrumentation verifies real WebView initialization, portrait/English UI, touch bounds, movement, two-pointer input, cancellation and pause.
+`npm test` checks 496 authored ground contacts, all 412 live grounded body/gear connections, pointed idle swords in four facings, animation tags, combo timing, 14 gameplay cases, floating multi-pointer touch behaviour and every one of the 528 poses through the shipping renderer. Three desktop and twelve portrait seeded playthroughs exercise ordinary game rules; at least one run at each tested portrait height completes all encounters and the exit. Android instrumentation verifies real WebView initialization, English UI, full viewport coverage, the complete compact room, responsive resizing, button bounds, floating origin, flexible dragging, two-pointer movement/attack, cancellation and pause.
 
 MCP review checks palette, layers, animation, export readiness, stray pixels and effect placement. There are no errors. Style notes about outlines on individual material layers are accepted: metal, cloth, bone and glow use selective edges, while the composite structure is checked separately. Attack filmstrips and onion skins are reviewed visually; automatic scores are not treated as a measure of artistic taste.
 

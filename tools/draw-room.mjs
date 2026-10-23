@@ -6,10 +6,10 @@ const moss=[
 const crack=(x,y)=>[poly([[x,y],[x+3,y+2],[x+1,y+5],[x+5,y+7],[x+5,y+10]],'n'),line(x+3,y+3,x+7,y+3,'n'),line(x+4,y+8,x+7,y+9,'T')];
 const skull=['..qqqq..','.qHHQqs.','qQHHHQqs','qIIQQIIs','.qQHQqs.','..QHQq..','..qqqq..'];
 const rune=[['.T.','TTT','.T.','T.T'],['T.T','TT.','T.T','.T.'],['TTT','T..','TT.','..T'],['.T.','T.T','TTT','T.T'],['T.T','.T.','.T.','T.T']];
-function stone(x,y,w,h,face='D'){
+export function stone(x,y,w,h,face='D'){
  return [rect(x,y,w,h,'n'),rect(x+1,y+1,w-2,h-2,face),line(x+2,y+1,x+w-3,y+1,'s'),line(x+1,y+2,x+1,y+h-3,'s'),line(x+2,y+h-2,x+w-2,y+h-2,'d')];
 }
-function brickwall(x,y,w,h){
+export function brickwall(x,y,w,h){
  const ops=[rect(x,y,w,h,'n')];
  for(let row=0;row<h;row+=9)for(let col=-(row%18?12:0);col<w;col+=24){
    const xx=Math.max(x,x+col),ww=Math.min(23,w-col)-Math.max(0,-col);
@@ -17,7 +17,7 @@ function brickwall(x,y,w,h){
  }
  return ops;
 }
-function niche(x,y){
+export function niche(x,y){
  const ops=[rect(x,y+8,36,43,'I'),poly([[x,y+10],[x+3,y+4],[x+10,y],[x+26,y],[x+33,y+4],[x+36,y+10]],'s'),line(x-2,y+10,x-2,y+48,'s',3),line(x+38,y+10,x+38,y+48,'D',3),rect(x-4,y+48,45,4,'l'),rect(x-3,y+52,43,4,'n')];
  // Deep, leaded lancet: jade panes and carved stone mullions.
  ops.push(poly([[x+7,y+12],[x+12,y+5],[x+24,y+5],[x+29,y+12],[x+29,y+43],[x+7,y+43]],'U','u'));
@@ -25,10 +25,10 @@ function niche(x,y){
  ops.push(line(x+18,y+6,x+18,y+43,'D',2),line(x+8,y+22,x+28,y+22,'D'),line(x+9,y+12,x+15,y+7,'V'),line(x+21,y+8,x+26,y+13,'V'),line(x+8,y+15,x+8,y+21,'J'));
  return ops;
 }
-function banner(x,y,flip=false){
+export function banner(x,y,flip=false){
  return [line(x-3,y,x+19,y,'O',2),rect(x,y+2,16,30,'c'),rect(x+1,y+3,4,27,'r'),line(x+13,y+3,x+13,y+30,'b'),poly([[x,y+29],[x+3,y+36],[x+8,y+32],[x+13,y+36],[x+16,y+29]],'b','c'),grid(x+4,y+9,['...AA...','..AyAA..','.AAAAAA.','AA.AA.AA','...AA...','...AA...','..AAAA..']),line(x+1,y+3,x+13,y+3,'R')];
 }
-function column(x,y){
+export function column(x,y){
  const ops=[ellipse(x-2,y+39,31,10,'n','n'),rect(x-2,y+33,29,6,'n'),rect(x,y+32,26,5,'s'),line(x+1,y+32,x+24,y+32,'l'),rect(x+3,y+5,19,28,'d'),rect(x+4,y+6,5,26,'s'),rect(x+10,y+6,2,26,'D'),rect(x+14,y+6,2,26,'s'),rect(x+19,y+6,2,26,'n'),rect(x-1,y+1,27,5,'s'),rect(x-3,y-2,31,4,'l'),rect(x-2,y-1,29,2,'m'),line(x+3,y+10,x+8,y+10,'l'),line(x+3,y+20,x+7,y+20,'m')];
  return ops;
 }

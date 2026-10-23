@@ -1,10 +1,10 @@
 # Cinder Vow for Android
 
-An offline, portrait Android application for Android 8.0 and newer. The packaged WebView loads the bundled game through `WebViewAssetLoader`; the game requires no network permission. The manifest locks phone orientation to portrait. A following camera preserves the proportions of the original pixel artwork.
+An offline, full-screen portrait Android application for Android 8.0 and newer. The packaged WebView loads the bundled game through `WebViewAssetLoader`; the game requires no network permission. The manifest locks phone orientation to portrait. A complete compact chamber fills the viewport and adapts to its height. Characters retain their pixel proportions; no separate control deck reduces the arena.
 
 ## Controls
 
-- D-pad: move and face in eight directions; slide between directions.
+- Floating D-pad: touch and drag anywhere on the arena to move and face in eight directions. The base follows a long drag and disappears on release. Each new touch selects a fresh origin.
 - Sword: hold for the three-hit combo.
 - Shield: hold to block.
 - Circular arrow: dodge roll in the current movement direction.
@@ -27,10 +27,10 @@ cd android
 
 On Windows use `gradlew.bat`. Set `ANDROID_HOME`, or create the ignored `android/local.properties` with the SDK path.
 
-The tested release APK is committed at `releases/CinderVow-2.1.0.apk`. To build another signed release, run `node tools/create-android-key.mjs` on Windows, then `gradlew.bat -p android assembleRelease` from the repository root. The helper creates a key and signing properties under the current user's private `.android/cinder-vow/` directory. Keep that directory for updates to the same installation. Signing files and passwords are excluded from Git. Without a local signing configuration, Gradle's release output is unsigned; the CI workflow deliberately builds a debug APK.
+The tested release APK is committed at `releases/CinderVow-2.2.0.apk`. It uses the same release certificate as 2.1.0 and can update that installation. To build another signed release, run `node tools/create-android-key.mjs` on Windows, then `gradlew.bat -p android assembleRelease` from the repository root. The helper creates a key and signing properties under the current user's private `.android/cinder-vow/` directory. Keep that directory for updates to the same installation. Signing files and passwords are excluded from Git. Without a local signing configuration, Gradle's release output is unsigned; the CI workflow deliberately builds a debug APK.
 
 ## Verification
 
-The instrumentation test checks real Android WebView startup with bundled content, English UI, portrait orientation, 360×480 game viewport, button bounds, D-pad movement, independent simultaneous movement and attack, pointer cancellation, pause and JavaScript errors. It saves a screenshot and JSON report in the test app's external files directory.
+The instrumentation test checks real Android WebView startup with bundled content, English UI, portrait orientation, full-screen viewport bounds, height-adaptive room dimensions, button bounds, hidden/revealed floating D-pad, touch-relative origin, flexible base following, independent simultaneous movement and attack, pointer cancellation, responsive resizing, pause and JavaScript errors. It saves gameplay screenshots with and without the floating D-pad, plus a JSON report, in the test app's external files directory.
 
 The launcher, D-pad arrows and action icons are authored through Aseprite MCP. Editable sources are in `art/ui-controls.aseprite`, `art/launcher.aseprite` and `art/launcher-foreground.aseprite`.
