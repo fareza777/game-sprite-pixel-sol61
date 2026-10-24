@@ -2520,6 +2520,216 @@
       "x": 40,
       "y": 72,
       "groundY": 71
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "abbey-0",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "abbey-1",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "abbey-2",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "tides-0",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "tides-1",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "tides-2",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "thorns-0",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "thorns-1",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "thorns-2",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "forge-0",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "forge-1",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "forge-2",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "bones-0",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "bones-1",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "bones-2",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "frost-0",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "frost-1",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "frost-2",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "blood-0",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "blood-1",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "blood-2",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "astral-0",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "astral-1",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "astral-2",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "gilded-0",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "gilded-1",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "gilded-2",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "abyss-0",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "abyss-1",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
+    },
+    {
+      "name": "biome-landmarks",
+      "tag": "abyss-2",
+      "x": 56,
+      "y": 113,
+      "groundY": 112
     }
   ],
   "failures": []

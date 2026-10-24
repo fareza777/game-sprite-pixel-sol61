@@ -27,6 +27,22 @@ export function createDungeonFloor(seed,floor){
  return {revision:3,floor,biome,boss,goalId:goal.id,form:rng.int(0x1000000),rooms,roomId:0};
 }
 
+export function createEvolvingFloor(seed,floor){
+ const layout=createDungeonFloor(seed,floor),rng=new DungeonRandom(seed^Math.imul(floor,134775813)^0x563247),rooms=layout.rooms;
+ layout.revision=4;layout.shortcuts=[];
+ for(const room of rooms)room.role=room.type==='treasure'?'relic':room.type==='hearth'||room.type==='entrance'?'rest':room.type==='merchant'?'trade':room.type;
+ // A blocked adjacency creates a genuine shorter route without making its
+ // lever necessary to complete the floor. Existing connected paths remain.
+ const candidates=[];
+ for(const a of rooms)for(const [da,[dx,dy]]of Object.entries(DIRECTION_VECTORS)){const b=rooms.find(r=>r.x===a.x+dx&&r.y===a.y+dy);if(b&&a.id<b.id&&a.doors[da]===undefined)candidates.push({a:a.id,b:b.id,da,db:OPPOSITE[da]});}
+ if(!candidates.length){for(const a of rooms)for(const [da,id]of Object.entries(a.doors)){if(a.id>=id||a.id===0||id===0)continue;const b=rooms[id],visited=new Set([a.id]),q=[a];while(q.length){const r=q.shift();for(const next of Object.values(r.doors))if(!((r.id===a.id&&next===b.id)||(r.id===b.id&&next===a.id))&&!visited.has(next)){visited.add(next);q.push(rooms[next]);}}if(visited.size===rooms.length)candidates.push({a:a.id,b:b.id,da,db:OPPOSITE[da],remove:true});}}
+ if(candidates.length){const s=rng.pick(candidates),lever=rng.pick(rooms.filter(r=>r.id!==0&&r.id!==s.a&&r.id!==s.b&&r.type!=='boss'&&r.type!=='guardian'));if(lever){if(s.remove){delete rooms[s.a].doors[s.da];delete rooms[s.b].doors[s.db];}layout.shortcuts.push({...s,open:false,switchRoom:lever.id});lever.switchFor=0;lever.switchActivated=false;}}
+ const optional=room=>{const seen=new Set([0]),q=[0];while(q.length){const id=q.shift();for(const next of Object.values(rooms[id].doors))if(next!==room.id&&!seen.has(next)){seen.add(next);q.push(next);}}return seen.has(layout.goalId);};
+ let eliteChoices=rooms.filter(r=>r.type==='combat'&&optional(r));if(!eliteChoices.length)eliteChoices=rooms.filter(r=>['merchant','hearth'].includes(r.type)&&optional(r));
+ const elite=rng.pick(eliteChoices);if(elite){if(elite.type!=='combat'){elite.type='combat';elite.cleared=false;delete elite.stock;elite.encounter=[`${BIOMES[layout.biome].id}-${floor%5}`,`${BIOMES[layout.biome].id}-${(floor+2)%5}`];}elite.role='elite';elite.encounter=elite.encounter.slice(0,3);}
+ return layout;
+}
+
 export function furnishDungeon(room,height,biome,{practice=false}={}){
  const a=portraitArena(height),b=a.bounds,H=b.bottom-b.top,Y=t=>Math.round(b.top+H*t),rng=new DungeonRandom(room.seed),layout=room.layout??'nave';a.props=[];a.floorTiles=[];a.regions=[];a.colliders=[];a.decals=[];a.header=ROOM_LAYOUTS.find(l=>l.id===layout)?.header??'cloister';a.floorStyle=room.floorStyle??room.pattern%4;a.lighting=room.lighting??0;
  const prop=(type,x,t,w=30,h=12,kit=false,scenic=false)=>{const p={type,x:Math.round(x),y:Y(t),w,h,kit,scenic};a.props.push(p);if(w&&h)a.colliders.push({x:p.x-w/2,y:p.y-h+3,w,h,blocksSight:true});return p;};

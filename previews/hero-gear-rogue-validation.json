@@ -1,0 +1,25 @@
+{
+  "sprite": "hero-gear-rogue.aseprite",
+  "findings": [
+    {
+      "count": 129,
+      "check": "palette",
+      "message": "129 palette entries. Most sprites read better under 32 — a large palette usually means ramps that were never merged.",
+      "severity": "note"
+    },
+    {
+      "count": 907,
+      "check": "animation",
+      "message": "907 frames and no animation tags. An engine cannot address untagged frames — add a tag per cycle.",
+      "severity": "error"
+    },
+    {
+      "check": "animation",
+      "message": "Every frame has the same duration. Uniform timing reads mechanical; hold contact poses longer than pass poses.",
+      "severity": "note"
+    }
+  ],
+  "passed": false,
+  "score": 85,
+  "summary": "1 error(s), 0 warning(s). Fix the errors before calling this done."
+}

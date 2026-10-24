@@ -1,0 +1,5 @@
+.rank-benefit{font-size:11px!important;line-height:1.7!important;color:#c2b58e!important;padding:9px 11px;background:#141f27;border-left:2px solid #8e7950}
+.relic-synergies{margin:12px 0 20px;padding:14px 15px;background:linear-gradient(115deg,#24302b55,#111d27);border:1px solid #58625170;border-radius:9px}.relic-synergies p{font-size:12px;line-height:1.7;margin:8px 0 0;color:#acbdb8}.relic-synergies b{font-weight:600}
+.item-relic-art{padding:14px;margin:10px 0 16px;border:1px solid #88745070;border-radius:9px;background:#242a26}.item-relic-art h3{margin:5px 0;color:#e3c58e}.item-relic-art p{font-size:12px;line-height:1.7;margin:7px 0;color:#bfd0c7}
+.touch-action.attack.charging{box-shadow:0 0 0 3px #80b5bf,0 0 calc(8px + var(--charge)*14px) #90c7dc66;filter:brightness(calc(1 + var(--charge)*.22))}.touch-action.attack.riposte-ready{box-shadow:0 0 0 2px #e6c17d,0 0 18px #d6ad5b77}
+@media(prefers-reduced-motion:reduce){.touch-action.attack{transition:none}}

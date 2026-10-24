@@ -1,0 +1,2310 @@
+{
+  "method": "Native Aseprite body cel contact checks and a separately drawn equipped motion study",
+  "cases": [
+    {
+      "hero": "knight",
+      "direction": "s",
+      "state": "idle",
+      "frame": 1,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "s",
+      "state": "idle",
+      "frame": 2,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "s",
+      "state": "idle",
+      "frame": 3,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "s",
+      "state": "idle",
+      "frame": 4,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "s",
+      "state": "walk",
+      "frame": 5,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "s",
+      "state": "walk",
+      "frame": 6,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "s",
+      "state": "walk",
+      "frame": 7,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "s",
+      "state": "walk",
+      "frame": 8,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "s",
+      "state": "walk",
+      "frame": 9,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "s",
+      "state": "walk",
+      "frame": 10,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "s",
+      "state": "walk",
+      "frame": 11,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "s",
+      "state": "walk",
+      "frame": 12,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "se",
+      "state": "idle",
+      "frame": 89,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "se",
+      "state": "idle",
+      "frame": 90,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "se",
+      "state": "idle",
+      "frame": 91,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "se",
+      "state": "idle",
+      "frame": 92,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "se",
+      "state": "walk",
+      "frame": 93,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "se",
+      "state": "walk",
+      "frame": 94,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "se",
+      "state": "walk",
+      "frame": 95,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "se",
+      "state": "walk",
+      "frame": 96,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "se",
+      "state": "walk",
+      "frame": 97,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "se",
+      "state": "walk",
+      "frame": 98,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "se",
+      "state": "walk",
+      "frame": 99,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "se",
+      "state": "walk",
+      "frame": 100,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "e",
+      "state": "idle",
+      "frame": 177,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "e",
+      "state": "idle",
+      "frame": 178,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "e",
+      "state": "idle",
+      "frame": 179,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "e",
+      "state": "idle",
+      "frame": 180,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "e",
+      "state": "walk",
+      "frame": 181,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "e",
+      "state": "walk",
+      "frame": 182,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "e",
+      "state": "walk",
+      "frame": 183,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "e",
+      "state": "walk",
+      "frame": 184,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "e",
+      "state": "walk",
+      "frame": 185,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "e",
+      "state": "walk",
+      "frame": 186,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "e",
+      "state": "walk",
+      "frame": 187,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "e",
+      "state": "walk",
+      "frame": 188,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "ne",
+      "state": "idle",
+      "frame": 265,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "ne",
+      "state": "idle",
+      "frame": 266,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "ne",
+      "state": "idle",
+      "frame": 267,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "ne",
+      "state": "idle",
+      "frame": 268,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 269,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 270,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 271,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 272,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 273,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 274,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 275,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 276,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "n",
+      "state": "idle",
+      "frame": 353,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "n",
+      "state": "idle",
+      "frame": 354,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "n",
+      "state": "idle",
+      "frame": 355,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "n",
+      "state": "idle",
+      "frame": 356,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "n",
+      "state": "walk",
+      "frame": 357,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "n",
+      "state": "walk",
+      "frame": 358,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "n",
+      "state": "walk",
+      "frame": 359,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "n",
+      "state": "walk",
+      "frame": 360,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "n",
+      "state": "walk",
+      "frame": 361,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "n",
+      "state": "walk",
+      "frame": 362,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "n",
+      "state": "walk",
+      "frame": 363,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "n",
+      "state": "walk",
+      "frame": 364,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "nw",
+      "state": "idle",
+      "frame": 441,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "nw",
+      "state": "idle",
+      "frame": 442,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "nw",
+      "state": "idle",
+      "frame": 443,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "nw",
+      "state": "idle",
+      "frame": 444,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 445,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 446,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 447,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 448,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 449,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 450,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 451,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 452,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "w",
+      "state": "idle",
+      "frame": 529,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "w",
+      "state": "idle",
+      "frame": 530,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "w",
+      "state": "idle",
+      "frame": 531,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "w",
+      "state": "idle",
+      "frame": 532,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "w",
+      "state": "walk",
+      "frame": 533,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "w",
+      "state": "walk",
+      "frame": 534,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "w",
+      "state": "walk",
+      "frame": 535,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "w",
+      "state": "walk",
+      "frame": 536,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "w",
+      "state": "walk",
+      "frame": 537,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "w",
+      "state": "walk",
+      "frame": 538,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "w",
+      "state": "walk",
+      "frame": 539,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "w",
+      "state": "walk",
+      "frame": 540,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "sw",
+      "state": "idle",
+      "frame": 617,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "sw",
+      "state": "idle",
+      "frame": 618,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "sw",
+      "state": "idle",
+      "frame": 619,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "sw",
+      "state": "idle",
+      "frame": 620,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 621,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 622,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 623,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 624,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 625,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 626,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 627,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "knight",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 628,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "s",
+      "state": "idle",
+      "frame": 1,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "s",
+      "state": "idle",
+      "frame": 2,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "s",
+      "state": "idle",
+      "frame": 3,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "s",
+      "state": "idle",
+      "frame": 4,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "s",
+      "state": "walk",
+      "frame": 5,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "s",
+      "state": "walk",
+      "frame": 6,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "s",
+      "state": "walk",
+      "frame": 7,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "s",
+      "state": "walk",
+      "frame": 8,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "s",
+      "state": "walk",
+      "frame": 9,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "s",
+      "state": "walk",
+      "frame": 10,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "s",
+      "state": "walk",
+      "frame": 11,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "s",
+      "state": "walk",
+      "frame": 12,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "se",
+      "state": "idle",
+      "frame": 89,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "se",
+      "state": "idle",
+      "frame": 90,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "se",
+      "state": "idle",
+      "frame": 91,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "se",
+      "state": "idle",
+      "frame": 92,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "se",
+      "state": "walk",
+      "frame": 93,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "se",
+      "state": "walk",
+      "frame": 94,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "se",
+      "state": "walk",
+      "frame": 95,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "se",
+      "state": "walk",
+      "frame": 96,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "se",
+      "state": "walk",
+      "frame": 97,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "se",
+      "state": "walk",
+      "frame": 98,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "se",
+      "state": "walk",
+      "frame": 99,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "se",
+      "state": "walk",
+      "frame": 100,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "e",
+      "state": "idle",
+      "frame": 177,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "e",
+      "state": "idle",
+      "frame": 178,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "e",
+      "state": "idle",
+      "frame": 179,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "e",
+      "state": "idle",
+      "frame": 180,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "e",
+      "state": "walk",
+      "frame": 181,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "e",
+      "state": "walk",
+      "frame": 182,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "e",
+      "state": "walk",
+      "frame": 183,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "e",
+      "state": "walk",
+      "frame": 184,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "e",
+      "state": "walk",
+      "frame": 185,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "e",
+      "state": "walk",
+      "frame": 186,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "e",
+      "state": "walk",
+      "frame": 187,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "e",
+      "state": "walk",
+      "frame": 188,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "ne",
+      "state": "idle",
+      "frame": 265,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "ne",
+      "state": "idle",
+      "frame": 266,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "ne",
+      "state": "idle",
+      "frame": 267,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "ne",
+      "state": "idle",
+      "frame": 268,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 269,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 270,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 271,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 272,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 273,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 274,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 275,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 276,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "n",
+      "state": "idle",
+      "frame": 353,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "n",
+      "state": "idle",
+      "frame": 354,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "n",
+      "state": "idle",
+      "frame": 355,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "n",
+      "state": "idle",
+      "frame": 356,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "n",
+      "state": "walk",
+      "frame": 357,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "n",
+      "state": "walk",
+      "frame": 358,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "n",
+      "state": "walk",
+      "frame": 359,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "n",
+      "state": "walk",
+      "frame": 360,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "n",
+      "state": "walk",
+      "frame": 361,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "n",
+      "state": "walk",
+      "frame": 362,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "n",
+      "state": "walk",
+      "frame": 363,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "n",
+      "state": "walk",
+      "frame": 364,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "nw",
+      "state": "idle",
+      "frame": 441,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "nw",
+      "state": "idle",
+      "frame": 442,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "nw",
+      "state": "idle",
+      "frame": 443,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "nw",
+      "state": "idle",
+      "frame": 444,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 445,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 446,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 447,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 448,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 449,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 450,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 451,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 452,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "w",
+      "state": "idle",
+      "frame": 529,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "w",
+      "state": "idle",
+      "frame": 530,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "w",
+      "state": "idle",
+      "frame": 531,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "w",
+      "state": "idle",
+      "frame": 532,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "w",
+      "state": "walk",
+      "frame": 533,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "w",
+      "state": "walk",
+      "frame": 534,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "w",
+      "state": "walk",
+      "frame": 535,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "w",
+      "state": "walk",
+      "frame": 536,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "w",
+      "state": "walk",
+      "frame": 537,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "w",
+      "state": "walk",
+      "frame": 538,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "w",
+      "state": "walk",
+      "frame": 539,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "w",
+      "state": "walk",
+      "frame": 540,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "sw",
+      "state": "idle",
+      "frame": 617,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "sw",
+      "state": "idle",
+      "frame": 618,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "sw",
+      "state": "idle",
+      "frame": 619,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "sw",
+      "state": "idle",
+      "frame": 620,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 621,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 622,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 623,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 624,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 625,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 626,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 627,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "rogue",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 628,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "s",
+      "state": "idle",
+      "frame": 1,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "s",
+      "state": "idle",
+      "frame": 2,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "s",
+      "state": "idle",
+      "frame": 3,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "s",
+      "state": "idle",
+      "frame": 4,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "s",
+      "state": "walk",
+      "frame": 5,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "s",
+      "state": "walk",
+      "frame": 6,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "s",
+      "state": "walk",
+      "frame": 7,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "s",
+      "state": "walk",
+      "frame": 8,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "s",
+      "state": "walk",
+      "frame": 9,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "s",
+      "state": "walk",
+      "frame": 10,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "s",
+      "state": "walk",
+      "frame": 11,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "s",
+      "state": "walk",
+      "frame": 12,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "se",
+      "state": "idle",
+      "frame": 89,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "se",
+      "state": "idle",
+      "frame": 90,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "se",
+      "state": "idle",
+      "frame": 91,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "se",
+      "state": "idle",
+      "frame": 92,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "se",
+      "state": "walk",
+      "frame": 93,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "se",
+      "state": "walk",
+      "frame": 94,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "se",
+      "state": "walk",
+      "frame": 95,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "se",
+      "state": "walk",
+      "frame": 96,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "se",
+      "state": "walk",
+      "frame": 97,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "se",
+      "state": "walk",
+      "frame": 98,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "se",
+      "state": "walk",
+      "frame": 99,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "se",
+      "state": "walk",
+      "frame": 100,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "e",
+      "state": "idle",
+      "frame": 177,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "e",
+      "state": "idle",
+      "frame": 178,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "e",
+      "state": "idle",
+      "frame": 179,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "e",
+      "state": "idle",
+      "frame": 180,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "e",
+      "state": "walk",
+      "frame": 181,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "e",
+      "state": "walk",
+      "frame": 182,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "e",
+      "state": "walk",
+      "frame": 183,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "e",
+      "state": "walk",
+      "frame": 184,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "e",
+      "state": "walk",
+      "frame": 185,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "e",
+      "state": "walk",
+      "frame": 186,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "e",
+      "state": "walk",
+      "frame": 187,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "e",
+      "state": "walk",
+      "frame": 188,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "ne",
+      "state": "idle",
+      "frame": 265,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "ne",
+      "state": "idle",
+      "frame": 266,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "ne",
+      "state": "idle",
+      "frame": 267,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "ne",
+      "state": "idle",
+      "frame": 268,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 269,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 270,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 271,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 272,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 273,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 274,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 275,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "ne",
+      "state": "walk",
+      "frame": 276,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "n",
+      "state": "idle",
+      "frame": 353,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "n",
+      "state": "idle",
+      "frame": 354,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "n",
+      "state": "idle",
+      "frame": 355,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "n",
+      "state": "idle",
+      "frame": 356,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "n",
+      "state": "walk",
+      "frame": 357,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "n",
+      "state": "walk",
+      "frame": 358,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "n",
+      "state": "walk",
+      "frame": 359,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "n",
+      "state": "walk",
+      "frame": 360,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "n",
+      "state": "walk",
+      "frame": 361,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "n",
+      "state": "walk",
+      "frame": 362,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "n",
+      "state": "walk",
+      "frame": 363,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "n",
+      "state": "walk",
+      "frame": 364,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "nw",
+      "state": "idle",
+      "frame": 441,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "nw",
+      "state": "idle",
+      "frame": 442,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "nw",
+      "state": "idle",
+      "frame": 443,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "nw",
+      "state": "idle",
+      "frame": 444,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 445,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 446,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 447,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 448,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 449,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 450,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 451,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "nw",
+      "state": "walk",
+      "frame": 452,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "w",
+      "state": "idle",
+      "frame": 529,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "w",
+      "state": "idle",
+      "frame": 530,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "w",
+      "state": "idle",
+      "frame": 531,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "w",
+      "state": "idle",
+      "frame": 532,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "w",
+      "state": "walk",
+      "frame": 533,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "w",
+      "state": "walk",
+      "frame": 534,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "w",
+      "state": "walk",
+      "frame": 535,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "w",
+      "state": "walk",
+      "frame": 536,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "w",
+      "state": "walk",
+      "frame": 537,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "w",
+      "state": "walk",
+      "frame": 538,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "w",
+      "state": "walk",
+      "frame": 539,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "w",
+      "state": "walk",
+      "frame": 540,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "sw",
+      "state": "idle",
+      "frame": 617,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "sw",
+      "state": "idle",
+      "frame": 618,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "sw",
+      "state": "idle",
+      "frame": 619,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "sw",
+      "state": "idle",
+      "frame": 620,
+      "plantedFeet": 2,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 621,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 622,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 623,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 624,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 625,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 626,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 627,
+      "plantedFeet": 1,
+      "contact": true
+    },
+    {
+      "hero": "seer",
+      "direction": "sw",
+      "state": "walk",
+      "frame": 628,
+      "plantedFeet": 1,
+      "contact": true
+    }
+  ],
+  "failures": []
+}

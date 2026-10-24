@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "touchParryAndRiposte": true,
+  "touchBackstab": true,
+  "holdReleaseChargedSpell": true,
+  "visibleSixSlotEquipment": true,
+  "honestRankBenefits": true,
+  "tenAwakenedBossArenas": 10,
+  "leverSurvivesReload": true,
+  "keyPoseScreenshotsUseTemporaryFixtureFreeze": true
+}

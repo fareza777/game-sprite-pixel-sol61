@@ -2,7 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {sprite,paint,finish,preview,call,data,ROOT,grid,P} from './art-lib.mjs';
 import {allLayers} from './campaign-art-design.mjs';
-import {heroDesign,enemyDesign} from './descent-actors.mjs';
+import {heroDesign} from './descent-actors.mjs';
+import {enemyDesign} from './evolution-enemy-design.mjs';
 import {offsetOps} from './actor-design-v2.mjs';
 import {HEROES,ENEMIES,BIOMES} from '../game/content.mjs';
 const font=JSON.parse(fs.readFileSync(path.join(ROOT,'assets/font.json'),'utf8'));
@@ -15,6 +16,7 @@ function landmarks(e,p,d,s,i){
  if(p.neck)return [{head:[p.neck.x,p.neck.y-5],body:[p.neck.x,(p.torsoY??42)+5]}];
  if(e.family==='hound'){if(e.id==='blood-4')return[{head:[d==='w'?27:d==='e'?73:49,d==='n'?52:65],body:[50,61]}];const side=d==='e'||d==='w',stag=e.id==='thorns-3';return [{head:[(side?(d==='w'?18:60):36)+10,(stag?33:43)+8],body:[48,51]}];}
  if(e.family==='crawler')return [{head:[48,e.biome===5?48:e.biome===8?42:56],body:[48,54]}];
+ if(e.id==='abyss-1')return [{head:[48,34],body:[48,49]},{head:[29,31],body:[48,49]},{head:[63,31],body:[48,49]}];
  if(e.family==='wisp'){if(e.biome===6)return [{head:[48,44],body:[48,58]}];if(e.biome===7)return [{head:[48,37],body:[48,47]}];if(e.biome===3)return [{head:[45,34],body:[48,51]}];return [{head:[48,e.biome===9?34:34],body:[48,49]}];}
  return [{head:[e.biome===9?44:48,e.biome===7?28:39],body:[48,52]}];
 }

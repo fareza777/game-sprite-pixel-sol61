@@ -2,7 +2,7 @@
 
 An original, offline portrait action roguelike. Carry the last ember through **100 procedural floors**, ten ruined realms and ten named bosses. All game text defaults to English.
 
-[Download the signed Android APK](releases/Vespergrave-3.1.0.apk?raw=true) · [Android build instructions](android/README.md) · [Editable Aseprite sources](art)
+[Download the signed Android APK](releases/Vespergrave-3.2.0.apk?raw=true) · [Android build instructions](android/README.md) · [Editable Aseprite sources](art)
 
 ![Vespergrave watchfire menu](previews/android-vespergrave/vespergrave-title.png)
 
@@ -10,11 +10,11 @@ An original, offline portrait action roguelike. Carry the last ember through **1
 
 - **Three heroes:** Aldric, a plate-armoured knight with a pointed longsword and shield; Sera, a hooded dual-dagger hunter; and Elian, a weathered sorcerer with layered robes, a grimoire and carved staff.
 - **Ten biomes:** Mourning Abbey, Drowned Reliquary, Thornwake Grove, Cinderforge, Ivory Necropolis, Frostveil Bastion, Scarlet Catacombs, Astral Archive, Gilded Ruin and The Bell Below.
-- **Sixty enemy designs**, including a boss on every tenth floor. Enemy behaviours include committed charges, thrusts, melee sweeps, arrows, spell volleys, slams, roots, summons and meteor attacks. Bosses accelerate their patterns below half health.
-- **Seeded branching dungeons** with loops, three or four passages from the entrance, and 7–11 chambers. Twenty room designs include barracks, prisons, aqueducts, ossuaries, reliquaries, observatories and sanctums alongside halls, cloisters, bridges, crypts, cisterns and gardens. The guardian can lie in any direction. Its descent is a physical stair, spiral shaft, lift or well with a varying position. A small map expands into a chart of explored and adjacent rooms.
+- **Sixty enemy designs**, including a boss on every tenth floor. Enemy behaviours include committed charges, thrusts, melee sweeps, arrows, spell volleys, slams, roots, summons and meteor attacks. Each boss awakens a different arena below half health: furnace lanes, root waves, flood surges, frost seams, starfalls and other realm-specific hazards. Ordinary enemies coordinate melee commitments while flankers seek side positions and ranged foes keep distance.
+- **Seeded branching dungeons** with loops, three or four passages from the entrance, and 7–11 chambers. Twenty room designs include barracks, prisons, aqueducts, ossuaries, reliquaries, observatories and sanctums alongside halls, cloisters, bridges, crypts, cisterns and gardens. The guardian can lie in any direction. Its descent is a physical stair, spiral shaft, lift or well with a varying position. A small map expands into a chart of explored and adjacent rooms. Elite trials are optional and guarantee a relic plus essence; relic vaults guarantee relic quality. Levers open reciprocal shortcut gates and persist through Continue.
 - **Ten interactive events:** a blood altar, cursed coffer, wounded pilgrim, oath shrine, sealed manuscript, falling-star vault, wandering smith, mirror champion, three-wave bell and a memory bargain. Choices consume actual resources, grant run-long boons, or begin encounters with earned rewards. Trials and choices persist through Continue.
-- Stamina, directional guard, dodge invulnerability, three-strike primary attacks, sorcery projectiles, focus, healing flasks, nine class skills, two equipped skill slots and skill strengthening.
-- **One hundred named base item designs**, with seeded level, rarity, affixes and numerical rolls. Six equipment slots around an animated hero, a rarity-framed inventory grid, category filters, sorting, item lore and positive/negative stat comparisons, consumables, purchase and salvage.
+- Stamina, directional guard, dodge invulnerability, three-strike primary attacks, focus and healing flasks. Aldric can parry into a timed riposte; Sera backstabs from behind; Elian holds and releases charged spells, with an early dodge cancel and a committed charge window. Impact pauses, directional recoil, metallic guard sounds and visible recovery windows add weight. All nine skills have meaningful ranks, including ward duration and absorption, mark amplification and its final burst, and orbit range, duration and pulse strength.
+- **One hundred named base item designs**, with seeded level, rarity, affixes and numerical rolls. Six equipment slots that change the animated hero’s weapon silhouette, armor details, boots, offhand and jewelry. Relic arts include perfect-guard shockwaves, critical bleed and death bursts, ricocheting Gravebolts, dodge runes, marked-kill restoration and an expiring ward burst. The satchel includes a rarity-framed inventory grid, category filters, sorting, item lore and positive/negative stat comparisons, consumables, purchase and salvage.
 - Original splash and app icon, three onboarding pages, an interactive six-step practice chamber, eight layered opening shots, a choice of two endings, English narration with sentence captions, slow parallax and separate foreground illustrations, an original ambient score and sound effects.
 - New Game, Continue, settings, equipment, skills, bestiary, journal, About, Share and a private in-app rating. Autosaved active runs and permanent ember bonds persist on the device.
 
@@ -29,7 +29,7 @@ Touch and drag any open floor to reveal the floating eight-way D-pad. Its base f
 | Keyboard | Action |
 |---|---|
 | WASD / arrows | Move and face |
-| J | Hold primary attack / cast |
+| J | Hold melee attack; mage holds to charge and releases to cast |
 | K | Hold guard |
 | Space | Dodge roll |
 | Q / E | First / second equipped skill |
@@ -38,7 +38,7 @@ Touch and drag any open floor to reveal the floating eight-way D-pad. Its base f
 | I | Equipment, skills and journal |
 | Escape | Pause or close a page |
 
-`atelier.html` is a standalone gallery of all 63 characters. Choose a character, facing and animation, or pause the preview. The in-game bestiary also previews every enemy's idle, walk and attack.
+`atelier.html` is a standalone gallery of all 63 characters. Choose a character, facing, animation and equipment quality, toggle a shield, or pause the preview. The in-game bestiary also previews every enemy's idle, walk and attack.
 
 ## Pixel artwork
 
@@ -46,10 +46,14 @@ Graphics are drawn as native pixel clusters, keyed poses and drawing primitives 
 
 | Character set | Native cell | Frames |
 |---|---|---:|
-| Each of three heroes | 96 × 96 | 240 |
+| Each playable hero | 96 × 96 · eight directions | 704 |
+| Independent hero equipment | 96 × 96 | 2,495 |
+| Armor details and boots | 64 × 64 / 16 × 8 | 192 |
+| Legacy hero source set | 96 × 96 · four facings | 720 |
 | Ordinary enemies | 96 × 96 | 128 each |
 | Bosses and brutes | 144 × 112 | 128 each |
 | Base character frames | Four facings | 8,400 |
+| Playable hero and enemy poses | Eight / four facings | 9,792 |
 | Skill casting poses | 128 × 128 · four facings | 288 |
 | Nine skill effects | 256 × 256 | 108 |
 
@@ -57,13 +61,13 @@ Elian has independently designed hood, face, mantle, sleeves, split robe, belt, 
 
 The individual review covers **60 enemies in 540 key poses**, with Aseprite-exported opaque-pixel paths from head to torso. It found and corrected disconnected anatomy, then passed with zero remaining connectivity failures. Filmstrips and onion-skin views supplement the numerical checks. These checks do not substitute for artistic judgement.
 
-![Revised heroes](previews/vespergrave-heroes.png)
+![Eight-direction hero designs](previews/eight-direction-review.png)
 
 Other assets include ten 360 × 640 room illustrations, 40 architectural headers, 160 biome-specific floor and furnishing tiles, ten large arena seals, 80 original furnishing variants, ten event objects and ten event illustrations, 100 item icons, nine skill icons, nine layered cinematic illustrations, three 160 × 192 hero portraits, a separate watchfire menu, 440 new environment frames, animated flames, touch icons and the launcher artwork. Atlas packing keeps every texture below 4096 pixels on either edge. Enemy atlases from earlier biomes are released from the image cache as the descent advances.
 
-![Architectural variants and event objects](previews/level-art-review.png)
+![Distinct realm architecture](previews/biome-architecture-review.png)
 
-[Compare the twenty room designs on Android](previews/level-gallery.html). Pools, chasms and aqueducts grow to fit the viewport using native pixel edges. Ground decorations and furniture use explicit foot anchors. MCP reads the lowest opaque row of all 360 prop frames to place their contact shadow directly beneath the drawn base. Pursuing enemies route around blocked terrain; sorcery can cross open pools and chasms.
+[Compare the twenty room designs on Android](previews/level-gallery.html). Pools, chasms and aqueducts grow to fit the viewport using native pixel edges. Ground decorations and furniture use explicit foot anchors. MCP reads the lowest opaque row of all 390 prop frames to place their contact shadow directly beneath the drawn base. Pursuing enemies route around blocked terrain; sorcery can cross open pools and chasms.
 
 ## Narration
 
@@ -81,9 +85,9 @@ npm test
 npm start
 ```
 
-The checks cover all 100 floors under four seeds, room graph reachability and reciprocal doors, seeded branching graphs and twenty distinct room layouts, furnishing routes at four viewport heights, event costs and one-time rewards, multi-wave encounters, timed trial warnings and persistence, progression to the ending, actual primary combat, guard, dodge, every boss pattern, all nine skills, equipment, item rolls, revisiting rooms, saves, tutorial controls and death. The shipping renderer is exercised with the base character frames, casting poses and spell keys. Saves retain casting anticipation and released projectiles; 3.0 descents keep their original floor graph and acquire the new generator on the following floor. Touch tests cover independent pointers and one-shot skill/heal input.
+The checks cover all 100 floors under four seeds, room graph reachability and reciprocal doors, seeded branching graphs and twenty distinct room layouts, furnishing routes at four viewport heights, event costs and one-time rewards, multi-wave encounters, timed trial warnings and persistence, progression to the ending, actual primary combat, guard, dodge, every boss pattern, all nine skills, equipment, item rolls, revisiting rooms, saves, tutorial controls and death. The shipping renderer is exercised with the base character frames, casting poses and spell keys. Saves retain casting anticipation and released projectiles; 3.0 and 3.1 descents keep their original floor graph and acquire the new generator on the following floor. Touch tests cover independent pointers and one-shot skill/heal input.
 
-Android instrumentation verifies the actual offline WebView, English UI, full portrait viewport, opening audio playback, floating movement, simultaneous attack, cancellation, mage skill, equipment, animated bestiary, settings persistence, Continue after activity recreation and responsive resizing. Further tests preview all twenty room layouts, chooses an event boon, starts the bell waves and verifies a timed trial through pause and Continue. The refinement flow also plays all eight prologue clips, checks button separation in standard and large modes, opens the branching map, compares relic stats, previews a spell and uses the actual descent. Reports and screenshots are in `previews/android-vespergrave/`. Room/event preview fixtures place the player directly at the feature being reviewed.
+Android instrumentation verifies the actual offline WebView, English UI, full portrait viewport, opening audio playback, floating movement, simultaneous attack, cancellation, mage skill, equipment, animated bestiary, settings persistence, Continue after activity recreation and responsive resizing. Further tests preview all twenty room layouts, choose an event boon, starts the bell waves and verifies a timed trial through pause and Continue. The refinement flow also plays all eight prologue clips, checks button separation in standard and large modes, opens the branching map, compares relic stats, previews a spell and uses the actual descent. The evolution flow exercises touch parry and riposte, backstabs, hold/release charging, six visible equipment slots, actual skill ranks, all ten awakened arenas and a lever through reload and Continue. Key-pose screenshots temporarily freeze test fixtures for inspection; production impact pauses remain 32–65 milliseconds. Reports and screenshots are in `previews/android-vespergrave/`. Room/event preview fixtures place the player directly at the feature being reviewed.
 
 ```sh
 node tools/mcp-service.mjs
@@ -101,14 +105,14 @@ Art regeneration needs the local MCP bridge and Aseprite. The original installat
 ## Project files
 
 - `game/content.mjs`: the complete English catalogue, lore and narration script.
-- `game/dungeon.mjs`, `game/campaign.mjs`: branching generation, room furnishing, navigation, combat, progression, equipment and validated saves.
-- `game/presentation.mjs`, `game/refinements.mjs` and their CSS: portrait renderer, input, menus, cinematic, satchel and audio.
-- `tools/draw-campaign-*.mjs`, `tools/mage-design.mjs`: reproducible MCP drawings and animation keys.
+- `game/dungeon.mjs`, `game/campaign.mjs`, `game/evolution.mjs`: branching generation, room furnishing, navigation, combat, progression, equipment and validated saves.
+- `game/presentation.mjs`, `game/refinements.mjs`, `game/evolution-presentation.mjs` and their CSS: portrait renderer, input, menus, cinematic, satchel and audio.
+- `tools/draw-campaign-*.mjs`, `tools/draw-evolution-*.mjs`, `tools/evolution-*-design.mjs`, `tools/mage-design.mjs`: reproducible MCP drawings and animation keys.
 - `art/`, `assets/`: editable documents, final atlases, frame tags, native foot anchors and offline audio.
 - `previews/cast-anatomy-report.json`, `campaign-asset-report.json`, `campaign-test-report.json`: verification evidence.
 - `android/`: offline Android host, Gradle project and instrumentation test.
-- `releases/Vespergrave-3.1.0.apk`: signed universal release for Android 8.0+.
+- `releases/Vespergrave-3.2.0.apk`: signed universal release for Android 8.0+.
 
-The Android package and signing certificate are retained from Cinder Vow so this release can update versions 2.2.0 and 3.0.0. Earlier slice sources and releases remain as project history. Vespergrave's shipped game uses the campaign engine.
+The Android package and signing certificate are retained from Cinder Vow so this release can update versions 2.2.0, 3.0.0 and 3.1.0. A saved run was restored after an in-place update from the signed 3.1.0 APK. Earlier slice sources and releases remain as project history. Vespergrave's shipped game uses the campaign engine.
 
 The pixel5x7 bitmap font supplied by Aseprite AI Artist's font knowledge is CC0-1.0. Vespergrave's lore, characters, illustration and score are original; third-party game artwork and music are not included.

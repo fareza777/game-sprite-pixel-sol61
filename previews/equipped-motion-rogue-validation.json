@@ -1,0 +1,20 @@
+{
+  "sprite": "equipped-motion-rogue.aseprite",
+  "findings": [
+    {
+      "count": 129,
+      "check": "palette",
+      "message": "129 palette entries. Most sprites read better under 32 — a large palette usually means ramps that were never merged.",
+      "severity": "note"
+    },
+    {
+      "layer": "motion",
+      "check": "layers",
+      "message": "Layer 'motion' has no cels on any frame.",
+      "severity": "note"
+    }
+  ],
+  "passed": true,
+  "score": 100,
+  "summary": "Clean."
+}

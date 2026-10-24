@@ -16,11 +16,11 @@
     "floor": 1,
     "biome": "abbey",
     "room": 0,
-    "roomLayout": "crossing",
-    "mapForm": 15634798,
+    "roomLayout": "nave",
+    "mapForm": 11443324,
     "event": null,
     "eventsResolved": 0,
-    "rooms": 11,
+    "rooms": 8,
     "enemies": 0,
     "player": {
       "x": 180,
@@ -28,7 +28,7 @@
       "hp": 92,
       "maxHp": 92,
       "action": "idle",
-      "focus": 135.1343600000002,
+      "focus": 135.44208000000052,
       "stamina": 100
     },
     "layout": {

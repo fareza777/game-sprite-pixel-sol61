@@ -10,7 +10,11 @@
   "cinematicPanels": 9,
   "offlineVoiceClips": 52,
   "connectedKeyPoses": 540,
-  "measuredPropContacts": 360,
+  "measuredPropContacts": 390,
+  "eightDirectionPoses": 2112,
+  "equipmentKeys": 2495,
+  "groundedHeroKeys": 288,
+  "awakenedArenaFrames": 40,
   "roomLayouts": 20,
   "mapGeneration": "Seeded branching grid with loops and 7–11 chambers",
   "interactiveEvents": 10,
@@ -39,7 +43,7 @@
     {
       "name": "enemy-abbey-0",
       "frames": 128,
-      "width": 960,
+      "width": 1056,
       "height": 960
     },
     {
@@ -52,7 +56,7 @@
       "name": "enemy-abbey-2",
       "frames": 128,
       "width": 576,
-      "height": 480
+      "height": 576
     },
     {
       "name": "enemy-abbey-3",
@@ -69,7 +73,7 @@
     {
       "name": "enemy-abbey-boss",
       "frames": 128,
-      "width": 1296,
+      "width": 1440,
       "height": 1008
     },
     {
@@ -82,7 +86,7 @@
       "name": "enemy-tides-1",
       "frames": 128,
       "width": 576,
-      "height": 480
+      "height": 576
     },
     {
       "name": "enemy-tides-2",
@@ -93,14 +97,14 @@
     {
       "name": "enemy-tides-3",
       "frames": 128,
-      "width": 288,
-      "height": 288
+      "width": 480,
+      "height": 384
     },
     {
       "name": "enemy-tides-4",
       "frames": 128,
-      "width": 384,
-      "height": 288
+      "width": 480,
+      "height": 480
     },
     {
       "name": "enemy-tides-boss",
@@ -135,13 +139,13 @@
     {
       "name": "enemy-thorns-4",
       "frames": 128,
-      "width": 288,
+      "width": 384,
       "height": 288
     },
     {
       "name": "enemy-thorns-boss",
       "frames": 128,
-      "width": 1296,
+      "width": 1440,
       "height": 1008
     },
     {
@@ -184,7 +188,7 @@
       "name": "enemy-bones-0",
       "frames": 128,
       "width": 960,
-      "height": 960
+      "height": 864
     },
     {
       "name": "enemy-bones-1",
@@ -202,7 +206,7 @@
       "name": "enemy-bones-3",
       "frames": 128,
       "width": 384,
-      "height": 288
+      "height": 384
     },
     {
       "name": "enemy-bones-4",
@@ -225,7 +229,7 @@
     {
       "name": "enemy-frost-1",
       "frames": 128,
-      "width": 288,
+      "width": 384,
       "height": 288
     },
     {
@@ -249,7 +253,7 @@
     {
       "name": "enemy-frost-boss",
       "frames": 128,
-      "width": 720,
+      "width": 864,
       "height": 560
     },
     {
@@ -279,8 +283,8 @@
     {
       "name": "enemy-blood-4",
       "frames": 128,
-      "width": 384,
-      "height": 384
+      "width": 672,
+      "height": 672
     },
     {
       "name": "enemy-blood-boss",
@@ -298,7 +302,7 @@
       "name": "enemy-astral-1",
       "frames": 128,
       "width": 576,
-      "height": 480
+      "height": 576
     },
     {
       "name": "enemy-astral-2",
@@ -310,7 +314,7 @@
       "name": "enemy-astral-3",
       "frames": 128,
       "width": 384,
-      "height": 288
+      "height": 384
     },
     {
       "name": "enemy-astral-4",
@@ -321,7 +325,7 @@
     {
       "name": "enemy-astral-boss",
       "frames": 128,
-      "width": 1008,
+      "width": 1152,
       "height": 784
     },
     {
@@ -352,7 +356,7 @@
       "name": "enemy-gilded-4",
       "frames": 128,
       "width": 384,
-      "height": 288
+      "height": 384
     },
     {
       "name": "enemy-gilded-boss",
@@ -370,7 +374,7 @@
       "name": "enemy-abyss-1",
       "frames": 128,
       "width": 576,
-      "height": 480
+      "height": 576
     },
     {
       "name": "enemy-abyss-2",
@@ -388,7 +392,7 @@
       "name": "enemy-abyss-4",
       "frames": 128,
       "width": 384,
-      "height": 288
+      "height": 384
     },
     {
       "name": "enemy-abyss-boss",
@@ -608,6 +612,96 @@
       "frames": 40,
       "width": 2520,
       "height": 720
+    },
+    {
+      "name": "hero-eight-knight",
+      "frames": 704,
+      "width": 1824,
+      "height": 1824
+    },
+    {
+      "name": "hero-gear-knight",
+      "frames": 983,
+      "width": 3072,
+      "height": 2976
+    },
+    {
+      "name": "hero-armor-knight",
+      "frames": 32,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "name": "hero-eight-rogue",
+      "frames": 704,
+      "width": 1728,
+      "height": 1728
+    },
+    {
+      "name": "hero-gear-rogue",
+      "frames": 907,
+      "width": 2976,
+      "height": 2880
+    },
+    {
+      "name": "hero-armor-rogue",
+      "frames": 32,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "name": "hero-eight-seer",
+      "frames": 704,
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "name": "hero-gear-seer",
+      "frames": 605,
+      "width": 2400,
+      "height": 2400
+    },
+    {
+      "name": "hero-armor-seer",
+      "frames": 32,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "name": "hero-boots",
+      "frames": 96,
+      "width": 48,
+      "height": 16
+    },
+    {
+      "name": "biome-vaults",
+      "frames": 40,
+      "width": 2520,
+      "height": 720
+    },
+    {
+      "name": "biome-floors",
+      "frames": 40,
+      "width": 448,
+      "height": 384
+    },
+    {
+      "name": "biome-landmarks",
+      "frames": 30,
+      "width": 672,
+      "height": 640
+    },
+    {
+      "name": "biome-awakenings",
+      "frames": 40,
+      "width": 672,
+      "height": 576
+    },
+    {
+      "name": "evolution-effects",
+      "frames": 46,
+      "width": 384,
+      "height": 384
     },
     {
       "name": "arena-seals",

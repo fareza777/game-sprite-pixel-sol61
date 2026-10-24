@@ -133,6 +133,78 @@ public class VespergraveGameTest {
             try(FileOutputStream out=new FileOutputStream(new File(folder,"vespergrave-event-report.json"))){out.write(report.toString(2).getBytes(java.nio.charset.StandardCharsets.UTF_8));}
         }
     }
+    private void preparedHero(String hero) throws Exception {
+        click("[data-command='new-game']");click("[data-hero='"+hero+"']");click("#begin");
+        if(Boolean.TRUE.equals(js("!!document.querySelector('[data-command=confirm-new]')")))click("[data-command='confirm-new']");
+        assertTrue(await("window.Vespergrave.snapshot().hero==='"+hero+"'&&window.Vespergrave.snapshot().state==='playing'",12000));
+    }
+    private void combatFixture() throws Exception {
+        js("(()=>{const g=window.Vespergrave.game;g.tutorial=null;g.enemies=[];g.projectiles=[];g.dangers=[];g.effects=[];g.room.type='combat';g.room.role='combat';g.room.event=null;g.room.layout='arena';g.room.cleared=false;g.room.phase2=false;g.arena=g.makeGeometry(g.room);g.arena.colliders=[];g.player.x=180;g.player.y=350;g.player.action='idle';g.player.at=0;g.player.aim=-Math.PI/2;g.player.invuln=0;g.player.stamina=100;g.level=10;g.essence=60;g.recalculate();g.player.hp=g.player.maxHp;g.player.focus=g.player.maxFocus;const e=g.spawn('abbey-0',180,315);e.hp=e.maxHp=50000;e.phase='hurt';e.timer=100;e.aim=-Math.PI/2;g.toastTime=0;g.freeze=0;return true;})()");
+    }
+    private void returnToTitle() throws Exception {
+        js("window.Vespergrave.pauseForBackground();location.reload();true");SystemClock.sleep(400);ready();
+    }
+    @Test public void evolvedCombatEquipmentAndAwakenedBosses() throws Exception {
+        try(ActivityScenario<MainActivity> scenario=ActivityScenario.launch(MainActivity.class)){
+            scenario.onActivity(value->activity=value);ready();
+            js("localStorage.setItem('vespergrave.v3.profile',JSON.stringify({version:3,onboarded:true,introSeen:true,tutorialDone:true}));location.reload();true");SystemClock.sleep(400);ready();
+            File folder=new File(activity.getExternalFilesDir(null),"verification");folder.mkdirs();
+            preparedHero("knight");combatFixture();
+            js("(()=>{const g=window.Vespergrave.game,base=g.inventory[0];for(const kind of ['sword','armor','boots','shield','ring','amulet'])g.inventory.push({...base,uid:'evolved-'+kind,baseId:'item-gilded-'+kind,name:'The Sun-King’s '+kind,quality:3,level:80,stats:kind==='sword'?{damage:12,crit:7}:kind==='armor'?{defense:8,maxHp:24}:kind==='boots'?{speed:4,staminaRegen:4}:{maxFocus:5},value:190});return true;})()");
+            click("#open-bag");
+            for(String kind:new String[]{"sword","armor","boots","shield","ring","amulet"}){
+                click("[data-item='evolved-"+kind+"']");
+                assertTrue("Relic inspection must explain its working art",await("document.querySelector('.item-relic-art')!==null",2500));
+                click("[data-command='item-equip']");
+                assertTrue(await("document.querySelector('.relic-synergies')!==null",2500));
+            }
+            assertTrue(await("(()=>{const a=JSON.parse(document.getElementById('game').dataset.equipment);return a.weapon===3&&a.armor===3&&a.boots===3&&a.offhand&&a.ring&&a.amulet;})()",2500));
+            screenshot(folder,"vespergrave-v32-visible-equipment.png");
+            click("[data-bag-tab='skills']");
+            for(int n=0;n<3;n++)click("[data-command='skill-upgrade'][data-id='iron-requiem']");
+            assertTrue(await("[...document.querySelectorAll('.rank-benefit')].some(e=>e.textContent.includes('8s ward'))",3000));
+            click("[data-command='skill-equip'][data-id='iron-requiem'][data-slot='1']");
+            screenshot(folder,"vespergrave-v32-skill-ranks.png");click("[data-command='close']");controlsDoNotOverlap();
+            pointer(".touch-action.guard","pointerdown",121,.5,.5);
+            assertTrue(await("window.Vespergrave.game.player.action==='block'",1000));
+            assertTrue(Boolean.TRUE.equals(js("(()=>{const g=window.Vespergrave.game;g.player.at=.08;const hp=g.player.hp;g.damagePlayer(30,g.enemies[0]);return g.player.hp===hp&&g.player.riposte>1.7;})()")));
+            // Freeze a demonstrated native key pose long enough for visual QA.
+            js("window.Vespergrave.game.freeze=1.2;true");screenshot(folder,"vespergrave-v32-parry.png");
+            pointer(".touch-action.guard","pointerup",121,.5,.5);js("window.Vespergrave.game.freeze=0;true");
+            pointer(".touch-action.attack","pointerdown",122,.5,.5);
+            assertTrue("Touch attack did not consume the parry opening",await("window.Vespergrave.game.player.riposteAttack===true",1000));
+            SystemClock.sleep(180);pointer(".touch-action.attack","pointerup",122,.5,.5);
+            assertTrue(await("window.Vespergrave.game.enemies[0].hp<50000",1500));
+            returnToTitle();preparedHero("rogue");combatFixture();
+            pointer(".touch-action.attack","pointerdown",123,.5,.5);
+            assertTrue("A real rear attack must trigger a backstab",await("window.Vespergrave.game.player.backstabCue>0",1500));
+            js("window.Vespergrave.game.freeze=1.2;true");screenshot(folder,"vespergrave-v32-backstab.png");pointer(".touch-action.attack","pointerup",123,.5,.5);js("window.Vespergrave.game.freeze=0;true");
+            returnToTitle();preparedHero("seer");combatFixture();
+            pointer(".touch-action.attack","pointerdown",124,.5,.5);
+            assertTrue("Touch hold must build spell power",await("window.Vespergrave.game.player.action==='charge'&&window.Vespergrave.game.player.charge>.85",2500));
+            assertTrue(Boolean.TRUE.equals(js("document.querySelector('.touch-action.attack').classList.contains('charging')")));
+            js("window.Vespergrave.game.freeze=1.2;true");screenshot(folder,"vespergrave-v32-charged-mage.png");js("window.Vespergrave.game.freeze=0;true");pointer(".touch-action.attack","pointerup",124,.5,.5);
+            assertTrue("Release must launch a real damaging charged spell",await("window.Vespergrave.game.enemies[0].hp<50000",2200));
+            String[] realms={"abbey","tides","thorns","forge","bones","frost","blood","astral","gilded","abyss"};
+            for(int biome=0;biome<10;biome++){
+                final int floor=(biome+1)*10;
+                js("(()=>{const g=window.Vespergrave.game;g.floor="+floor+";g.enemies=[];g.projectiles=[];g.dangers=[];g.effects=[];g.corpses=[];g.room.type='boss';g.room.role='boss';g.room.layout='arena';g.room.event=null;g.room.phase2=false;g.room.phaseClock=0;g.room.cleared=false;g.arena=g.makeGeometry(g.room);g.bossHazardTimer=1;g.player.x=180;g.player.y=g.arena.bounds.bottom-65;g.safePosition(g.player);g.player.hp=g.player.maxHp;g.player.invuln=100;g.player.action='idle';g.player.at=0;g.freeze=0;const e=g.spawn('"+realms[biome]+"-boss',180,g.arena.bounds.top+95);e.hp=e.maxHp*.45;g.events.push({type:'floor',floor:g.floor,biome:g.biome.id});return true;})()");
+                assertTrue("Boss arena "+realms[biome]+" did not awaken",await("window.Vespergrave.game.arena.phase2&&window.Vespergrave.game.dangers.some(d=>d.arenaHazard)",4000));
+                assertTrue(Boolean.TRUE.equals(js("document.getElementById('boss-name').textContent.includes('AWAKENED')")));
+                js("window.Vespergrave.game.freeze=1.2;true");screenshot(folder,"vespergrave-v32-boss-"+realms[biome]+".png");
+            }
+            assertTrue(Boolean.TRUE.equals(js("(()=>{const g=window.Vespergrave.game;for(let seed=1;seed<100;seed++){const c=new g.constructor({seed,hero:'seer',height:g.arena.height});if(!c.layout.shortcuts.length)continue;const gate=c.layout.shortcuts[0];c.enterRoom(gate.switchRoom);for(const e of [...c.enemies])c.hitEnemy(e,100000);c.room.cleared=true;c.player.x=c.arena.switch.x;c.player.y=c.arena.switch.y;c.player.invuln=100;c.freeze=0;c.toastTime=0;Object.assign(g,c);return true;}return false;})()")));
+            assertTrue(await("!document.getElementById('context').hidden&&document.getElementById('context').textContent.includes('lever')",3000));
+            screenshot(folder,"vespergrave-v32-shortcut-lever.png");pointer("#context","pointerdown",125,.5,.5);pointer("#context","pointerup",125,.5,.5);
+            assertTrue(await("window.Vespergrave.game.layout.shortcuts[0].open",2500));
+            js("window.Vespergrave.pauseForBackground();true");
+            assertTrue(Boolean.TRUE.equals(js("JSON.parse(localStorage.getItem('vespergrave.v3.run')).layout.shortcuts[0].open")));
+            returnToTitle();click("[data-command='continue']");
+            assertTrue("Opened shortcut must survive a real reload and Continue",await("window.Vespergrave.game?.layout.shortcuts?.[0]?.open&&window.Vespergrave.game.room.switchActivated",10000));
+            JSONObject report=new JSONObject().put("passed",true).put("touchParryAndRiposte",true).put("touchBackstab",true).put("holdReleaseChargedSpell",true).put("visibleSixSlotEquipment",true).put("honestRankBenefits",true).put("tenAwakenedBossArenas",10).put("leverSurvivesReload",true).put("keyPoseScreenshotsUseTemporaryFixtureFreeze",true);
+            try(FileOutputStream out=new FileOutputStream(new File(folder,"vespergrave-evolution-report.json"))){out.write(report.toString(2).getBytes(java.nio.charset.StandardCharsets.UTF_8));}
+        }
+    }
     @Test public void fullOfflineCampaignFlowsAndPortraitControls() throws Exception {
         try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
             scenario.onActivity(value -> activity = value); ready();

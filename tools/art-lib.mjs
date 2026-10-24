@@ -26,7 +26,7 @@ export function grid(x,y,rows,legend=P){
   const rr=typeof rows==='string'?rows.split('\n'):rows;
   const width=Math.max(...rr.map(r=>r.length));
   const used=new Set(rr.join(''));const colors=Object.fromEntries(Object.entries(legend).filter(([key])=>used.has(key)));
-  return {kind:'grid',x,y,rows:rr.map(r=>r.padEnd(width,'.')),legend:colors,transparent:'skip'};
+  return {kind:'grid',x:Math.round(x),y:Math.round(y),rows:rr.map(r=>r.padEnd(width,'.')),legend:colors,transparent:'skip'};
 }
 export async function sprite(name,w,h,layers){
   const made=data(await call('sprite_manage',{op:'new',width:w,height:h,colorMode:'rgb'}));

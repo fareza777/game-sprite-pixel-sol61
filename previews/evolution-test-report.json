@@ -1,0 +1,86 @@
+{
+  "passed": 20,
+  "total": 20,
+  "results": [
+    {
+      "name": "All nine skill ranks scale useful power and reduce recovery",
+      "passed": true
+    },
+    {
+      "name": "Iron Requiem ranks extend the ward and increase real damage absorption",
+      "passed": true
+    },
+    {
+      "name": "Marked for Silence ranks increase amplification, duration and its final burst",
+      "passed": true
+    },
+    {
+      "name": "Orbit ranks change actual radius, pulse strength and lifetime",
+      "passed": true
+    },
+    {
+      "name": "Knight parry opens a timed riposte and ordinary or rear guards do not",
+      "passed": true
+    },
+    {
+      "name": "Rogue backstabs use the target facing and cause a readable reaction",
+      "passed": true
+    },
+    {
+      "name": "Mage hold and release produces a stronger projectile and early dodge can cancel",
+      "passed": true
+    },
+    {
+      "name": "Impact pauses movement briefly and retains a dodge pressed during the impact",
+      "passed": true
+    },
+    {
+      "name": "Enemies coordinate at most two melee commitments and flankers seek side positions",
+      "passed": true
+    },
+    {
+      "name": "Oathglass reacts to a perfect guard and Bloodbloom reacts to a bleeding death",
+      "passed": true
+    },
+    {
+      "name": "Grave Echo ricochets only to unhit targets and retains its state through Continue",
+      "passed": true
+    },
+    {
+      "name": "Embertrail, Duskfeast and Last Ember each have distinct working triggers",
+      "passed": true
+    },
+    {
+      "name": "Relic art and appearance follow independent equipped slots and survive restoration",
+      "passed": true
+    },
+    {
+      "name": "Each awakened boss changes arena hazards, leaves safe ground and persists its phase",
+      "passed": true
+    },
+    {
+      "name": "Lever shortcuts open reciprocal routes, remain optional and persist after Continue",
+      "passed": true
+    },
+    {
+      "name": "A 3.1 run retains its exact room graph and advances into the new floor revision",
+      "passed": true
+    },
+    {
+      "name": "Eight directions distinguish every diagonal during movement",
+      "passed": true
+    },
+    {
+      "name": "Elite branches award a relic once and treasure branches guarantee relic quality",
+      "passed": true
+    },
+    {
+      "name": "Elite risk stays optional even while shortcut gates are closed",
+      "passed": true
+    },
+    {
+      "name": "Boss death cancels its arena pulses and projectiles",
+      "passed": true
+    }
+  ]
+}
