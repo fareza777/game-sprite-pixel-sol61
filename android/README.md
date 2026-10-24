@@ -1,8 +1,8 @@
 # Vespergrave for Android
 
-An offline, full-screen portrait application for Android 8.0+. The APK bundles the complete game, its artwork and thirty English narration clips. The host uses WebViewAssetLoader and requires no internet permission. Device-local storage keeps the active run, permanent embers and settings.
+An offline, full-screen portrait application for Android 8.0+. The APK bundles the complete game, its artwork and fifty-two English narration clips. The host uses WebViewAssetLoader and requires no internet permission. Device-local storage keeps the active run, permanent embers and settings.
 
-The package remains `io.github.fareza777.cindervow` and uses the existing release certificate, allowing an in-place update from Cinder Vow 2.2.0. The launcher name is Vespergrave. Version 3.0.0 uses version code 3.
+The package remains `io.github.fareza777.cindervow` and uses the existing release certificate, allowing an in-place update from Cinder Vow 2.2.0. The launcher name is Vespergrave. Version 3.1.0 uses version code 4.
 
 ## Controls
 
@@ -24,13 +24,13 @@ cd android
 
 Use `gradlew.bat` on Windows. Configure `ANDROID_HOME` or the ignored `android/local.properties`. Signing properties and keys live outside the repository under the original `.android/cinder-vow/` directory. Preserve the existing key for updates. Without that local signing configuration, the release is unsigned; CI deliberately builds a debug APK.
 
-The signed deliverable is `releases/Vespergrave-3.0.0.apk`. No Deepgram key is needed to build or play; narration audio is already included.
+The signed deliverable is `releases/Vespergrave-3.1.0.apk`. No Deepgram key is needed to build or play; narration audio is already included.
 
 ## Verification
 
 `VespergraveGameTest` exercises the actual WebView and Android lifecycle. It checks offline startup, English, portrait viewport bounds, three hero choices, onboarding, actual bundled voice playback, mage practice, floating pad origin, independent movement/attack pointers, cancellation, a mage skill cooldown, equipment, skill page, animated enemy preview, saved settings, Continue after activity recreation, and resizing without trapping an actor in furniture.
 
-Its second test reviews all twelve room layouts in a common biome, chooses and saves an oath-shrine boon, starts the three-wave bell encounter, and verifies the falling-star trial's warnings, paused timer and continuation. These preview fixtures place the player at the room or event being tested. The signed release was also installed over 2.2.0 and cold-launched successfully.
+Its second test reviews all twenty room layouts, chooses and saves an oath-shrine boon, starts the three-wave bell encounter, and verifies the falling-star trial's warnings, paused timer and continuation. These preview fixtures place the player at the room or event being tested. The refinement test plays all eight prologue clips, measures battle button separation in two sizes, opens the branch map, compares relic stats, previews a skill and uses the physical descent.
 
 The test saves screenshots and `vespergrave-report.json` beneath the app's external `verification/` directory. Reviewed outputs are included in `previews/android-vespergrave/`.
 

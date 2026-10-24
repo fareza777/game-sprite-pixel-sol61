@@ -1,17 +1,21 @@
 {
   "passed": true,
   "poses": 8400,
+  "castPoses": 288,
+  "effectKeys": 108,
   "enemies": 60,
   "items": 100,
   "skills": 9,
   "biomes": 10,
-  "cinematicPanels": 6,
-  "offlineVoiceClips": 30,
+  "cinematicPanels": 9,
+  "offlineVoiceClips": 52,
   "connectedKeyPoses": 540,
-  "roomLayouts": 12,
-  "mapPlans": 8,
+  "measuredPropContacts": 360,
+  "roomLayouts": 20,
+  "mapGeneration": "Seeded branching grid with loops and 7–11 chambers",
   "interactiveEvents": 10,
   "environmentKitFrames": 160,
+  "newEnvironmentFrames": 440,
   "architecturalHeaders": 40,
   "checks": [
     {
@@ -71,7 +75,7 @@
     {
       "name": "enemy-tides-0",
       "frames": 128,
-      "width": 960,
+      "width": 1056,
       "height": 960
     },
     {
@@ -311,7 +315,7 @@
     {
       "name": "enemy-astral-4",
       "frames": 128,
-      "width": 960,
+      "width": 1056,
       "height": 960
     },
     {
@@ -461,32 +465,52 @@
       "height": 120
     },
     {
-      "name": "cinematic-0",
+      "name": "front-vigil",
+      "width": 360,
+      "height": 720
+    },
+    {
+      "name": "overture-0",
       "width": 360,
       "height": 640
     },
     {
-      "name": "cinematic-1",
+      "name": "overture-1",
       "width": 360,
       "height": 640
     },
     {
-      "name": "cinematic-2",
+      "name": "overture-2",
       "width": 360,
       "height": 640
     },
     {
-      "name": "cinematic-3",
+      "name": "overture-3",
       "width": 360,
       "height": 640
     },
     {
-      "name": "cinematic-4",
+      "name": "overture-4",
       "width": 360,
       "height": 640
     },
     {
-      "name": "cinematic-5",
+      "name": "overture-5",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "overture-6",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "overture-7",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "overture-8",
       "width": 360,
       "height": 640
     },
@@ -494,6 +518,96 @@
       "name": "vespergrave-icon",
       "width": 128,
       "height": 128
+    },
+    {
+      "name": "hero-portraits",
+      "frames": 3,
+      "width": 320,
+      "height": 384
+    },
+    {
+      "name": "interface",
+      "frames": 3,
+      "width": 96,
+      "height": 96
+    },
+    {
+      "name": "hero-casts-knight",
+      "frames": 96,
+      "width": 1280,
+      "height": 1152
+    },
+    {
+      "name": "vfx-knight",
+      "frames": 36,
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "name": "hero-casts-rogue",
+      "frames": 96,
+      "width": 1280,
+      "height": 1152
+    },
+    {
+      "name": "vfx-rogue",
+      "frames": 36,
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "name": "hero-casts-seer",
+      "frames": 96,
+      "width": 896,
+      "height": 896
+    },
+    {
+      "name": "vfx-seer",
+      "frames": 36,
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "name": "descent-paving",
+      "frames": 40,
+      "width": 448,
+      "height": 384
+    },
+    {
+      "name": "descent-terrain",
+      "frames": 50,
+      "width": 560,
+      "height": 480
+    },
+    {
+      "name": "descent-decals",
+      "frames": 40,
+      "width": 384,
+      "height": 384
+    },
+    {
+      "name": "descent-props",
+      "frames": 110,
+      "width": 1232,
+      "height": 1120
+    },
+    {
+      "name": "descent-doors",
+      "frames": 80,
+      "width": 1008,
+      "height": 1008
+    },
+    {
+      "name": "descent-exits",
+      "frames": 80,
+      "width": 1008,
+      "height": 1008
+    },
+    {
+      "name": "descent-headers",
+      "frames": 40,
+      "width": 2520,
+      "height": 720
     },
     {
       "name": "arena-seals",

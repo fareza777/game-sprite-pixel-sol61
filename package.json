@@ -1,11 +1,11 @@
 {
   "name": "vespergrave",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node tools/serve.mjs",
-    "art": "node tools/draw-campaign-actors.mjs && node tools/draw-campaign-world.mjs && node tools/draw-layout-kit.mjs && node tools/review-campaign-art.mjs",
+    "art": "node tools/draw-campaign-actors.mjs && node tools/draw-campaign-world.mjs && node tools/draw-layout-kit.mjs && node tools/draw-descent-world.mjs && node tools/draw-overture.mjs && node tools/draw-skill-cinema.mjs && node tools/draw-interface.mjs && node tools/review-campaign-art.mjs && node tools/measure-ground-contact.mjs",
     "build": "node tools/build.mjs",
     "test": "node tools/test-campaign.mjs && node tools/test-touch.mjs && node tools/check-campaign-assets.mjs && node tools/test-campaign-client.mjs",
     "android:sync": "node tools/sync-android.mjs",

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "eightOfflinePrologueClipsPlayed": true,
+  "voiceEndingAdvancesCinematic": true,
+  "branchingEntrance": true,
+  "nonOverlappingBattleButtons": true,
+  "largeControls": true,
+  "map": true,
+  "relicComparison": true,
+  "castingPreview": true,
+  "physicalDescent": true
+}

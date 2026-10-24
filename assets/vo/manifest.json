@@ -3,45 +3,251 @@
   "language": "en",
   "generated": "2026-10-23",
   "clips": {
-    "intro-1": {
-      "file": "assets/vo/intro-1.mp3",
+    "prologue-1": {
+      "file": "assets/vo/prologue-1.mp3",
       "voice": "aura-2-draco-en",
-      "text": "Once, the bells of Vespergrave called the living home. Then the king asked for a kingdom that would never end.",
-      "scriptHash": "b438fe0c7f4b2bdeac603927df19625cb1cbb214758f2d4a5d663428d0a51e74",
-      "bytes": 42048,
-      "sha256": "df8a751c1347b7c0a83bea46bb269bb1a4108e1fd48ad6c5d0c1011af10428f2"
+      "text": "On the last morning of Vespergrave, the bells rang for a king who was afraid to die. No one knew they were hearing the dawn for the final time.",
+      "scriptHash": "30c806e8189ddb9276079524308f8a9bc09b28124bbaf2f0d06c82b005e985de",
+      "bytes": 63648,
+      "sha256": "efd47c6aa60caba986013aac9c8ba3d8d75a9f489463da32344a8e4cdb58df3b",
+      "duration": 10.608,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 6.198,
+          "text": "On the last morning of Vespergrave, the bells rang for a king who was afraid to die."
+        },
+        {
+          "start": 6.198,
+          "end": 10.488,
+          "text": "No one knew they were hearing the dawn for the final time."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
-    "intro-2": {
-      "file": "assets/vo/intro-2.mp3",
+    "prologue-2": {
+      "file": "assets/vo/prologue-2.mp3",
       "voice": "aura-2-draco-en",
-      "text": "Beneath his throne, he buried the final bell. It stole the names of the dead, and taught their bodies to rise again.",
-      "scriptHash": "808be59d39cc5103bef1e64582a0388bbb9c30d1adf69a3914086da8a253275b",
-      "bytes": 47088,
-      "sha256": "50deb4f62689af87c497a73f61dc8743623a3a0eaddd90f7f2fa6c32b47ca6bd"
+      "text": "He called his priests beneath the throne. Give me a kingdom that will never end, he said. They brought him a bell without a name.",
+      "scriptHash": "539c007189e183594ab14abc997a4ec859e8ddb30d8fbce81aa8528dc505cc00",
+      "bytes": 52848,
+      "sha256": "dfb0a10ff128503d18f9233422af07ea0d0ac7f1b21fd4033a4e88ad020f94a8",
+      "duration": 8.808,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.519,
+          "text": "He called his priests beneath the throne."
+        },
+        {
+          "start": 2.519,
+          "end": 5.946,
+          "text": "Give me a kingdom that will never end, he said."
+        },
+        {
+          "start": 5.946,
+          "end": 8.688,
+          "text": "They brought him a bell without a name."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
-    "intro-3": {
-      "file": "assets/vo/intro-3.mp3",
+    "prologue-3": {
+      "file": "assets/vo/prologue-3.mp3",
       "voice": "aura-2-draco-en",
-      "text": "Now a hundred floors separate the fading world from its stolen dawn. Ten forgotten realms. Ten souls that will not rest.",
-      "scriptHash": "b9337190e6b0369079301ea7b05fd3f8a16d0c48b5b3d7b67e1bb3e097a211e2",
-      "bytes": 54288,
-      "sha256": "041ad49b89b6abe94db664f6cb01e2a28771d59c5f0904759cd20e7d5a2ca842"
+      "text": "The king struck it once. The dead opened their eyes. He struck it twice. Their names vanished from the mouths of everyone who had loved them.",
+      "scriptHash": "647efdddfd2c354953437770717487955267ce74bce407000b02b7b1a2b6a288",
+      "bytes": 56016,
+      "sha256": "35217c7fc164a725d12f772beca4c71a86f10fb7a35004e61b9a9e8ee2c25fc5",
+      "duration": 9.336,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.869,
+          "text": "The king struck it once."
+        },
+        {
+          "start": 1.869,
+          "end": 3.618,
+          "text": "The dead opened their eyes."
+        },
+        {
+          "start": 3.618,
+          "end": 5.018,
+          "text": "He struck it twice."
+        },
+        {
+          "start": 5.018,
+          "end": 9.216,
+          "text": "Their names vanished from the mouths of everyone who had loved them."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
-    "intro-4": {
-      "file": "assets/vo/intro-4.mp3",
+    "prologue-4": {
+      "file": "assets/vo/prologue-4.mp3",
       "voice": "aura-2-draco-en",
-      "text": "A knight without a king. A hunter without a name. A seer without a future. One of them must carry the last ember below.",
-      "scriptHash": "3aedb9cded7248cc6e0eb5ebcfa437386b7ac3020e4a781e50e832ad42735025",
-      "bytes": 57024,
-      "sha256": "e40c6edb92dac7bb03c08179db45246c1e113315dbf553263d646fe0c7f0d69b"
+      "text": "They buried the bell beneath a hundred floors of stone. Abbey and garden, furnace and frozen court. Ten realms became its prison. Ten keepers became its chains.",
+      "scriptHash": "8d9da5e222eb24fd35b64b29994ef71bc493ddcbfbb25db2a84aff729a1fe70f",
+      "bytes": 77616,
+      "sha256": "adf9a878f0f42144122fd5585a0e2eb3fdafb4e4aafe910216ebc33cdfdce193",
+      "duration": 12.936,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 4.822,
+          "text": "They buried the bell beneath a hundred floors of stone."
+        },
+        {
+          "start": 4.822,
+          "end": 8.114,
+          "text": "Abbey and garden, furnace and frozen court."
+        },
+        {
+          "start": 8.114,
+          "end": 10.465,
+          "text": "Ten realms became its prison."
+        },
+        {
+          "start": 10.465,
+          "end": 12.816,
+          "text": "Ten keepers became its chains."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
-    "intro-5": {
-      "file": "assets/vo/intro-5.mp3",
+    "prologue-5": {
+      "file": "assets/vo/prologue-5.mp3",
       "voice": "aura-2-draco-en",
-      "text": "Descend, wanderer. Gather what the darkness has forgotten. And when the final bell calls your name, answer with steel.",
-      "scriptHash": "297c90beabd9ce696d3821f90b9f1e87129a6ee0a77f4df0ea9d1a7a408cd69d",
-      "bytes": 54144,
-      "sha256": "18f5f6cea5ed5be2f2f23f50961a2d48dd6af278d99eb0d13c5ab80ff6d2b82e"
+      "text": "Above them, the fires grew small. Mothers forgot their children. Knights forgot their kings. Only an ember remained, and the promise of a morning no one could remember.",
+      "scriptHash": "30ce6ff1e89adfc442715d008738253c613d1d3832cf981b3041ffa92f747f26",
+      "bytes": 79056,
+      "sha256": "795a65ed4425747ba41c9de905c7697707fe81d355bbd56a8f7e0343aabb8c09",
+      "duration": 13.176,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.892,
+          "text": "Above them, the fires grew small."
+        },
+        {
+          "start": 2.892,
+          "end": 4.74,
+          "text": "Mothers forgot their children."
+        },
+        {
+          "start": 4.74,
+          "end": 6.588,
+          "text": "Knights forgot their kings."
+        },
+        {
+          "start": 6.588,
+          "end": 13.056,
+          "text": "Only an ember remained, and the promise of a morning no one could remember."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "prologue-6": {
+      "file": "assets/vo/prologue-6.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "A knight who will break his final oath. A hunter who will return the stolen names. A seer who still hears a star beyond the dark. One of them must carry the ember below.",
+      "scriptHash": "18e838d4988635d46b9355d27b89f66e04144cb6a00e9f6df400109bc61b7a95",
+      "bytes": 72144,
+      "sha256": "b900f19a76d00c6149872262720c9a0fb618e00124cbe9663eff12f4578b6909",
+      "duration": 12.024,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.893,
+          "text": "A knight who will break his final oath."
+        },
+        {
+          "start": 2.893,
+          "end": 5.665,
+          "text": "A hunter who will return the stolen names."
+        },
+        {
+          "start": 5.665,
+          "end": 9.131,
+          "text": "A seer who still hears a star beyond the dark."
+        },
+        {
+          "start": 9.131,
+          "end": 11.904,
+          "text": "One of them must carry the ember below."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "prologue-7": {
+      "file": "assets/vo/prologue-7.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "There is no straight road to the last bell. The halls divide. Strangers bargain for blood, memory and mercy. Choose your path, wanderer. The stone will remember what you become.",
+      "scriptHash": "ea4381caae7cc21d064a2e79487eabc919402d7c34f8395ae29dac4312f15d0d",
+      "bytes": 74736,
+      "sha256": "07afc44db73c2801809f2a4936aab7dc7ad3310a0f1bbd5dee3d9475a069a43e",
+      "duration": 12.456,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 3.785,
+          "text": "There is no straight road to the last bell."
+        },
+        {
+          "start": 3.785,
+          "end": 5.006,
+          "text": "The halls divide."
+        },
+        {
+          "start": 5.006,
+          "end": 7.857,
+          "text": "Strangers bargain for blood, memory and mercy."
+        },
+        {
+          "start": 7.857,
+          "end": 9.486,
+          "text": "Choose your path, wanderer."
+        },
+        {
+          "start": 9.486,
+          "end": 12.336,
+          "text": "The stone will remember what you become."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "prologue-8": {
+      "file": "assets/vo/prologue-8.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "And when the hollow sovereign speaks your name, do not answer with fear. Carry the last ember. Break the final chain. Let Vespergrave see the dawn.",
+      "scriptHash": "ca32bc373d38f413263108b264915e5f33632550b62ab0c467e93a6e86d6a811",
+      "bytes": 65664,
+      "sha256": "b9e7b408116848230274435e8ba13577b8fa2df06ee9efbd60e1d39c9d34c6a3",
+      "duration": 10.944,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 5.472,
+          "text": "And when the hollow sovereign speaks your name, do not answer with fear."
+        },
+        {
+          "start": 5.472,
+          "end": 7.119,
+          "text": "Carry the last ember."
+        },
+        {
+          "start": 7.119,
+          "end": 8.766,
+          "text": "Break the final chain."
+        },
+        {
+          "start": 8.766,
+          "end": 10.824,
+          "text": "Let Vespergrave see the dawn."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "ending-silence": {
       "file": "assets/vo/ending-silence.mp3",
@@ -49,7 +255,26 @@
       "text": "You broke the hollow crown, and gave the stolen names to morning. The dead lie still. Above the ruined kingdom, the first bird begins to sing.",
       "scriptHash": "cab729e684e7e9b563ba3c5159a5d9e40278d6a8cb4a57c54a8495c68e5b9ff5",
       "bytes": 64656,
-      "sha256": "c605acf62f5c54c9050c94c069146b144daa88951cb790f565be5c794bff62f7"
+      "sha256": "c605acf62f5c54c9050c94c069146b144daa88951cb790f565be5c794bff62f7",
+      "duration": 10.776,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 4.983,
+          "text": "You broke the hollow crown, and gave the stolen names to morning."
+        },
+        {
+          "start": 4.983,
+          "end": 6.604,
+          "text": "The dead lie still."
+        },
+        {
+          "start": 6.604,
+          "end": 10.656,
+          "text": "Above the ruined kingdom, the first bird begins to sing."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "ending-keeper": {
       "file": "assets/vo/ending-keeper.mp3",
@@ -57,7 +282,26 @@
       "text": "You took the bell into your hands, and held the darkness where it stood. The world will never know your name. But it will see another dawn.",
       "scriptHash": "5d7cea566ad0f60eef9652b7d53cd19586672b37800663f9c6b7c2d9ffc38f10",
       "bytes": 55728,
-      "sha256": "fafbc421a359b5b105668c7799d204c94171f51b4534cc7757edf3d368e3d05d"
+      "sha256": "fafbc421a359b5b105668c7799d204c94171f51b4534cc7757edf3d368e3d05d",
+      "duration": 9.288,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 4.812,
+          "text": "You took the bell into your hands, and held the darkness where it stood."
+        },
+        {
+          "start": 4.812,
+          "end": 7.157,
+          "text": "The world will never know your name."
+        },
+        {
+          "start": 7.157,
+          "end": 9.168,
+          "text": "But it will see another dawn."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "biome-abbey": {
       "file": "assets/vo/biome-abbey.mp3",
@@ -65,7 +309,21 @@
       "text": "Mourning Abbey. The first bell tolls for the faithful.",
       "scriptHash": "65b9d5218879795b8c87b16c247fe68cd291db0077fa5705a00bcedb1f27a41d",
       "bytes": 25344,
-      "sha256": "3b6925f4023d692a4b79bf8b6e891750ebffc480a5f80b5862b73f58c5ba2016"
+      "sha256": "3b6925f4023d692a4b79bf8b6e891750ebffc480a5f80b5862b73f58c5ba2016",
+      "duration": 4.224,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.005,
+          "text": "Mourning Abbey."
+        },
+        {
+          "start": 1.005,
+          "end": 4.104,
+          "text": "The first bell tolls for the faithful."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "biome-tides": {
       "file": "assets/vo/biome-tides.mp3",
@@ -73,7 +331,21 @@
       "text": "Drowned Reliquary. Here, the sea learned to remember.",
       "scriptHash": "e34adcdd1c3e2c0c6e154251b095f33fe11772bd176a94105fece409e15d33ab",
       "bytes": 22896,
-      "sha256": "b00d7e6ff3f6a869d16dc5fc09a1f246e8d0472e5f001c9b69849ce5a610fd8d"
+      "sha256": "b00d7e6ff3f6a869d16dc5fc09a1f246e8d0472e5f001c9b69849ce5a610fd8d",
+      "duration": 3.816,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.014,
+          "text": "Drowned Reliquary."
+        },
+        {
+          "start": 1.014,
+          "end": 3.696,
+          "text": "Here, the sea learned to remember."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "biome-thorns": {
       "file": "assets/vo/biome-thorns.mp3",
@@ -81,7 +353,21 @@
       "text": "Thornwake Grove. Every root has tasted a name.",
       "scriptHash": "988ee027e565448d74bf7904d996effbe6ded50cf3a88f1ef06756258916557a",
       "bytes": 23184,
-      "sha256": "251c97157d44793409afb197fec34bc52a0ea9687290f77708447f4bbf42830a"
+      "sha256": "251c97157d44793409afb197fec34bc52a0ea9687290f77708447f4bbf42830a",
+      "duration": 3.864,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.026,
+          "text": "Thornwake Grove."
+        },
+        {
+          "start": 1.026,
+          "end": 3.744,
+          "text": "Every root has tasted a name."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "biome-forge": {
       "file": "assets/vo/biome-forge.mp3",
@@ -89,7 +375,21 @@
       "text": "Cinderforge. The furnaces still pray for fuel.",
       "scriptHash": "94ae9406ae25e5b3b78802e1e6edaff43a67f1dbe8f407aded71851c13edc54f",
       "bytes": 23904,
-      "sha256": "9ab4e44faa1740ef8c189c3b61602064b195ab924e22730dd4336e859abff22d"
+      "sha256": "9ab4e44faa1740ef8c189c3b61602064b195ab924e22730dd4336e859abff22d",
+      "duration": 3.984,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 0.655,
+          "text": "Cinderforge."
+        },
+        {
+          "start": 0.655,
+          "end": 3.864,
+          "text": "The furnaces still pray for fuel."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "biome-bones": {
       "file": "assets/vo/biome-bones.mp3",
@@ -97,7 +397,21 @@
       "text": "Ivory Necropolis. Death is only another kind of court.",
       "scriptHash": "9d199271ea6ab9be72995c1d43301c274268f8ef3bb0d9a89c7743c673e04cac",
       "bytes": 29808,
-      "sha256": "2386b374e15c17984f88f631aa1c86d7e869191d9868ee9deaa791fb76c4fb1d"
+      "sha256": "2386b374e15c17984f88f631aa1c86d7e869191d9868ee9deaa791fb76c4fb1d",
+      "duration": 4.968,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.171,
+          "text": "Ivory Necropolis."
+        },
+        {
+          "start": 1.171,
+          "end": 4.848,
+          "text": "Death is only another kind of court."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "biome-frost": {
       "file": "assets/vo/biome-frost.mp3",
@@ -105,7 +419,21 @@
       "text": "Frostveil Bastion. The last watch has never ended.",
       "scriptHash": "88ce0080085656c7d6a4d383b0b6267abd6bf8af8096abfa86dc4e258c00fefa",
       "bytes": 25344,
-      "sha256": "dff948fc73b38e5dece97b6a17ac927b89c55b0bd48e278e29b2abcd313d6385"
+      "sha256": "dff948fc73b38e5dece97b6a17ac927b89c55b0bd48e278e29b2abcd313d6385",
+      "duration": 4.224,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.116,
+          "text": "Frostveil Bastion."
+        },
+        {
+          "start": 1.116,
+          "end": 4.104,
+          "text": "The last watch has never ended."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "biome-blood": {
       "file": "assets/vo/biome-blood.mp3",
@@ -113,7 +441,21 @@
       "text": "Scarlet Catacombs. The heart beneath the stone still beats.",
       "scriptHash": "476b1e814318d9004c28d38f0ccef48583eb6195c2c3ba527dc0af963d9572bd",
       "bytes": 27216,
-      "sha256": "6486645adb49a7461ad8d8d32e63b477c4cb9ea11196c0ceae8683996098a6ad"
+      "sha256": "6486645adb49a7461ad8d8d32e63b477c4cb9ea11196c0ceae8683996098a6ad",
+      "duration": 4.536,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.075,
+          "text": "Scarlet Catacombs."
+        },
+        {
+          "start": 1.075,
+          "end": 4.416,
+          "text": "The heart beneath the stone still beats."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "biome-astral": {
       "file": "assets/vo/biome-astral.mp3",
@@ -121,7 +463,26 @@
       "text": "Astral Archive. Read slowly. The stars are watching.",
       "scriptHash": "27962bba1dcdc5920bcf083b7b11ff31e10f30c08684947c613f27572c759944",
       "bytes": 29808,
-      "sha256": "14a8cba3961e9648e6638b4ce8bae12b50e9f0ecb02113a640821bfe22ab8e15"
+      "sha256": "14a8cba3961e9648e6638b4ce8bae12b50e9f0ecb02113a640821bfe22ab8e15",
+      "duration": 4.968,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.302,
+          "text": "Astral Archive."
+        },
+        {
+          "start": 1.302,
+          "end": 2.484,
+          "text": "Read slowly."
+        },
+        {
+          "start": 2.484,
+          "end": 4.848,
+          "text": "The stars are watching."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "biome-gilded": {
       "file": "assets/vo/biome-gilded.mp3",
@@ -129,7 +490,21 @@
       "text": "Gilded Ruin. Gold cannot warm an empty throne.",
       "scriptHash": "b974cc7d65a9b72c2a2a84908570dc2125afb84804e9eebaffa9839688928803",
       "bytes": 24048,
-      "sha256": "ce3dbffa8fc1fa9a2e8eb794653fc7fb9b5a82afaef75b92b32ab9b2cc89ebf4"
+      "sha256": "ce3dbffa8fc1fa9a2e8eb794653fc7fb9b5a82afaef75b92b32ab9b2cc89ebf4",
+      "duration": 4.008,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.062,
+          "text": "Gilded Ruin."
+        },
+        {
+          "start": 1.062,
+          "end": 3.888,
+          "text": "Gold cannot warm an empty throne."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "biome-abyss": {
       "file": "assets/vo/biome-abyss.mp3",
@@ -137,7 +512,26 @@
       "text": "The Bell Below. One hundred steps. One final name.",
       "scriptHash": "2ec4ce24d15b34f7cced220cf65587a9cf38c6d42471b45c974e89059295a50f",
       "bytes": 23904,
-      "sha256": "0b6159791e0a10a9da524d08ce269745311f7bb934fa219ac7cb1fd7745b8c35"
+      "sha256": "0b6159791e0a10a9da524d08ce269745311f7bb934fa219ac7cb1fd7745b8c35",
+      "duration": 3.984,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.368,
+          "text": "The Bell Below."
+        },
+        {
+          "start": 1.368,
+          "end": 2.616,
+          "text": "One hundred steps."
+        },
+        {
+          "start": 2.616,
+          "end": 3.864,
+          "text": "One final name."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "boss-0": {
       "file": "assets/vo/boss-0.mp3",
@@ -145,7 +539,21 @@
       "text": "The Bellworn Prior. The bell demands another soul.",
       "scriptHash": "47ad76f6c202c29acf98c69c39dce27fb60ce35fe40c01585751674fc42b936d",
       "bytes": 22608,
-      "sha256": "4008795d60de4cd6206ddd5fc0bab058d9bf3c5e6bb9758d22a3bc508d293e7e"
+      "sha256": "4008795d60de4cd6206ddd5fc0bab058d9bf3c5e6bb9758d22a3bc508d293e7e",
+      "duration": 3.768,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.443,
+          "text": "The Bellworn Prior."
+        },
+        {
+          "start": 1.443,
+          "end": 3.648,
+          "text": "The bell demands another soul."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "boss-1": {
       "file": "assets/vo/boss-1.mp3",
@@ -153,7 +561,21 @@
       "text": "The Widow of Tides. The bell demands another soul.",
       "scriptHash": "82f8c96d3cba17980cd063075c67f959dc3ea3ef4f6d160ac06d70802deff613",
       "bytes": 24624,
-      "sha256": "982c9fec460a8571d30446905d218cb688e8aefaa63f4071f152d58e533260c3"
+      "sha256": "982c9fec460a8571d30446905d218cb688e8aefaa63f4071f152d58e533260c3",
+      "duration": 4.104,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.837,
+          "text": "The Widow of Tides."
+        },
+        {
+          "start": 1.837,
+          "end": 3.984,
+          "text": "The bell demands another soul."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "boss-2": {
       "file": "assets/vo/boss-2.mp3",
@@ -161,7 +583,21 @@
       "text": "The Rootbound Regent. The bell demands another soul.",
       "scriptHash": "a19baf859693d32ee624cb761b178969cdaf582eae95312612bda654d6b8b92a",
       "bytes": 23328,
-      "sha256": "76a0f4c7d17b99040388f00cd8797c3552b5bf39551de3bdf4274826b13d68d5"
+      "sha256": "76a0f4c7d17b99040388f00cd8797c3552b5bf39551de3bdf4274826b13d68d5",
+      "duration": 3.888,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.488,
+          "text": "The Rootbound Regent."
+        },
+        {
+          "start": 1.488,
+          "end": 3.768,
+          "text": "The bell demands another soul."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "boss-3": {
       "file": "assets/vo/boss-3.mp3",
@@ -169,7 +605,21 @@
       "text": "The Furnace Saint. The bell demands another soul.",
       "scriptHash": "c26e59657a1df4d5eeb15cc7ab016ebfcd5f14a248a70a9812126227bbb89168",
       "bytes": 21888,
-      "sha256": "0b9bff96949b3b2074f47ccbe4c7a3923746162adeb7d0170a367c4cf34568ff"
+      "sha256": "0b9bff96949b3b2074f47ccbe4c7a3923746162adeb7d0170a367c4cf34568ff",
+      "duration": 3.648,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.398,
+          "text": "The Furnace Saint."
+        },
+        {
+          "start": 1.398,
+          "end": 3.528,
+          "text": "The bell demands another soul."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "boss-4": {
       "file": "assets/vo/boss-4.mp3",
@@ -177,7 +627,21 @@
       "text": "The King of Ashen Bones. The bell demands another soul.",
       "scriptHash": "b1b4ca005915957eb248017e58cefeb5a7b99f0d2197a7fa26b4d61b8ec6a732",
       "bytes": 25344,
-      "sha256": "d26c7f3ef368d0be645fb73362bc28ba20d7cccfc9ab280a7e97a995b7048f30"
+      "sha256": "d26c7f3ef368d0be645fb73362bc28ba20d7cccfc9ab280a7e97a995b7048f30",
+      "duration": 4.224,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.112,
+          "text": "The King of Ashen Bones."
+        },
+        {
+          "start": 2.112,
+          "end": 4.104,
+          "text": "The bell demands another soul."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "boss-5": {
       "file": "assets/vo/boss-5.mp3",
@@ -185,7 +649,21 @@
       "text": "The Pale Marshal. The bell demands another soul.",
       "scriptHash": "86c0319752949fed59b3a180fc38de29f8a11c02f2139ba3009b927c55ef27d3",
       "bytes": 22464,
-      "sha256": "a1f611e8d78f473e577c5c0754e32812a507b975b68843e3c114f8984091b46f"
+      "sha256": "a1f611e8d78f473e577c5c0754e32812a507b975b68843e3c114f8984091b46f",
+      "duration": 3.744,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.434,
+          "text": "The Pale Marshal."
+        },
+        {
+          "start": 1.434,
+          "end": 3.624,
+          "text": "The bell demands another soul."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "boss-6": {
       "file": "assets/vo/boss-6.mp3",
@@ -193,7 +671,21 @@
       "text": "The Heart Beneath. The bell demands another soul.",
       "scriptHash": "d1afd600331b0459adc65ae1ab88f22847f4e0d0399925e6e3cd5514aba289f2",
       "bytes": 21024,
-      "sha256": "31530274dab8bd8c290f594d783267b225f131db07f37e310948e429a9c7fe75"
+      "sha256": "31530274dab8bd8c290f594d783267b225f131db07f37e310948e429a9c7fe75",
+      "duration": 3.504,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.344,
+          "text": "The Heart Beneath."
+        },
+        {
+          "start": 1.344,
+          "end": 3.384,
+          "text": "The bell demands another soul."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "boss-7": {
       "file": "assets/vo/boss-7.mp3",
@@ -201,7 +693,21 @@
       "text": "The Blind Astronomer. The bell demands another soul.",
       "scriptHash": "a590913ca77e9c012dea041cc808ed62e141d22800d66c349e8d76effec6189a",
       "bytes": 22608,
-      "sha256": "0cd2461bd06dc33b42aa62b4ab4ca1f951166a42e33fc454594aa9b7f18e111b"
+      "sha256": "0cd2461bd06dc33b42aa62b4ab4ca1f951166a42e33fc454594aa9b7f18e111b",
+      "duration": 3.768,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.443,
+          "text": "The Blind Astronomer."
+        },
+        {
+          "start": 1.443,
+          "end": 3.648,
+          "text": "The bell demands another soul."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "boss-8": {
       "file": "assets/vo/boss-8.mp3",
@@ -209,7 +715,21 @@
       "text": "The Last Sun-King. The bell demands another soul.",
       "scriptHash": "226250f75bbb7341fb93295020867d31cf94d3c28ee838293ff07beff2bdb8e0",
       "bytes": 24336,
-      "sha256": "102c6576fc1c558cf4168d172f83a692a01c50b1d919ccaa14585677b7c700be"
+      "sha256": "102c6576fc1c558cf4168d172f83a692a01c50b1d919ccaa14585677b7c700be",
+      "duration": 4.056,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.551,
+          "text": "The Last Sun-King."
+        },
+        {
+          "start": 1.551,
+          "end": 3.936,
+          "text": "The bell demands another soul."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "boss-9": {
       "file": "assets/vo/boss-9.mp3",
@@ -217,7 +737,21 @@
       "text": "The Hollow Sovereign. The bell demands another soul.",
       "scriptHash": "cd4f9bea5742d717d342141637eb49cab8466a96f1340476676c44b42846ebff",
       "bytes": 21456,
-      "sha256": "531c45eb628cf70301b47f8fc4f07e2c18882c41fcd5174fb9429347e11d99de"
+      "sha256": "531c45eb628cf70301b47f8fc4f07e2c18882c41fcd5174fb9429347e11d99de",
+      "duration": 3.576,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.371,
+          "text": "The Hollow Sovereign."
+        },
+        {
+          "start": 1.371,
+          "end": 3.456,
+          "text": "The bell demands another soul."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "hero-knight": {
       "file": "assets/vo/hero-knight.mp3",
@@ -225,7 +759,21 @@
       "text": "An oath can outlive its king. Mine ends below.",
       "scriptHash": "770f77931b9cddb932246c1ef92879dcf2b35bd0f6665657cb826c636bdc2cc4",
       "bytes": 23904,
-      "sha256": "491c0c1b7642abe0d2d7983fc7d03f14eeee1da3385e71bc58005cbcc12421af"
+      "sha256": "491c0c1b7642abe0d2d7983fc7d03f14eeee1da3385e71bc58005cbcc12421af",
+      "duration": 3.984,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.616,
+          "text": "An oath can outlive its king."
+        },
+        {
+          "start": 2.616,
+          "end": 3.864,
+          "text": "Mine ends below."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "hero-rogue": {
       "file": "assets/vo/hero-rogue.mp3",
@@ -233,7 +781,21 @@
       "text": "Keep your crown. I have come for the names you stole.",
       "scriptHash": "af7a37c4dd852acc7f4f9a76655ee41e6eaf868c84e38eb1e07ab0d440f537b3",
       "bytes": 20736,
-      "sha256": "199f8a540b396489c76cbd1c58943bbf9b5083175b6abc4687c4ce59ef4486ed"
+      "sha256": "199f8a540b396489c76cbd1c58943bbf9b5083175b6abc4687c4ce59ef4486ed",
+      "duration": 3.456,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 0.997,
+          "text": "Keep your crown."
+        },
+        {
+          "start": 0.997,
+          "end": 3.336,
+          "text": "I have come for the names you stole."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     },
     "hero-seer": {
       "file": "assets/vo/hero-seer.mp3",
@@ -241,7 +803,819 @@
       "text": "Even the stars grow quiet here. I will listen once more.",
       "scriptHash": "b209b69514cee3fd1cb78553a0d992745c650300469a855e225341f1d5de827b",
       "bytes": 25776,
-      "sha256": "a151c9c09b05e730a9048664f9791ac8e14ac60315fc3a58e440b911f1a215f4"
+      "sha256": "a151c9c09b05e730a9048664f9791ac8e14ac60315fc3a58e440b911f1a215f4",
+      "duration": 4.296,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.332,
+          "text": "Even the stars grow quiet here."
+        },
+        {
+          "start": 2.332,
+          "end": 4.176,
+          "text": "I will listen once more."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "onboard-1": {
+      "file": "assets/vo/onboard-1.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "No road leads only downward. The dungeon branches in every direction. Follow unexplored passages, seek a guardian, and find its stair, lift or well. A descent can wait on any side of a chamber.",
+      "scriptHash": "fca42de5699edd9d7572e57551d7e993c55b76996db788b2fd5f4e26c0fddef3",
+      "bytes": 90288,
+      "sha256": "942dcc66e6a970007b874ad4298f812216884f48451f5c8377d17e34ebaba6b4",
+      "duration": 15.048,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.298,
+          "text": "No road leads only downward."
+        },
+        {
+          "start": 2.298,
+          "end": 4.911,
+          "text": "The dungeon branches in every direction."
+        },
+        {
+          "start": 4.911,
+          "end": 10.573,
+          "text": "Follow unexplored passages, seek a guardian, and find its stair, lift or well."
+        },
+        {
+          "start": 10.573,
+          "end": 14.928,
+          "text": "A descent can wait on any side of a chamber."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "onboard-2": {
+      "file": "assets/vo/onboard-2.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "Let your hands remember. Touch the open floor and drag. The movement pad follows your thumb. Keep your other hand free for attack, guard, dodge and skills. An interaction appears only when something is within reach.",
+      "scriptHash": "fe52067d4f945ccc6e352f47113f3638130e5e9e584ea1ca3dba7c2ad90f7d46",
+      "bytes": 89136,
+      "sha256": "fd1c06cd805856cce343f5266e654640633586baec0f6a22cc5fc6e1426b9e41",
+      "duration": 14.856,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.744,
+          "text": "Let your hands remember."
+        },
+        {
+          "start": 1.744,
+          "end": 4.18,
+          "text": "Touch the open floor and drag."
+        },
+        {
+          "start": 4.18,
+          "end": 6.616,
+          "text": "The movement pad follows your thumb."
+        },
+        {
+          "start": 6.616,
+          "end": 11.082,
+          "text": "Keep your other hand free for attack, guard, dodge and skills."
+        },
+        {
+          "start": 11.082,
+          "end": 14.736,
+          "text": "An interaction appears only when something is within reach."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "onboard-3": {
+      "file": "assets/vo/onboard-3.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "Every promise leaves a mark. Carry equipment, strengthen your skills, and choose what you give to the strangers below. Your choices and descent are saved. Death ends the journey; the embers you earn strengthen the next.",
+      "scriptHash": "4d59ff7e0dca6151d72117a3e5e5a015332bbdb6c9fe813c2d2be51eef528013",
+      "bytes": 95616,
+      "sha256": "8fc6d39a8ad8a58d69e347a488540467c912b23cd2be401d15af438eba825ffe",
+      "duration": 15.936,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.3,
+          "text": "Every promise leaves a mark."
+        },
+        {
+          "start": 2.3,
+          "end": 8.404,
+          "text": "Carry equipment, strengthen your skills, and choose what you give to the strangers below."
+        },
+        {
+          "start": 8.404,
+          "end": 11.02,
+          "text": "Your choices and descent are saved."
+        },
+        {
+          "start": 11.02,
+          "end": 15.816,
+          "text": "Death ends the journey; the embers you earn strengthen the next."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "practice-move": {
+      "file": "assets/vo/practice-move.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "Find your footing. Touch any open part of the arena and drag. The floating D-pad follows your thumb. Move toward the pale rune.",
+      "scriptHash": "89ca99c4cd87862d9554090373ab3345389117782abdb82027fa400c4a51c8bf",
+      "bytes": 59184,
+      "sha256": "b758d163b5ea526f89b349a3dbc07355b5a8e8e8a216b1a81b9d88b7b7aa8659",
+      "duration": 9.864,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.375,
+          "text": "Find your footing."
+        },
+        {
+          "start": 1.375,
+          "end": 5.141,
+          "text": "Touch any open part of the arena and drag."
+        },
+        {
+          "start": 5.141,
+          "end": 7.652,
+          "text": "The floating D-pad follows your thumb."
+        },
+        {
+          "start": 7.652,
+          "end": 9.744,
+          "text": "Move toward the pale rune."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "practice-attack": {
+      "file": "assets/vo/practice-attack.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "Steel has a rhythm. Face the practice effigy and hold ATTACK. Your third strike is a heavy finisher. Let stamina recover between combinations.",
+      "scriptHash": "ac5538d8377953ec4ebd3280d3786e7c18277fb9e74a79dea0dce1346fafe810",
+      "bytes": 64224,
+      "sha256": "33225593e2cfdbebdb2a65f79d63ec7d5a33f1aabc29410d11e315d08907bf2f",
+      "duration": 10.704,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.94,
+          "text": "Steel has a rhythm."
+        },
+        {
+          "start": 1.94,
+          "end": 5.125,
+          "text": "Face the practice effigy and hold ATTACK."
+        },
+        {
+          "start": 5.125,
+          "end": 8.309,
+          "text": "Your third strike is a heavy finisher."
+        },
+        {
+          "start": 8.309,
+          "end": 10.584,
+          "text": "Let stamina recover between combinations."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "practice-roll": {
+      "file": "assets/vo/practice-roll.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "Pass through danger. Drag to choose a direction, then tap ROLL as the red warning blooms. A dodge briefly protects you.",
+      "scriptHash": "4f04beafef6ee0a613f856414510524cb722feb9034701ac05542790addae118",
+      "bytes": 50544,
+      "sha256": "3cc1549a3e8b7ffc4847e03ef26c325aaf1141eb1471a1f52cb02ba3bcb0c808",
+      "duration": 8.424,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.289,
+          "text": "Pass through danger."
+        },
+        {
+          "start": 1.289,
+          "end": 6.355,
+          "text": "Drag to choose a direction, then tap ROLL as the red warning blooms."
+        },
+        {
+          "start": 6.355,
+          "end": 8.304,
+          "text": "A dodge briefly protects you."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "practice-skill": {
+      "file": "assets/vo/practice-skill.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "Remember your oath. Tap your first skill to unleash its power. Skills spend focus and need time to recover.",
+      "scriptHash": "6461d3a4294bccf720154c9f0c89a8d0d0923dda06dd5a012f69fd9d2b5ff475",
+      "bytes": 53424,
+      "sha256": "0ab9fffb9c5ba2489560393ae93916e76bc029494d4e7b9d44dd930ee3a3a739",
+      "duration": 8.904,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.488,
+          "text": "Remember your oath."
+        },
+        {
+          "start": 1.488,
+          "end": 5.136,
+          "text": "Tap your first skill to unleash its power."
+        },
+        {
+          "start": 5.136,
+          "end": 8.784,
+          "text": "Skills spend focus and need time to recover."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "practice-flask": {
+      "file": "assets/vo/practice-flask.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "Keep the ember alive. Tap the flask to restore health. Charges return at a hearth, and after each floor guardian.",
+      "scriptHash": "29d9a688ffcf3faf1cac685dfab02173281021a20be4d1bcdf7c658a14bc0a3f",
+      "bytes": 55584,
+      "sha256": "ea100a97f96604be478236faafedbbedd89b2d906da3ef91f94c76321c61ce55",
+      "duration": 9.264,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.925,
+          "text": "Keep the ember alive."
+        },
+        {
+          "start": 1.925,
+          "end": 4.632,
+          "text": "Tap the flask to restore health."
+        },
+        {
+          "start": 4.632,
+          "end": 9.144,
+          "text": "Charges return at a hearth, and after each floor guardian."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "practice-gate": {
+      "file": "assets/vo/practice-gate.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "The descent begins. Approach the north gate and tap USE. The bell is waiting. Equipment and skills are always available from the satchel.",
+      "scriptHash": "eb941a5b28e16b82046b22b0b095aef34f6cc934cb4404dae112b0d1a1b4f806",
+      "bytes": 62928,
+      "sha256": "56570da2065043d54578cac2553d414ee84dd670378b36bf918c4c3f81607d31",
+      "duration": 10.488,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 1.457,
+          "text": "The descent begins."
+        },
+        {
+          "start": 1.457,
+          "end": 4.576,
+          "text": "Approach the north gate and tap USE."
+        },
+        {
+          "start": 4.576,
+          "end": 6.358,
+          "text": "The bell is waiting."
+        },
+        {
+          "start": 6.358,
+          "end": 10.368,
+          "text": "Equipment and skills are always available from the satchel."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "event-blood-altar": {
+      "file": "assets/vo/event-blood-altar.mp3",
+      "voice": "aura-2-orpheus-en",
+      "text": "Warmth rises from the stone. A voice beneath it offers a relic for a measure of the blood you still possess. Offer your blood. Lose 22% maximum health. Receive a relic or better. Keep your blood. Leave the altar undisturbed.",
+      "scriptHash": "6816039ff82e0327429505c907afd7bc34ae6cf07edfde143f1a92b328081392",
+      "bytes": 102096,
+      "sha256": "1786ac45ec0c4a4290496a03ddf801ae4d90adf1935a585ff081d4cb96f0cc66",
+      "duration": 17.016,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.217,
+          "text": "Warmth rises from the stone."
+        },
+        {
+          "start": 2.217,
+          "end": 8.927,
+          "text": "A voice beneath it offers a relic for a measure of the blood you still possess."
+        },
+        {
+          "start": 8.927,
+          "end": 10.186,
+          "text": "Offer your blood."
+        },
+        {
+          "start": 10.186,
+          "end": 11.863,
+          "text": "Lose 22% maximum health."
+        },
+        {
+          "start": 11.863,
+          "end": 13.96,
+          "text": "Receive a relic or better."
+        },
+        {
+          "start": 13.96,
+          "end": 15.218,
+          "text": "Keep your blood."
+        },
+        {
+          "start": 15.218,
+          "end": 16.896,
+          "text": "Leave the altar undisturbed."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "event-cursed-cache": {
+      "file": "assets/vo/event-cursed-cache.mp3",
+      "voice": "aura-2-orpheus-en",
+      "text": "Something inside the iron coffer is breathing. Its seal bears the same mark as the souls waiting beyond the walls. Break the seal. Survive an ambush. Claim a relic and gold. Let it sleep. Leave the coffer sealed.",
+      "scriptHash": "955b45eeb8085e808a4eb81f25c05da047a02c4b94cc686e785a925f93fa5e84",
+      "bytes": 85824,
+      "sha256": "6ec485f96ad7c88d4985c5eea4dc54002845f454d5d94d2a49f9d208f6d00412",
+      "duration": 14.304,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.711,
+          "text": "Something inside the iron coffer is breathing."
+        },
+        {
+          "start": 2.711,
+          "end": 7.522,
+          "text": "Its seal bears the same mark as the souls waiting beyond the walls."
+        },
+        {
+          "start": 7.522,
+          "end": 8.632,
+          "text": "Break the seal."
+        },
+        {
+          "start": 8.632,
+          "end": 9.743,
+          "text": "Survive an ambush."
+        },
+        {
+          "start": 9.743,
+          "end": 11.593,
+          "text": "Claim a relic and gold."
+        },
+        {
+          "start": 11.593,
+          "end": 12.704,
+          "text": "Let it sleep."
+        },
+        {
+          "start": 12.704,
+          "end": 14.184,
+          "text": "Leave the coffer sealed."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "event-lost-pilgrim": {
+      "file": "assets/vo/event-lost-pilgrim.mp3",
+      "voice": "aura-2-pandora-en",
+      "text": "A wounded traveller holds an empty flask. “I remember the way,” she whispers, “but I have forgotten why I came.” Share your hearthwater. Spend one flask charge. Receive an offering and 6 essence. Leave a small offering. Spend 25 gold. Receive 6 essence and a little healing. Offer only a prayer. Let the pilgrim rest.",
+      "scriptHash": "cf035bb96793d3556ca3b64520e2c06d7eb8da5f9b3b546af37962583cc1b2c6",
+      "bytes": 130176,
+      "sha256": "533e0c85519486319fd6ec07f2cf3441b15fad42bf391bdb3717871b7238e80b",
+      "duration": 21.696,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.851,
+          "text": "A wounded traveller holds an empty flask."
+        },
+        {
+          "start": 2.851,
+          "end": 7.922,
+          "text": "“I remember the way,” she whispers, “but I have forgotten why I came.”"
+        },
+        {
+          "start": 7.922,
+          "end": 9.093,
+          "text": "Share your hearthwater."
+        },
+        {
+          "start": 9.093,
+          "end": 10.653,
+          "text": "Spend one flask charge."
+        },
+        {
+          "start": 10.653,
+          "end": 12.994,
+          "text": "Receive an offering and 6 essence."
+        },
+        {
+          "start": 12.994,
+          "end": 14.554,
+          "text": "Leave a small offering."
+        },
+        {
+          "start": 14.554,
+          "end": 15.724,
+          "text": "Spend 25 gold."
+        },
+        {
+          "start": 15.724,
+          "end": 18.455,
+          "text": "Receive 6 essence and a little healing."
+        },
+        {
+          "start": 18.455,
+          "end": 20.016,
+          "text": "Offer only a prayer."
+        },
+        {
+          "start": 20.016,
+          "end": 21.576,
+          "text": "Let the pilgrim rest."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "event-oath-shrine": {
+      "file": "assets/vo/event-oath-shrine.mp3",
+      "voice": "aura-2-orpheus-en",
+      "text": "Three candles survive on a windless altar. Each flame remembers a different promise. Only one will answer you. Swear to the blade. Gain 5 damage for this descent. Swear to the living. Gain 20 maximum health and restore 20 health. Swear to the silent stars. Gain 25 maximum focus and restore your focus.",
+      "scriptHash": "b13190c89e2062b87ccbf036807def491991dc09766066d1ec435c2c4fbbf351",
+      "bytes": 129024,
+      "sha256": "ff72ade9afaab8e930f576b890785772120439ac737a3f87221b509d0cc6cf0f",
+      "duration": 21.504,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.928,
+          "text": "Three candles survive on a windless altar."
+        },
+        {
+          "start": 2.928,
+          "end": 5.336,
+          "text": "Each flame remembers a different promise."
+        },
+        {
+          "start": 5.336,
+          "end": 7.342,
+          "text": "Only one will answer you."
+        },
+        {
+          "start": 7.342,
+          "end": 8.947,
+          "text": "Swear to the blade."
+        },
+        {
+          "start": 8.947,
+          "end": 11.354,
+          "text": "Gain 5 damage for this descent."
+        },
+        {
+          "start": 11.354,
+          "end": 12.959,
+          "text": "Swear to the living."
+        },
+        {
+          "start": 12.959,
+          "end": 16.168,
+          "text": "Gain 20 maximum health and restore 20 health."
+        },
+        {
+          "start": 16.168,
+          "end": 18.174,
+          "text": "Swear to the silent stars."
+        },
+        {
+          "start": 18.174,
+          "end": 21.384,
+          "text": "Gain 25 maximum focus and restore your focus."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "event-sealed-library": {
+      "file": "assets/vo/event-sealed-library.mp3",
+      "voice": "aura-2-orpheus-en",
+      "text": "A chained manuscript turns its own pages. It can teach you what the dead have learned—or call them to defend its knowledge. Read a borrowed name. Gain experience and 5 essence. Unbind the manuscript. Defeat its guardians. Claim a relic and 9 essence. Close the book. Leave the names in peace.",
+      "scriptHash": "61078abc0c8f805b86f62ca657827667e9021a3a0858a1246ab8d5332f5f4be7",
+      "bytes": 115344,
+      "sha256": "4a74b54c2b2802d6f516af780ba7752758543bf96ffbd3a426f218afe9cacd11",
+      "duration": 19.224,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 2.726,
+          "text": "A chained manuscript turns its own pages."
+        },
+        {
+          "start": 2.726,
+          "end": 8.309,
+          "text": "It can teach you what the dead have learned—or call them to defend its knowledge."
+        },
+        {
+          "start": 8.309,
+          "end": 9.798,
+          "text": "Read a borrowed name."
+        },
+        {
+          "start": 9.798,
+          "end": 11.659,
+          "text": "Gain experience and 5 essence."
+        },
+        {
+          "start": 11.659,
+          "end": 12.776,
+          "text": "Unbind the manuscript."
+        },
+        {
+          "start": 12.776,
+          "end": 13.893,
+          "text": "Defeat its guardians."
+        },
+        {
+          "start": 13.893,
+          "end": 16.126,
+          "text": "Claim a relic and 9 essence."
+        },
+        {
+          "start": 16.126,
+          "end": 17.243,
+          "text": "Close the book."
+        },
+        {
+          "start": 17.243,
+          "end": 19.104,
+          "text": "Leave the names in peace."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "event-trap-vault": {
+      "file": "assets/vo/event-trap-vault.mp3",
+      "voice": "aura-2-orpheus-en",
+      "text": "A sealed offering waits beyond a circle of pressure stones. A sandglass gives you twelve seconds to prove that you still belong among the living. Enter the trial. Survive twelve seconds of marked impacts. Receive a relic and gold. Leave the sand untouched. The vault remains silent.",
+      "scriptHash": "b08b6ff6474ad1b7d9920677da97e7d542855870b041ccf754857fe26271bdb8",
+      "bytes": 103824,
+      "sha256": "31f305bfae5865abf6ad57a816e0dd4f5cee3177b9a12254cc338f9b488bb557",
+      "duration": 17.304,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 3.751,
+          "text": "A sealed offering waits beyond a circle of pressure stones."
+        },
+        {
+          "start": 3.751,
+          "end": 9.197,
+          "text": "A sandglass gives you twelve seconds to prove that you still belong among the living."
+        },
+        {
+          "start": 9.197,
+          "end": 10.286,
+          "text": "Enter the trial."
+        },
+        {
+          "start": 10.286,
+          "end": 12.464,
+          "text": "Survive twelve seconds of marked impacts."
+        },
+        {
+          "start": 12.464,
+          "end": 14.279,
+          "text": "Receive a relic and gold."
+        },
+        {
+          "start": 14.279,
+          "end": 15.732,
+          "text": "Leave the sand untouched."
+        },
+        {
+          "start": 15.732,
+          "end": 17.184,
+          "text": "The vault remains silent."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "event-wandering-smith": {
+      "file": "assets/vo/event-wandering-smith.mp3",
+      "voice": "aura-2-draco-en",
+      "text": "The smith strikes cold iron, and sparks fall upward. “Your weapon has another oath in it. Shall I wake it?” Temper your weapon. Spend gold to increase your equipped weapon’s damage by 20%. Keep the old edge. Leave your weapon unchanged.",
+      "scriptHash": "40a444d19a63de754edf60a39f30276badd9aa58f5fdeb61104f453bd15d3d88",
+      "bytes": 111744,
+      "sha256": "086f6d57aafabd68dce1e9af9f249bd56092f6cefeb4b067ace7bc34c01f104d",
+      "duration": 18.624,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 4.156,
+          "text": "The smith strikes cold iron, and sparks fall upward."
+        },
+        {
+          "start": 4.156,
+          "end": 7.294,
+          "text": "“Your weapon has another oath in it."
+        },
+        {
+          "start": 7.294,
+          "end": 9.088,
+          "text": "Shall I wake it?”"
+        },
+        {
+          "start": 9.088,
+          "end": 10.433,
+          "text": "Temper your weapon."
+        },
+        {
+          "start": 10.433,
+          "end": 14.917,
+          "text": "Spend gold to increase your equipped weapon’s damage by 20%."
+        },
+        {
+          "start": 14.917,
+          "end": 16.71,
+          "text": "Keep the old edge."
+        },
+        {
+          "start": 16.71,
+          "end": 18.504,
+          "text": "Leave your weapon unchanged."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "event-shadow-duel": {
+      "file": "assets/vo/event-shadow-duel.mp3",
+      "voice": "aura-2-orpheus-en",
+      "text": "The mirror shows a chamber you have not entered. A champion on the other side raises a weapon and waits for your answer. Answer the challenge. Defeat one empowered champion. Receive a relic weapon. Turn away. The reflection lowers its blade.",
+      "scriptHash": "fff13c32608498dbbd57658c54abab7a2ff2eceae670b1be35ffd51bca98b375",
+      "bytes": 80928,
+      "sha256": "a20613e3fa9d8197766a544fdb68ff7cf2fe8a47450663214e243adfebd9487c",
+      "duration": 13.488,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 3.028,
+          "text": "The mirror shows a chamber you have not entered."
+        },
+        {
+          "start": 3.028,
+          "end": 7.552,
+          "text": "A champion on the other side raises a weapon and waits for your answer."
+        },
+        {
+          "start": 7.552,
+          "end": 8.521,
+          "text": "Answer the challenge."
+        },
+        {
+          "start": 8.521,
+          "end": 9.814,
+          "text": "Defeat one empowered champion."
+        },
+        {
+          "start": 9.814,
+          "end": 11.106,
+          "text": "Receive a relic weapon."
+        },
+        {
+          "start": 11.106,
+          "end": 11.752,
+          "text": "Turn away."
+        },
+        {
+          "start": 11.752,
+          "end": 13.368,
+          "text": "The reflection lowers its blade."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "event-restless-bell": {
+      "file": "assets/vo/event-restless-bell.mp3",
+      "voice": "aura-2-orpheus-en",
+      "text": "A bell hangs above a bed of ashes. Its inscription promises a sovereign’s offering to the soul that can endure three answers. Ring the bell. Survive three waves of enemies. Claim a legendary offering. Pass in silence. Wake nothing beneath the ash.",
+      "scriptHash": "70a2daea697cfd879574c9abd645bcf663eb41150631a809f4e09dde6d4835a9",
+      "bytes": 111744,
+      "sha256": "5f72fb34637b62a0ee5e0cf7a3dd5a1caa7a2edeeadea80106740f1051b66e99",
+      "duration": 18.624,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 3.622,
+          "text": "A bell hangs above a bed of ashes."
+        },
+        {
+          "start": 3.622,
+          "end": 9.75,
+          "text": "Its inscription promises a sovereign’s offering to the soul that can endure three answers."
+        },
+        {
+          "start": 9.75,
+          "end": 11.063,
+          "text": "Ring the bell."
+        },
+        {
+          "start": 11.063,
+          "end": 13.251,
+          "text": "Survive three waves of enemies."
+        },
+        {
+          "start": 13.251,
+          "end": 15.002,
+          "text": "Claim a legendary offering."
+        },
+        {
+          "start": 15.002,
+          "end": 16.315,
+          "text": "Pass in silence."
+        },
+        {
+          "start": 16.315,
+          "end": 18.504,
+          "text": "Wake nothing beneath the ash."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
+    },
+    "event-memory-vow": {
+      "file": "assets/vo/event-memory-vow.mp3",
+      "voice": "aura-2-orpheus-en",
+      "text": "A pale root offers to carry some part of you. What you surrender will return as strength, but the memory will remain below. Surrender your safety. Lose 15 maximum health. Gain 9 damage for this descent. Surrender your wrath. Lose 3 damage. Gain 30 maximum health and restore 30 health. Keep your own name. Leave without a vow.",
+      "scriptHash": "d42126433b167f9602e6ebed540c7f3435280a5a553bf7fe76b4f40c656bc38c",
+      "bytes": 137808,
+      "sha256": "c347b4540e514ba94617551505adf366443d42b48b3f648ba06e1dda0c491b12",
+      "duration": 22.968,
+      "captionCues": [
+        {
+          "start": 0.12,
+          "end": 4.039,
+          "text": "A pale root offers to carry some part of you."
+        },
+        {
+          "start": 4.039,
+          "end": 9.133,
+          "text": "What you surrender will return as strength, but the memory will remain below."
+        },
+        {
+          "start": 9.133,
+          "end": 10.308,
+          "text": "Surrender your safety."
+        },
+        {
+          "start": 10.308,
+          "end": 11.876,
+          "text": "Lose 15 maximum health."
+        },
+        {
+          "start": 11.876,
+          "end": 14.227,
+          "text": "Gain 9 damage for this descent."
+        },
+        {
+          "start": 14.227,
+          "end": 15.403,
+          "text": "Surrender your wrath."
+        },
+        {
+          "start": 15.403,
+          "end": 16.578,
+          "text": "Lose 3 damage."
+        },
+        {
+          "start": 16.578,
+          "end": 19.713,
+          "text": "Gain 30 maximum health and restore 30 health."
+        },
+        {
+          "start": 19.713,
+          "end": 21.281,
+          "text": "Keep your own name."
+        },
+        {
+          "start": 21.281,
+          "end": 22.848,
+          "text": "Leave without a vow."
+        }
+      ],
+      "cueMethod": "Sentence timings estimated from the measured audio duration"
     }
   }
 }

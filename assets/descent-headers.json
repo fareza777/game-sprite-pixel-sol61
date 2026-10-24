@@ -1,0 +1,418 @@
+{ "frames": [
+   {
+    "filename": "descent-headers 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 1.aseprite",
+    "frame": { "x": 360, "y": 0, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 2.aseprite",
+    "frame": { "x": 720, "y": 0, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 3.aseprite",
+    "frame": { "x": 1080, "y": 0, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 4.aseprite",
+    "frame": { "x": 1440, "y": 0, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 5.aseprite",
+    "frame": { "x": 1800, "y": 0, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 6.aseprite",
+    "frame": { "x": 2160, "y": 0, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 7.aseprite",
+    "frame": { "x": 0, "y": 120, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 8.aseprite",
+    "frame": { "x": 360, "y": 120, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 9.aseprite",
+    "frame": { "x": 720, "y": 120, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 10.aseprite",
+    "frame": { "x": 1080, "y": 120, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 11.aseprite",
+    "frame": { "x": 1440, "y": 120, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 12.aseprite",
+    "frame": { "x": 1800, "y": 120, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 13.aseprite",
+    "frame": { "x": 2160, "y": 120, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 14.aseprite",
+    "frame": { "x": 0, "y": 240, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 15.aseprite",
+    "frame": { "x": 360, "y": 240, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 16.aseprite",
+    "frame": { "x": 720, "y": 240, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 17.aseprite",
+    "frame": { "x": 1080, "y": 240, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 18.aseprite",
+    "frame": { "x": 1440, "y": 240, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 19.aseprite",
+    "frame": { "x": 1800, "y": 240, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 20.aseprite",
+    "frame": { "x": 2160, "y": 240, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 21.aseprite",
+    "frame": { "x": 0, "y": 360, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 22.aseprite",
+    "frame": { "x": 360, "y": 360, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 23.aseprite",
+    "frame": { "x": 720, "y": 360, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 24.aseprite",
+    "frame": { "x": 1080, "y": 360, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 25.aseprite",
+    "frame": { "x": 1440, "y": 360, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 26.aseprite",
+    "frame": { "x": 1800, "y": 360, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 27.aseprite",
+    "frame": { "x": 2160, "y": 360, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 28.aseprite",
+    "frame": { "x": 0, "y": 480, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 29.aseprite",
+    "frame": { "x": 360, "y": 480, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 30.aseprite",
+    "frame": { "x": 720, "y": 480, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 31.aseprite",
+    "frame": { "x": 1080, "y": 480, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 32.aseprite",
+    "frame": { "x": 1440, "y": 480, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 33.aseprite",
+    "frame": { "x": 1800, "y": 480, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 34.aseprite",
+    "frame": { "x": 2160, "y": 480, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 35.aseprite",
+    "frame": { "x": 0, "y": 600, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 36.aseprite",
+    "frame": { "x": 360, "y": 600, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 37.aseprite",
+    "frame": { "x": 720, "y": 600, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 38.aseprite",
+    "frame": { "x": 1080, "y": 600, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-headers 39.aseprite",
+    "frame": { "x": 1440, "y": 600, "w": 360, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 360, "h": 120 },
+    "sourceSize": { "w": 360, "h": 120 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.18.6-dev",
+  "image": "descent-headers.png",
+  "format": "RGBA8888",
+  "size": { "w": 2520, "h": 720 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "abbey-cloister", "from": 0, "to": 0, "direction": "forward", "color": "#000000ff" },
+   { "name": "abbey-crypt", "from": 1, "to": 1, "direction": "forward", "color": "#000000ff" },
+   { "name": "abbey-broken", "from": 2, "to": 2, "direction": "forward", "color": "#000000ff" },
+   { "name": "abbey-throne", "from": 3, "to": 3, "direction": "forward", "color": "#000000ff" },
+   { "name": "tides-cloister", "from": 4, "to": 4, "direction": "forward", "color": "#000000ff" },
+   { "name": "tides-crypt", "from": 5, "to": 5, "direction": "forward", "color": "#000000ff" },
+   { "name": "tides-broken", "from": 6, "to": 6, "direction": "forward", "color": "#000000ff" },
+   { "name": "tides-throne", "from": 7, "to": 7, "direction": "forward", "color": "#000000ff" },
+   { "name": "thorns-cloister", "from": 8, "to": 8, "direction": "forward", "color": "#000000ff" },
+   { "name": "thorns-crypt", "from": 9, "to": 9, "direction": "forward", "color": "#000000ff" },
+   { "name": "thorns-broken", "from": 10, "to": 10, "direction": "forward", "color": "#000000ff" },
+   { "name": "thorns-throne", "from": 11, "to": 11, "direction": "forward", "color": "#000000ff" },
+   { "name": "forge-cloister", "from": 12, "to": 12, "direction": "forward", "color": "#000000ff" },
+   { "name": "forge-crypt", "from": 13, "to": 13, "direction": "forward", "color": "#000000ff" },
+   { "name": "forge-broken", "from": 14, "to": 14, "direction": "forward", "color": "#000000ff" },
+   { "name": "forge-throne", "from": 15, "to": 15, "direction": "forward", "color": "#000000ff" },
+   { "name": "bones-cloister", "from": 16, "to": 16, "direction": "forward", "color": "#000000ff" },
+   { "name": "bones-crypt", "from": 17, "to": 17, "direction": "forward", "color": "#000000ff" },
+   { "name": "bones-broken", "from": 18, "to": 18, "direction": "forward", "color": "#000000ff" },
+   { "name": "bones-throne", "from": 19, "to": 19, "direction": "forward", "color": "#000000ff" },
+   { "name": "frost-cloister", "from": 20, "to": 20, "direction": "forward", "color": "#000000ff" },
+   { "name": "frost-crypt", "from": 21, "to": 21, "direction": "forward", "color": "#000000ff" },
+   { "name": "frost-broken", "from": 22, "to": 22, "direction": "forward", "color": "#000000ff" },
+   { "name": "frost-throne", "from": 23, "to": 23, "direction": "forward", "color": "#000000ff" },
+   { "name": "blood-cloister", "from": 24, "to": 24, "direction": "forward", "color": "#000000ff" },
+   { "name": "blood-crypt", "from": 25, "to": 25, "direction": "forward", "color": "#000000ff" },
+   { "name": "blood-broken", "from": 26, "to": 26, "direction": "forward", "color": "#000000ff" },
+   { "name": "blood-throne", "from": 27, "to": 27, "direction": "forward", "color": "#000000ff" },
+   { "name": "astral-cloister", "from": 28, "to": 28, "direction": "forward", "color": "#000000ff" },
+   { "name": "astral-crypt", "from": 29, "to": 29, "direction": "forward", "color": "#000000ff" },
+   { "name": "astral-broken", "from": 30, "to": 30, "direction": "forward", "color": "#000000ff" },
+   { "name": "astral-throne", "from": 31, "to": 31, "direction": "forward", "color": "#000000ff" },
+   { "name": "gilded-cloister", "from": 32, "to": 32, "direction": "forward", "color": "#000000ff" },
+   { "name": "gilded-crypt", "from": 33, "to": 33, "direction": "forward", "color": "#000000ff" },
+   { "name": "gilded-broken", "from": 34, "to": 34, "direction": "forward", "color": "#000000ff" },
+   { "name": "gilded-throne", "from": 35, "to": 35, "direction": "forward", "color": "#000000ff" },
+   { "name": "abyss-cloister", "from": 36, "to": 36, "direction": "forward", "color": "#000000ff" },
+   { "name": "abyss-crypt", "from": 37, "to": 37, "direction": "forward", "color": "#000000ff" },
+   { "name": "abyss-broken", "from": 38, "to": 38, "direction": "forward", "color": "#000000ff" },
+   { "name": "abyss-throne", "from": 39, "to": 39, "direction": "forward", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "authored-pixels", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

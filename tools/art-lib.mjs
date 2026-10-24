@@ -19,7 +19,7 @@ export const P={
   '0':'#171923','1':'#242d1b','2':'#3c4726','3':'#596735','4':'#798742','5':'#9eac53','6':'#c3cb72','7':'#eee29d','8':'#70654f','9':'#a29476',P:'#d0c4a2',i:'#eee4cd'
 };
 export function rect(x,y,width,height,c,fill=c){return {kind:'rect',rect:{x:Math.round(x),y:Math.round(y),width:Math.round(width),height:Math.round(height)},color:P[c]??c,...(fill?{fill:P[fill]??fill}:{})};}
-export function line(x,y,x2,y2,c,thickness=1){return {kind:'line',from:{x:Math.round(x),y:Math.round(y)},to:{x:Math.round(x2),y:Math.round(y2)},color:P[c]??c,thickness};}
+export function line(x,y,x2,y2,c,thickness=1){return {kind:'line',from:{x:Math.round(x),y:Math.round(y)},to:{x:Math.round(x2),y:Math.round(y2)},color:P[c]??c,thickness:Math.max(1,Math.round(thickness))};}
 export function ellipse(x,y,width,height,c,fill){return {kind:'ellipse',rect:{x:Math.round(x),y:Math.round(y),width:Math.round(width),height:Math.round(height)},color:P[c]??c,...(fill?{fill:P[fill]??fill}:{})};}
 export function poly(points,c,fill){return {kind:'polyline',points:points.map(([x,y])=>({x:Math.round(x),y:Math.round(y)})),closed:!!fill,color:P[c]??c,...(fill?{fill:P[fill]??fill}:{})};}
 export function grid(x,y,rows,legend=P){

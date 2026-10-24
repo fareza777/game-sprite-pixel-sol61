@@ -1,6 +1,6 @@
 {
-  "passed": 21,
-  "total": 21,
+  "passed": 26,
+  "total": 26,
   "results": [
     {
       "name": "The catalogue contains 60 species, 10 unique bosses, 100 items and 3 complete classes",
@@ -84,6 +84,26 @@
     },
     {
       "name": "Death finishes once and a completed run never serializes as resumable",
+      "passed": true
+    },
+    {
+      "name": "Physical descents vary in side and form and require approach to the actual shaft",
+      "passed": true
+    },
+    {
+      "name": "A saved anticipation resumes once, while a completed cast never spends focus again",
+      "passed": true
+    },
+    {
+      "name": "Melee pursuit routes around a pool and sorcery crosses it while stone cover blocks shots",
+      "passed": true
+    },
+    {
+      "name": "A 3.0 descent restores its original graph and continues into the new branching floors",
+      "passed": true
+    },
+    {
+      "name": "A released fallen star survives Continue and lands once; wards retain their remaining duration",
       "passed": true
     }
   ]

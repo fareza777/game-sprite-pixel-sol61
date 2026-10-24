@@ -1,0 +1,2526 @@
+{
+  "method": "Lowest opaque row read from the native Aseprite cel through MCP",
+  "anchors": [
+    {
+      "name": "campaign-props",
+      "tag": "abbey-pillar",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abbey-statue",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abbey-urn",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abbey-brazier",
+      "x": 32,
+      "y": 69,
+      "groundY": 68
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abbey-chest-closed",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abbey-chest-open",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abbey-shrine",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abbey-merchant",
+      "x": 32,
+      "y": 71,
+      "groundY": 70
+    },
+    {
+      "name": "campaign-props",
+      "tag": "tides-pillar",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "tides-statue",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "tides-urn",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "tides-brazier",
+      "x": 32,
+      "y": 69,
+      "groundY": 68
+    },
+    {
+      "name": "campaign-props",
+      "tag": "tides-chest-closed",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "tides-chest-open",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "tides-shrine",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "tides-merchant",
+      "x": 32,
+      "y": 71,
+      "groundY": 70
+    },
+    {
+      "name": "campaign-props",
+      "tag": "thorns-pillar",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "thorns-statue",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "thorns-urn",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "thorns-brazier",
+      "x": 32,
+      "y": 69,
+      "groundY": 68
+    },
+    {
+      "name": "campaign-props",
+      "tag": "thorns-chest-closed",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "thorns-chest-open",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "thorns-shrine",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "thorns-merchant",
+      "x": 32,
+      "y": 71,
+      "groundY": 70
+    },
+    {
+      "name": "campaign-props",
+      "tag": "forge-pillar",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "forge-statue",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "forge-urn",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "forge-brazier",
+      "x": 32,
+      "y": 69,
+      "groundY": 68
+    },
+    {
+      "name": "campaign-props",
+      "tag": "forge-chest-closed",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "forge-chest-open",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "forge-shrine",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "forge-merchant",
+      "x": 32,
+      "y": 71,
+      "groundY": 70
+    },
+    {
+      "name": "campaign-props",
+      "tag": "bones-pillar",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "bones-statue",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "bones-urn",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "bones-brazier",
+      "x": 32,
+      "y": 69,
+      "groundY": 68
+    },
+    {
+      "name": "campaign-props",
+      "tag": "bones-chest-closed",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "bones-chest-open",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "bones-shrine",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "bones-merchant",
+      "x": 32,
+      "y": 71,
+      "groundY": 70
+    },
+    {
+      "name": "campaign-props",
+      "tag": "frost-pillar",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "frost-statue",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "frost-urn",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "frost-brazier",
+      "x": 32,
+      "y": 69,
+      "groundY": 68
+    },
+    {
+      "name": "campaign-props",
+      "tag": "frost-chest-closed",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "frost-chest-open",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "frost-shrine",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "frost-merchant",
+      "x": 32,
+      "y": 71,
+      "groundY": 70
+    },
+    {
+      "name": "campaign-props",
+      "tag": "blood-pillar",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "blood-statue",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "blood-urn",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "blood-brazier",
+      "x": 32,
+      "y": 69,
+      "groundY": 68
+    },
+    {
+      "name": "campaign-props",
+      "tag": "blood-chest-closed",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "blood-chest-open",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "blood-shrine",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "blood-merchant",
+      "x": 32,
+      "y": 71,
+      "groundY": 70
+    },
+    {
+      "name": "campaign-props",
+      "tag": "astral-pillar",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "astral-statue",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "astral-urn",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "astral-brazier",
+      "x": 32,
+      "y": 69,
+      "groundY": 68
+    },
+    {
+      "name": "campaign-props",
+      "tag": "astral-chest-closed",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "astral-chest-open",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "astral-shrine",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "astral-merchant",
+      "x": 32,
+      "y": 71,
+      "groundY": 70
+    },
+    {
+      "name": "campaign-props",
+      "tag": "gilded-pillar",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "gilded-statue",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "gilded-urn",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "gilded-brazier",
+      "x": 32,
+      "y": 69,
+      "groundY": 68
+    },
+    {
+      "name": "campaign-props",
+      "tag": "gilded-chest-closed",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "gilded-chest-open",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "gilded-shrine",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "gilded-merchant",
+      "x": 32,
+      "y": 71,
+      "groundY": 70
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abyss-pillar",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abyss-statue",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abyss-urn",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abyss-brazier",
+      "x": 32,
+      "y": 69,
+      "groundY": 68
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abyss-chest-closed",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abyss-chest-open",
+      "x": 32,
+      "y": 68,
+      "groundY": 67
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abyss-shrine",
+      "x": 32,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "campaign-props",
+      "tag": "abyss-merchant",
+      "x": 32,
+      "y": 71,
+      "groundY": 70
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-pit",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-water",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-lava",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-dais",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-rune",
+      "x": 40,
+      "y": 60,
+      "groundY": 59
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-pressure",
+      "x": 40,
+      "y": 61,
+      "groundY": 60
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-sarcophagus",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-bookcase",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-roots",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-machine",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-broken-column",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-debris",
+      "x": 40,
+      "y": 66,
+      "groundY": 65
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-well",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-obelisk",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-carpet",
+      "x": 40,
+      "y": 76,
+      "groundY": 75
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abbey-grate",
+      "x": 40,
+      "y": 67,
+      "groundY": 66
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-pit",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-water",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-lava",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-dais",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-rune",
+      "x": 40,
+      "y": 60,
+      "groundY": 59
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-pressure",
+      "x": 40,
+      "y": 61,
+      "groundY": 60
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-sarcophagus",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-bookcase",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-roots",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-machine",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-broken-column",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-debris",
+      "x": 40,
+      "y": 66,
+      "groundY": 65
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-well",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-obelisk",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-carpet",
+      "x": 40,
+      "y": 76,
+      "groundY": 75
+    },
+    {
+      "name": "layout-kit",
+      "tag": "tides-grate",
+      "x": 40,
+      "y": 67,
+      "groundY": 66
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-pit",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-water",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-lava",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-dais",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-rune",
+      "x": 40,
+      "y": 60,
+      "groundY": 59
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-pressure",
+      "x": 40,
+      "y": 61,
+      "groundY": 60
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-sarcophagus",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-bookcase",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-roots",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-machine",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-broken-column",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-debris",
+      "x": 40,
+      "y": 66,
+      "groundY": 65
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-well",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-obelisk",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-carpet",
+      "x": 40,
+      "y": 76,
+      "groundY": 75
+    },
+    {
+      "name": "layout-kit",
+      "tag": "thorns-grate",
+      "x": 40,
+      "y": 67,
+      "groundY": 66
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-pit",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-water",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-lava",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-dais",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-rune",
+      "x": 40,
+      "y": 60,
+      "groundY": 59
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-pressure",
+      "x": 40,
+      "y": 61,
+      "groundY": 60
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-sarcophagus",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-bookcase",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-roots",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-machine",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-broken-column",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-debris",
+      "x": 40,
+      "y": 66,
+      "groundY": 65
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-well",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-obelisk",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-carpet",
+      "x": 40,
+      "y": 76,
+      "groundY": 75
+    },
+    {
+      "name": "layout-kit",
+      "tag": "forge-grate",
+      "x": 40,
+      "y": 67,
+      "groundY": 66
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-pit",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-water",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-lava",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-dais",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-rune",
+      "x": 40,
+      "y": 60,
+      "groundY": 59
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-pressure",
+      "x": 40,
+      "y": 61,
+      "groundY": 60
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-sarcophagus",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-bookcase",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-roots",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-machine",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-broken-column",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-debris",
+      "x": 40,
+      "y": 66,
+      "groundY": 65
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-well",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-obelisk",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-carpet",
+      "x": 40,
+      "y": 76,
+      "groundY": 75
+    },
+    {
+      "name": "layout-kit",
+      "tag": "bones-grate",
+      "x": 40,
+      "y": 67,
+      "groundY": 66
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-pit",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-water",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-lava",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-dais",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-rune",
+      "x": 40,
+      "y": 60,
+      "groundY": 59
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-pressure",
+      "x": 40,
+      "y": 61,
+      "groundY": 60
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-sarcophagus",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-bookcase",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-roots",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-machine",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-broken-column",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-debris",
+      "x": 40,
+      "y": 66,
+      "groundY": 65
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-well",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-obelisk",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-carpet",
+      "x": 40,
+      "y": 76,
+      "groundY": 75
+    },
+    {
+      "name": "layout-kit",
+      "tag": "frost-grate",
+      "x": 40,
+      "y": 67,
+      "groundY": 66
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-pit",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-water",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-lava",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-dais",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-rune",
+      "x": 40,
+      "y": 60,
+      "groundY": 59
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-pressure",
+      "x": 40,
+      "y": 61,
+      "groundY": 60
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-sarcophagus",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-bookcase",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-roots",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-machine",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-broken-column",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-debris",
+      "x": 40,
+      "y": 66,
+      "groundY": 65
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-well",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-obelisk",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-carpet",
+      "x": 40,
+      "y": 76,
+      "groundY": 75
+    },
+    {
+      "name": "layout-kit",
+      "tag": "blood-grate",
+      "x": 40,
+      "y": 67,
+      "groundY": 66
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-pit",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-water",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-lava",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-dais",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-rune",
+      "x": 40,
+      "y": 60,
+      "groundY": 59
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-pressure",
+      "x": 40,
+      "y": 61,
+      "groundY": 60
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-sarcophagus",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-bookcase",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-roots",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-machine",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-broken-column",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-debris",
+      "x": 40,
+      "y": 66,
+      "groundY": 65
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-well",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-obelisk",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-carpet",
+      "x": 40,
+      "y": 76,
+      "groundY": 75
+    },
+    {
+      "name": "layout-kit",
+      "tag": "astral-grate",
+      "x": 40,
+      "y": 67,
+      "groundY": 66
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-pit",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-water",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-lava",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-dais",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-rune",
+      "x": 40,
+      "y": 60,
+      "groundY": 59
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-pressure",
+      "x": 40,
+      "y": 61,
+      "groundY": 60
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-sarcophagus",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-bookcase",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-roots",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-machine",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-broken-column",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-debris",
+      "x": 40,
+      "y": 66,
+      "groundY": 65
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-well",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-obelisk",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-carpet",
+      "x": 40,
+      "y": 76,
+      "groundY": 75
+    },
+    {
+      "name": "layout-kit",
+      "tag": "gilded-grate",
+      "x": 40,
+      "y": 67,
+      "groundY": 66
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-pit",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-water",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-lava",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-dais",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-rune",
+      "x": 40,
+      "y": 60,
+      "groundY": 59
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-pressure",
+      "x": 40,
+      "y": 61,
+      "groundY": 60
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-sarcophagus",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-bookcase",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-roots",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-machine",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-broken-column",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-debris",
+      "x": 40,
+      "y": 66,
+      "groundY": 65
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-well",
+      "x": 40,
+      "y": 70,
+      "groundY": 69
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-obelisk",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-carpet",
+      "x": 40,
+      "y": 76,
+      "groundY": 75
+    },
+    {
+      "name": "layout-kit",
+      "tag": "abyss-grate",
+      "x": 40,
+      "y": 67,
+      "groundY": 66
+    },
+    {
+      "name": "descent-props",
+      "tag": "abbey-reading-table",
+      "x": 56,
+      "y": 94,
+      "groundY": 93
+    },
+    {
+      "name": "descent-props",
+      "tag": "abbey-bunk",
+      "x": 56,
+      "y": 95,
+      "groundY": 94
+    },
+    {
+      "name": "descent-props",
+      "tag": "abbey-weapons-rack",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "abbey-cage",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "abbey-bone-pile",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "abbey-altar-font",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "abbey-anvil",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "abbey-orrery",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "abbey-fallen-bell",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "abbey-balustrade",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "abbey-statue-king",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "tides-reading-table",
+      "x": 56,
+      "y": 94,
+      "groundY": 93
+    },
+    {
+      "name": "descent-props",
+      "tag": "tides-bunk",
+      "x": 56,
+      "y": 95,
+      "groundY": 94
+    },
+    {
+      "name": "descent-props",
+      "tag": "tides-weapons-rack",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "tides-cage",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "tides-bone-pile",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "tides-altar-font",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "tides-anvil",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "tides-orrery",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "tides-fallen-bell",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "tides-balustrade",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "tides-statue-king",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "thorns-reading-table",
+      "x": 56,
+      "y": 94,
+      "groundY": 93
+    },
+    {
+      "name": "descent-props",
+      "tag": "thorns-bunk",
+      "x": 56,
+      "y": 95,
+      "groundY": 94
+    },
+    {
+      "name": "descent-props",
+      "tag": "thorns-weapons-rack",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "thorns-cage",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "thorns-bone-pile",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "thorns-altar-font",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "thorns-anvil",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "thorns-orrery",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "thorns-fallen-bell",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "thorns-balustrade",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "thorns-statue-king",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "forge-reading-table",
+      "x": 56,
+      "y": 94,
+      "groundY": 93
+    },
+    {
+      "name": "descent-props",
+      "tag": "forge-bunk",
+      "x": 56,
+      "y": 95,
+      "groundY": 94
+    },
+    {
+      "name": "descent-props",
+      "tag": "forge-weapons-rack",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "forge-cage",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "forge-bone-pile",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "forge-altar-font",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "forge-anvil",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "forge-orrery",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "forge-fallen-bell",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "forge-balustrade",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "forge-statue-king",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "bones-reading-table",
+      "x": 56,
+      "y": 94,
+      "groundY": 93
+    },
+    {
+      "name": "descent-props",
+      "tag": "bones-bunk",
+      "x": 56,
+      "y": 95,
+      "groundY": 94
+    },
+    {
+      "name": "descent-props",
+      "tag": "bones-weapons-rack",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "bones-cage",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "bones-bone-pile",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "bones-altar-font",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "bones-anvil",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "bones-orrery",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "bones-fallen-bell",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "bones-balustrade",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "bones-statue-king",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "frost-reading-table",
+      "x": 56,
+      "y": 94,
+      "groundY": 93
+    },
+    {
+      "name": "descent-props",
+      "tag": "frost-bunk",
+      "x": 56,
+      "y": 95,
+      "groundY": 94
+    },
+    {
+      "name": "descent-props",
+      "tag": "frost-weapons-rack",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "frost-cage",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "frost-bone-pile",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "frost-altar-font",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "frost-anvil",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "frost-orrery",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "frost-fallen-bell",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "frost-balustrade",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "frost-statue-king",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "blood-reading-table",
+      "x": 56,
+      "y": 94,
+      "groundY": 93
+    },
+    {
+      "name": "descent-props",
+      "tag": "blood-bunk",
+      "x": 56,
+      "y": 95,
+      "groundY": 94
+    },
+    {
+      "name": "descent-props",
+      "tag": "blood-weapons-rack",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "blood-cage",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "blood-bone-pile",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "blood-altar-font",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "blood-anvil",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "blood-orrery",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "blood-fallen-bell",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "blood-balustrade",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "blood-statue-king",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "astral-reading-table",
+      "x": 56,
+      "y": 94,
+      "groundY": 93
+    },
+    {
+      "name": "descent-props",
+      "tag": "astral-bunk",
+      "x": 56,
+      "y": 95,
+      "groundY": 94
+    },
+    {
+      "name": "descent-props",
+      "tag": "astral-weapons-rack",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "astral-cage",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "astral-bone-pile",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "astral-altar-font",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "astral-anvil",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "astral-orrery",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "astral-fallen-bell",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "astral-balustrade",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "astral-statue-king",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "gilded-reading-table",
+      "x": 56,
+      "y": 94,
+      "groundY": 93
+    },
+    {
+      "name": "descent-props",
+      "tag": "gilded-bunk",
+      "x": 56,
+      "y": 95,
+      "groundY": 94
+    },
+    {
+      "name": "descent-props",
+      "tag": "gilded-weapons-rack",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "gilded-cage",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "gilded-bone-pile",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "gilded-altar-font",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "gilded-anvil",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "gilded-orrery",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "gilded-fallen-bell",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "gilded-balustrade",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "gilded-statue-king",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "abyss-reading-table",
+      "x": 56,
+      "y": 94,
+      "groundY": 93
+    },
+    {
+      "name": "descent-props",
+      "tag": "abyss-bunk",
+      "x": 56,
+      "y": 95,
+      "groundY": 94
+    },
+    {
+      "name": "descent-props",
+      "tag": "abyss-weapons-rack",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "abyss-cage",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "abyss-bone-pile",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "abyss-altar-font",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "abyss-anvil",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "abyss-orrery",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "abyss-fallen-bell",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "descent-props",
+      "tag": "abyss-balustrade",
+      "x": 56,
+      "y": 96,
+      "groundY": 95
+    },
+    {
+      "name": "descent-props",
+      "tag": "abyss-statue-king",
+      "x": 56,
+      "y": 97,
+      "groundY": 96
+    },
+    {
+      "name": "event-props",
+      "tag": "blood-altar",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "event-props",
+      "tag": "cursed-cache",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "event-props",
+      "tag": "lost-pilgrim",
+      "x": 40,
+      "y": 73,
+      "groundY": 72
+    },
+    {
+      "name": "event-props",
+      "tag": "oath-shrine",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "event-props",
+      "tag": "sealed-library",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "event-props",
+      "tag": "trap-vault",
+      "x": 40,
+      "y": 74,
+      "groundY": 73
+    },
+    {
+      "name": "event-props",
+      "tag": "wandering-smith",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "event-props",
+      "tag": "shadow-duel",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "event-props",
+      "tag": "restless-bell",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    },
+    {
+      "name": "event-props",
+      "tag": "memory-vow",
+      "x": 40,
+      "y": 72,
+      "groundY": 71
+    }
+  ],
+  "failures": []
+}

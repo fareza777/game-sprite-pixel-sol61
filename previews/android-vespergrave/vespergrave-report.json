@@ -16,11 +16,11 @@
     "floor": 1,
     "biome": "abbey",
     "room": 0,
-    "roomLayout": "cloister",
-    "mapForm": 1,
+    "roomLayout": "crossing",
+    "mapForm": 15634798,
     "event": null,
     "eventsResolved": 0,
-    "rooms": 6,
+    "rooms": 11,
     "enemies": 0,
     "player": {
       "x": 180,
@@ -28,7 +28,7 @@
       "hp": 92,
       "maxHp": 92,
       "action": "idle",
-      "focus": 135.92676000000054,
+      "focus": 135.1343600000002,
       "stamina": 100
     },
     "layout": {

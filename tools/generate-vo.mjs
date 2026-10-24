@@ -4,7 +4,8 @@ import crypto from 'node:crypto';
 import {VO_SCRIPT} from '../game/content.mjs';
 const root=path.resolve(import.meta.dirname,'..'),dir=path.join(root,'assets','vo');fs.mkdirSync(dir,{recursive:true});
 const manifestFile=path.join(dir,'manifest.json'),previous=fs.existsSync(manifestFile)?JSON.parse(fs.readFileSync(manifestFile,'utf8')):{clips:{}};
-const manifest={provider:'Deepgram Aura 2',language:'en',generated:new Date().toISOString().slice(0,10),clips:{}};
+const manifest={provider:'Deepgram Aura 2',language:'en',generated:new Date().toISOString().slice(0,10),clips:{...previous.clips}};
+async function saveManifest(){for(let attempt=0;;attempt++){try{fs.writeFileSync(manifestFile+'.pending',JSON.stringify(manifest,null,2));fs.renameSync(manifestFile+'.pending',manifestFile);return;}catch(error){if(attempt===5)throw error;await new Promise(resolve=>setTimeout(resolve,200*(attempt+1)));}}}
 for(const clip of VO_SCRIPT){
  const digest=crypto.createHash('sha256').update(clip.voice+'\n'+clip.text).digest('hex'),file=path.join(dir,clip.id+'.mp3');
  if(clip.text.length>2000)throw new Error('Narration exceeds Deepgram character limit');
@@ -15,6 +16,6 @@ for(const clip of VO_SCRIPT){
  if(!response.headers.get('content-type')?.startsWith('audio/'))throw new Error('Deepgram returned non-audio content');
  const bytes=Buffer.from(await response.arrayBuffer());if(bytes.length<1000)throw new Error('Narration audio is unexpectedly short');fs.writeFileSync(file,bytes);
  manifest.clips[clip.id]={file:`assets/vo/${clip.id}.mp3`,voice:clip.voice,text:clip.text,scriptHash:digest,bytes:bytes.length,sha256:crypto.createHash('sha256').update(bytes).digest('hex')};
- fs.writeFileSync(manifestFile,JSON.stringify(manifest,null,2));console.log('Narrated',clip.id,bytes.length,'bytes');
+ await saveManifest();console.log('Narrated',clip.id,bytes.length,'bytes');
 }
-fs.writeFileSync(manifestFile,JSON.stringify(manifest,null,2));console.log('VO ready:',Object.keys(manifest.clips).length,'offline narration clips.');
+manifest.clips=Object.fromEntries(VO_SCRIPT.map(c=>[c.id,manifest.clips[c.id]]));await saveManifest();console.log('VO ready:',Object.keys(manifest.clips).length,'offline narration clips.');

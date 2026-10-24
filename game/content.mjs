@@ -1,8 +1,8 @@
 export const GAME_TITLE='VESPERGRAVE';
 export const GAME_SUBTITLE='The Bell Below';
-export const GAME_VERSION='3.0.0';
+export const GAME_VERSION='3.1.0';
 export const PROJECT_URL='https://github.com/fareza777/game-sprite-pixel-sol61';
-export const DOWNLOAD_URL=PROJECT_URL+'/raw/refs/heads/main/releases/Vespergrave-3.0.0.apk';
+export const DOWNLOAD_URL=PROJECT_URL+'/raw/refs/heads/main/releases/Vespergrave-3.1.0.apk';
 export const HEROES=[
  {id:'knight',name:'Aldric',title:'The Bellworn Knight',role:'STEEL / GUARD',asset:'hero-knight',hp:120,damage:24,speed:100,defense:5,focus:80,range:45,color:'#d9b674',weapon:'sword',skillIds:['vowbreaker','iron-requiem','last-light'],passive:'Perfectly timed guards restore focus.',story:'He guarded a throne that had forgotten the living. Now he descends to break the oath that buried his kingdom.',line:'An oath can outlive its king. Mine ends below.'},
  {id:'rogue',name:'Sera',title:'The Veilblade',role:'DAGGERS / CRITICAL',asset:'hero-rogue',hp:90,damage:19,speed:120,defense:2,focus:100,range:40,color:'#8ec7b7',weapon:'daggers',skillIds:['veilstep','deathblossom','marked-for-silence'],passive:'Striking after a dodge increases critical chance.',story:'The last hunter of an order erased from the chronicles. She follows the names whispered by the bell.',line:'Keep your crown. I have come for the names you stole.'},
@@ -19,6 +19,7 @@ export const SKILLS=[
  {id:'orbit-of-ashes',hero:'seer',name:'Orbit of Ashes',level:4,cost:32,cooldown:13,kind:'orbit',duration:7,radius:62,mult:.7,color:'#afa3df',description:'Three astral cinders circle you, scouring enemies that approach.'},
  {id:'starfall',hero:'seer',name:'Starfall',level:8,cost:50,cooldown:19,kind:'meteor',radius:100,mult:4,color:'#e3d7ff',description:'Call a fallen star onto the strongest enemy. The impact chills survivors.'}
 ];
+for(const s of SKILLS){s.castDuration=['nova','meteor'].includes(s.kind)?.96:s.kind==='ward'?.72:.76;s.releaseTime=s.castDuration*.34;s.vfx='vfx-'+s.hero;}
 // Five ordinary designs and a dedicated boss belong to every ten-floor chapter.
 const biomeRows=[
  ['abbey','Mourning Abbey','The first bell tolls for the faithful.','The Bellworn Prior','bell', ['#101723','#23343f','#3b5057','#81918b','#d4b780'],['Bell Thrall|hollow|club|bell','Ossuary Guard|knight|spear|cage','Veil Acolyte|wisp|staff|veil','Gutter Hound|hound|fang|chain','Iron Cantor|revenant|sword|bell']],
@@ -63,18 +64,25 @@ export const AFFIXES=[
  {id:'keen',name:'Keen',stat:'crit',value:4},{id:'stalwart',name:'Stalwart',stat:'defense',value:2},{id:'vital',name:'Vital',stat:'maxHp',value:9},{id:'swift',name:'Swift',stat:'speed',value:3},{id:'lucent',name:'Lucent',stat:'maxFocus',value:9},{id:'hungry',name:'Hungry',stat:'lifesteal',value:1},{id:'wrathful',name:'Wrathful',stat:'damage',value:3},{id:'unbroken',name:'Unbroken',stat:'staminaRegen',value:3}
 ];
 export const DIFFICULTIES=[{id:'pilgrim',name:'Pilgrim',description:'A gentler descent. More healing, lighter enemy blows.',damage:.7,health:.85,flasks:5},{id:'oathbound',name:'Oathbound',description:'The intended trial. Patient combat and earned victories.',damage:1,health:1,flasks:3},{id:'forsaken',name:'Forsaken',description:'Merciless foes. For those who have heard the bell before.',damage:1.3,health:1.25,flasks:2}];
+export const ONBOARDING=[
+ {id:'onboard-1',heading:'No road leads only downward',text:'The dungeon branches in every direction. Follow unexplored passages, seek a guardian, and find its stair, lift or well. A descent can wait on any side of a chamber.',asset:'room-abbey'},
+ {id:'onboard-2',heading:'Let your hands remember',text:'Touch the open floor and drag. The movement pad follows your thumb. Keep your other hand free for attack, guard, dodge and skills. An interaction appears only when something is within reach.',asset:'hero-knight'},
+ {id:'onboard-3',heading:'Every promise leaves a mark',text:'Carry equipment, strengthen your skills, and choose what you give to the strangers below. Your choices and descent are saved. Death ends the journey; the embers you earn strengthen the next.',asset:'hero-seer'}
+];
 export const INTRO=[
- {id:'intro-1',scene:0,heading:'A KINGDOM WITHOUT MORNING',text:'Once, the bells of Vespergrave called the living home. Then the king asked for a kingdom that would never end.'},
- {id:'intro-2',scene:1,heading:'THE PRICE OF A CROWN',text:'Beneath his throne, he buried the final bell. It stole the names of the dead, and taught their bodies to rise again.'},
- {id:'intro-3',scene:2,heading:'ONE HUNDRED FLOORS BELOW',text:'Now a hundred floors separate the fading world from its stolen dawn. Ten forgotten realms. Ten souls that will not rest.'},
- {id:'intro-4',scene:3,heading:'THREE UNFINISHED OATHS',text:'A knight without a king. A hunter without a name. A seer without a future. One of them must carry the last ember below.'},
- {id:'intro-5',scene:4,heading:'THE BELL IS WAITING',text:'Descend, wanderer. Gather what the darkness has forgotten. And when the final bell calls your name, answer with steel.'}
+ {id:'prologue-1',scene:0,heading:'THE LAST MORNING',text:'On the last morning of Vespergrave, the bells rang for a king who was afraid to die. No one knew they were hearing the dawn for the final time.'},
+ {id:'prologue-2',scene:1,heading:'A CROWN AGAINST THE DARK',text:'He called his priests beneath the throne. Give me a kingdom that will never end, he said. They brought him a bell without a name.'},
+ {id:'prologue-3',scene:2,heading:'THE PRICE OF FOREVER',text:'The king struck it once. The dead opened their eyes. He struck it twice. Their names vanished from the mouths of everyone who had loved them.'},
+ {id:'prologue-4',scene:3,heading:'ONE HUNDRED FLOORS',text:'They buried the bell beneath a hundred floors of stone. Abbey and garden, furnace and frozen court. Ten realms became its prison. Ten keepers became its chains.'},
+ {id:'prologue-5',scene:4,heading:'WHAT THE LIVING CARRY',text:'Above them, the fires grew small. Mothers forgot their children. Knights forgot their kings. Only an ember remained, and the promise of a morning no one could remember.'},
+ {id:'prologue-6',scene:5,heading:'THREE UNFINISHED OATHS',text:'A knight who will break his final oath. A hunter who will return the stolen names. A seer who still hears a star beyond the dark. One of them must carry the ember below.'},
+ {id:'prologue-7',scene:6,heading:'THE ROADS BENEATH',text:'There is no straight road to the last bell. The halls divide. Strangers bargain for blood, memory and mercy. Choose your path, wanderer. The stone will remember what you become.'},
+ {id:'prologue-8',scene:7,heading:'ANSWER WITH THE DAWN',text:'And when the hollow sovereign speaks your name, do not answer with fear. Carry the last ember. Break the final chain. Let Vespergrave see the dawn.'}
 ];
 export const ENDINGS=[
- {id:'ending-silence',scene:5,heading:'AT LAST, THE BELLS ARE SILENT',text:'You broke the hollow crown, and gave the stolen names to morning. The dead lie still. Above the ruined kingdom, the first bird begins to sing.'},
- {id:'ending-keeper',scene:5,heading:'THE LAST KEEPER',text:'You took the bell into your hands, and held the darkness where it stood. The world will never know your name. But it will see another dawn.'}
+ {id:'ending-silence',scene:8,heading:'AT LAST, THE BELLS ARE SILENT',text:'You broke the hollow crown, and gave the stolen names to morning. The dead lie still. Above the ruined kingdom, the first bird begins to sing.'},
+ {id:'ending-keeper',scene:8,heading:'THE LAST KEEPER',text:'You took the bell into your hands, and held the darkness where it stood. The world will never know your name. But it will see another dawn.'}
 ];
-export const VO_SCRIPT=[...INTRO.map(x=>({...x,voice:'aura-2-draco-en'})),...ENDINGS.map(x=>({...x,voice:'aura-2-draco-en'})),...BIOMES.map(b=>({id:`biome-${b.id}`,text:`${b.name}. ${b.line}`,voice:'aura-2-draco-en'})),...ENEMIES.filter(e=>e.boss).map(e=>({id:`boss-${e.biome}`,text:`${e.name}. The bell demands another soul.`,voice:'aura-2-draco-en'})),...HEROES.map(h=>({id:`hero-${h.id}`,text:h.line,voice:h.id==='rogue'?'aura-2-pandora-en':h.id==='seer'?'aura-2-orpheus-en':'aura-2-draco-en'}))];
 export const TUTORIAL_STEPS=[
  {id:'move',title:'Find your footing',text:'Touch any open part of the arena and drag. The floating D-pad follows your thumb. Move toward the pale rune.',key:'MOVE'},
  {id:'attack',title:'Steel has a rhythm',text:'Face the practice effigy and hold ATTACK. Your third strike is a heavy finisher. Let stamina recover between combinations.',key:'ATTACK'},
@@ -95,7 +103,15 @@ export const ROOM_LAYOUTS=[
  {id:'archive',name:'The Sealed Stacks',header:'cloister'},
  {id:'grove',name:'Rootbound Sanctuary',header:'broken'},
  {id:'foundry',name:'The Iron Assembly',header:'crypt'},
- {id:'ritual',name:'The Candle Court',header:'throne'}
+ {id:'ritual',name:'The Candle Court',header:'throne'},
+ {id:'barracks',name:'The Forsaken Barracks',header:'cloister'},
+ {id:'reliquary',name:'The Quiet Reliquary',header:'throne'},
+ {id:'aqueduct',name:'The Blackwater Aqueduct',header:'broken'},
+ {id:'prison',name:'The Warden’s Cells',header:'crypt'},
+ {id:'ossuary',name:'The Bone Procession',header:'crypt'},
+ {id:'observatory',name:'The Fallen Observatory',header:'throne'},
+ {id:'rotunda',name:'The Crownless Rotunda',header:'broken'},
+ {id:'sanctum',name:'The Divided Sanctum',header:'cloister'}
 ];
 export const EVENTS=[
  {id:'blood-altar',name:'The Altar That Drinks',layout:'ritual',art:0,prop:'altar',description:'Warmth rises from the stone. A voice beneath it offers a relic for a measure of the blood you still possess.',choices:[{id:'offer',label:'Offer your blood',detail:'Lose 22% maximum health. Receive a relic or better.'},{id:'leave',label:'Keep your blood',detail:'Leave the altar undisturbed.'}]},
@@ -110,3 +126,6 @@ export const EVENTS=[
  {id:'memory-vow',name:'The Weight of a Name',layout:'grove',art:9,prop:'memory',description:'A pale root offers to carry some part of you. What you surrender will return as strength, but the memory will remain below.',choices:[{id:'fury',label:'Surrender your safety',detail:'Lose 15 maximum health. Gain 9 damage for this descent.'},{id:'mercy',label:'Surrender your wrath',detail:'Lose 3 damage. Gain 30 maximum health and restore 30 health.'},{id:'leave',label:'Keep your own name',detail:'Leave without a vow.'}]}
 ];
 export const EVENT_BY_ID=Object.fromEntries(EVENTS.map(e=>[e.id,e]));
+
+export const VO_SCRIPT=[...INTRO.map(x=>({...x,voice:'aura-2-draco-en'})),...ENDINGS.map(x=>({...x,voice:'aura-2-draco-en'})),...BIOMES.map(b=>({id:'biome-'+b.id,text:b.name+'. '+b.line,voice:'aura-2-draco-en'})),...ENEMIES.filter(e=>e.boss).map(e=>({id:'boss-'+e.biome,text:e.name+'. The bell demands another soul.',voice:'aura-2-draco-en'})),...HEROES.map(h=>({id:'hero-'+h.id,text:h.line,voice:h.id==='rogue'?'aura-2-pandora-en':h.id==='seer'?'aura-2-orpheus-en':'aura-2-draco-en'})),...ONBOARDING.map(x=>({id:x.id,text:x.heading+'. '+x.text,voice:'aura-2-draco-en'})),...TUTORIAL_STEPS.map(x=>({id:'practice-'+x.id,text:x.title+'. '+x.text,voice:'aura-2-draco-en'})),...EVENTS.map(e=>({id:'event-'+e.id,text:e.description+' '+e.choices.map(c=>c.label+'. '+c.detail).join(' '),voice:e.id==='lost-pilgrim'?'aura-2-pandora-en':e.id==='wandering-smith'?'aura-2-draco-en':'aura-2-orpheus-en'}))];
+export const SHOT_STAGING=[{focus:'50% 36%',motion:'rise',tone:'dawn'},{focus:'52% 42%',motion:'approach',tone:'crown'},{focus:'50% 48%',motion:'reveal',tone:'bell'},{focus:'50% 60%',motion:'descend',tone:'abyss'},{focus:'44% 55%',motion:'drift',tone:'embers'},{focus:'50% 48%',motion:'approach',tone:'oaths'},{focus:'50% 58%',motion:'descend',tone:'roads'},{focus:'50% 40%',motion:'approach',tone:'sovereign'},{focus:'50% 40%',motion:'rise',tone:'dawn'}];

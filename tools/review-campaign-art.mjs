@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {sprite,paint,finish,preview,call,data,ROOT,grid,P} from './art-lib.mjs';
 import {allLayers} from './campaign-art-design.mjs';
-import {heroDesign,enemyDesign} from './campaign-distinct-design.mjs';
+import {heroDesign,enemyDesign} from './descent-actors.mjs';
 import {offsetOps} from './actor-design-v2.mjs';
 import {HEROES,ENEMIES,BIOMES} from '../game/content.mjs';
 const font=JSON.parse(fs.readFileSync(path.join(ROOT,'assets/font.json'),'utf8'));

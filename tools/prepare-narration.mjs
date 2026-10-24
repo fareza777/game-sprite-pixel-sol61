@@ -1,0 +1,6 @@
+import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {VO_SCRIPT} from '../game/content.mjs';
+const file='assets/vo/manifest.json',manifest=JSON.parse(fs.readFileSync(file,'utf8'));
+for(const clip of VO_SCRIPT){const entry=manifest.clips[clip.id];if(!entry)throw Error('Missing narration: '+clip.id);const seconds=Number(execFileSync('ffprobe',['-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1','assets/vo/'+clip.id+'.mp3'],{encoding:'utf8'}).trim());if(!Number.isFinite(seconds)||seconds<1)throw Error('Invalid voice duration: '+clip.id);const phrases=clip.text.match(/[^.!?]+[.!?]+(?:[”"])?|[^.!?]+$/g).map(t=>t.trim()),weights=phrases.map(s=>s.split(/\s+/).length),total=weights.reduce((a,b)=>a+b,0);let t=.12;entry.duration=seconds;entry.captionCues=phrases.map((text,n)=>{const start=t;t+=(seconds-.24)*weights[n]/total;return {start:Math.round(start*1000)/1000,end:Math.round(t*1000)/1000,text};});entry.cueMethod='Sentence timings estimated from the measured audio duration';}
+fs.writeFileSync(file,JSON.stringify(manifest,null,2)+'\n');console.log('Measured audio and prepared sentence captions for',VO_SCRIPT.length,'offline clips.');

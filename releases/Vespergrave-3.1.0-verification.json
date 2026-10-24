@@ -1,0 +1,53 @@
+{
+  "version": "3.1.0",
+  "verified": "2026-10-24",
+  "apk": "Vespergrave-3.1.0.apk",
+  "bytes": 8112992,
+  "sha256": "6011b1c17dfd21b3a9fba2fd65495e8d49e86ebdee99974ebae35f1afa9fe22e",
+  "certificateSha256": "5abd29cf401e2f84cdb80f37621e649ca8bde259f4784427f79985e4f66430b4",
+  "embeddedGameSha256": "6a8f49e0b3e5dca2529d0682ac99ac395d7bbd892ff53679a60c433cafaa56df",
+  "minimumAndroid": "8.0 (API 26)",
+  "targetApi": 35,
+  "permissions": [
+    "VIBRATE"
+  ],
+  "engineChecks": {
+    "passed": 26,
+    "total": 26
+  },
+  "assetsVerified": true,
+  "characterFrames": 8400,
+  "castingPoses": 288,
+  "spellEffectKeys": 108,
+  "measuredPropContacts": 360,
+  "offlineVoiceClips": 52,
+  "openingShots": 8,
+  "roomLayouts": 20,
+  "floorGeneration": "Seeded branching grid with loops and 7–11 chambers",
+  "descentForms": [
+    "stairs",
+    "spiral",
+    "lift",
+    "well"
+  ],
+  "interactiveEvents": 10,
+  "nativeTestsPassed": 3,
+  "nativeTestSeconds": 82.459,
+  "nativeOfflineCampaign": true,
+  "nativeEvents": true,
+  "nativeRefinements": {
+    "passed": true,
+    "eightOfflinePrologueClipsPlayed": true,
+    "voiceEndingAdvancesCinematic": true,
+    "branchingEntrance": true,
+    "nonOverlappingBattleButtons": true,
+    "largeControls": true,
+    "map": true,
+    "relicComparison": true,
+    "castingPreview": true,
+    "physicalDescent": true
+  },
+  "releaseSignatureVerified": true,
+  "releaseStartupVerified": true,
+  "updateFrom300Installed": true
+}

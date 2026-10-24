@@ -1,0 +1,19 @@
+{
+  "sprite": "descent-decals.aseprite",
+  "findings": [
+    {
+      "count": 163,
+      "check": "palette",
+      "message": "163 palette entries. Most sprites read better under 32 — a large palette usually means ramps that were never merged.",
+      "severity": "note"
+    },
+    {
+      "check": "animation",
+      "message": "Every frame has the same duration. Uniform timing reads mechanical; hold contact poses longer than pass poses.",
+      "severity": "note"
+    }
+  ],
+  "passed": true,
+  "score": 100,
+  "summary": "Clean."
+}

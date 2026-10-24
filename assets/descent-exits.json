@@ -1,0 +1,818 @@
+{ "frames": [
+   {
+    "filename": "descent-exits 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 1.aseprite",
+    "frame": { "x": 112, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 2.aseprite",
+    "frame": { "x": 224, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 3.aseprite",
+    "frame": { "x": 336, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 4.aseprite",
+    "frame": { "x": 448, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 5.aseprite",
+    "frame": { "x": 560, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 6.aseprite",
+    "frame": { "x": 672, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 7.aseprite",
+    "frame": { "x": 784, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 8.aseprite",
+    "frame": { "x": 896, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 9.aseprite",
+    "frame": { "x": 0, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 10.aseprite",
+    "frame": { "x": 112, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 11.aseprite",
+    "frame": { "x": 224, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 12.aseprite",
+    "frame": { "x": 336, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 13.aseprite",
+    "frame": { "x": 448, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 14.aseprite",
+    "frame": { "x": 560, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 15.aseprite",
+    "frame": { "x": 672, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 16.aseprite",
+    "frame": { "x": 784, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 17.aseprite",
+    "frame": { "x": 896, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 18.aseprite",
+    "frame": { "x": 0, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 19.aseprite",
+    "frame": { "x": 112, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 20.aseprite",
+    "frame": { "x": 224, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 21.aseprite",
+    "frame": { "x": 336, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 22.aseprite",
+    "frame": { "x": 448, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 23.aseprite",
+    "frame": { "x": 560, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 24.aseprite",
+    "frame": { "x": 672, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 25.aseprite",
+    "frame": { "x": 784, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 26.aseprite",
+    "frame": { "x": 896, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 27.aseprite",
+    "frame": { "x": 0, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 28.aseprite",
+    "frame": { "x": 112, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 29.aseprite",
+    "frame": { "x": 224, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 30.aseprite",
+    "frame": { "x": 336, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 31.aseprite",
+    "frame": { "x": 448, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 32.aseprite",
+    "frame": { "x": 560, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 33.aseprite",
+    "frame": { "x": 672, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 34.aseprite",
+    "frame": { "x": 784, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 35.aseprite",
+    "frame": { "x": 896, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 36.aseprite",
+    "frame": { "x": 0, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 37.aseprite",
+    "frame": { "x": 112, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 38.aseprite",
+    "frame": { "x": 224, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 39.aseprite",
+    "frame": { "x": 336, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 40.aseprite",
+    "frame": { "x": 448, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 41.aseprite",
+    "frame": { "x": 560, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 42.aseprite",
+    "frame": { "x": 672, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 43.aseprite",
+    "frame": { "x": 784, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 44.aseprite",
+    "frame": { "x": 896, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 45.aseprite",
+    "frame": { "x": 0, "y": 560, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 46.aseprite",
+    "frame": { "x": 112, "y": 560, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 47.aseprite",
+    "frame": { "x": 224, "y": 560, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 48.aseprite",
+    "frame": { "x": 336, "y": 560, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 49.aseprite",
+    "frame": { "x": 448, "y": 560, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 50.aseprite",
+    "frame": { "x": 560, "y": 560, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 51.aseprite",
+    "frame": { "x": 672, "y": 560, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 52.aseprite",
+    "frame": { "x": 784, "y": 560, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 53.aseprite",
+    "frame": { "x": 896, "y": 560, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 54.aseprite",
+    "frame": { "x": 0, "y": 672, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 55.aseprite",
+    "frame": { "x": 112, "y": 672, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 56.aseprite",
+    "frame": { "x": 224, "y": 672, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 57.aseprite",
+    "frame": { "x": 336, "y": 672, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 58.aseprite",
+    "frame": { "x": 448, "y": 672, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 59.aseprite",
+    "frame": { "x": 560, "y": 672, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 60.aseprite",
+    "frame": { "x": 672, "y": 672, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 61.aseprite",
+    "frame": { "x": 784, "y": 672, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 62.aseprite",
+    "frame": { "x": 896, "y": 672, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 63.aseprite",
+    "frame": { "x": 0, "y": 784, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 64.aseprite",
+    "frame": { "x": 112, "y": 784, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 65.aseprite",
+    "frame": { "x": 224, "y": 784, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 66.aseprite",
+    "frame": { "x": 336, "y": 784, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 67.aseprite",
+    "frame": { "x": 448, "y": 784, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 68.aseprite",
+    "frame": { "x": 560, "y": 784, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 69.aseprite",
+    "frame": { "x": 672, "y": 784, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 70.aseprite",
+    "frame": { "x": 784, "y": 784, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 71.aseprite",
+    "frame": { "x": 896, "y": 784, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 72.aseprite",
+    "frame": { "x": 0, "y": 896, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 73.aseprite",
+    "frame": { "x": 112, "y": 896, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 74.aseprite",
+    "frame": { "x": 224, "y": 896, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 75.aseprite",
+    "frame": { "x": 336, "y": 896, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 76.aseprite",
+    "frame": { "x": 448, "y": 896, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 77.aseprite",
+    "frame": { "x": 560, "y": 896, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 78.aseprite",
+    "frame": { "x": 672, "y": 896, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "descent-exits 79.aseprite",
+    "frame": { "x": 784, "y": 896, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.18.6-dev",
+  "image": "descent-exits.png",
+  "format": "RGBA8888",
+  "size": { "w": 1008, "h": 1008 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "abbey-stairs-open", "from": 0, "to": 0, "direction": "forward", "color": "#000000ff" },
+   { "name": "abbey-stairs-sealed", "from": 1, "to": 1, "direction": "forward", "color": "#000000ff" },
+   { "name": "abbey-spiral-open", "from": 2, "to": 2, "direction": "forward", "color": "#000000ff" },
+   { "name": "abbey-spiral-sealed", "from": 3, "to": 3, "direction": "forward", "color": "#000000ff" },
+   { "name": "abbey-lift-open", "from": 4, "to": 4, "direction": "forward", "color": "#000000ff" },
+   { "name": "abbey-lift-sealed", "from": 5, "to": 5, "direction": "forward", "color": "#000000ff" },
+   { "name": "abbey-well-open", "from": 6, "to": 6, "direction": "forward", "color": "#000000ff" },
+   { "name": "abbey-well-sealed", "from": 7, "to": 7, "direction": "forward", "color": "#000000ff" },
+   { "name": "tides-stairs-open", "from": 8, "to": 8, "direction": "forward", "color": "#000000ff" },
+   { "name": "tides-stairs-sealed", "from": 9, "to": 9, "direction": "forward", "color": "#000000ff" },
+   { "name": "tides-spiral-open", "from": 10, "to": 10, "direction": "forward", "color": "#000000ff" },
+   { "name": "tides-spiral-sealed", "from": 11, "to": 11, "direction": "forward", "color": "#000000ff" },
+   { "name": "tides-lift-open", "from": 12, "to": 12, "direction": "forward", "color": "#000000ff" },
+   { "name": "tides-lift-sealed", "from": 13, "to": 13, "direction": "forward", "color": "#000000ff" },
+   { "name": "tides-well-open", "from": 14, "to": 14, "direction": "forward", "color": "#000000ff" },
+   { "name": "tides-well-sealed", "from": 15, "to": 15, "direction": "forward", "color": "#000000ff" },
+   { "name": "thorns-stairs-open", "from": 16, "to": 16, "direction": "forward", "color": "#000000ff" },
+   { "name": "thorns-stairs-sealed", "from": 17, "to": 17, "direction": "forward", "color": "#000000ff" },
+   { "name": "thorns-spiral-open", "from": 18, "to": 18, "direction": "forward", "color": "#000000ff" },
+   { "name": "thorns-spiral-sealed", "from": 19, "to": 19, "direction": "forward", "color": "#000000ff" },
+   { "name": "thorns-lift-open", "from": 20, "to": 20, "direction": "forward", "color": "#000000ff" },
+   { "name": "thorns-lift-sealed", "from": 21, "to": 21, "direction": "forward", "color": "#000000ff" },
+   { "name": "thorns-well-open", "from": 22, "to": 22, "direction": "forward", "color": "#000000ff" },
+   { "name": "thorns-well-sealed", "from": 23, "to": 23, "direction": "forward", "color": "#000000ff" },
+   { "name": "forge-stairs-open", "from": 24, "to": 24, "direction": "forward", "color": "#000000ff" },
+   { "name": "forge-stairs-sealed", "from": 25, "to": 25, "direction": "forward", "color": "#000000ff" },
+   { "name": "forge-spiral-open", "from": 26, "to": 26, "direction": "forward", "color": "#000000ff" },
+   { "name": "forge-spiral-sealed", "from": 27, "to": 27, "direction": "forward", "color": "#000000ff" },
+   { "name": "forge-lift-open", "from": 28, "to": 28, "direction": "forward", "color": "#000000ff" },
+   { "name": "forge-lift-sealed", "from": 29, "to": 29, "direction": "forward", "color": "#000000ff" },
+   { "name": "forge-well-open", "from": 30, "to": 30, "direction": "forward", "color": "#000000ff" },
+   { "name": "forge-well-sealed", "from": 31, "to": 31, "direction": "forward", "color": "#000000ff" },
+   { "name": "bones-stairs-open", "from": 32, "to": 32, "direction": "forward", "color": "#000000ff" },
+   { "name": "bones-stairs-sealed", "from": 33, "to": 33, "direction": "forward", "color": "#000000ff" },
+   { "name": "bones-spiral-open", "from": 34, "to": 34, "direction": "forward", "color": "#000000ff" },
+   { "name": "bones-spiral-sealed", "from": 35, "to": 35, "direction": "forward", "color": "#000000ff" },
+   { "name": "bones-lift-open", "from": 36, "to": 36, "direction": "forward", "color": "#000000ff" },
+   { "name": "bones-lift-sealed", "from": 37, "to": 37, "direction": "forward", "color": "#000000ff" },
+   { "name": "bones-well-open", "from": 38, "to": 38, "direction": "forward", "color": "#000000ff" },
+   { "name": "bones-well-sealed", "from": 39, "to": 39, "direction": "forward", "color": "#000000ff" },
+   { "name": "frost-stairs-open", "from": 40, "to": 40, "direction": "forward", "color": "#000000ff" },
+   { "name": "frost-stairs-sealed", "from": 41, "to": 41, "direction": "forward", "color": "#000000ff" },
+   { "name": "frost-spiral-open", "from": 42, "to": 42, "direction": "forward", "color": "#000000ff" },
+   { "name": "frost-spiral-sealed", "from": 43, "to": 43, "direction": "forward", "color": "#000000ff" },
+   { "name": "frost-lift-open", "from": 44, "to": 44, "direction": "forward", "color": "#000000ff" },
+   { "name": "frost-lift-sealed", "from": 45, "to": 45, "direction": "forward", "color": "#000000ff" },
+   { "name": "frost-well-open", "from": 46, "to": 46, "direction": "forward", "color": "#000000ff" },
+   { "name": "frost-well-sealed", "from": 47, "to": 47, "direction": "forward", "color": "#000000ff" },
+   { "name": "blood-stairs-open", "from": 48, "to": 48, "direction": "forward", "color": "#000000ff" },
+   { "name": "blood-stairs-sealed", "from": 49, "to": 49, "direction": "forward", "color": "#000000ff" },
+   { "name": "blood-spiral-open", "from": 50, "to": 50, "direction": "forward", "color": "#000000ff" },
+   { "name": "blood-spiral-sealed", "from": 51, "to": 51, "direction": "forward", "color": "#000000ff" },
+   { "name": "blood-lift-open", "from": 52, "to": 52, "direction": "forward", "color": "#000000ff" },
+   { "name": "blood-lift-sealed", "from": 53, "to": 53, "direction": "forward", "color": "#000000ff" },
+   { "name": "blood-well-open", "from": 54, "to": 54, "direction": "forward", "color": "#000000ff" },
+   { "name": "blood-well-sealed", "from": 55, "to": 55, "direction": "forward", "color": "#000000ff" },
+   { "name": "astral-stairs-open", "from": 56, "to": 56, "direction": "forward", "color": "#000000ff" },
+   { "name": "astral-stairs-sealed", "from": 57, "to": 57, "direction": "forward", "color": "#000000ff" },
+   { "name": "astral-spiral-open", "from": 58, "to": 58, "direction": "forward", "color": "#000000ff" },
+   { "name": "astral-spiral-sealed", "from": 59, "to": 59, "direction": "forward", "color": "#000000ff" },
+   { "name": "astral-lift-open", "from": 60, "to": 60, "direction": "forward", "color": "#000000ff" },
+   { "name": "astral-lift-sealed", "from": 61, "to": 61, "direction": "forward", "color": "#000000ff" },
+   { "name": "astral-well-open", "from": 62, "to": 62, "direction": "forward", "color": "#000000ff" },
+   { "name": "astral-well-sealed", "from": 63, "to": 63, "direction": "forward", "color": "#000000ff" },
+   { "name": "gilded-stairs-open", "from": 64, "to": 64, "direction": "forward", "color": "#000000ff" },
+   { "name": "gilded-stairs-sealed", "from": 65, "to": 65, "direction": "forward", "color": "#000000ff" },
+   { "name": "gilded-spiral-open", "from": 66, "to": 66, "direction": "forward", "color": "#000000ff" },
+   { "name": "gilded-spiral-sealed", "from": 67, "to": 67, "direction": "forward", "color": "#000000ff" },
+   { "name": "gilded-lift-open", "from": 68, "to": 68, "direction": "forward", "color": "#000000ff" },
+   { "name": "gilded-lift-sealed", "from": 69, "to": 69, "direction": "forward", "color": "#000000ff" },
+   { "name": "gilded-well-open", "from": 70, "to": 70, "direction": "forward", "color": "#000000ff" },
+   { "name": "gilded-well-sealed", "from": 71, "to": 71, "direction": "forward", "color": "#000000ff" },
+   { "name": "abyss-stairs-open", "from": 72, "to": 72, "direction": "forward", "color": "#000000ff" },
+   { "name": "abyss-stairs-sealed", "from": 73, "to": 73, "direction": "forward", "color": "#000000ff" },
+   { "name": "abyss-spiral-open", "from": 74, "to": 74, "direction": "forward", "color": "#000000ff" },
+   { "name": "abyss-spiral-sealed", "from": 75, "to": 75, "direction": "forward", "color": "#000000ff" },
+   { "name": "abyss-lift-open", "from": 76, "to": 76, "direction": "forward", "color": "#000000ff" },
+   { "name": "abyss-lift-sealed", "from": 77, "to": 77, "direction": "forward", "color": "#000000ff" },
+   { "name": "abyss-well-open", "from": 78, "to": 78, "direction": "forward", "color": "#000000ff" },
+   { "name": "abyss-well-sealed", "from": 79, "to": 79, "direction": "forward", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "authored-pixels", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

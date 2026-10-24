@@ -2,9 +2,9 @@
   "sprite": "enemy-gilded-3.aseprite",
   "findings": [
     {
-      "count": 122,
+      "count": 129,
       "check": "palette",
-      "message": "122 palette entries. Most sprites read better under 32 — a large palette usually means ramps that were never merged.",
+      "message": "129 palette entries. Most sprites read better under 32 — a large palette usually means ramps that were never merged.",
       "severity": "note"
     },
     {
